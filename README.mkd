@@ -1,3 +1,3 @@
 Old SQL
 ==========
-OldSQL is a Ruby on Rails database reporting gem that uses plain old SQL.
+OldSQL is a Rails Engine database reporting gem that uses plain old SQL.

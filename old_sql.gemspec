@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email       = ["eddiemgonzales@gmail.com"]
   s.homepage    = "https://github.com/egonz/old_sql"
   s.summary     = %q{Database Reporting for Rails}
-  s.description = %q{OldSQL is a Ruby on Rails database reporting gem that uses plain old SQL}
+  s.description = %q{OldSQL is a Rails Engine database reporting gem that uses plain old SQL}
 
   s.rubyforge_project = "old_sql"
 
