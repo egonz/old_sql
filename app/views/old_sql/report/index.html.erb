@@ -1,0 +1,148 @@
+<% head_style "old_sql/db_report" %>
+
+<% head_javascript "old_sql/application.js" %>
+<% head_javascript "old_sql/jquery-ui-timepicker-addon.js" %>
+<% head_javascript "old_sql/date_format.js" %>
+
+<script>
+var host = "<%=@host%>";
+var port = "<%=@port%>";
+var _report_sql = '';
+var _report_loaded = false;
+
+function report_selected()
+{
+	var virality = $j("#report option:selected").attr('virality');
+	_report_sql = $j("#report option:selected").attr('report_sql');
+	
+  	if (virality == 'true')
+	{
+		$j("#select-generation").removeAttr('disabled');
+	}
+	else
+	{
+		$j("#select-generation").attr('disabled', 'disabled');
+		$j("#select-generation option:first").attr('selected','selected');
+	}
+}
+
+function load_report()
+{	
+	var src = "http://" + host+":"+port+"/admin/db/report/datagrid/?report="+$j("#report").val()+
+	"&start_date="+$j("#datepicker-start").val()+"&end_date="+$j("#datepicker-end").val()+"&generation="+$j("#select-generation").val()+"&report_sql="+
+	_report_sql;
+	
+	jQuery('iframe').attr('src', src);
+	
+	_report_loaded = true;
+}
+
+function print_report()
+{
+	if(_report_loaded == false) 
+	{
+		alert("You must select a report, and run it before continuing.");
+		return;
+	}
+	
+	var src = "http://" + host+":"+port+"/admin/db/report/print/?report="+$j("#report").val()+
+		"&start_date="+$j("#datepicker-start").val()+"&end_date="+$j("#datepicker-end").val()+"&generation="+$j("#select-generation").val()+"&report_sql="+
+		_report_sql+"&desc="+$j("#report option:selected").attr('desc');
+	window.open(src,'DB Report')
+}
+
+function export_report_to_excel()
+{
+	if(_report_loaded == false) 
+	{
+		alert("You must select a report, and run it before continuing.");
+		return;
+	}
+	
+	var src = "http://" + host+":"+port+"/admin/db/report/query.csv/?report="+$j("#report").val()+
+		"&start_date="+$j("#datepicker-start").val()+"&end_date="+$j("#datepicker-end").val()+"&generation="+$j("#select-generation").val()+"&report_sql="+
+		_report_sql+"&desc="+$j("#report option:selected").attr('desc');
+	window.open(src,'DB Report')
+}
+
+$j(document).ready(function($){
+	$("#datepicker-start").datetimepicker();
+	$("#datepicker-start").datetimepicker( "option", "dateFormat", "yy/mm/dd" );
+	$("#datepicker-end").datetimepicker();
+	$("#datepicker-end").datetimepicker( "option", "dateFormat", "yy/mm/dd" );
+
+	$j("#select-generation").attr('disabled', 'disabled');
+	
+	var now = new Date();
+	var tomorrow = new Date();
+	var two_weeks_ago = new Date();
+	two_weeks_ago.setDate(now.getDate() - 14);
+	tomorrow.setDate(now.getDate() + 1);
+	$j("#datepicker-start").attr('value', two_weeks_ago.format("yyyy/mm/dd HH:MM:ss"));
+	$j("#datepicker-end").attr('value', tomorrow.format("yyyy/mm/dd HH:MM:ss"));
+});
+</script>
+
+<div class="ra-block">
+	<div class="ui-widget-header clearfix">
+    	<%= @page_name %>
+  	</div>
+
+	<form id="report-form" name="report-form" action="/admin/db/report/query" method="POST">
+		<div class="report-form-row">
+			<div class="report-form-label">SELECT A REPORT:</div>
+			<div class="report-form-input">
+				<select name="report" id="report" 
+					onchange="report_selected()">
+					<option></option>		
+					<% @reports.each do |report, data| %>
+					<option value="<%= data['name'] %>" virality="<%= data['virality'] %>" report_sql="<%= data['report_sql'] %>" desc="<%= data['value'] %>"><%= data['value'] %></option>
+					<% end %>
+				</select>
+			</div>
+		</div>
+		
+		<div class="report-form-row">
+			<div class="report-form-label">GENERATION:</div>
+			<div class="report-form-input">
+				<select name="generation" id="select-generation">
+					<option value="-1"></option>
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+				</select>
+			</div>
+		</div>
+		
+		<div class="report-form-row">
+			<div class="report-form-label">START DATE:</div>
+			<div class="report-form-input">
+				<input type="text" id="datepicker-start" name="start_date" value="">
+			</div>
+		</div>
+		
+		<div class="report-form-row">
+			<div class="report-form-label">END DATE:</div>
+			<div class="report-form-input">
+				<input type="text" id="datepicker-end" name="end_date" value="">
+			</div>
+		</div>
+		
+		<div class="report-form-row">
+			<div class="report-form-label"></div>
+			<input type="button" value="Run" onclick="load_report();"/>
+		</div>
+	</form>
+	
+	<div id="links">
+		<div><%= link_to_function("Print Report", "javascript:print_report()") %></div>
+		<div><%= link_to_function("Export To Excel", "javascript:export_report_to_excel()") %></div>
+	</div>
+
+	<div id="data_grid">
+		<iframe id="data_grid_frame" src="" width="100%" height="530" frameborder="0" scrolling="no">
+			<p>Your browser does not support iframes.</p>
+		</iframe>
+	</div>
+		
+</div>

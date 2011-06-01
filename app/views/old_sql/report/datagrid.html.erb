@@ -1,0 +1,16 @@
+<%=jqgrid_javascripts%>
+<%=jqgrid_stylesheets%>
+
+<%=raw jqgrid(
+	"#{@reports[@report_name]['value']} Report", 
+	"#{@report_name}", 		
+	"/admin/db/report/query.json/",
+	jqgrid_field_list(), 
+	{
+		:autowidth=>true, 
+		:height=>430, 
+		:rows_per_page=>25,
+		:mtype=>'GET',
+		:post_data=>"{'report':'#{@report_name}','report_sql':'#{@report_sql}','generation':'#{@generation}','start_date':'#{@start_date}','end_date':'#{@end_date}'}"
+	}
+ ) %>

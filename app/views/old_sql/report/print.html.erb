@@ -1,0 +1,66 @@
+<script>
+	print();
+</script>
+
+<style>
+body {
+	background-color: White;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:13px;
+}
+#report-name {
+	font-weight:bold;
+}
+table {
+	border-collapse: collapse;
+}
+td {
+	border: 1px solid #000000;
+}
+.data {
+	text-align:center; 
+	vertical-align:top
+}
+th {
+	border: 1px solid #000000;
+	font-weight:normal;
+}
+</style>
+
+<div class="print">
+	<!-- DISPLAY FOR PRINTED PAGE -->
+	
+	<table border="0" style="margin-bottom:10px; border:0px;">
+		<tr>
+			<td colspan="3" style="border:0px;"><div id="report-name"><%=@desc%> Report</div></td>
+		</tr>
+		<tr>
+			<td style="border:0px;">Start Date: <%=@start_date%></td>
+			<td style="border:0px; padding-left:20px; padding-right:20px;">to</td>
+			<td style="border:0px;">End Date: <%=@end_date%></td>
+		</tr>
+	</table>	
+
+	<table border="1" cellspacing="5" cellpadding="0" width="700">
+		<tr>
+			<% @reports[@report_name]['fields'].each do |report_field| %>
+				<td class="data"><%=report_field%></td>
+			<% end %>
+		</tr>
+		
+		<% @report[:rows].each do |row| %>
+			<tr>
+				<% first_cell=true %>
+				<%row[:cell].each do |c|%>
+					<% cleaned_cell = Sanitize.clean(c.to_s) %>
+					<% if first_cell==true %>
+						<td><%=cleaned_cell%></td>
+					<% else %>
+						<td class="data"><%=cleaned_cell%></td>
+					<% end %>
+					<% first_cell=false %>
+				<%end%>
+			</tr>
+		<% end %>
+	</table>
+</div>
