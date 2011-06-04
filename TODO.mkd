@@ -1,4 +1,5 @@
 # TODO
 
 * Implement Rails Engine
-* Allow users to pass in their own variables to the sql file
+* Allow users to pass in their own variables to the sql file (complete)
+* Allow multiple sql files

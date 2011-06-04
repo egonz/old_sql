@@ -19,14 +19,15 @@ module ReportProcessor
       
       begin
         #todo change to a reporting db
-        db = Sequel.connect("mysql2://#{PurePlay.database.user}:#{PurePlay.database.password}@#{PurePlay.database.host}:3306/#{PurePlay.database.database}")
-
+        db = ActiveRecord::Base.connection();
+        
         @resultset = []
-        db.fetch(sql) do |row|
+        rec = db.select_all(sql)
+        rec.each do |row|
           @resultset << row
         end
-      ensure
-        db.disconnect
+      rescue
+        #todo log error
       end
       
       parse(@resultset)
