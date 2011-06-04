@@ -35,7 +35,54 @@ Gem::Specification.new do |s|
     "lib/report_processor/base.rb",
     "old_sql.gemspec",
     "pkg/old_sql-0.1.0.gem",
-    "pkg/old_sql-0.2.0.gem"
+    "pkg/old_sql-0.2.0.gem",
+    "pkg/old_sql-0.3.0.gem",
+    "test/dummy/.gitignore",
+    "test/dummy/Gemfile",
+    "test/dummy/Gemfile.lock",
+    "test/dummy/README",
+    "test/dummy/Rakefile",
+    "test/dummy/app/controllers/application_controller.rb",
+    "test/dummy/app/helpers/application_helper.rb",
+    "test/dummy/app/views/layouts/application.html.erb",
+    "test/dummy/config.ru",
+    "test/dummy/config/application.rb",
+    "test/dummy/config/boot.rb",
+    "test/dummy/config/database.yml",
+    "test/dummy/config/environment.rb",
+    "test/dummy/config/environments/development.rb",
+    "test/dummy/config/environments/production.rb",
+    "test/dummy/config/environments/test.rb",
+    "test/dummy/config/initializers/backtrace_silencers.rb",
+    "test/dummy/config/initializers/inflections.rb",
+    "test/dummy/config/initializers/mime_types.rb",
+    "test/dummy/config/initializers/secret_token.rb",
+    "test/dummy/config/initializers/session_store.rb",
+    "test/dummy/config/locales/en.yml",
+    "test/dummy/config/routes.rb",
+    "test/dummy/db/schema.rb",
+    "test/dummy/db/seeds.rb",
+    "test/dummy/doc/README_FOR_APP",
+    "test/dummy/lib/tasks/.gitkeep",
+    "test/dummy/public/404.html",
+    "test/dummy/public/422.html",
+    "test/dummy/public/500.html",
+    "test/dummy/public/favicon.ico",
+    "test/dummy/public/images/rails.png",
+    "test/dummy/public/index.html",
+    "test/dummy/public/javascripts/application.js",
+    "test/dummy/public/javascripts/controls.js",
+    "test/dummy/public/javascripts/dragdrop.js",
+    "test/dummy/public/javascripts/effects.js",
+    "test/dummy/public/javascripts/prototype.js",
+    "test/dummy/public/javascripts/rails.js",
+    "test/dummy/public/robots.txt",
+    "test/dummy/public/stylesheets/.gitkeep",
+    "test/dummy/script/rails",
+    "test/dummy/test/performance/browsing_test.rb",
+    "test/dummy/test/test_helper.rb",
+    "test/dummy/test/unit/hello_world_test.rb",
+    "test/dummy/vendor/plugins/.gitkeep"
   ]
   s.homepage = %q{http://github.com/egonz/old_sql}
   s.licenses = [%q{MIT}]
@@ -47,20 +94,17 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<rake>, ["= 0.9.1"])
       s.add_development_dependency(%q<shoulda>, [">= 0"])
       s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.6.0"])
       s.add_development_dependency(%q<rcov>, [">= 0"])
     else
-      s.add_dependency(%q<rake>, ["= 0.9.1"])
       s.add_dependency(%q<shoulda>, [">= 0"])
       s.add_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_dependency(%q<jeweler>, ["~> 1.6.0"])
       s.add_dependency(%q<rcov>, [">= 0"])
     end
   else
-    s.add_dependency(%q<rake>, ["= 0.9.1"])
     s.add_dependency(%q<shoulda>, [">= 0"])
     s.add_dependency(%q<bundler>, ["~> 1.0.0"])
     s.add_dependency(%q<jeweler>, ["~> 1.6.0"])
