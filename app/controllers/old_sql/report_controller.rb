@@ -1,5 +1,4 @@
 require 'csv'
-require 'sequel'
 
 #
 # TODO:
@@ -34,7 +33,7 @@ module OldSql
     BASE_PROCESSOR = "base"
 
     def index
-      render :layout => 'rails_admin/dashboard'
+      #render :layout => 'rails_admin/dashboard'
     end
     
     def datagrid
@@ -44,7 +43,7 @@ module OldSql
       @report_name = params[:report]
       @report_sql = params[:report_sql]
       
-      render :layout => 'rails_admin/datagrid', :template => "rails_admin/db_report/datagrid.html.erb"
+      render :template => "rails_admin/db_report/datagrid.html.erb"
     end
     
     def query
