@@ -1,9 +1,0 @@
-users:
-  name: "users"
-  value: "Users"
-  report_sql: "users"
-  virality: false
-  processor: Users
-  fields: 
-    - 'id'
-    - 'name'
