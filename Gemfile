@@ -3,6 +3,10 @@ source "http://rubygems.org"
 # Example:
 #   gem "activesupport", ">= 2.3.5"
 
+gem "rails", "3.0.6"
+gem "capybara", ">= 0.4.0"
+gem "sqlite3"
+
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.
 group :development do
