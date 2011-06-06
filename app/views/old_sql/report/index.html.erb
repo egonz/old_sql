@@ -22,7 +22,7 @@ function report_selected()
 
 function load_report()
 {	
-	var src = "http://"+host+":"+port+"/oldsql/reports/datagrid/?report="+jQuery("#report").val()+
+	var src = "http://"+host+":"+port+"/sql/reports/datagrid/?report="+jQuery("#report").val()+
 	"&start_date="+jQuery("#datepicker-start").val()+"&end_date="+jQuery("#datepicker-end").val()+"&generation="+
 	jQuery("#select-generation").val()+"&report_sql="+
 	_report_sql;
@@ -40,7 +40,7 @@ function print_report()
 		return;
 	}
 	
-	var src = "http://"+host+":"+port+"/oldsql/reports/print/?report="+jQuery("#report").val()+
+	var src = "http://"+host+":"+port+"/sql/reports/print/?report="+jQuery("#report").val()+
 		"&start_date="+jQuery("#datepicker-start").val()+"&end_date="+jQuery("#datepicker-end").val()+"&generation="+
 		jQuery("#select-generation").val()+"&report_sql="+_report_sql+"&desc="+jQuery("#report option:selected").attr('desc');
 	window.open(src,'Old SQL Report')
@@ -54,7 +54,7 @@ function export_report_to_excel()
 		return;
 	}
 	
-	var src = "http://"+host+":"+port+"/oldsql/reports/query.csv/?report="+jQuery("#report").val()+
+	var src = "http://"+host+":"+port+"/sql/reports/query.csv/?report="+jQuery("#report").val()+
 		"&start_date="+jQuery("#datepicker-start").val()+"&end_date="+jQuery("#datepicker-end").val()+
 		"&generation="+jQuery("#select-generation").val()+"&report_sql="+
 		_report_sql+"&desc="+jQuery("#report option:selected").attr('desc');

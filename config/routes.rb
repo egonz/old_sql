@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  scope "oldsql", :module => :old_sql, :as => "old_sql" do
+  scope "sql", :module => :old_sql, :as => "old_sql" do
     scope "reports", :as => "reports" do
       controller "report" do
         match "/", :to => :index, :as => "report_list"

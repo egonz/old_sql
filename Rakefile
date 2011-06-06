@@ -21,6 +21,7 @@ Jeweler::Tasks.new do |gem|
   gem.description = %Q{OldSQL is a Rails Engine database reporting gem that uses plain old SQL}
   gem.email = "egonzales@pureplay.com"
   gem.authors = ["Eddie Gonzales"]
+  gem.files = Dir["{app,lib,config,public}/**/*"] + ["LICENSE.txt", "Rakefile", "Gemfile", "README.rdoc"]
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new

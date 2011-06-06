@@ -6,14 +6,11 @@
 <script>
 jQuery(document).ready(function(){
   jQuery("#rowed1").jqGrid({
-    url:"http://<%=@host%>:<%=@port%>/oldsql/reports/query.json/?report=<%=@report_name%>&report_sql=<%=@report_sql%>&generation=<%=@generation%>&start_date=<%=@start_date%>&end_date=<%=@end_date%>",
+    url:"http://<%=@host%>:<%=@port%>/sql/reports/query.json/?report=<%=@report_name%>&report_sql=<%=@report_sql%>&generation=<%=@generation%>&start_date=<%=@start_date%>&end_date=<%=@end_date%>",
   	datatype: "json",
   	pager: false,
-    colNames:['id','name'],
-    colModel:[
-      {name:'id',index:'id', width:55},
-      {name:'name',index:'name', width:100}
-    ],
+    colNames: <%=jqgrid_col_names()%>,
+    colModel: <%=jqgrid_col_model()%>,
     rowNum:25,
     rowList:[10,20,30],
     width: 777,

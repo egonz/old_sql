@@ -160,11 +160,12 @@ module OldSql
           field_num+=1
         end
         
-        @fields.to_json
+        @fields.to_json.html_safe
       end
       
       def jqgrid_col_names
-        @reports[@report_name]['fields'].to_json
+        json = @reports[@report_name]['fields'].to_json
+        json.html_safe
       end
       
       def query_vars report
