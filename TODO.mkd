@@ -1,5 +1,10 @@
 # TODO
 
-* Implement Rails Engine
-* Allow users to pass in their own variables to the sql file (complete)
 * Allow multiple sql files
+* Move javascript in index.html.erb into a separate javascript file.
+* As an alternative to report_processors allow for a csv file that defines the format of the report.
+  Use symbols in the cells for the columns. Math operators could be used for performing calculations.
+  If this works we could write a complex report with zero ruby/rails code, html, or javascript.   
+* Try and implement jqgrid sort and search methods.
+  This should be done in the sql files by passing the params from jqgrid into them.
+* Add Devise support

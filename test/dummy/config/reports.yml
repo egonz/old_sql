@@ -1,0 +1,8 @@
+users:
+  name: users
+  value: User
+  report_sql: users
+  virality: false
+  fields: 
+    - 'id'
+    - 'name'

@@ -1,39 +1,18 @@
 require 'csv'
 
-#
-# TODO:
-# 1. Reduce the datagrid and print views to a single view.
-#    The colnames can be defined in the reports.yml config file.
-#    (Completed on 5-24-2011)
-# 2. Create a generic SQL parse method.
-#    (Completed on 5-24-2011)
-# 3. Convert to a gem. This class will be overridden to implement
-#    parse methods.
-# 4. Add export to CSV
-#    (Completed on 5-24-2011)
-# 5. I think we should move the parse methods to a lib class.
-#    The parse class name could be defined in the reports.yml file.
-#    (Completed on 5-24-2011)
-# 6. Try and implement jqgrid sort and search methods.
-#    This should be done in the sql files by passing the params
-#    from jqgrid into them.
-# 7. Remove rails_admin dependencies
-# 8. Add Devise support
-# 9. Rewrite jqgrid using JQuery 
-#
-
 module OldSql
   class ReportController < ApplicationController
     before_filter :_init
     before_filter :_reports
 
-    helper_method :jqgrid_field_list
+    helper_method :jqgrid_col_model
+    helper_method :jqgrid_col_names
 
-    ROUND_PRECISION = 2
+    layout "old_sql/report.html.erb"
+    
     BASE_PROCESSOR = "base"
 
     def index
-      #render :layout => 'rails_admin/dashboard'
     end
     
     def datagrid
@@ -43,7 +22,7 @@ module OldSql
       @report_name = params[:report]
       @report_sql = params[:report_sql]
       
-      render :template => "rails_admin/db_report/datagrid.html.erb"
+      render :template => "old_sql/report/datagrid.html.erb"
     end
     
     def query
@@ -115,16 +94,15 @@ module OldSql
       processor = load_processor(@report_name)
       @report = processor.execute_query(@report_sql,@start_date,@end_date,query_vars(@report_name))
       
-      render :layout => 'rails_admin/db_report_print', :template => "rails_admin/db_report/print.html.erb"
+      render :template => "old_sql/report/print.html.erb"
     end
     
 
     private
       def _init
-		#todo add Devise support
+		    #todo add Devise support
         #@authorization_adapter.authorize(:index) if @authorization_adapter
-        @page_name = t("admin.report.pagename")
-        @page_type = "report"
+        @page_name = t("old_sql.report.pagename")
         @host = self.request.host
         @port = self.request.port
       end
@@ -140,38 +118,53 @@ module OldSql
           #todo get processor name from @reports
           
           if !@reports[report]['processor'].nil?
-            logger.info "Loading Processor report_processor/#{@reports[report]['processor'].downcase}"
-            require "report_processor/#{@reports[report]['processor'].downcase}"
-            processor=eval("ReportProcessor::#{@reports[report]['processor'].gsub("_","")}").new
+            logger.info "Loading Processor old_sql/report_processor/#{@reports[report]['processor'].downcase}"
+            require "old_sql/report_processor/#{@reports[report]['processor'].downcase}"
+            processor=eval("OldSql::ReportProcessor::#{@reports[report]['processor'].gsub("_","")}").new
           
           else
-            logger.info "Loading Processor report_processor/#{BASE_PROCESSOR}"
-            require "report_processor/#{BASE_PROCESSOR}"
-            processor=eval("ReportProcessor::#{BASE_PROCESSOR}.capitalize").new
+            logger.info "Loading Processor old_sql/report_processor/#{BASE_PROCESSOR}"
+            require "old_sql/report_processor/#{BASE_PROCESSOR}"
+            processor=eval("OldSql::ReportProcessor::#{BASE_PROCESSOR.capitalize}").new
           end 
-        rescue
-          logger.info "Loading Processor report_processor/#{BASE_PROCESSOR}"
-          require "report_processor/#{BASE_PROCESSOR}"
-          processor=eval("ReportProcessor::#{BASE_PROCESSOR}.capitalize").new
+        rescue Exception=>e
+          logger.error e.message
+          logger.info "Loading Processor old_sql/report_processor/#{BASE_PROCESSOR}"
+          require "old_sql/report_processor/#{BASE_PROCESSOR}"
+          processor=eval("OldSql::ReportProcessor::#{BASE_PROCESSOR.capitalize}").new
         end
         
         processor
       end
       
-      def jqgrid_field_list
+      def jqgrid_col_model
         @fields = []
         field_num = 1
+        
+        # [
+        #   {name:'id',index:'id', width:55},
+        #   {name:'invdate',index:'invdate', width:90, editable:true},
+        #   {name:'name',index:'name', width:100,editable:true},
+        #   {name:'amount',index:'amount', width:80, align:"right",editable:true},
+        #   {name:'tax',index:'tax', width:80, align:"right",editable:true},    
+        #   {name:'total',index:'total', width:80,align:"right",editable:true},   
+        #   {name:'note',index:'note', width:150, sortable:false,editable:true}   
+        # ]
 
         @reports[@report_name]['fields'].each do |field|
           if field_num == 1
-            @fields << { :field => "cell_#{field_num}", :label => field }
+            @fields << { :name=>field }
           else
-            @fields << { :field => "cell_#{field_num}", :label => field, :align => "center" }
+            @fields << { :name=>field, :align=>"center" }
           end
           field_num+=1
         end
         
-        @fields
+        @fields.to_json
+      end
+      
+      def jqgrid_col_names
+        @reports[@report_name]['fields'].to_json
       end
       
       def query_vars report

@@ -1,9 +1,3 @@
-<%= stylesheet_link_tag "old_sql/db_report" %>
-<%= stylesheet_link_tag "old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" %>
-
-<%= javascript_include_tag "old_sql/jquery-1.5.1.min.js" %>
-<%= javascript_include_tag "old_sql/jquery-ui-1.8.13.custom.min.js" %>
-
 <script>
 var host = "<%=@host%>";
 var port = "<%=@port%>";
@@ -12,24 +6,25 @@ var _report_loaded = false;
 
 function report_selected()
 {
-	var virality = $j("#report option:selected").attr('virality');
-	_report_sql = $j("#report option:selected").attr('report_sql');
+	var virality = jQuery("#report option:selected").attr('virality');
+	_report_sql = jQuery("#report option:selected").attr('report_sql');
 	
   	if (virality == 'true')
 	{
-		$j("#select-generation").removeAttr('disabled');
+		jQuery("#select-generation").removeAttr('disabled');
 	}
 	else
 	{
-		$j("#select-generation").attr('disabled', 'disabled');
-		$j("#select-generation option:first").attr('selected','selected');
+		jQuery("#select-generation").attr('disabled', 'disabled');
+		jQuery("#select-generation option:first").attr('selected','selected');
 	}
 }
 
 function load_report()
 {	
-	var src = "http://" + host+":"+port+"/admin/db/report/datagrid/?report="+$j("#report").val()+
-	"&start_date="+$j("#datepicker-start").val()+"&end_date="+$j("#datepicker-end").val()+"&generation="+$j("#select-generation").val()+"&report_sql="+
+	var src = "http://"+host+":"+port+"/oldsql/reports/datagrid/?report="+jQuery("#report").val()+
+	"&start_date="+jQuery("#datepicker-start").val()+"&end_date="+jQuery("#datepicker-end").val()+"&generation="+
+	jQuery("#select-generation").val()+"&report_sql="+
 	_report_sql;
 	
 	jQuery('iframe').attr('src', src);
@@ -45,10 +40,10 @@ function print_report()
 		return;
 	}
 	
-	var src = "http://" + host+":"+port+"/admin/db/report/print/?report="+$j("#report").val()+
-		"&start_date="+$j("#datepicker-start").val()+"&end_date="+$j("#datepicker-end").val()+"&generation="+$j("#select-generation").val()+"&report_sql="+
-		_report_sql+"&desc="+$j("#report option:selected").attr('desc');
-	window.open(src,'DB Report')
+	var src = "http://"+host+":"+port+"/oldsql/reports/print/?report="+jQuery("#report").val()+
+		"&start_date="+jQuery("#datepicker-start").val()+"&end_date="+jQuery("#datepicker-end").val()+"&generation="+
+		jQuery("#select-generation").val()+"&report_sql="+_report_sql+"&desc="+jQuery("#report option:selected").attr('desc');
+	window.open(src,'Old SQL Report')
 }
 
 function export_report_to_excel()
@@ -59,36 +54,37 @@ function export_report_to_excel()
 		return;
 	}
 	
-	var src = "http://" + host+":"+port+"/admin/db/report/query.csv/?report="+$j("#report").val()+
-		"&start_date="+$j("#datepicker-start").val()+"&end_date="+$j("#datepicker-end").val()+"&generation="+$j("#select-generation").val()+"&report_sql="+
-		_report_sql+"&desc="+$j("#report option:selected").attr('desc');
+	var src = "http://"+host+":"+port+"/oldsql/reports/query.csv/?report="+jQuery("#report").val()+
+		"&start_date="+jQuery("#datepicker-start").val()+"&end_date="+jQuery("#datepicker-end").val()+
+		"&generation="+jQuery("#select-generation").val()+"&report_sql="+
+		_report_sql+"&desc="+jQuery("#report option:selected").attr('desc');
 	window.open(src,'DB Report')
 }
 
-$j(document).ready(function($){
-	$("#datepicker-start").datetimepicker();
-	$("#datepicker-start").datetimepicker( "option", "dateFormat", "yy/mm/dd" );
-	$("#datepicker-end").datetimepicker();
-	$("#datepicker-end").datetimepicker( "option", "dateFormat", "yy/mm/dd" );
+jQuery(document).ready(function($){
+	jQuery("#datepicker-start").datetimepicker();
+	jQuery("#datepicker-start").datetimepicker( "option", "dateFormat", "yy/mm/dd" );
+	jQuery("#datepicker-end").datetimepicker();
+	jQuery("#datepicker-end").datetimepicker( "option", "dateFormat", "yy/mm/dd" );
 
-	$j("#select-generation").attr('disabled', 'disabled');
+	jQuery("#select-generation").attr('disabled', 'disabled');
 	
 	var now = new Date();
 	var tomorrow = new Date();
 	var two_weeks_ago = new Date();
 	two_weeks_ago.setDate(now.getDate() - 14);
 	tomorrow.setDate(now.getDate() + 1);
-	$j("#datepicker-start").attr('value', two_weeks_ago.format("yyyy/mm/dd HH:MM:ss"));
-	$j("#datepicker-end").attr('value', tomorrow.format("yyyy/mm/dd HH:MM:ss"));
+	jQuery("#datepicker-start").attr('value', two_weeks_ago.format("yyyy/mm/dd HH:MM:ss"));
+	jQuery("#datepicker-end").attr('value', tomorrow.format("yyyy/mm/dd HH:MM:ss"));
 });
 </script>
 
-<div class="ra-block">
+<div class="os-block">
 	<div class="ui-widget-header clearfix">
     	<%= @page_name %>
   	</div>
 
-	<form id="report-form" name="report-form" action="/admin/db/report/query" method="POST">
+	<form id="report-form" name="report-form" action="/oldsql/reports/query" method="POST">
 		<div class="report-form-row">
 			<div class="report-form-label">SELECT A REPORT:</div>
 			<div class="report-form-input">

@@ -81,6 +81,8 @@ GEM
       thor (~> 0.14.4)
     rake (0.9.1)
     rubyzip (0.9.4)
+    sanitize (2.0.2)
+      nokogiri (~> 1.4.4)
     selenium-webdriver (0.2.1)
       childprocess (>= 0.1.7)
       ffi (>= 1.0.7)
@@ -101,4 +103,5 @@ DEPENDENCIES
   capybara (>= 0.4.0)
   jeweler
   rails (= 3.0.6)
+  sanitize
   sqlite3

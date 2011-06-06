@@ -1,16 +1,25 @@
-<%=jqgrid_javascripts%>
-<%=jqgrid_stylesheets%>
+<!-- TODO move these to the head -->
+<%= stylesheet_link_tag "old_sql/jqgrid/ui.jqgrid.css" %>
+<%= javascript_include_tag "old_sql/jqgrid/jquery.jqGrid.min.js" %>
+<%= javascript_include_tag "old_sql/jqgrid/ui.multiselect.js" %>
 
-<%=raw jqgrid(
-	"#{@reports[@report_name]['value']} Report", 
-	"#{@report_name}", 		
-	"/admin/db/report/query.json/",
-	jqgrid_field_list(), 
-	{
-		:autowidth=>true, 
-		:height=>430, 
-		:rows_per_page=>25,
-		:mtype=>'GET',
-		:post_data=>"{'report':'#{@report_name}','report_sql':'#{@report_sql}','generation':'#{@generation}','start_date':'#{@start_date}','end_date':'#{@end_date}'}"
-	}
- ) %>
+<script>
+jQuery(document).ready(function(){
+  jQuery("#rowed1").jqGrid({
+    url:"http://<%=@host%>:<%=@port%>/oldsql/reports/query.json/?report=<%=@report_name%>&report_sql=<%=@report_sql%>&generation=<%=@generation%>&start_date=<%=@start_date%>&end_date=<%=@end_date%>",
+  	datatype: "json",
+  	pager: false,
+    colNames:['id','name'],
+    colModel:[
+      {name:'id',index:'id', width:55},
+      {name:'name',index:'name', width:100}
+    ],
+    rowNum:25,
+    rowList:[10,20,30],
+    width: 777,
+    caption: "<%=@reports[@report_name]['value']%> Report"
+  });
+});
+</script>
+
+<table id="rowed1"></table>
