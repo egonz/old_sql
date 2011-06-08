@@ -7,5 +7,5 @@ tmp/**/*
 .#*
 /public/images/home
 libreadline-ruby
-pkg/*
-vendor/cache/*.gem
+pkg
+vendor/cache
