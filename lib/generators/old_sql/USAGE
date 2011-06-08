@@ -1,0 +1,15 @@
+Description:
+    Installs Old SQL.
+
+Examples:
+    `rails generate old_sql:install`
+
+        Creates locale and migration files:
+
+            Locales:    config/locales/old_sql.XX.yml
+
+        Creates SQL and Parser directories and examples:
+      
+            Reports:    config/old_sql/reports.yml
+            SQL:        config/old_sql/report_sql/
+            Parsers:    lib/old_sql/report_processor/

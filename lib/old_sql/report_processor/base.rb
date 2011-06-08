@@ -15,7 +15,7 @@ module OldSql
           vars = vars.merge query_vars
         end
       
-        template = File.read("#{Rails.root}/config/report_sql/#{report_sql}.erb")
+        template = File.read("#{Rails.root}/config/old_sql/report_sql/#{report_sql}.erb")
         sql = Erubis::Eruby.new(template).result(vars)
       
         Rails.logger.debug sql

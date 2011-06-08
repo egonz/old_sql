@@ -2,6 +2,8 @@ require 'csv'
 
 module OldSql
   class ReportController < ApplicationController
+    before_filter :authenticate_user!
+    before_filter :ensure_old_sql_admin!
     before_filter :_init
     before_filter :_reports
 
@@ -99,6 +101,10 @@ module OldSql
     
 
     private
+      def ensure_old_sql_admin!
+        raise CanCan::AccessDenied unless current_user.old_sql_admin?
+      end
+      
       def _init
 		    #todo add Devise support
         #@authorization_adapter.authorize(:index) if @authorization_adapter
@@ -108,7 +114,7 @@ module OldSql
       end
       
       def _reports
-        template = File.read("#{Rails.root}/config/reports.yml")
+        template = File.read("#{Rails.root}/config/old_sql/reports.yml")
         @reports = YAML.load(Erubis::Eruby.new(template).result)
       end
       

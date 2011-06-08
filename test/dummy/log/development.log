@@ -7683,3 +7683,3568 @@ Started GET "/sql/reports/datagrid/?report=users&start_date=2011/05/23%2014:22:1
   Parameters: {"report"=>"users", "start_date"=>"2011/05/23 14:22:18", "end_date"=>"2011/06/0714:22:18", "generation"=>"-1", "report_sql"=>"users"}
 Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (2.1ms)
 Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-06 16:46:29 -0700
+  Processing by OldSql::ReportController#index as HTML
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/index.html.erb within layouts/old_sql/report (2.6ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-06 16:46:29 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-06 16:46:29 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-06 16:46:29 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-06 16:46:29 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-06 16:46:29 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-06 16:46:29 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-06 16:46:29 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-06 16:46:29 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-06 16:46:29 -0700
+
+
+Started GET "/sql/reports/datagrid/?report=users&start_date=2011/05/23%2016:46:29&end_date=2011/06/07%2016:46:29&generation=-1&report_sql=users" for 127.0.0.1 at 2011-06-06 16:46:32 -0700
+  Processing by OldSql::ReportController#datagrid as HTML
+  Parameters: {"report"=>"users", "start_date"=>"2011/05/23 16:46:29", "end_date"=>"2011/06/07 16:46:29", "generation"=>"-1", "report_sql"=>"users"}
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (2.5ms)
+Completed 200 OK in 93ms (Views: 91.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-06 16:46:32 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-06 16:46:32 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-06 16:46:32 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-06 16:46:32 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-06 16:46:32 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-06 16:46:32 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-06 16:46:32 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-06 16:46:32 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/sql/reports/query.json/?report=users&report_sql=users&generation=-1&start_date=2011/05/23%2016:46:29&end_date=2011/06/07%2016:46:29&_search=false&nd=1307403992474&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-06 16:46:32 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"users", "report_sql"=>"users", "generation"=>"-1", "start_date"=>"2011/05/23 16:46:29", "end_date"=>"2011/06/07 16:46:29", "_search"=>"false", "nd"=>"1307403992474", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+REPORT: users
+REPORT SQL: users
+START_DATE: 2011/05/23 16:46:29
+END_DATE: 2011/06/07 16:46:29
+GENERATION: -1
+Loading Processor old_sql/report_processor/base
+SELECT id, name
+FROM users
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT id, name
+FROM users[0m
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-06 16:46:32 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-06 16:46:32 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-06 16:46:32 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-06 16:46:32 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-06 16:46:32 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-06 16:46:32 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-06 16:46:32 -0700
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-06 16:49:46 -0700
+  Processing by OldSql::ReportController#index as HTML
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/index.html.erb within layouts/old_sql/report (2.4ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-06 16:49:46 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-06 16:49:46 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-06 16:49:46 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-06 16:49:46 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-06 16:49:46 -0700
+
+ActionController::RoutingError (No route matches "/javascripts/old_sql/jquery-ui-timepicker-addon.js"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-06 16:49:46 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-06 16:49:47 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-06 16:49:47 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-06 16:49:47 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-06 16:50:07 -0700
+  Processing by OldSql::ReportController#index as HTML
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/index.html.erb within layouts/old_sql/report (2.5ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-06 16:50:07 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-06 16:50:07 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-06 16:50:07 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-06 16:50:07 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-06 16:50:07 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-06 16:50:07 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-06 16:50:07 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-06 16:50:07 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-06 16:50:07 -0700
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-06 19:04:47 -0700
+  Processing by OldSql::ReportController#index as HTML
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/index.html.erb within layouts/old_sql/report (30.5ms)
+Completed 200 OK in 35ms (Views: 34.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-06 19:04:47 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-06 19:04:47 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-06 19:04:47 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-06 19:04:47 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-06 19:04:47 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-06 19:04:47 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-06 19:04:47 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-06 19:04:47 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-06 19:04:47 -0700
+
+
+Started GET "/sql/reports/datagrid/?report=users&start_date=2011/05/23%2019:04:47&end_date=2011/06/07%2019:04:47&generation=-1&report_sql=users" for 127.0.0.1 at 2011-06-06 19:04:52 -0700
+  Processing by OldSql::ReportController#datagrid as HTML
+  Parameters: {"report"=>"users", "start_date"=>"2011/05/23 19:04:47", "end_date"=>"2011/06/07 19:04:47", "generation"=>"-1", "report_sql"=>"users"}
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (2.3ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-06 19:04:52 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-06 19:04:52 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-06 19:04:52 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-06 19:04:52 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-06 19:04:52 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-06 19:04:52 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-06 19:04:52 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-06 19:04:52 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-06 19:04:52 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/sql/reports/query.json/?report=users&report_sql=users&generation=-1&start_date=2011/05/23%2019:04:47&end_date=2011/06/07%2019:04:47&_search=false&nd=1307412292435&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-06 19:04:52 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"users", "report_sql"=>"users", "generation"=>"-1", "start_date"=>"2011/05/23 19:04:47", "end_date"=>"2011/06/07 19:04:47", "_search"=>"false", "nd"=>"1307412292435", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+REPORT: users
+REPORT SQL: users
+START_DATE: 2011/05/23 19:04:47
+END_DATE: 2011/06/07 19:04:47
+GENERATION: -1
+Loading Processor old_sql/report_processor/base
+SELECT id, name
+FROM users
+  [1m[35mSQL (0.3ms)[0m  SELECT id, name
+FROM users
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-06 19:04:52 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-06 19:04:52 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-06 19:04:52 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-06 19:04:52 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-06 19:04:52 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-06 19:04:52 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-06 19:04:52 -0700
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (3.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (3.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+Migrating to DeviseCreateUsers (20110607170831)
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(128) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+SQLite3::SQLException: table "users" already exists: CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(128) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.6ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(128) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+  [1m[35mSQL (0.2ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110607170831')[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_info('index_users_on_reset_password_token')
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+
+
+Started GET "/old_sql/report" for 127.0.0.1 at 2011-06-07 15:02:36 -0700
+
+ActionController::RoutingError (No route matches "/old_sql/report"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/sql/report" for 127.0.0.1 at 2011-06-07 15:02:44 -0700
+
+ActionController::RoutingError (No route matches "/sql/report"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-07 15:02:49 -0700
+  Processing by OldSql::ReportController#index as HTML
+Completed   in 31ms
+
+Errno::ENOENT (No such file or directory - /Users/egonz/projects/rails/old_sql/test/dummy/config/reports.yml):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.3ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.5ms)
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-07 15:05:05 -0700
+  Processing by OldSql::ReportController#index as HTML
+Completed   in 0ms
+
+Errno::ENOENT (No such file or directory - /Users/egonz/projects/rails/old_sql/test/dummy/old_sql/config/reports.yml):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.6ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.6ms)
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-07 15:05:08 -0700
+  Processing by OldSql::ReportController#index as HTML
+Completed   in 1ms
+
+Errno::ENOENT (No such file or directory - /Users/egonz/projects/rails/old_sql/test/dummy/old_sql/config/reports.yml):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.8ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.3ms)
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-07 15:05:28 -0700
+  Processing by OldSql::ReportController#index as HTML
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/index.html.erb within layouts/old_sql/report (3.4ms)
+Completed 200 OK in 64ms (Views: 63.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-07 15:05:28 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-07 15:05:28 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-07 15:05:28 -0700
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-07 15:05:28 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-07 15:05:28 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-07 15:05:28 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 15:05:28 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-07 15:05:28 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-07 15:05:28 -0700
+
+
+Started GET "/sql/reports/datagrid/?report=user&start_date=2011/05/24%2015:05:28&end_date=2011/06/08%2015:05:28&generation=-1&report_sql=user" for 127.0.0.1 at 2011-06-07 15:05:32 -0700
+  Processing by OldSql::ReportController#datagrid as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/24 15:05:28", "end_date"=>"2011/06/08 15:05:28", "generation"=>"-1", "report_sql"=>"user"}
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (2.5ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-07 15:05:32 -0700
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-07 15:05:32 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-07 15:05:32 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-07 15:05:32 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-07 15:05:32 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-07 15:05:32 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-07 15:05:32 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-07 15:05:32 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 15:05:32 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-07 15:05:32 -0700
+
+
+Started GET "/sql/reports/query.json/?report=user&report_sql=user&generation=-1&start_date=2011/05/24%2015:05:28&end_date=2011/06/08%2015:05:28&_search=false&nd=1307484333094&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-07 15:05:33 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"user", "report_sql"=>"user", "generation"=>"-1", "start_date"=>"2011/05/24 15:05:28", "end_date"=>"2011/06/08 15:05:28", "_search"=>"false", "nd"=>"1307484333094", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+REPORT: user
+REPORT SQL: user
+START_DATE: 2011/05/24 15:05:28
+END_DATE: 2011/06/08 15:05:28
+GENERATION: -1
+Loading Processor old_sql/report_processor/base
+Completed   in 29ms
+
+Errno::ENOENT (No such file or directory - /Users/egonz/projects/rails/old_sql/test/dummy/config/report_sql/user.erb):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.8ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-07 15:05:33 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-07 15:05:33 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-07 15:05:33 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-07 15:05:33 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-07 15:05:33 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-07 15:05:33 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-07 15:05:33 -0700
+
+
+Started GET "/robots.txt" for 127.0.0.1 at 2011-06-07 15:05:33 -0700
+
+ActionController::RoutingError (No route matches "/robots.txt"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_fdf5ce_1x400.png" for 127.0.0.1 at 2011-06-07 15:05:37 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_75_ffe45c_1x100.png" for 127.0.0.1 at 2011-06-07 15:05:50 -0700
+
+
+Started GET "/sql/reports/datagrid/?report=user&start_date=2011/03/24%2000:00&end_date=2011/07/08%2000:00&generation=-1&report_sql=user" for 127.0.0.1 at 2011-06-07 15:05:54 -0700
+  Processing by OldSql::ReportController#datagrid as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/03/24 00:00", "end_date"=>"2011/07/08 00:00", "generation"=>"-1", "report_sql"=>"user"}
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (2.3ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-07 15:05:54 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-07 15:05:54 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-07 15:05:54 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-07 15:05:54 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-07 15:05:54 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-07 15:05:54 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-07 15:05:54 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-07 15:05:54 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-07 15:05:54 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 15:05:54 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/sql/reports/query.json/?report=user&report_sql=user&generation=-1&start_date=2011/03/24%2000:00&end_date=2011/07/08%2000:00&_search=false&nd=1307484354286&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-07 15:05:54 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"user", "report_sql"=>"user", "generation"=>"-1", "start_date"=>"2011/03/24 00:00", "end_date"=>"2011/07/08 00:00", "_search"=>"false", "nd"=>"1307484354286", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+REPORT: user
+REPORT SQL: user
+START_DATE: 2011/03/24 00:00
+END_DATE: 2011/07/08 00:00
+GENERATION: -1
+Loading Processor old_sql/report_processor/base
+Completed   in 3ms
+
+Errno::ENOENT (No such file or directory - /Users/egonz/projects/rails/old_sql/test/dummy/config/report_sql/user.erb):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (35.0ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (39.7ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-07 15:05:54 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-07 15:05:54 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-07 15:05:54 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-07 15:05:54 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-07 15:05:54 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-07 15:05:54 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-07 15:05:54 -0700
+
+
+Started GET "/sql/reports/datagrid/?report=user&start_date=2011/03/24%2000:00&end_date=2011/07/08%2000:00&generation=-1&report_sql=user" for 127.0.0.1 at 2011-06-07 15:06:07 -0700
+  Processing by OldSql::ReportController#datagrid as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/03/24 00:00", "end_date"=>"2011/07/08 00:00", "generation"=>"-1", "report_sql"=>"user"}
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (2.4ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-07 15:06:07 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-07 15:06:07 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-07 15:06:07 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-07 15:06:07 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-07 15:06:07 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-07 15:06:07 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-07 15:06:07 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-07 15:06:07 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-07 15:06:07 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 15:06:07 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/sql/reports/query.json/?report=user&report_sql=user&generation=-1&start_date=2011/03/24%2000:00&end_date=2011/07/08%2000:00&_search=false&nd=1307484367968&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-07 15:06:07 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"user", "report_sql"=>"user", "generation"=>"-1", "start_date"=>"2011/03/24 00:00", "end_date"=>"2011/07/08 00:00", "_search"=>"false", "nd"=>"1307484367968", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+REPORT: user
+REPORT SQL: user
+START_DATE: 2011/03/24 00:00
+END_DATE: 2011/07/08 00:00
+GENERATION: -1
+Loading Processor old_sql/report_processor/base
+Completed   in 3ms
+
+Errno::ENOENT (No such file or directory - /Users/egonz/projects/rails/old_sql/test/dummy/config/report_sql/user.erb):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.6ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.2ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-07 15:06:08 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-07 15:06:08 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-07 15:06:08 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-07 15:06:08 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-07 15:06:08 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-07 15:06:08 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-07 15:06:08 -0700
+
+
+Started GET "/like/chest/id/70764d37687faee205cd7cae6b5d237d/id2/c53f801a57361913a8a540dbd962e2be/" for 127.0.0.1 at 2011-06-07 15:06:12 -0700
+
+ActionController::RoutingError (No route matches "/like/chest/id/70764d37687faee205cd7cae6b5d237d/id2/c53f801a57361913a8a540dbd962e2be"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/like/overall/id/eed93ee398bfb512038f016a6194d0cb/id2/c53f801a57361913a8a540dbd962e2be/" for 127.0.0.1 at 2011-06-07 15:07:42 -0700
+
+ActionController::RoutingError (No route matches "/like/overall/id/eed93ee398bfb512038f016a6194d0cb/id2/c53f801a57361913a8a540dbd962e2be"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/like/chest/id/9a3aeb7847a04abe74d3bdcf530b90ad/id2/c53f801a57361913a8a540dbd962e2be/id3/78bc51bb817a22c9aec3575c3389f036/" for 127.0.0.1 at 2011-06-07 15:07:42 -0700
+
+ActionController::RoutingError (No route matches "/like/chest/id/9a3aeb7847a04abe74d3bdcf530b90ad/id2/c53f801a57361913a8a540dbd962e2be/id3/78bc51bb817a22c9aec3575c3389f036"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/like/butt/id/c0547a6eb1050f8d5cd73ed09ed415a6/id2/c53f801a57361913a8a540dbd962e2be/" for 127.0.0.1 at 2011-06-07 15:07:42 -0700
+
+ActionController::RoutingError (No route matches "/like/butt/id/c0547a6eb1050f8d5cd73ed09ed415a6/id2/c53f801a57361913a8a540dbd962e2be"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/sql/reports/datagrid/?report=user&start_date=2011/03/24%2000:00&end_date=2011/07/08%2000:00&generation=-1&report_sql=user" for 127.0.0.1 at 2011-06-07 15:07:58 -0700
+  Processing by OldSql::ReportController#datagrid as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/03/24 00:00", "end_date"=>"2011/07/08 00:00", "generation"=>"-1", "report_sql"=>"user"}
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (2.3ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-07 15:07:58 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-07 15:07:58 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-07 15:07:58 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-07 15:07:58 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-07 15:07:58 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-07 15:07:58 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-07 15:07:58 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-07 15:07:58 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 15:07:58 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-07 15:07:58 -0700
+
+
+Started GET "/sql/reports/query.json/?report=user&report_sql=user&generation=-1&start_date=2011/03/24%2000:00&end_date=2011/07/08%2000:00&_search=false&nd=1307484478949&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-07 15:07:58 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"user", "report_sql"=>"user", "generation"=>"-1", "start_date"=>"2011/03/24 00:00", "end_date"=>"2011/07/08 00:00", "_search"=>"false", "nd"=>"1307484478949", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+REPORT: user
+REPORT SQL: user
+START_DATE: 2011/03/24 00:00
+END_DATE: 2011/07/08 00:00
+GENERATION: -1
+Loading Processor old_sql/report_processor/base
+Completed   in 35ms
+
+Errno::ENOENT (No such file or directory - /Users/egonz/projects/rails/old_sql/test/dummy/config/report_sql/user.erb):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.1ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.1ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-07 15:07:59 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-07 15:07:59 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-07 15:07:59 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-07 15:07:59 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-07 15:07:59 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-07 15:07:59 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-07 15:07:59 -0700
+
+
+Started GET "/sql/reports/datagrid/?report=user&start_date=2011/03/24%2000:00&end_date=2011/07/08%2000:00&generation=-1&report_sql=user" for 127.0.0.1 at 2011-06-07 15:08:11 -0700
+  Processing by OldSql::ReportController#datagrid as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/03/24 00:00", "end_date"=>"2011/07/08 00:00", "generation"=>"-1", "report_sql"=>"user"}
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (2.3ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-07 15:08:11 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-07 15:08:11 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-07 15:08:11 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-07 15:08:11 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-07 15:08:11 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-07 15:08:11 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-07 15:08:11 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-07 15:08:11 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 15:08:11 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-07 15:08:11 -0700
+
+
+Started GET "/sql/reports/query.json/?report=user&report_sql=user&generation=-1&start_date=2011/03/24%2000:00&end_date=2011/07/08%2000:00&_search=false&nd=1307484491728&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-07 15:08:11 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"user", "report_sql"=>"user", "generation"=>"-1", "start_date"=>"2011/03/24 00:00", "end_date"=>"2011/07/08 00:00", "_search"=>"false", "nd"=>"1307484491728", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+REPORT: user
+REPORT SQL: user
+START_DATE: 2011/03/24 00:00
+END_DATE: 2011/07/08 00:00
+GENERATION: -1
+Loading Processor old_sql/report_processor/base
+Completed   in 3ms
+
+Errno::ENOENT (No such file or directory - /Users/egonz/projects/rails/old_sql/test/dummy/config/report_sql/user.erb):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.1ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.6ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-07 15:08:11 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-07 15:08:11 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-07 15:08:11 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-07 15:08:11 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-07 15:08:11 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-07 15:08:11 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-07 15:08:11 -0700
+
+
+Started GET "/sql/reports/datagrid/?report=user&start_date=2011/03/24%2000:00&end_date=2011/07/08%2000:00&generation=-1&report_sql=user" for 127.0.0.1 at 2011-06-07 15:08:51 -0700
+  Processing by OldSql::ReportController#datagrid as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/03/24 00:00", "end_date"=>"2011/07/08 00:00", "generation"=>"-1", "report_sql"=>"user"}
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (3.6ms)
+Completed 200 OK in 12ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-07 15:08:51 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-07 15:08:51 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-07 15:08:51 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-07 15:08:51 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-07 15:08:51 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-07 15:08:51 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-07 15:08:51 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-07 15:08:51 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-07 15:08:51 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 15:08:51 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/sql/reports/query.json/?report=user&report_sql=user&generation=-1&start_date=2011/03/24%2000:00&end_date=2011/07/08%2000:00&_search=false&nd=1307484531328&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-07 15:08:51 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"user", "report_sql"=>"user", "generation"=>"-1", "start_date"=>"2011/03/24 00:00", "end_date"=>"2011/07/08 00:00", "_search"=>"false", "nd"=>"1307484531328", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+REPORT: user
+REPORT SQL: user
+START_DATE: 2011/03/24 00:00
+END_DATE: 2011/07/08 00:00
+GENERATION: -1
+Loading Processor old_sql/report_processor/base
+SELECT u.id, u.name
+FROM users u
+WHERE 1=1
+AND u.created_at > '2011/03/24 00:00'
+AND u.created_at < '2011/07/08 00:00'
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT u.id, u.name
+FROM users u
+WHERE 1=1
+AND u.created_at > '2011/03/24 00:00'
+AND u.created_at < '2011/07/08 00:00'[0m
+SQLite3::SQLException: no such column: u.name: SELECT u.id, u.name
+FROM users u
+WHERE 1=1
+AND u.created_at > '2011/03/24 00:00'
+AND u.created_at < '2011/07/08 00:00'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-07 15:08:51 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-07 15:08:51 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-07 15:08:51 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-07 15:08:51 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-07 15:08:51 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-07 15:08:51 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-07 15:08:51 -0700
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.5ms)[0m  [1mALTER TABLE "users" ADD "name" varchar(255)[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110607221041')
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_reset_password_token')[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_info('index_users_on_email')
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-07 15:31:47 -0700
+  Processing by OldSql::ReportController#index as HTML
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/index.html.erb within layouts/old_sql/report (3.3ms)
+Completed 200 OK in 19ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-07 15:31:47 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-07 15:31:48 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-07 15:31:48 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-07 15:31:48 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-07 15:31:48 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-07 15:31:48 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 15:31:48 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-07 15:31:48 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-07 15:31:48 -0700
+
+
+Started GET "/sql/reports/datagrid/?report=user&start_date=2011/05/24%2015:31:48&end_date=2011/06/08%2015:31:48&generation=-1&report_sql=user" for 127.0.0.1 at 2011-06-07 15:31:50 -0700
+  Processing by OldSql::ReportController#datagrid as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/24 15:31:48", "end_date"=>"2011/06/08 15:31:48", "generation"=>"-1", "report_sql"=>"user"}
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (2.5ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-07 15:31:50 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-07 15:31:50 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-07 15:31:50 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-07 15:31:50 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-07 15:31:50 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-07 15:31:50 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-07 15:31:50 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-07 15:31:50 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 15:31:50 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-07 15:31:50 -0700
+
+
+Started GET "/sql/reports/query.json/?report=user&report_sql=user&generation=-1&start_date=2011/05/24%2015:31:48&end_date=2011/06/08%2015:31:48&_search=false&nd=1307485910949&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-07 15:31:50 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"user", "report_sql"=>"user", "generation"=>"-1", "start_date"=>"2011/05/24 15:31:48", "end_date"=>"2011/06/08 15:31:48", "_search"=>"false", "nd"=>"1307485910949", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+REPORT: user
+REPORT SQL: user
+START_DATE: 2011/05/24 15:31:48
+END_DATE: 2011/06/08 15:31:48
+GENERATION: -1
+Loading Processor old_sql/report_processor/base
+SELECT u.id, u.name
+FROM users u
+WHERE 1=1
+AND u.created_at > '2011/05/24 15:31:48'
+AND u.created_at < '2011/06/08 15:31:48'
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT u.id, u.name
+FROM users u
+WHERE 1=1
+AND u.created_at > '2011/05/24 15:31:48'
+AND u.created_at < '2011/06/08 15:31:48'[0m
+Completed 200 OK in 20ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-07 15:31:51 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-07 15:31:51 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-07 15:31:51 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-07 15:31:51 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-07 15:31:51 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-07 15:31:51 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-07 15:31:51 -0700
+
+
+Started GET "/sql/reports/datagrid/?report=user&start_date=2011/02/24%2000:00&end_date=2011/07/08%2000:00&generation=-1&report_sql=user" for 127.0.0.1 at 2011-06-07 15:31:58 -0700
+  Processing by OldSql::ReportController#datagrid as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/02/24 00:00", "end_date"=>"2011/07/08 00:00", "generation"=>"-1", "report_sql"=>"user"}
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (2.3ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-07 15:31:58 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-07 15:31:58 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-07 15:31:58 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-07 15:31:58 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-07 15:31:58 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-07 15:31:58 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-07 15:31:58 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-07 15:31:58 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 15:31:58 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-07 15:31:58 -0700
+
+
+Started GET "/sql/reports/query.json/?report=user&report_sql=user&generation=-1&start_date=2011/02/24%2000:00&end_date=2011/07/08%2000:00&_search=false&nd=1307485918934&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-07 15:31:58 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"user", "report_sql"=>"user", "generation"=>"-1", "start_date"=>"2011/02/24 00:00", "end_date"=>"2011/07/08 00:00", "_search"=>"false", "nd"=>"1307485918934", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+REPORT: user
+REPORT SQL: user
+START_DATE: 2011/02/24 00:00
+END_DATE: 2011/07/08 00:00
+GENERATION: -1
+Loading Processor old_sql/report_processor/base
+SELECT u.id, u.name
+FROM users u
+WHERE 1=1
+AND u.created_at > '2011/02/24 00:00'
+AND u.created_at < '2011/07/08 00:00'
+  [1m[35mSQL (0.4ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE 1=1
+AND u.created_at > '2011/02/24 00:00'
+AND u.created_at < '2011/07/08 00:00'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-07 15:31:58 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-07 15:31:59 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-07 15:31:59 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-07 15:31:59 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-07 15:31:59 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-07 15:31:59 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-07 15:31:59 -0700
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+WARNING: Can't mass-assign protected attributes: name
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."email" = 'test@oldsql.com') LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."email" = 'test@oldsql.com') LIMIT 1[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at", "name") VALUES ('test@oldsql.com', '$2a$10$mNsD5JfvEAPUT3Fcgc07jOYUqgKLMFOnHGLayKiBu7l8zKlZBKITm', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2011-06-07 22:47:24.668515', '2011-06-07 22:47:24.668515', NULL)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+
+
+Started GET "/sql/reports/datagrid/?report=user&start_date=2011/02/24%2000:00&end_date=2011/07/08%2000:00&generation=-1&report_sql=user" for 127.0.0.1 at 2011-06-07 15:48:02 -0700
+  Processing by OldSql::ReportController#datagrid as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/02/24 00:00", "end_date"=>"2011/07/08 00:00", "generation"=>"-1", "report_sql"=>"user"}
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (2.6ms)
+Completed 200 OK in 28ms (Views: 24.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-07 15:48:03 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-07 15:48:03 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-07 15:48:03 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-07 15:48:03 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-07 15:48:03 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 15:48:03 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/sql/reports/query.json/?report=user&report_sql=user&generation=-1&start_date=2011/02/24%2000:00&end_date=2011/07/08%2000:00&_search=false&nd=1307486883413&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-07 15:48:03 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"user", "report_sql"=>"user", "generation"=>"-1", "start_date"=>"2011/02/24 00:00", "end_date"=>"2011/07/08 00:00", "_search"=>"false", "nd"=>"1307486883413", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+REPORT: user
+REPORT SQL: user
+START_DATE: 2011/02/24 00:00
+END_DATE: 2011/07/08 00:00
+GENERATION: -1
+Loading Processor old_sql/report_processor/base
+SELECT u.id, u.name
+FROM users u
+WHERE 1=1
+AND u.created_at > '2011/02/24 00:00'
+AND u.created_at < '2011/07/08 00:00'
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT u.id, u.name
+FROM users u
+WHERE 1=1
+AND u.created_at > '2011/02/24 00:00'
+AND u.created_at < '2011/07/08 00:00'[0m
+Completed 200 OK in 27ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-07 15:48:03 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-07 15:48:03 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-07 15:48:03 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-07 15:48:03 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-07 15:48:03 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-07 15:48:03 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-07 15:48:03 -0700
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-07 15:51:29 -0700
+  Processing by OldSql::ReportController#index as HTML
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/index.html.erb within layouts/old_sql/report (2.1ms)
+Completed 200 OK in 10ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-07 15:51:29 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-07 15:51:29 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-07 15:51:29 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-07 15:51:29 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-07 15:51:29 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-07 15:51:29 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 15:51:29 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-07 15:51:30 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-07 15:51:30 -0700
+
+
+Started GET "/sql/reports/datagrid/?report=user&start_date=2011/05/24%2015:51:29&end_date=2011/06/08%2015:51:29&generation=-1&report_sql=user" for 127.0.0.1 at 2011-06-07 15:51:32 -0700
+  Processing by OldSql::ReportController#datagrid as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/24 15:51:29", "end_date"=>"2011/06/08 15:51:29", "generation"=>"-1", "report_sql"=>"user"}
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (2.6ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-07 15:51:32 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-07 15:51:32 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-07 15:51:32 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-07 15:51:32 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-07 15:51:32 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-07 15:51:32 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-07 15:51:32 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-07 15:51:32 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-07 15:51:32 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 15:51:32 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/sql/reports/query.json/?report=user&report_sql=user&generation=-1&start_date=2011/05/24%2015:51:29&end_date=2011/06/08%2015:51:29&_search=false&nd=1307487092203&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-07 15:51:32 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"user", "report_sql"=>"user", "generation"=>"-1", "start_date"=>"2011/05/24 15:51:29", "end_date"=>"2011/06/08 15:51:29", "_search"=>"false", "nd"=>"1307487092203", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+REPORT: user
+REPORT SQL: user
+START_DATE: 2011/05/24 15:51:29
+END_DATE: 2011/06/08 15:51:29
+GENERATION: -1
+Loading Processor old_sql/report_processor/base
+SELECT u.id, u.name
+FROM users u
+WHERE
+AND u.created_at > '2011/05/24 15:51:29'
+AND u.created_at < '2011/06/08 15:51:29'
+  [1m[36mSQL (0.7ms)[0m  [1mSELECT u.id, u.name
+FROM users u
+WHERE
+AND u.created_at > '2011/05/24 15:51:29'
+AND u.created_at < '2011/06/08 15:51:29'[0m
+SQLite3::SQLException: near "AND": syntax error: SELECT u.id, u.name
+FROM users u
+WHERE
+AND u.created_at > '2011/05/24 15:51:29'
+AND u.created_at < '2011/06/08 15:51:29'
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-07 15:51:32 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-07 15:51:32 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-07 15:51:32 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-07 15:51:32 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-07 15:51:32 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-07 15:51:32 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-07 15:51:32 -0700
+
+
+Started GET "/sql/reports/datagrid/?report=user&start_date=2011/04/24%2000:00&end_date=2011/07/08%2000:00&generation=-1&report_sql=user" for 127.0.0.1 at 2011-06-07 15:51:39 -0700
+  Processing by OldSql::ReportController#datagrid as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/04/24 00:00", "end_date"=>"2011/07/08 00:00", "generation"=>"-1", "report_sql"=>"user"}
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (2.8ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-07 15:51:39 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-07 15:51:39 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-07 15:51:39 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-07 15:51:39 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-07 15:51:39 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-07 15:51:39 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-07 15:51:39 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-07 15:51:39 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-07 15:51:39 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 15:51:39 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/sql/reports/query.json/?report=user&report_sql=user&generation=-1&start_date=2011/04/24%2000:00&end_date=2011/07/08%2000:00&_search=false&nd=1307487099410&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-07 15:51:39 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"user", "report_sql"=>"user", "generation"=>"-1", "start_date"=>"2011/04/24 00:00", "end_date"=>"2011/07/08 00:00", "_search"=>"false", "nd"=>"1307487099410", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+REPORT: user
+REPORT SQL: user
+START_DATE: 2011/04/24 00:00
+END_DATE: 2011/07/08 00:00
+GENERATION: -1
+Loading Processor old_sql/report_processor/base
+SELECT u.id, u.name
+FROM users u
+WHERE
+AND u.created_at > '2011/04/24 00:00'
+AND u.created_at < '2011/07/08 00:00'
+  [1m[35mSQL (0.5ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE
+AND u.created_at > '2011/04/24 00:00'
+AND u.created_at < '2011/07/08 00:00'
+SQLite3::SQLException: near "AND": syntax error: SELECT u.id, u.name
+FROM users u
+WHERE
+AND u.created_at > '2011/04/24 00:00'
+AND u.created_at < '2011/07/08 00:00'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-07 15:51:39 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-07 15:51:39 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-07 15:51:39 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-07 15:51:39 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-07 15:51:39 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-07 15:51:39 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-07 15:51:39 -0700
+
+
+Started GET "/sql/reports/datagrid/?report=user&start_date=2011/04/24%2000:00&end_date=2011/07/08%2000:00&generation=-1&report_sql=user" for 127.0.0.1 at 2011-06-07 15:51:51 -0700
+  Processing by OldSql::ReportController#datagrid as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/04/24 00:00", "end_date"=>"2011/07/08 00:00", "generation"=>"-1", "report_sql"=>"user"}
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (2.2ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-07 15:51:51 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-07 15:51:51 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-07 15:51:51 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-07 15:51:51 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-07 15:51:51 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-07 15:51:51 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-07 15:51:51 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-07 15:51:51 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-07 15:51:51 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 15:51:51 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/sql/reports/query.json/?report=user&report_sql=user&generation=-1&start_date=2011/04/24%2000:00&end_date=2011/07/08%2000:00&_search=false&nd=1307487111927&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-07 15:51:51 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"user", "report_sql"=>"user", "generation"=>"-1", "start_date"=>"2011/04/24 00:00", "end_date"=>"2011/07/08 00:00", "_search"=>"false", "nd"=>"1307487111927", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+REPORT: user
+REPORT SQL: user
+START_DATE: 2011/04/24 00:00
+END_DATE: 2011/07/08 00:00
+GENERATION: -1
+Loading Processor old_sql/report_processor/base
+SELECT u.id, u.name
+FROM users u
+WHERE
+AND u.created_at > '2011/04/24 00:00'
+AND u.created_at < '2011/07/08 00:00'
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT u.id, u.name
+FROM users u
+WHERE
+AND u.created_at > '2011/04/24 00:00'
+AND u.created_at < '2011/07/08 00:00'[0m
+SQLite3::SQLException: near "AND": syntax error: SELECT u.id, u.name
+FROM users u
+WHERE
+AND u.created_at > '2011/04/24 00:00'
+AND u.created_at < '2011/07/08 00:00'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-07 15:51:52 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-07 15:51:52 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-07 15:51:52 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-07 15:51:52 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-07 15:51:52 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-07 15:51:52 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-07 15:51:52 -0700
+
+
+Started GET "/sql/reports/datagrid/?report=user&start_date=2011/04/24%2000:00&end_date=2011/07/08%2000:00&generation=-1&report_sql=user" for 127.0.0.1 at 2011-06-07 15:52:46 -0700
+  Processing by OldSql::ReportController#datagrid as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/04/24 00:00", "end_date"=>"2011/07/08 00:00", "generation"=>"-1", "report_sql"=>"user"}
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (2.5ms)
+Completed 200 OK in 10ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-07 15:52:46 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-07 15:52:46 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-07 15:52:46 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-07 15:52:46 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-07 15:52:46 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-07 15:52:46 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-07 15:52:46 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-07 15:52:46 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-07 15:52:46 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 15:52:46 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/sql/reports/query.json/?report=user&report_sql=user&generation=-1&start_date=2011/04/24%2000:00&end_date=2011/07/08%2000:00&_search=false&nd=1307487166991&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-07 15:52:47 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"user", "report_sql"=>"user", "generation"=>"-1", "start_date"=>"2011/04/24 00:00", "end_date"=>"2011/07/08 00:00", "_search"=>"false", "nd"=>"1307487166991", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+REPORT: user
+REPORT SQL: user
+START_DATE: 2011/04/24 00:00
+END_DATE: 2011/07/08 00:00
+GENERATION: -1
+Loading Processor old_sql/report_processor/base
+SELECT u.id, u.name
+FROM users u
+WHERE
+u.created_at > '2011/04/24 00:00'
+AND u.created_at < '2011/07/08 00:00'
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT u.id, u.name
+FROM users u
+WHERE
+u.created_at > '2011/04/24 00:00'
+AND u.created_at < '2011/07/08 00:00'[0m
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-07 15:52:47 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-07 15:52:47 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-07 15:52:47 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-07 15:52:47 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-07 15:52:47 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-07 15:52:47 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-07 15:52:47 -0700
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+
+
+Started GET "/sql/reports/datagrid/?report=user&start_date=2011/04/24%2000:00&end_date=2011/07/08%2000:00&generation=-1&report_sql=user" for 127.0.0.1 at 2011-06-07 15:59:35 -0700
+  Processing by OldSql::ReportController#datagrid as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/04/24 00:00", "end_date"=>"2011/07/08 00:00", "generation"=>"-1", "report_sql"=>"user"}
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (4.4ms)
+Completed 200 OK in 60ms (Views: 56.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-07 15:59:36 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-07 15:59:36 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-07 15:59:36 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-07 15:59:36 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-07 15:59:36 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 15:59:36 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/sql/reports/query.json/?report=user&report_sql=user&generation=-1&start_date=2011/04/24%2000:00&end_date=2011/07/08%2000:00&_search=false&nd=1307487576465&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-07 15:59:36 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"user", "report_sql"=>"user", "generation"=>"-1", "start_date"=>"2011/04/24 00:00", "end_date"=>"2011/07/08 00:00", "_search"=>"false", "nd"=>"1307487576465", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+REPORT: user
+REPORT SQL: user
+START_DATE: 2011/04/24 00:00
+END_DATE: 2011/07/08 00:00
+GENERATION: -1
+Loading Processor old_sql/report_processor/base
+SELECT u.id, u.name
+FROM users u
+#WHERE
+#u.created_at > '2011/04/24 00:00'
+#AND u.created_at < '2011/07/08 00:00'
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT u.id, u.name
+FROM users u
+#WHERE
+#u.created_at > '2011/04/24 00:00'
+#AND u.created_at < '2011/07/08 00:00'[0m
+SQLite3::SQLException: near "#WHERE": syntax error: SELECT u.id, u.name
+FROM users u
+#WHERE
+#u.created_at > '2011/04/24 00:00'
+#AND u.created_at < '2011/07/08 00:00'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-07 15:59:36 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-07 15:59:36 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-07 15:59:36 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-07 15:59:36 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-07 15:59:36 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-07 15:59:36 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-07 15:59:36 -0700
+
+
+Started GET "/sql/reports/datagrid/?report=user&start_date=2011/04/24%2000:00&end_date=2011/07/08%2000:00&generation=-1&report_sql=user" for 127.0.0.1 at 2011-06-07 16:00:43 -0700
+  Processing by OldSql::ReportController#datagrid as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/04/24 00:00", "end_date"=>"2011/07/08 00:00", "generation"=>"-1", "report_sql"=>"user"}
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (2.6ms)
+Completed 200 OK in 10ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-07 16:00:43 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-07 16:00:43 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-07 16:00:43 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-07 16:00:43 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-07 16:00:43 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-07 16:00:43 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-07 16:00:43 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-07 16:00:43 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 16:00:43 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-07 16:00:43 -0700
+
+
+Started GET "/sql/reports/query.json/?report=user&report_sql=user&generation=-1&start_date=2011/04/24%2000:00&end_date=2011/07/08%2000:00&_search=false&nd=1307487643876&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-07 16:00:43 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"user", "report_sql"=>"user", "generation"=>"-1", "start_date"=>"2011/04/24 00:00", "end_date"=>"2011/07/08 00:00", "_search"=>"false", "nd"=>"1307487643876", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+REPORT: user
+REPORT SQL: user
+START_DATE: 2011/04/24 00:00
+END_DATE: 2011/07/08 00:00
+GENERATION: -1
+Loading Processor old_sql/report_processor/base
+SELECT u.id, u.name
+FROM users u
+--WHERE
+--u.created_at > '2011/04/24 00:00'
+--AND u.created_at < '2011/07/08 00:00'
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT u.id, u.name
+FROM users u
+--WHERE
+--u.created_at > '2011/04/24 00:00'
+--AND u.created_at < '2011/07/08 00:00'[0m
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-07 16:00:43 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-07 16:00:43 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-07 16:00:43 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-07 16:00:43 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-07 16:00:43 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-07 16:00:43 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-07 16:00:43 -0700
+WARNING: Can't mass-assign protected attributes: name
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."email" = 'test@oldsql.com') LIMIT 1
+WARNING: Can't mass-assign protected attributes: name
+WARNING: Can't mass-assign protected attributes: name
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."email" = 'eddiemgonzales@gmail.com') LIMIT 1
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at", "name") VALUES ('eddiemgonzales@gmail.com', '$2a$10$R9MBpymjHeaOYEvPOSDjdeZQskPZkyEMTTDIXEReS9NAk9B9u4Z66', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2011-06-07 23:03:52.655723', '2011-06-07 23:03:52.655723', 'Eddie Gonzales')[0m
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" ORDER BY users.id DESC LIMIT 1
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mUser Load (1.5ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (44.5ms)[0m  DELETE FROM "users" WHERE "users"."id" = 2
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+
+
+Started GET "/sql/reports/datagrid/?report=user&start_date=2011/04/24%2000:00&end_date=2011/07/08%2000:00&generation=-1&report_sql=user" for 127.0.0.1 at 2011-06-07 16:10:08 -0700
+  Processing by OldSql::ReportController#datagrid as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/04/24 00:00", "end_date"=>"2011/07/08 00:00", "generation"=>"-1", "report_sql"=>"user"}
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (2.5ms)
+Completed 200 OK in 56ms (Views: 51.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-07 16:10:08 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-07 16:10:08 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-07 16:10:08 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 16:10:08 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/sql/reports/query.json/?report=user&report_sql=user&generation=-1&start_date=2011/04/24%2000:00&end_date=2011/07/08%2000:00&_search=false&nd=1307488208745&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-07 16:10:08 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"user", "report_sql"=>"user", "generation"=>"-1", "start_date"=>"2011/04/24 00:00", "end_date"=>"2011/07/08 00:00", "_search"=>"false", "nd"=>"1307488208745", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+REPORT: user
+REPORT SQL: user
+START_DATE: 2011/04/24 00:00
+END_DATE: 2011/07/08 00:00
+GENERATION: -1
+Loading Processor old_sql/report_processor/base
+-- Change the where clause so that it can be  for your database
+
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011/04/24 00:00')
+AND u.created_at < date('2011/07/08 00:00')
+  [1m[36mSQL (0.5ms)[0m  [1m-- Change the where clause so that it can be for your database
+
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011/04/24 00:00')
+AND u.created_at < date('2011/07/08 00:00')[0m
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-07 16:10:08 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-07 16:10:08 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-07 16:10:08 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-07 16:10:08 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-07 16:10:08 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-07 16:10:08 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-07 16:10:08 -0700
+
+
+Started GET "/sql/reports/datagrid/?report=user&start_date=2011/04/24%2000:00&end_date=2011/07/08%2000:00&generation=-1&report_sql=user" for 127.0.0.1 at 2011-06-07 16:12:38 -0700
+  Processing by OldSql::ReportController#datagrid as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/04/24 00:00", "end_date"=>"2011/07/08 00:00", "generation"=>"-1", "report_sql"=>"user"}
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (2.3ms)
+Completed 200 OK in 10ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-07 16:12:38 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-07 16:12:38 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-07 16:12:38 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-07 16:12:38 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-07 16:12:38 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-07 16:12:38 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-07 16:12:38 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-07 16:12:38 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-07 16:12:38 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 16:12:38 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/sql/reports/query.json/?report=user&report_sql=user&generation=-1&start_date=2011/04/24%2000:00&end_date=2011/07/08%2000:00&_search=false&nd=1307488358996&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-07 16:12:39 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"user", "report_sql"=>"user", "generation"=>"-1", "start_date"=>"2011/04/24 00:00", "end_date"=>"2011/07/08 00:00", "_search"=>"false", "nd"=>"1307488358996", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+REPORT: user
+REPORT SQL: user
+START_DATE: 2011/04/24 00:00
+END_DATE: 2011/07/08 00:00
+GENERATION: -1
+Loading Processor old_sql/report_processor/base
+-- Change the where clause so that it can be  for your database
+
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-04-24 00:00')
+AND u.created_at < date('2011-07-08 00:00')
+  [1m[36mSQL (0.6ms)[0m  [1m-- Change the where clause so that it can be for your database
+
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-04-24 00:00')
+AND u.created_at < date('2011-07-08 00:00')[0m
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-07 16:12:39 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-07 16:12:39 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-07 16:12:39 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-07 16:12:39 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-07 16:12:39 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-07 16:12:39 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-07 16:12:39 -0700
+
+
+Started GET "/sql/reports/datagrid/?report=user&start_date=2011/04/24%2000:00&end_date=2011/07/08%2000:00&generation=-1&report_sql=user" for 127.0.0.1 at 2011-06-07 16:13:39 -0700
+  Processing by OldSql::ReportController#datagrid as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/04/24 00:00", "end_date"=>"2011/07/08 00:00", "generation"=>"-1", "report_sql"=>"user"}
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (2.5ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-07 16:13:39 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-07 16:13:39 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-07 16:13:39 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-07 16:13:39 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-07 16:13:39 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-07 16:13:39 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-07 16:13:39 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-07 16:13:39 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 16:13:39 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-07 16:13:39 -0700
+
+
+Started GET "/sql/reports/query.json/?report=user&report_sql=user&generation=-1&start_date=2011/04/24%2000:00&end_date=2011/07/08%2000:00&_search=false&nd=1307488419628&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-07 16:13:39 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"user", "report_sql"=>"user", "generation"=>"-1", "start_date"=>"2011/04/24 00:00", "end_date"=>"2011/07/08 00:00", "_search"=>"false", "nd"=>"1307488419628", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+REPORT: user
+REPORT SQL: user
+START_DATE: 2011/04/24 00:00
+END_DATE: 2011/07/08 00:00
+GENERATION: -1
+Loading Processor old_sql/report_processor/base
+-- Change the where clause so that it can be  for your database
+
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-04-24 00:00')
+AND u.created_at < date('2011-07-08 00:00')
+  [1m[35mSQL (0.4ms)[0m  -- Change the where clause so that it can be for your database
+
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-04-24 00:00')
+AND u.created_at < date('2011-07-08 00:00')
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-07 16:13:39 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-07 16:13:39 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-07 16:13:39 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-07 16:13:39 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-07 16:13:39 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-07 16:13:39 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-07 16:13:39 -0700
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-07 16:15:53 -0700
+  Processing by OldSql::ReportController#index as HTML
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/index.html.erb within layouts/old_sql/report (2.1ms)
+Completed 200 OK in 11ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-07 16:15:53 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-07 16:15:53 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-07 16:15:53 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-07 16:15:53 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-07 16:15:53 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-07 16:15:53 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 16:15:53 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-07 16:15:53 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-07 16:15:53 -0700
+
+
+Started GET "/sql/reports/datagrid/?report=user&start_date=2011/05/24%2016:15:53&end_date=2011/06/08%2016:15:53&generation=-1&report_sql=user" for 127.0.0.1 at 2011-06-07 16:15:57 -0700
+  Processing by OldSql::ReportController#datagrid as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/24 16:15:53", "end_date"=>"2011/06/08 16:15:53", "generation"=>"-1", "report_sql"=>"user"}
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (3.3ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-07 16:15:57 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-07 16:15:57 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-07 16:15:57 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-07 16:15:57 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-07 16:15:57 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-07 16:15:57 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-07 16:15:57 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-07 16:15:57 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-07 16:15:57 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 16:15:57 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/sql/reports/query.json/?report=user&report_sql=user&generation=-1&start_date=2011/05/24%2016:15:53&end_date=2011/06/08%2016:15:53&_search=false&nd=1307488557581&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-07 16:15:57 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"user", "report_sql"=>"user", "generation"=>"-1", "start_date"=>"2011/05/24 16:15:53", "end_date"=>"2011/06/08 16:15:53", "_search"=>"false", "nd"=>"1307488557581", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+REPORT: user
+REPORT SQL: user
+START_DATE: 2011/05/24 16:15:53
+END_DATE: 2011/06/08 16:15:53
+GENERATION: -1
+Loading Processor old_sql/report_processor/user_processor
+no such file to load -- report_processor/base
+Loading Processor old_sql/report_processor/base
+-- Change the where clause so that it can be  for your database
+
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-24 16:15:53')
+AND u.created_at < date('2011-06-08 16:15:53')
+  [1m[36mSQL (0.5ms)[0m  [1m-- Change the where clause so that it can be for your database
+
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-24 16:15:53')
+AND u.created_at < date('2011-06-08 16:15:53')[0m
+Completed 200 OK in 149ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-07 16:15:57 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-07 16:15:57 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-07 16:15:57 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-07 16:15:57 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-07 16:15:57 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-07 16:15:57 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-07 16:15:57 -0700
+
+
+Started GET "/sql/reports/datagrid/?report=user&start_date=2011/05/24%2016:15:53&end_date=2011/06/08%2016:15:53&generation=-1&report_sql=user" for 127.0.0.1 at 2011-06-07 16:18:07 -0700
+  Processing by OldSql::ReportController#datagrid as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/24 16:15:53", "end_date"=>"2011/06/08 16:15:53", "generation"=>"-1", "report_sql"=>"user"}
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (2.8ms)
+Completed 200 OK in 27ms (Views: 26.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-07 16:18:07 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-07 16:18:07 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-07 16:18:07 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-07 16:18:07 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-07 16:18:07 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-07 16:18:07 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-07 16:18:08 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-07 16:18:08 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-07 16:18:08 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 16:18:08 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/sql/reports/query.json/?report=user&report_sql=user&generation=-1&start_date=2011/05/24%2016:15:53&end_date=2011/06/08%2016:15:53&_search=false&nd=1307488688140&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-07 16:18:08 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"user", "report_sql"=>"user", "generation"=>"-1", "start_date"=>"2011/05/24 16:15:53", "end_date"=>"2011/06/08 16:15:53", "_search"=>"false", "nd"=>"1307488688140", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+REPORT: user
+REPORT SQL: user
+START_DATE: 2011/05/24 16:15:53
+END_DATE: 2011/06/08 16:15:53
+GENERATION: -1
+Loading Processor old_sql/report_processor/user_processor
+no such file to load -- report_processor/base
+Loading Processor old_sql/report_processor/base
+-- Change the where clause so that it can be  for your database
+
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-24 16:15:53')
+AND u.created_at < date('2011-06-08 16:15:53')
+  [1m[35mSQL (0.4ms)[0m  -- Change the where clause so that it can be for your database
+
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-24 16:15:53')
+AND u.created_at < date('2011-06-08 16:15:53')
+Completed 200 OK in 42ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-07 16:18:08 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-07 16:18:08 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-07 16:18:08 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-07 16:18:08 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-07 16:18:08 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-07 16:18:08 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-07 16:18:08 -0700
+
+
+Started GET "/sql/reports/datagrid/?report=user&start_date=2011/05/24%2016:15:53&end_date=2011/06/08%2016:15:53&generation=-1&report_sql=user" for 127.0.0.1 at 2011-06-07 16:18:25 -0700
+  Processing by OldSql::ReportController#datagrid as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/24 16:15:53", "end_date"=>"2011/06/08 16:15:53", "generation"=>"-1", "report_sql"=>"user"}
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (2.5ms)
+Completed 200 OK in 10ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-07 16:18:26 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-07 16:18:26 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-07 16:18:26 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-07 16:18:26 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-07 16:18:26 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-07 16:18:26 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-07 16:18:26 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 16:18:26 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-07 16:18:26 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-07 16:18:26 -0700
+
+
+Started GET "/sql/reports/query.json/?report=user&report_sql=user&generation=-1&start_date=2011/05/24%2016:15:53&end_date=2011/06/08%2016:15:53&_search=false&nd=1307488706280&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-07 16:18:26 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"user", "report_sql"=>"user", "generation"=>"-1", "start_date"=>"2011/05/24 16:15:53", "end_date"=>"2011/06/08 16:15:53", "_search"=>"false", "nd"=>"1307488706280", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+REPORT: user
+REPORT SQL: user
+START_DATE: 2011/05/24 16:15:53
+END_DATE: 2011/06/08 16:15:53
+GENERATION: -1
+Loading Processor old_sql/report_processor/user_processor
+no such file to load -- report_processor/base
+Loading Processor old_sql/report_processor/base
+-- Change the where clause so that it can be  for your database
+
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-24 16:15:53')
+AND u.created_at < date('2011-06-08 16:15:53')
+  [1m[36mSQL (0.6ms)[0m  [1m-- Change the where clause so that it can be for your database
+
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-24 16:15:53')
+AND u.created_at < date('2011-06-08 16:15:53')[0m
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-07 16:18:26 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-07 16:18:26 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-07 16:18:26 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-07 16:18:26 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-07 16:18:26 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-07 16:18:26 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-07 16:18:26 -0700
+
+
+Started GET "/sql/reports/datagrid/?report=user&start_date=2011/05/24%2016:15:53&end_date=2011/06/08%2016:15:53&generation=-1&report_sql=user" for 127.0.0.1 at 2011-06-07 16:21:43 -0700
+  Processing by OldSql::ReportController#datagrid as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/24 16:15:53", "end_date"=>"2011/06/08 16:15:53", "generation"=>"-1", "report_sql"=>"user"}
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (2.9ms)
+Completed 200 OK in 11ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-07 16:21:43 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-07 16:21:43 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-07 16:21:43 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-07 16:21:43 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-07 16:21:43 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-07 16:21:43 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-07 16:21:43 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-07 16:21:43 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-07 16:21:43 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 16:21:43 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/sql/reports/query.json/?report=user&report_sql=user&generation=-1&start_date=2011/05/24%2016:15:53&end_date=2011/06/08%2016:15:53&_search=false&nd=1307488903815&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-07 16:21:43 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"user", "report_sql"=>"user", "generation"=>"-1", "start_date"=>"2011/05/24 16:15:53", "end_date"=>"2011/06/08 16:15:53", "_search"=>"false", "nd"=>"1307488903815", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+REPORT: user
+REPORT SQL: user
+START_DATE: 2011/05/24 16:15:53
+END_DATE: 2011/06/08 16:15:53
+GENERATION: -1
+Loading Processor old_sql/report_processor/user_processor
+no such file to load -- report_processor/base
+Loading Processor old_sql/report_processor/base
+-- Change the where clause so that it can be  for your database
+
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-24 16:15:53')
+AND u.created_at < date('2011-06-08 16:15:53')
+  [1m[36mSQL (0.6ms)[0m  [1m-- Change the where clause so that it can be for your database
+
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-24 16:15:53')
+AND u.created_at < date('2011-06-08 16:15:53')[0m
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-07 16:21:43 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-07 16:21:43 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-07 16:21:43 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-07 16:21:43 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-07 16:21:43 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-07 16:21:43 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-07 16:21:43 -0700
+
+
+Started GET "/sql/reports/datagrid/?report=user&start_date=2011/05/24%2016:15:53&end_date=2011/06/08%2016:15:53&generation=-1&report_sql=user" for 127.0.0.1 at 2011-06-07 16:25:05 -0700
+  Processing by OldSql::ReportController#datagrid as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/24 16:15:53", "end_date"=>"2011/06/08 16:15:53", "generation"=>"-1", "report_sql"=>"user"}
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (3.5ms)
+Completed 200 OK in 13ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-07 16:25:05 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-07 16:25:05 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-07 16:25:05 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-07 16:25:05 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-07 16:25:05 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-07 16:25:05 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-07 16:25:05 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-07 16:25:05 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 16:25:05 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-07 16:25:05 -0700
+
+
+Started GET "/sql/reports/query.json/?report=user&report_sql=user&generation=-1&start_date=2011/05/24%2016:15:53&end_date=2011/06/08%2016:15:53&_search=false&nd=1307489105972&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-07 16:25:05 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"user", "report_sql"=>"user", "generation"=>"-1", "start_date"=>"2011/05/24 16:15:53", "end_date"=>"2011/06/08 16:15:53", "_search"=>"false", "nd"=>"1307489105972", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+REPORT: user
+REPORT SQL: user
+START_DATE: 2011/05/24 16:15:53
+END_DATE: 2011/06/08 16:15:53
+GENERATION: -1
+Loading Processor old_sql/report_processor/user_processor
+-- Change the where clause so that it can be  for your database
+
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-24 16:15:53')
+AND u.created_at < date('2011-06-08 16:15:53')
+  [1m[36mSQL (0.6ms)[0m  [1m-- Change the where clause so that it can be for your database
+
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-24 16:15:53')
+AND u.created_at < date('2011-06-08 16:15:53')[0m
+REC: {"id"=>3, "name"=>"Eddie Gonzales"}
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-07 16:25:06 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-07 16:25:06 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-07 16:25:06 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-07 16:25:06 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-07 16:25:06 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-07 16:25:06 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-07 16:25:06 -0700
+
+
+Started GET "/sql/reports/datagrid/?report=user&start_date=2011/05/24%2016:15:53&end_date=2011/06/08%2016:15:53&generation=-1&report_sql=user" for 127.0.0.1 at 2011-06-07 16:28:30 -0700
+  Processing by OldSql::ReportController#datagrid as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/24 16:15:53", "end_date"=>"2011/06/08 16:15:53", "generation"=>"-1", "report_sql"=>"user"}
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (2.4ms)
+Completed 200 OK in 10ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-07 16:28:30 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-07 16:28:30 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-07 16:28:30 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-07 16:28:30 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-07 16:28:30 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-07 16:28:30 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-07 16:28:30 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-07 16:28:30 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-07 16:28:30 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 16:28:30 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/sql/reports/query.json/?report=user&report_sql=user&generation=-1&start_date=2011/05/24%2016:15:53&end_date=2011/06/08%2016:15:53&_search=false&nd=1307489310716&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-07 16:28:30 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"user", "report_sql"=>"user", "generation"=>"-1", "start_date"=>"2011/05/24 16:15:53", "end_date"=>"2011/06/08 16:15:53", "_search"=>"false", "nd"=>"1307489310716", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+REPORT: user
+REPORT SQL: user
+START_DATE: 2011/05/24 16:15:53
+END_DATE: 2011/06/08 16:15:53
+GENERATION: -1
+Loading Processor old_sql/report_processor/user_processor
+-- Change the where clause so that it can be  for your database
+
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-24 16:15:53')
+AND u.created_at < date('2011-06-08 16:15:53')
+  [1m[36mSQL (0.6ms)[0m  [1m-- Change the where clause so that it can be for your database
+
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-24 16:15:53')
+AND u.created_at < date('2011-06-08 16:15:53')[0m
+REC: {"id"=>3, "name"=>"Eddie Gonzales"}
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-07 16:28:30 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-07 16:28:30 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-07 16:28:30 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-07 16:28:30 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-07 16:28:30 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-07 16:28:30 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-07 16:28:30 -0700
+
+
+Started GET "/sql/reports/datagrid/?report=user&start_date=2011/05/24%2016:15:53&end_date=2011/06/08%2016:15:53&generation=-1&report_sql=user" for 127.0.0.1 at 2011-06-07 16:31:16 -0700
+  Processing by OldSql::ReportController#datagrid as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/24 16:15:53", "end_date"=>"2011/06/08 16:15:53", "generation"=>"-1", "report_sql"=>"user"}
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (2.7ms)
+Completed 200 OK in 58ms (Views: 54.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-07 16:31:16 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-07 16:31:16 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-07 16:31:16 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 16:31:16 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-07 16:31:17 -0700
+
+
+Started GET "/sql/reports/query.json/?report=user&report_sql=user&generation=-1&start_date=2011/05/24%2016:15:53&end_date=2011/06/08%2016:15:53&_search=false&nd=1307489477032&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-07 16:31:17 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"user", "report_sql"=>"user", "generation"=>"-1", "start_date"=>"2011/05/24 16:15:53", "end_date"=>"2011/06/08 16:15:53", "_search"=>"false", "nd"=>"1307489477032", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+REPORT: user
+REPORT SQL: user
+START_DATE: 2011/05/24 16:15:53
+END_DATE: 2011/06/08 16:15:53
+GENERATION: -1
+Loading Processor old_sql/report_processor/user_processor
+-- Change the where clause so that it can be  for your database
+
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-24 16:15:53')
+AND u.created_at < date('2011-06-08 16:15:53')
+  [1m[36mSQL (0.5ms)[0m  [1m-- Change the where clause so that it can be for your database
+
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-24 16:15:53')
+AND u.created_at < date('2011-06-08 16:15:53')[0m
+REC: {"id"=>3, "name"=>"Eddie Gonzales"}
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-07 16:31:17 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-07 16:31:17 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-07 16:31:17 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-07 16:31:17 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-07 16:31:17 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-07 16:31:17 -0700
+
+
+Started GET "/sql/reports/datagrid/?report=user&start_date=2011/05/24%2016:15:53&end_date=2011/06/08%2016:15:53&generation=-1&report_sql=user" for 127.0.0.1 at 2011-06-07 16:31:43 -0700
+  Processing by OldSql::ReportController#datagrid as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/24 16:15:53", "end_date"=>"2011/06/08 16:15:53", "generation"=>"-1", "report_sql"=>"user"}
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (3.2ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-07 16:31:43 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-07 16:31:43 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-07 16:31:44 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 16:31:44 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/sql/reports/query.json/?report=user&report_sql=user&generation=-1&start_date=2011/05/24%2016:15:53&end_date=2011/06/08%2016:15:53&_search=false&nd=1307489504139&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-07 16:31:44 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"user", "report_sql"=>"user", "generation"=>"-1", "start_date"=>"2011/05/24 16:15:53", "end_date"=>"2011/06/08 16:15:53", "_search"=>"false", "nd"=>"1307489504139", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+REPORT: user
+REPORT SQL: user
+START_DATE: 2011/05/24 16:15:53
+END_DATE: 2011/06/08 16:15:53
+GENERATION: -1
+Loading Processor old_sql/report_processor/user_processor
+-- Change the where clause so that it can be  for your database
+
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-24 16:15:53')
+AND u.created_at < date('2011-06-08 16:15:53')
+  [1m[35mSQL (0.7ms)[0m  -- Change the where clause so that it can be for your database
+
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-24 16:15:53')
+AND u.created_at < date('2011-06-08 16:15:53')
+REC: {"id"=>3, "name"=>"Eddie Gonzales"}
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-07 16:31:44 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-07 16:31:44 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-07 16:31:44 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-07 16:31:44 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-07 16:31:44 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-07 16:31:44 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-07 16:31:44 -0700
+
+
+Started GET "/sql/reports/datagrid/?report=user&start_date=2011/05/24%2016:15:53&end_date=2011/06/08%2016:15:53&generation=-1&report_sql=user" for 127.0.0.1 at 2011-06-07 16:32:27 -0700
+  Processing by OldSql::ReportController#datagrid as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/24 16:15:53", "end_date"=>"2011/06/08 16:15:53", "generation"=>"-1", "report_sql"=>"user"}
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (3.4ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-07 16:32:28 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-07 16:32:28 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-07 16:32:28 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 16:32:28 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/sql/reports/query.json/?report=user&report_sql=user&generation=-1&start_date=2011/05/24%2016:15:53&end_date=2011/06/08%2016:15:53&_search=false&nd=1307489548273&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-07 16:32:28 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"user", "report_sql"=>"user", "generation"=>"-1", "start_date"=>"2011/05/24 16:15:53", "end_date"=>"2011/06/08 16:15:53", "_search"=>"false", "nd"=>"1307489548273", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+REPORT: user
+REPORT SQL: user
+START_DATE: 2011/05/24 16:15:53
+END_DATE: 2011/06/08 16:15:53
+GENERATION: -1
+Loading Processor old_sql/report_processor/user_processor
+-- Change the where clause so that it can be  for your database
+
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-24 16:15:53')
+AND u.created_at < date('2011-06-08 16:15:53')
+  [1m[36mSQL (0.4ms)[0m  [1m-- Change the where clause so that it can be for your database
+
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-24 16:15:53')
+AND u.created_at < date('2011-06-08 16:15:53')[0m
+REC: {"id"=>3, "name"=>"Eddie Gonzales"}
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-07 16:32:28 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-07 16:32:28 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-07 16:32:28 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-07 16:32:28 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-07 16:32:28 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-07 16:32:28 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-07 16:32:28 -0700
+
+
+Started GET "/sql/reports/datagrid/?report=user&start_date=2011/05/24%2016:15:53&end_date=2011/06/08%2016:15:53&generation=-1&report_sql=user" for 127.0.0.1 at 2011-06-07 16:33:06 -0700
+  Processing by OldSql::ReportController#datagrid as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/24 16:15:53", "end_date"=>"2011/06/08 16:15:53", "generation"=>"-1", "report_sql"=>"user"}
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (2.9ms)
+Completed 200 OK in 10ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-07 16:33:06 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-07 16:33:06 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 16:33:06 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/sql/reports/query.json/?report=user&report_sql=user&generation=-1&start_date=2011/05/24%2016:15:53&end_date=2011/06/08%2016:15:53&_search=false&nd=1307489586970&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-07 16:33:06 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"user", "report_sql"=>"user", "generation"=>"-1", "start_date"=>"2011/05/24 16:15:53", "end_date"=>"2011/06/08 16:15:53", "_search"=>"false", "nd"=>"1307489586970", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+REPORT: user
+REPORT SQL: user
+START_DATE: 2011/05/24 16:15:53
+END_DATE: 2011/06/08 16:15:53
+GENERATION: -1
+Loading Processor old_sql/report_processor/user_processor
+-- Change the where clause so that it can be  for your database
+
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-24 16:15:53')
+AND u.created_at < date('2011-06-08 16:15:53')
+  [1m[36mSQL (0.6ms)[0m  [1m-- Change the where clause so that it can be for your database
+
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-24 16:15:53')
+AND u.created_at < date('2011-06-08 16:15:53')[0m
+REC: {"id"=>3, "name"=>"Eddie Gonzales"}
+Completed 200 OK in 24ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/sql/reports/datagrid/?report=user&start_date=2011/05/24%2016:15:53&end_date=2011/06/08%2016:15:53&generation=-1&report_sql=user" for 127.0.0.1 at 2011-06-07 16:34:17 -0700
+  Processing by OldSql::ReportController#datagrid as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/24 16:15:53", "end_date"=>"2011/06/08 16:15:53", "generation"=>"-1", "report_sql"=>"user"}
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (2.6ms)
+Completed 200 OK in 10ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-07 16:34:17 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-07 16:34:17 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-07 16:34:17 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 16:34:18 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/sql/reports/query.json/?report=user&report_sql=user&generation=-1&start_date=2011/05/24%2016:15:53&end_date=2011/06/08%2016:15:53&_search=false&nd=1307489658129&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-07 16:34:18 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"user", "report_sql"=>"user", "generation"=>"-1", "start_date"=>"2011/05/24 16:15:53", "end_date"=>"2011/06/08 16:15:53", "_search"=>"false", "nd"=>"1307489658129", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+REPORT: user
+REPORT SQL: user
+START_DATE: 2011/05/24 16:15:53
+END_DATE: 2011/06/08 16:15:53
+GENERATION: -1
+Loading Processor old_sql/report_processor/user_processor
+-- Change the where clause so that it can be  for your database
+
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-24 16:15:53')
+AND u.created_at < date('2011-06-08 16:15:53')
+  [1m[36mSQL (0.6ms)[0m  [1m-- Change the where clause so that it can be for your database
+
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-24 16:15:53')
+AND u.created_at < date('2011-06-08 16:15:53')[0m
+REC: {"id"=>3, "name"=>"Eddie Gonzales"}
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-07 16:34:18 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-07 16:34:18 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-07 16:34:18 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-07 16:34:18 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-07 16:34:18 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-07 16:34:18 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-07 16:34:18 -0700
+
+
+Started GET "/sql/reports/datagrid/?report=user&start_date=2011/05/24%2016:15:53&end_date=2011/06/08%2016:15:53&generation=-1&report_sql=user" for 127.0.0.1 at 2011-06-07 16:34:56 -0700
+  Processing by OldSql::ReportController#datagrid as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/24 16:15:53", "end_date"=>"2011/06/08 16:15:53", "generation"=>"-1", "report_sql"=>"user"}
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (2.4ms)
+Completed 200 OK in 10ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-07 16:34:56 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-07 16:34:56 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-07 16:34:56 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 16:34:56 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/sql/reports/query.json/?report=user&report_sql=user&generation=-1&start_date=2011/05/24%2016:15:53&end_date=2011/06/08%2016:15:53&_search=false&nd=1307489696678&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-07 16:34:56 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"user", "report_sql"=>"user", "generation"=>"-1", "start_date"=>"2011/05/24 16:15:53", "end_date"=>"2011/06/08 16:15:53", "_search"=>"false", "nd"=>"1307489696678", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+REPORT: user
+REPORT SQL: user
+START_DATE: 2011/05/24 16:15:53
+END_DATE: 2011/06/08 16:15:53
+GENERATION: -1
+Loading Processor old_sql/report_processor/base
+-- Change the where clause so that it can be  for your database
+
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-24 16:15:53')
+AND u.created_at < date('2011-06-08 16:15:53')
+  [1m[36mSQL (0.6ms)[0m  [1m-- Change the where clause so that it can be for your database
+
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-24 16:15:53')
+AND u.created_at < date('2011-06-08 16:15:53')[0m
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-07 16:34:56 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-07 16:34:56 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-07 16:34:56 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-07 16:34:56 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-07 16:34:56 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-07 16:34:56 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-07 16:34:56 -0700
+
+
+Started GET "/sql/reports/datagrid/?report=user&start_date=2011/05/24%2016:15:53&end_date=2011/06/08%2016:15:53&generation=-1&report_sql=user" for 127.0.0.1 at 2011-06-07 16:38:10 -0700
+  Processing by OldSql::ReportController#datagrid as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/24 16:15:53", "end_date"=>"2011/06/08 16:15:53", "generation"=>"-1", "report_sql"=>"user"}
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (2.5ms)
+Completed 200 OK in 47ms (Views: 46.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-07 16:38:10 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-07 16:38:10 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-07 16:38:10 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 16:38:10 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/sql/reports/query.json/?report=user&report_sql=user&generation=-1&start_date=2011/05/24%2016:15:53&end_date=2011/06/08%2016:15:53&_search=false&nd=1307489891049&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-07 16:38:11 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"user", "report_sql"=>"user", "generation"=>"-1", "start_date"=>"2011/05/24 16:15:53", "end_date"=>"2011/06/08 16:15:53", "_search"=>"false", "nd"=>"1307489891049", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+REPORT: user
+REPORT SQL: user
+START_DATE: 2011/05/24 16:15:53
+END_DATE: 2011/06/08 16:15:53
+GENERATION: -1
+Loading Processor old_sql/report_processor/base
+-- Change the where clause so that it can be  for your database
+
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-24 16:15:53')
+AND u.created_at < date('2011-06-08 16:15:53')
+  [1m[35mSQL (0.8ms)[0m  -- Change the where clause so that it can be for your database
+
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-24 16:15:53')
+AND u.created_at < date('2011-06-08 16:15:53')
+Completed 200 OK in 26ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-07 16:38:11 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-07 16:38:11 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-07 16:38:11 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-07 16:38:11 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-07 16:38:11 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-07 16:38:11 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-07 16:38:11 -0700
+
+
+Started GET "/sql/reports/datagrid/?report=user&start_date=2011/05/24%2016:15:53&end_date=2011/05/08%2000:00&generation=-1&report_sql=user" for 127.0.0.1 at 2011-06-07 16:38:18 -0700
+  Processing by OldSql::ReportController#datagrid as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/24 16:15:53", "end_date"=>"2011/05/08 00:00", "generation"=>"-1", "report_sql"=>"user"}
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (2.3ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-07 16:38:18 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-07 16:38:18 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-07 16:38:18 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 16:38:18 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/sql/reports/query.json/?report=user&report_sql=user&generation=-1&start_date=2011/05/24%2016:15:53&end_date=2011/05/08%2000:00&_search=false&nd=1307489898551&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-07 16:38:18 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"user", "report_sql"=>"user", "generation"=>"-1", "start_date"=>"2011/05/24 16:15:53", "end_date"=>"2011/05/08 00:00", "_search"=>"false", "nd"=>"1307489898551", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+REPORT: user
+REPORT SQL: user
+START_DATE: 2011/05/24 16:15:53
+END_DATE: 2011/05/08 00:00
+GENERATION: -1
+Loading Processor old_sql/report_processor/base
+-- Change the where clause so that it can be  for your database
+
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-24 16:15:53')
+AND u.created_at < date('2011-05-08 00:00')
+  [1m[36mSQL (0.4ms)[0m  [1m-- Change the where clause so that it can be for your database
+
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-24 16:15:53')
+AND u.created_at < date('2011-05-08 00:00')[0m
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-07 16:38:18 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-07 16:38:18 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-07 16:38:18 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-07 16:38:18 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-07 16:38:18 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-07 16:38:18 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-07 16:38:18 -0700
+
+
+Started GET "/sql/reports/datagrid/?report=user&start_date=2011/05/24%2016:15:53&end_date=2011/06/08%2000:00&generation=-1&report_sql=user" for 127.0.0.1 at 2011-06-07 16:38:22 -0700
+  Processing by OldSql::ReportController#datagrid as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/24 16:15:53", "end_date"=>"2011/06/08 00:00", "generation"=>"-1", "report_sql"=>"user"}
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (2.8ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-07 16:38:23 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-07 16:38:23 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-07 16:38:23 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 16:38:23 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/sql/reports/query.json/?report=user&report_sql=user&generation=-1&start_date=2011/05/24%2016:15:53&end_date=2011/06/08%2000:00&_search=false&nd=1307489903265&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-07 16:38:23 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"user", "report_sql"=>"user", "generation"=>"-1", "start_date"=>"2011/05/24 16:15:53", "end_date"=>"2011/06/08 00:00", "_search"=>"false", "nd"=>"1307489903265", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+REPORT: user
+REPORT SQL: user
+START_DATE: 2011/05/24 16:15:53
+END_DATE: 2011/06/08 00:00
+GENERATION: -1
+Loading Processor old_sql/report_processor/base
+-- Change the where clause so that it can be  for your database
+
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-24 16:15:53')
+AND u.created_at < date('2011-06-08 00:00')
+  [1m[35mSQL (0.6ms)[0m  -- Change the where clause so that it can be for your database
+
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-24 16:15:53')
+AND u.created_at < date('2011-06-08 00:00')
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-07 16:38:23 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-07 16:38:23 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-07 16:38:23 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-07 16:38:23 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-07 16:38:23 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-07 16:38:23 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-07 16:38:23 -0700
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-07 16:43:58 -0700
+  Processing by OldSql::ReportController#index as HTML
+Completed   in 14ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-06-07 16:43:58 -0700
+  Processing by Devise::SessionsController#new as HTML
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/devise-1.3.4/app/views/devise/shared/_links.erb (1.8ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/devise-1.3.4/app/views/devise/sessions/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 59ms (Views: 35.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-06-07 16:45:02 -0700
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mt3HyEtoGg4i7gDBhlLfwv7+/twW8uyUcngI4z0e3lk=", "user"=>{"email"=>"eddiemgonzales@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Sign in"}
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'eddiemgonzales@gmail.com' LIMIT 1
+  [1m[36mAREL (0.5ms)[0m  [1mUPDATE "users" SET "remember_created_at" = '2011-06-07 23:45:02.888513', "updated_at" = '2011-06-07 23:45:02.888883' WHERE "users"."id" = 3[0m
+  [1m[35mAREL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = '2011-06-07 23:45:02.928880', "current_sign_in_at" = '2011-06-07 23:45:02.928880', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2011-06-07 23:45:02.929302' WHERE "users"."id" = 3
+Redirected to http://localhost:3000/sql/reports
+Completed 302 Found in 745ms
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-07 16:45:02 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/index.html.erb within layouts/old_sql/report (2.9ms)
+Completed 200 OK in 86ms (Views: 16.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-07 16:45:03 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-07 16:45:03 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-07 16:45:03 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 16:45:03 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-07 16:45:03 -0700
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-07 16:45:09 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/index.html.erb within layouts/old_sql/report (2.2ms)
+Completed 200 OK in 65ms (Views: 6.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-07 16:45:09 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-07 16:45:09 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-07 16:45:09 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-07 16:45:09 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-07 16:45:09 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-07 16:45:09 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 16:45:09 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-07 16:45:09 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-07 16:45:09 -0700
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-07 16:45:17 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/index.html.erb within layouts/old_sql/report (2.1ms)
+Completed 200 OK in 31ms (Views: 5.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 16:45:18 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUserMigration (20110608000707)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsersMigration (20110608001124)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.6ms)[0m  [1mALTER TABLE "users" ADD "old_sql_admin" boolean DEFAULT 'f'[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110608001349')
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('index_users_on_reset_password_token')[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_info('index_users_on_email')
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."email" = 'eddiemgonzales@gmail.com') AND ("users".id <> 3) LIMIT 1
+  [1m[36mAREL (11.4ms)[0m  [1mUPDATE "users" SET "old_sql_admin" = 't', "updated_at" = '2011-06-08 00:31:33.833636' WHERE "users"."id" = 3[0m
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-07 17:31:49 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/index.html.erb within layouts/old_sql/report (2.4ms)
+Completed 200 OK in 136ms (Views: 16.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-07 17:31:49 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-07 17:31:49 -0700
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-07 17:31:49 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-07 17:31:49 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-07 17:31:49 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-07 17:31:49 -0700
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."email" = 'eddiemgonzales@gmail.com') AND ("users".id <> 3) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  UPDATE "users" SET "old_sql_admin" = 'f', "updated_at" = '2011-06-08 00:32:15.530285' WHERE "users"."id" = 3
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-07 17:32:26 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 117ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-06-07 17:32:26 -0700
+
+ActionController::RoutingError (No route matches "/"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-07 17:38:07 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Completed   in 115ms
+
+CanCan::AccessDenied (You are not authorized to access this page.):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.5ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.5ms)
