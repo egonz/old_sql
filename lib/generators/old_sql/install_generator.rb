@@ -6,14 +6,13 @@ module OldSql
     desc "Old SQL Install"
 
     def check_for_devise
-      puts "Hello!
-Old SQL works with devise. Checking for a current installation of devise!
-"
+      puts "Old SQL works with devise, cancan and sanitize. Checking for a current installation of devise!
+           "
 
       if defined?(Devise)
         check_for_devise_models
       else
-        puts "Please put gem 'devise' into your Gemfile"
+        puts "Please put gem 'devise', gem 'cancan', and gem 'sanitize' into your Gemfile"
       end
 
       copy_locales_files
@@ -28,7 +27,7 @@ Old SQL works with devise. Checking for a current installation of devise!
 
     def check_for_devise_models
       # File.exists?
-      devise_path =  FileUtils.pwd + "/config/initializers/devise.rb"
+      devise_path =  "#{FileUtils.pwd}/config/initializers/devise.rb"
 
       if File.exists?(devise_path)
         parse_route_files
@@ -37,37 +36,41 @@ Old SQL works with devise. Checking for a current installation of devise!
         
         invoke 'devise:install'
         
-        if !user_model_exists?
+        if !devise_table_exists?
           puts 'User Model Does Not Exist'
           set_devise
-        elsif !user_model_has_devise?
+        elsif !model_has_devise?
           puts 'User Model Does Not Have Devise Support'
           invoke 'old_sql:install_devise_migrations'
-          #todo add devise stuff to users
+          create_model_class unless model_exists?
+          add_devise_to_routes
         end
 
       end
     end
     
-    #todo user :model_name
-    def user_model_exists?
+    def devise_table_exists?
       app_path = Rails.public_path.split("/")
       app_path.delete_at(-1)
       app_path = app_path.join("/")
-      schema_path = app_path+'/db/schema.rb'
+      schema_path = "#{app_path}/db/schema.rb"
       
-      if File.exists?(schema_path) && open(schema_path).grep(/users/).count>0
+      puts "Checking #{schema_path} for pattern #{model_name}" 
+      
+      if File.exists?(schema_path) && open(schema_path).grep(/#{model_name.pluralize}/).count>0
         return true
       else
         return false
       end
     end
     
-    def user_model_has_devise?
+    def model_has_devise?
       app_path = Rails.public_path.split("/")
       app_path.delete_at(-1)
       app_path = app_path.join("/")
       schema_path = app_path+'/db/schema.rb'
+
+      puts "Checking #{schema_path} for pattern /database_authenticatable/"
 
       if File.exists?(schema_path) && open(schema_path).grep(/database_authenticatable/).count>0
         return true
@@ -75,13 +78,40 @@ Old SQL works with devise. Checking for a current installation of devise!
         return false
       end
     end
-
-    def parse_route_files
-      # check if migrations exist
+    
+    def model_exists?
       app_path = Rails.public_path.split("/")
       app_path.delete_at(-1)
       app_path = app_path.join("/")
-      routes_path = app_path + "/config/routes.rb"
+      
+      File.exists?("#{app_path}/app/models/#{model_name}.rb")
+    end
+    
+    def create_model_class
+      model_path = "#{app_path}/app/models/#{model_name}.rb"
+      
+      gem_path = __FILE__
+      gem_path = gem_path.split("/")
+      gem_path = gem_path[0..-5]
+      gem_path = gem_path.join("/")
+      devise_template_path = "#{gem_path}/lib/generators/old_sql/templates/devise/devise_model.rb.template"
+      
+      copy_file devise_template_path, model_path
+      
+      gsub_file model_path, /DeviseModel/, "#{model_name.capitalize}"
+    end
+    
+    def add_devise_to_routes
+      routes_path = "#{app_path}/config/routes.rb"
+      if open(routes_path).grep(/devise_for :#{model_name}/).count<=0
+        puts "Adding devise_for :#{model_name} to #{routes_path}"
+        insert_into_file routes_path, "  devise_for :#{model_name}\n\n", :after => "ReportDemo::Application.routes.draw do\n"
+      end
+    end
+
+    def parse_route_files
+      # check if migrations exist
+      routes_path = "#{app_path}/config/routes.rb"
 
       content = ""
 
@@ -106,28 +136,19 @@ Old SQL works with devise. Checking for a current installation of devise!
 
     def copy_locales_files
       print "Now copying locales files! "
-      gem_path = __FILE__
-      gem_path = gem_path.split("/")
-
-      gem_path = gem_path[0..-5]
-      gem_path = gem_path.join("/")
       ###
-      locales_path = gem_path + "/config/locales/*.yml"
+      locales_path = "#{gem_path}/config/locales/*.yml"
 
-      app_path = Rails.public_path.split("/")
-      app_path.delete_at(-1)
-      app_path = app_path.join("/")
+      locales_app_path = "#{app_path}/config/locales"
 
-      app_path = app_path + "/config/locales"
-
-      unless File.directory?(app_path)
-        FileUtils.mkdir app_path
+      unless File.directory?(locales_app_path)
+        FileUtils.mkdir locales_app_path
       end
 
       Dir.glob(locales_path).each do |file|
         file_path = file.split("/")
         file_path = file_path[-1]
-        FileUtils.copy_file(file, app_path + "/" + file_path)
+        FileUtils.copy_file(file, "#{locales_app_path}/#{file_path}")
         print "."
       end
       print "\n"
@@ -135,28 +156,30 @@ Old SQL works with devise. Checking for a current installation of devise!
     end
     
     def create_old_sql_dirs
-      app_path = Rails.public_path.split("/")
-      app_path.delete_at(-1)
-      app_path = app_path.join("/")
-      
-      empty_directory(app_path + "/config/old_sql/")
-      empty_directory(app_path + "/config/old_sql/report_sql")
-      empty_directory(app_path + "/lib/old_sql/report_processor")
+      empty_directory "#{app_path}/config/old_sql/"
+      empty_directory "#{app_path}/config/old_sql/report_sql"
+      empty_directory "#{app_path}/lib/old_sql/report_processor"
     end
     
     def copy_old_sql_files
+      copy_file "#{gem_path}/config/old_sql/reports.yml.example", "#{app_path}/config/old_sql/reports.yml"
+      copy_file "#{gem_path}/config/old_sql/report_sql/user.erb.example", "#{app_path}/config/old_sql/report_sql/user.erb"
+      copy_file "#{gem_path}/lib/old_sql/report_processor/user_processor.rb.example", "#{app_path}/lib/old_sql/report_processor/user_processor.rb"
+    end
+    
+    def app_path
       app_path = Rails.public_path.split("/")
       app_path.delete_at(-1)
       app_path = app_path.join("/")
-      
+      app_path
+    end
+    
+    def gem_path
       gem_path = __FILE__
       gem_path = gem_path.split("/")
       gem_path = gem_path[0..-5]
       gem_path = gem_path.join("/")
-      
-      copy_file gem_path + "/config/old_sql/reports.yml.example", app_path + "/config/old_sql/reports.yml"
-      copy_file gem_path + "/config/old_sql/report_sql/user.erb.example", app_path + "/config/old_sql/report_sql/user.erb"
-      copy_file gem_path + "/lib/old_sql/report_processor/user_processor.rb.example", app_path + "/lib/old_sql/report_processor/user_processor.rb"
+      gem_path
     end
   end
 end
