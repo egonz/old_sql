@@ -6,9 +6,10 @@ module OldSql
     desc "Old SQL Install"
 
     def check_for_devise
-      puts "Hello!0
+      puts "Hello!
 Old SQL works with devise. Checking for a current installation of devise!
 "
+
       if defined?(Devise)
         check_for_devise_models
       else
@@ -33,9 +34,45 @@ Old SQL works with devise. Checking for a current installation of devise!
         parse_route_files
       else
         puts "Looks like you don't have devise install! We'll install it for you!"
+        
         invoke 'devise:install'
-        set_devise
+        
+        if !user_model_exists?
+          puts 'User Model Does Not Exist'
+          set_devise
+        elsif !user_model_has_devise?
+          puts 'User Model Does Not Have Devise Support'
+          invoke 'old_sql:install_devise_migrations'
+          #todo add devise stuff to users
+        end
 
+      end
+    end
+    
+    #todo user :model_name
+    def user_model_exists?
+      app_path = Rails.public_path.split("/")
+      app_path.delete_at(-1)
+      app_path = app_path.join("/")
+      schema_path = app_path+'/db/schema.rb'
+      
+      if File.exists?(schema_path) && open(schema_path).grep(/users/).count>0
+        return true
+      else
+        return false
+      end
+    end
+    
+    def user_model_has_devise?
+      app_path = Rails.public_path.split("/")
+      app_path.delete_at(-1)
+      app_path = app_path.join("/")
+      schema_path = app_path+'/db/schema.rb'
+
+      if File.exists?(schema_path) && open(schema_path).grep(/database_authenticatable/).count>0
+        return true
+      else
+        return false
       end
     end
 

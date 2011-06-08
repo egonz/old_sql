@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{old_sql}
-  s.version = "0.9.0"
+  s.version = "0.28.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = [%q{Eddie Gonzales}]
-  s.date = %q{2011-06-06}
+  s.date = %q{2011-06-08}
   s.description = %q{OldSQL is a Rails Engine database reporting gem that uses plain old SQL}
   s.email = %q{egonzales@pureplay.com}
   s.extra_rdoc_files = [
@@ -27,11 +27,21 @@ Gem::Specification.new do |s|
     "app/views/old_sql/report/index.html.erb",
     "app/views/old_sql/report/print.html.erb",
     "config/locales/old_sql.en.yml",
+    "config/old_sql/report_sql/user.erb.example",
+    "config/old_sql/reports.yml.example",
     "config/routes.rb",
     "lib/extensions/action_controller/base.rb",
+    "lib/generators/old_sql/USAGE",
+    "lib/generators/old_sql/install_devise_migrations_generator.rb",
+    "lib/generators/old_sql/install_generator.rb",
+    "lib/generators/old_sql/install_migrations_generator.rb",
+    "lib/generators/old_sql/old_sql_generator.rb",
+    "lib/generators/old_sql/templates/add_old_sql_admin_to_users_migration.rb",
+    "lib/generators/old_sql/templates/devise/add_devise_to_users_migration.rb",
     "lib/old_sql.rb",
     "lib/old_sql/engine.rb",
     "lib/old_sql/report_processor/base.rb",
+    "lib/old_sql/report_processor/user_processor.rb.example",
     "public/javascripts/old_sql/date_format.js",
     "public/javascripts/old_sql/jqgrid/i18n/grid.locale-bg.js",
     "public/javascripts/old_sql/jqgrid/i18n/grid.locale-bg1251.js",
@@ -131,13 +141,19 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<sanitize>, [">= 0"])
+      s.add_runtime_dependency(%q<devise>, [">= 0"])
+      s.add_runtime_dependency(%q<cancan>, [">= 0"])
       s.add_development_dependency(%q<jeweler>, [">= 0"])
     else
       s.add_dependency(%q<sanitize>, [">= 0"])
+      s.add_dependency(%q<devise>, [">= 0"])
+      s.add_dependency(%q<cancan>, [">= 0"])
       s.add_dependency(%q<jeweler>, [">= 0"])
     end
   else
     s.add_dependency(%q<sanitize>, [">= 0"])
+    s.add_dependency(%q<devise>, [">= 0"])
+    s.add_dependency(%q<cancan>, [">= 0"])
     s.add_dependency(%q<jeweler>, [">= 0"])
   end
 end

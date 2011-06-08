@@ -2,9 +2,9 @@ require 'rails/generators'
 require 'rails/generators/migration'
 
 module OldSql
-  class InstallMigrationsGenerator < Rails::Generators::Base
+  class InstallDeviseMigrationsGenerator < Rails::Generators::Base
     include Rails::Generators::Migration
-    source_root File.expand_path('../templates', __FILE__)
+    source_root File.expand_path('../templates/devise', __FILE__)
 
     def self.next_migration_number(dirname)
       if ActiveRecord::Base.timestamped_migrations
@@ -17,8 +17,7 @@ module OldSql
     end
 
     def create_migration_file
-      sleep 1 # ensure scripts have different timestamps
-      migration_template 'add_old_sql_admin_to_users_migration.rb', 'db/migrate/add_old_sql_admin_to_users.rb' rescue p $!.message
+      migration_template 'add_devise_to_users_migration.rb', 'db/migrate/add_devise_to_users.rb' rescue p $!.message
       #sleep 1 # ensure scripts have different timestamps
     end
   end
