@@ -25,3 +25,2183 @@
  FROM sqlite_master
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.6ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(128) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+  [1m[35mSQL (0.2ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110607170831')[0m
+Migrating to AddNameToUsers (20110607221041)
+  [1m[35mSQL (0.6ms)[0m  ALTER TABLE "users" ADD "name" varchar(255)
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110607221041')[0m
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[35mSQL (0.6ms)[0m  ALTER TABLE "users" ADD "old_sql_admin" boolean DEFAULT 'f'
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110608001349')[0m
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-06-06')
+AND u.created_at < date('2011-08-06')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-06-06')
+AND u.created_at < date('2011-08-06')
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-06-06')
+AND u.created_at < date('2011-08-06')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-06-06')
+AND u.created_at < date('2011-08-06')
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."email" = 'eddiemgonzales@gmail.com') LIMIT 1
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at", "name", "old_sql_admin") VALUES ('eddiemgonzales@gmail.com', '$2a$10$5QoKlBSZBcpxqG5zfRDskuJVHYkxcSiDCMla.YQUR6cC6WtEH02a6', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2011-06-09 19:03:59.936012', '2011-06-09 19:03:59.936012', 'Eddie Gonzales', 't')[0m
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[35mSQL (0.3ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[35mSQL (0.3ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[35mSQL (0.3ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20110607170831)
+Migrating to AddNameToUsers (20110607221041)
+Migrating to AddOldSqlAdminToUsers (20110608001349)
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+  [1m[35mSQL (0.4ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-06')
+AND u.created_at < date('2011-08-06')
+PARSING DESIGN DOCUMENT user.csv

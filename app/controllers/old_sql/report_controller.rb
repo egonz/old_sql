@@ -46,7 +46,7 @@ module OldSql
       logger.info "GENERATION: #{@generation}"
       
       processor = load_processor(@report_name)
-      @report = processor.execute_query(@report_sql,@start_date,@end_date,query_vars(@report_name))
+      @report = processor.execute_query(@report_sql,@start_date,@end_date,query_vars(@report_name),@reports[@report_name]['report_design'])
       
       respond_to do |format|
         format.json { render :json => @report.to_json}

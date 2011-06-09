@@ -6,8 +6,7 @@ module OldSql
     desc "Old SQL Install"
 
     def check_for_devise
-      puts "Old SQL works with devise, cancan and sanitize. Checking for a current installation of devise!
-           "
+      puts "Old SQL works with devise, cancan and sanitize. Checking for a current installation of devise!\n"
 
       if defined?(Devise)
         check_for_devise_models
@@ -16,16 +15,52 @@ module OldSql
       end
       
       puts "Please put gem 'cancan' into your Gemfile" unless defined?(Cancan)
-      
       puts "Please put gem 'sanitize' into your Gemfile" unless defined?(Sanitize)
-
-      copy_locales_files
-      create_old_sql_dirs
-      copy_old_sql_files
       
       puts "Also you need a new migration. We'll generate it for you now."
       invoke 'old_sql:install_migrations'
     end
+    
+    def copy_initializer
+      template "old_sql.rb", "config/initializers/old_sql.rb"
+    end
+    
+    def copy_locales_files
+      print "Now copying locales files! "
+      ###
+      locales_path = "#{gem_path}/config/locales/*.yml"
+
+      locales_app_path = "#{app_path}/config/locales"
+
+      unless File.directory?(locales_app_path)
+        FileUtils.mkdir locales_app_path
+      end
+
+      Dir.glob(locales_path).each do |file|
+        file_path = file.split("/")
+        file_path = file_path[-1]
+        FileUtils.copy_file(file, "#{locales_app_path}/#{file_path}")
+        print "."
+      end
+      print "\n"
+
+    end
+    
+    def create_old_sql_dirs
+      empty_directory "#{app_path}/config/old_sql/"
+      empty_directory "#{app_path}/config/old_sql/report_sql"
+      empty_directory "#{app_path}/config/old_sql/report_design"
+      empty_directory "#{app_path}/lib/old_sql/report_processor"
+    end
+    
+    def copy_old_sql_files
+      copy_file "#{gem_path}/config/old_sql/reports.yml.example", "#{app_path}/config/old_sql/reports.yml"
+      copy_file "#{gem_path}/config/old_sql/report_sql/user.erb.example", "#{app_path}/config/old_sql/report_sql/user.erb"
+      copy_file "#{gem_path}/lib/old_sql/report_processor/user_processor.rb.example", "#{app_path}/lib/old_sql/report_processor/user_processor.rb"
+      copy_file "user_design_template.csv", "#{app_path}/config/old_sql/report_design/user.csv"
+    end
+    
+    ################ PRIVATE ################
 
     private
 
@@ -136,39 +171,6 @@ module OldSql
       puts "Setting up devise for you!
 ======================================================"
       invoke 'devise', [model_name]
-    end
-
-    def copy_locales_files
-      print "Now copying locales files! "
-      ###
-      locales_path = "#{gem_path}/config/locales/*.yml"
-
-      locales_app_path = "#{app_path}/config/locales"
-
-      unless File.directory?(locales_app_path)
-        FileUtils.mkdir locales_app_path
-      end
-
-      Dir.glob(locales_path).each do |file|
-        file_path = file.split("/")
-        file_path = file_path[-1]
-        FileUtils.copy_file(file, "#{locales_app_path}/#{file_path}")
-        print "."
-      end
-      print "\n"
-
-    end
-    
-    def create_old_sql_dirs
-      empty_directory "#{app_path}/config/old_sql/"
-      empty_directory "#{app_path}/config/old_sql/report_sql"
-      empty_directory "#{app_path}/lib/old_sql/report_processor"
-    end
-    
-    def copy_old_sql_files
-      copy_file "#{gem_path}/config/old_sql/reports.yml.example", "#{app_path}/config/old_sql/reports.yml"
-      copy_file "#{gem_path}/config/old_sql/report_sql/user.erb.example", "#{app_path}/config/old_sql/report_sql/user.erb"
-      copy_file "#{gem_path}/lib/old_sql/report_processor/user_processor.rb.example", "#{app_path}/lib/old_sql/report_processor/user_processor.rb"
     end
     
     def app_path

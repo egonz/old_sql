@@ -3,12 +3,8 @@ module OldSql
     class Base
     
       ROUND_PRECISION = 2
-      
-      def hello_world
-        puts "Hello World"
-      end
     
-      def execute_query(report_sql,start_date,end_date,query_vars)
+      def execute_query(report_sql,start_date,end_date,query_vars,design=nil)
         vars = {:start_date => start_date, :end_date => end_date}
       
         if !query_vars.nil?
@@ -34,8 +30,12 @@ module OldSql
         rescue
           #todo log error
         end
-      
-        parse(@resultset)
+        
+        if design
+          parse_design(design, @resultset)
+        else
+          parse(@resultset)
+        end
       
         @data
       end
@@ -57,6 +57,38 @@ module OldSql
         end
       
         @data
+      end
+      
+      def parse_design(design, resultset)
+        Rails.logger.info "PARSING DESIGN DOCUMENT #{design}.csv"
+        model = OldSql::ReportDesign::Parser.read_file("#{design}.csv")
+        
+        init(resultset)
+        
+        model.rows.each do |row|
+          report_row = []
+          row.cells.each do |cell|
+            expression = ""
+            cell.cell_data.each do |cd|
+              if cell.expression?
+                if cd.type == OldSql::ReportDesign::CellData::COLUMN
+                  expression << @rec[cd.data].to_s
+                elsif cd.type == OldSql::ReportDesign::CellData::OPERATOR
+                  expression << cd.data
+                end
+              else
+                if cd.type == OldSql::ReportDesign::CellData::COLUMN
+                  report_row << @rec[cd.data]
+                elsif  cd.type == OldSql::ReportDesign::CellData::LABEL
+                  report_row << cd.data
+                end
+              end
+            end
+            report_row << eval(expression) unless expression.length==0
+          end
+          
+          new_row(nil, report_row)
+        end
       end
     
       def new_data(page=1, total=1, records=1)

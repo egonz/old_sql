@@ -7,4 +7,27 @@
   If this works we could write a complex report with zero ruby/rails code, html, or javascript.   
 * Try and implement jqgrid sort and search methods.
   This should be done in the sql files by passing the params from jqgrid into them.
-* Add Devise support
+
+* Add initializer (done)
+* The authenticate method in the report controller should be more generic. A variable could be set 
+  in an initializer that can be used in an eval method.
+* I'd like to create a more traditional html report view in addition to jqgrid.
+* Add setting in the initializer for jqgrid or html. This will determine which view is used.
+* Add a copy assets generator that will copy the few files to the app stylesheets dir. This will 
+  allow the user to customize the reports. Do the same for the layout file.
+* Rename new_row to add_row.
+* Move loading of the sub processor into the base processor.
+* Think about creating a rake task. For instance an ASCII view of the reports, or csv.
+* Report type should be in the yaml. Default can be in initializer.
+* Base should setup structure based on report type.
+
+* Move all templates to lib/generators/old_sql/templates.
+
+# Design Parser
+
+* The model should return a row_count
+* That is the number of lines. 
+* It should also have a cell_count method
+* Finally it should have a method that a block can be passed to to retrieve each record. This should 
+  be a record class that has an each method for its cells.
+
