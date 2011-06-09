@@ -3,6 +3,7 @@ module OldSql
   
   # The default report view. This setting will be used unless overridden in 
   # config/old_sql/reports.yml.
+  mattr_accessor :default_report_view
   @@default_report_view = 'jqgrid'
   
   # Default way to setup Old SQL. Run rails generate old_sql:install to create

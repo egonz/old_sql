@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{old_sql}
-  s.version = "0.42.0"
+  s.version = "0.43.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = [%q{Eddie Gonzales}]
@@ -39,8 +39,15 @@ Gem::Specification.new do |s|
     "lib/generators/old_sql/templates/add_old_sql_admin_to_users_migration.rb",
     "lib/generators/old_sql/templates/devise/add_devise_to_users_migration.rb",
     "lib/generators/old_sql/templates/devise/devise_model.rb.template",
+    "lib/generators/old_sql/templates/old_sql.rb",
+    "lib/generators/old_sql/templates/user_design_template.csv",
     "lib/old_sql.rb",
     "lib/old_sql/engine.rb",
+    "lib/old_sql/report_design/cell.rb",
+    "lib/old_sql/report_design/cell_data.rb",
+    "lib/old_sql/report_design/model.rb",
+    "lib/old_sql/report_design/parser.rb",
+    "lib/old_sql/report_design/row.rb",
     "lib/old_sql/report_processor/base.rb",
     "lib/old_sql/report_processor/user_processor.rb.example",
     "public/javascripts/old_sql/date_format.js",
