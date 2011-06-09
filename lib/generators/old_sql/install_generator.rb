@@ -14,6 +14,10 @@ module OldSql
       else
         puts "Please put gem 'devise', gem 'cancan', and gem 'sanitize' into your Gemfile"
       end
+      
+      puts "Please put gem 'cancan' into your Gemfile" unless defined?(Cancan)
+      
+      puts "Please put gem 'sanitize' into your Gemfile" unless defined?(Sanitize)
 
       copy_locales_files
       create_old_sql_dirs
@@ -105,7 +109,7 @@ module OldSql
       routes_path = "#{app_path}/config/routes.rb"
       if open(routes_path).grep(/devise_for :#{model_name}/).count<=0
         puts "Adding devise_for :#{model_name} to #{routes_path}"
-        insert_into_file routes_path, "  devise_for :#{model_name}\n\n", :after => "ReportDemo::Application.routes.draw do\n"
+        insert_into_file routes_path, "  devise_for :#{model_name}\n\n", :after => "Application.routes.draw do\n"
       end
     end
 
