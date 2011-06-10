@@ -23,6 +23,8 @@
 
 * Move all templates to lib/generators/old_sql/templates.
 
+* Rename demo files to user_old_sql_demo* to not conflict with actual reports. 
+
 # Design Parser
 
 * The model should return a row_count
@@ -30,4 +32,5 @@
 * It should also have a cell_count method
 * Finally it should have a method that a block can be passed to to retrieve each record. This should 
   be a record class that has an each method for its cells.
+* Need to check for divide by zero errors before calling eval
 

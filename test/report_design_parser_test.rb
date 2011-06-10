@@ -20,8 +20,6 @@ class ReportDesignParserTest < ActiveSupport::TestCase
     assert_instance_of OldSql::ReportDesign::Cell, model.rows[0].cells[0]
     assert_instance_of OldSql::ReportDesign::CellData, model.rows[0].cells[0].cell_data[0]
     
-    assert_equal model.rows.count, 3
-    
     # TEST CELL_DATA
     assert_equal model.rows[0].cells[0].cell_data[0].type, OldSql::ReportDesign::CellData::COLUMN
     assert_equal model.rows[1].cells[0].cell_data[0].type, OldSql::ReportDesign::CellData::LABEL

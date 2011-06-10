@@ -6,6 +6,7 @@ module OldSql
       COLUMN = 1
       LABEL = 2
       OPERATOR = 3
+      NUMERIC_LITERAL = 4
       
       def initialize(value)
         @data = value
@@ -15,12 +16,13 @@ module OldSql
       private
       
       def set_type
-        first_char = @data[0]
-        @type = case first_char
+        @type = case @data[0]
                 when /['"]/
                   LABEL
-                when /[\/*+]/
+                when /[\/*+-\Q()]/
                   OPERATOR
+                when /[0-9]/
+                  NUMERIC_LITERAL
                 else
                   COLUMN
                 end
