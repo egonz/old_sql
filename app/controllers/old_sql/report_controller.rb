@@ -24,6 +24,11 @@ module OldSql
       @report_name = params[:report]
       @report_sql = params[:report_sql]
       
+      #todo allow these to be overridden in the report config
+      @row_num = OldSql.jqgrid_row_num
+      @width = OldSql.jqgrid_width
+      @height = OldSql.jqgrid_height
+      
       render :template => "old_sql/report/datagrid.html.erb"
     end
     
@@ -39,14 +44,9 @@ module OldSql
         @report_sql << "_gen_#{@generation}"
       end
       
-      logger.info "REPORT: #{@report_name}"
-      logger.info "REPORT SQL: #{@report_sql}"
-      logger.info "START_DATE: #{@start_date}"
-      logger.info "END_DATE: #{@end_date}"
-      logger.info "GENERATION: #{@generation}"
-      
-      processor = load_processor(@report_name)
-      @report = processor.execute_query(@report_sql,@start_date,@end_date,query_vars(@report_name),@reports[@report_name]['report_design'])
+      processor = load_base_processor
+      @report = processor.execute_query(@report_sql,@start_date,@end_date,query_vars(@report_name),@reports[@report_name]['report_design'],
+                                        @reports[@report_name]['report_processor'])
       
       respond_to do |format|
         format.json { render :json => @report.to_json}
@@ -87,14 +87,9 @@ module OldSql
         @report_sql << "_gen_#{@generation}"
       end
       
-      logger.info "REPORT: #{@report_name}"
-      logger.info "REPORT SQL: #{@report_sql}"
-      logger.info "START_DATE: #{@start_date}"
-      logger.info "END_DATE: #{@end_date}"
-      logger.info "GENERATION: #{@generation}"
-      
-      processor = load_processor(@report_name)
-      @report = processor.execute_query(@report_sql,@start_date,@end_date,query_vars(@report_name))
+      processor = load_base_processor
+      @report = processor.execute_query(@report_sql,@start_date,@end_date,query_vars(@report_name),@reports[@report_name]['report_design'],
+                                        @reports[@report_name]['report_processor'])
       
       render :template => "old_sql/report/print.html.erb"
     end
@@ -106,9 +101,6 @@ module OldSql
       end
       
       def _init
-		    #todo add Devise support
-        #@authorization_adapter.authorize(:index) if @authorization_adapter
-        @page_name = t("old_sql.report.pagename")
         @host = self.request.host
         @port = self.request.port
       end
@@ -118,29 +110,9 @@ module OldSql
         @reports = YAML.load(Erubis::Eruby.new(template).result)
       end
       
-      def load_processor report
-        processor = nil
-        begin
-          #todo get processor name from @reports
-          
-          if !@reports[report]['processor'].nil?
-            logger.info "Loading Processor old_sql/report_processor/#{@reports[report]['processor'].downcase}"
-            require "old_sql/report_processor/#{@reports[report]['processor'].downcase}"
-            processor=eval("OldSql::ReportProcessor::#{@reports[report]['processor'].gsub("_","")}").new
-          
-          else
-            logger.info "Loading Processor old_sql/report_processor/#{BASE_PROCESSOR}"
-            require "old_sql/report_processor/#{BASE_PROCESSOR}"
-            processor=eval("OldSql::ReportProcessor::#{BASE_PROCESSOR.capitalize}").new
-          end 
-        rescue Exception=>e
-          logger.error e.message
-          logger.info "Loading Processor old_sql/report_processor/#{BASE_PROCESSOR}"
-          require "old_sql/report_processor/#{BASE_PROCESSOR}"
-          processor=eval("OldSql::ReportProcessor::#{BASE_PROCESSOR.capitalize}").new
-        end
-        
-        processor
+      def load_base_processor
+        require "old_sql/report_processor/base"
+        OldSql::ReportProcessor::Base.new
       end
       
       def jqgrid_col_model

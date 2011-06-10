@@ -9,8 +9,8 @@ module OldSql
      
         Rails.logger.debug "REC: #{@rec}"
      
-        new_row(nil, [@rec['id'], @rec['name']])
-        new_row('Totals', ['...'])
+        add_row(nil, [@rec['id'], @rec['name']])
+        add_row('Totals', ['...'])
      
         @data
       end

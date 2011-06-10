@@ -8,9 +8,9 @@ module OldSql
   module ReportProcessor
     class Base
     
-      ROUND_PRECISION = 2
+      ROUND_PRECISION = OldSql.rounding_precision
     
-      def execute_query(report_sql,start_date,end_date,query_vars,design=nil)
+      def execute_query(report_sql,start_date,end_date,query_vars,design=nil,sub_processor=nil)
         vars = {:start_date => start_date, :end_date => end_date}
       
         if !query_vars.nil?
@@ -22,8 +22,6 @@ module OldSql
       
         Rails.logger.debug sql
       
-        db = nil
-      
         begin
           #todo change to a reporting db
           db = ActiveRecord::Base.connection();
@@ -33,16 +31,27 @@ module OldSql
           rec.each do |row|
             @resultset << row
           end
-        rescue
+        rescue Exception=>e
           #todo log error
+          Rails.logger.error e
         end
         
         if design
           parse_design(design, @resultset)
         else
-          parse(@resultset)
+          loaded_sub_processor = load_sub_processor(sub_processor)
+          
+          if loaded_sub_processor.nil?
+            parse(@resultset)
+          else
+            @data = loaded_sub_processor.parse(@resultset)
+          end
         end
-      
+        
+        if Rails.env == "development"
+          Rails.logger.debug "PARSED DATA:\n@data"
+        end
+        
         @data
       end
     
@@ -85,13 +94,17 @@ module OldSql
                 end
               else
                 if cd.type == OldSql::ReportDesign::CellData::COLUMN
-                  report_row << @rec[cd.data]
+                  result = @rec[cd.data]
+                  if OldSql.round_report_values
+                    result = round(result.to_f, OldSql.rounding_precision)
+                  end
+                  report_row << result
                 elsif  cd.type == OldSql::ReportDesign::CellData::LABEL
                   report_row << cd.data.gsub(/"/,"")
                 end
               end
             end
-            report_row << eval_expression(expression) unless expression.length==0 
+            report_row << eval_expression(expression) unless expression.length==0
           end
           
           add_row(nil, report_row)
@@ -99,16 +112,34 @@ module OldSql
       end
       
       def eval_expression expression
+        result = 0.0
         begin
+          Rails.logger.debug "Evalutating Expression: #{expression}"
           result = eval(expression)
-          if result.to_s!="Infinity"
-            return result
-          else
-            return "0"
-          end
-        rescue
-          return "0"
+        rescue ZeroDivisionError => e
+          Rails.logger.error e
+        rescue Exception => e
+          Rails.logger.error e
         end
+        
+        if result.class == Float || result.class == Fixnum
+          result = result.to_s
+        end
+        
+        if result == "Infinity" || result == "NaN"
+          result = 0.0
+        elsif OldSql.round_report_values
+          result = round(result.to_f, OldSql.rounding_precision)
+        end
+        
+        Rails.logger.debug "Expression result: #{result}"
+        
+        result
+      end
+      
+      def round(value, precision = ROUND_PRECISION)
+        factor = 10.0**precision
+        (value*factor).round / factor
       end
     
       def new_data(page=1, total=1, records=1)
@@ -138,6 +169,21 @@ module OldSql
   
       def isNumeric(s)
         Float(s) != nil rescue false
+      end
+      
+      def load_sub_processor sub_processor
+        return if sub_processor.nil?
+        
+        loaded_sub_processor = nil
+        begin
+          Rails.logger.info "Loading Processor old_sql/report_processor/#{sub_processor.downcase}"
+          require "old_sql/report_processor/#{sub_processor.downcase}"
+          loaded_sub_processor=eval("OldSql::ReportProcessor::#{sub_processor.gsub("_","")}").new 
+        rescue Exception=>e
+          Rails.logger.error e.message
+        end
+        
+        loaded_sub_processor
       end
     end
   end

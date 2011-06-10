@@ -7,7 +7,7 @@ require 'old_sql/report_design/cell_data'
 require 'old_sql/report_processor/base'
 
 class ReportDesignParserTest < ActiveSupport::TestCase
-  test "truth" do
+  test "parsing design document" do
     # TEST REQUIRED PARAMETERS (I might remove these)
     assert_raise(ArgumentError) {OldSql::ReportDesign::Parser.read_file}
     assert_raise(ArgumentError) {OldSql::ReportDesign::Parser.read_file "foo.csv"}
@@ -33,6 +33,10 @@ class ReportDesignParserTest < ActiveSupport::TestCase
     
     assert_equal model.rows[1].cells[0].expression?, false
     assert_equal model.rows[1].cells[1].expression?, true
+  end
+  
+  test "using design document" do
+    model = OldSql::ReportDesign::Parser.read_file "user.csv"
     
     template = File.read("#{OldSql::ReportDesign::Parser.report_design_path}/../reports.yml")
     report = YAML.load(Erubis::Eruby.new(template).result)['user']
@@ -40,5 +44,7 @@ class ReportDesignParserTest < ActiveSupport::TestCase
     base_parser = OldSql::ReportProcessor::Base.new
     data = base_parser.execute_query(report['report_sql'],'2011-05-06','2011-08-06',nil,report['report_design'])
     puts "DATA #{data}"
+    
+    #todo add assertion
   end
 end

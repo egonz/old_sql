@@ -10,7 +10,7 @@ user:
   report_sql: user
   virality: false
   report_design: user
-  #processor: User_Processor
+  #report_processor: User_Processor
   fields: 
     - 'id'
     - 'name'

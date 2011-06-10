@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{old_sql}
-  s.version = "0.46.0"
+  s.version = "1.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = [%q{Eddie Gonzales}]
-  s.date = %q{2011-06-09}
+  s.date = %q{2011-06-10}
   s.description = %q{OldSQL is a Rails Engine database reporting gem that uses plain old SQL}
   s.email = %q{egonzales@pureplay.com}
   s.extra_rdoc_files = [
@@ -87,6 +87,7 @@ Gem::Specification.new do |s|
     "public/javascripts/old_sql/jquery-1.5.1.min.js",
     "public/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js",
     "public/javascripts/old_sql/jquery-ui-timepicker-addon.js",
+    "public/javascripts/old_sql/old_sql.js",
     "public/stylesheets/old_sql/jqgrid/themes/default/images/ui-bg_diagonals-thick_90_eeeeee_40x40.png",
     "public/stylesheets/old_sql/jqgrid/themes/default/images/ui-bg_flat_15_cd0a0a_40x100.png",
     "public/stylesheets/old_sql/jqgrid/themes/default/images/ui-bg_glass_100_e4f1fb_1x400.png",

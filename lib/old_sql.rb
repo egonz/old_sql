@@ -1,10 +1,34 @@
 module OldSql
   require 'old_sql/engine' if defined?(Rails)
   
+  # The title of the Report Selection View.
+  mattr_accessor :report_select_page_title
+  @@report_select_page_title = 'Old SQL Reports'
+  
   # The default report view. This setting will be used unless overridden in 
   # config/old_sql/reports.yml.
   mattr_accessor :default_report_view
   @@default_report_view = 'jqgrid'
+  
+  # Determines whether the values for the report will be rounded.
+  mattr_accessor :round_report_values
+  @@round_report_values = true
+  
+  # The precision to round all values to if rounding is enabled.
+  mattr_accessor :rounding_precision
+  @@rounding_precision = 2
+  
+  # Width of the jqGrid component in the jqGrid report view.
+  mattr_accessor :jqgrid_width
+  @@jqgrid_width = 800
+  
+  # Height of the jqGrid component in the jqGrid report view.
+  mattr_accessor :jqgrid_height
+  @@jqgrid_width = 630
+  
+  # Number of rows to display in the jqGrid component in the jqGrid report view.
+  mattr_accessor :jqgrid_row_num
+  @@jqgrid_row_num = 25
   
   # Default way to setup Old SQL. Run rails generate old_sql:install to create
   # a fresh initializer with all configuration values.

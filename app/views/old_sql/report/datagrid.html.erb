@@ -11,9 +11,10 @@ jQuery(document).ready(function(){
   	pager: false,
     colNames: <%=jqgrid_col_names%>,
     colModel: <%=jqgrid_col_model%>,
-    rowNum:25,
-    rowList:[10,20,30],
-    width: 777,
+    rowNum: <%=@row_num%>,
+    rowList: [10,20,30],
+    width: <%=@width%>,
+	height: <%=@height%>,
     caption: "<%=@reports[@report_name]['value']%> Report"
   });
 });
