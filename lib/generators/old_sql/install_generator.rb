@@ -54,10 +54,11 @@ module OldSql
     end
     
     def copy_old_sql_files
-      copy_file "#{gem_path}/config/old_sql/reports.yml.example", "#{app_path}/config/old_sql/reports.yml"
-      copy_file "#{gem_path}/config/old_sql/report_sql/user.erb.example", "#{app_path}/config/old_sql/report_sql/user.erb"
-      copy_file "#{gem_path}/lib/old_sql/report_processor/user_processor.rb.example", "#{app_path}/lib/old_sql/report_processor/user_processor.rb"
-      copy_file "user_design_template.csv", "#{app_path}/config/old_sql/report_design/user.csv"
+      path_to_reports_config = "#{app_path}/config/old_sql/reports.yml"
+      copy_file "reports.yml.example", path_to_reports_config unless File.exists?(path_to_reports_config)
+      copy_file "user.erb.example", "#{app_path}/config/old_sql/report_sql/user_old_sql_demo.erb"
+      copy_file "user_processor.rb.example", "#{app_path}/lib/old_sql/report_processor/user_old_sql_demo_processor.rb"
+      copy_file "user_design_template.csv", "#{app_path}/config/old_sql/report_design/user_old_sql_demo.csv"
     end
     
     ################ PRIVATE ################
@@ -128,15 +129,7 @@ module OldSql
     
     def create_model_class
       model_path = "#{app_path}/app/models/#{model_name}.rb"
-      
-      gem_path = __FILE__
-      gem_path = gem_path.split("/")
-      gem_path = gem_path[0..-5]
-      gem_path = gem_path.join("/")
-      devise_template_path = "#{gem_path}/lib/generators/old_sql/templates/devise/devise_model.rb.template"
-      
-      copy_file devise_template_path, model_path
-      
+      copy_file "devise_model.rb.template", model_path
       gsub_file model_path, /DeviseModel/, "#{model_name.capitalize}"
     end
     

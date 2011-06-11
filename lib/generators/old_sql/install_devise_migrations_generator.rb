@@ -4,7 +4,7 @@ require 'rails/generators/migration'
 module OldSql
   class InstallDeviseMigrationsGenerator < Rails::Generators::Base
     include Rails::Generators::Migration
-    source_root File.expand_path('../templates/devise', __FILE__)
+    source_root File.expand_path('../templates', __FILE__)
 
     def self.next_migration_number(dirname)
       if ActiveRecord::Base.timestamped_migrations

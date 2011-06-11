@@ -21,16 +21,11 @@
 * Report type should be in the yaml. Default can be in initializer.
 * Base should setup structure based on report type.
 
-* Move all templates to lib/generators/old_sql/templates.
-
-* Rename demo files to user_old_sql_demo* to not conflict with actual reports. 
-
-* ! Don't create the reports.yml if it already exists !
-
+* Move all templates to lib/generators/old_sql/templates. (done)
+* Rename demo files to user_old_sql_demo* to not conflict with actual reports. (done)
+* ! Don't create the reports.yml if it already exists ! (done)
 * Allow jqgrid settings to be overridden in the report config (started)
-
 * Remove CanCan and Sanitize requirement
-
 * Make ROUND_PRECISION and whether to round values configuration options (done)
 
 # Design Parser

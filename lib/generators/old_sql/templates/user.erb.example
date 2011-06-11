@@ -1,0 +1,4 @@
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('<%=start_date.gsub('/','-')%>')
+AND u.created_at < date('<%=end_date.gsub('/','-')%>')
