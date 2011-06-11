@@ -14,7 +14,7 @@
 * I'd like to create a more traditional html report view in addition to jqgrid.
 * Add setting in the initializer for jqgrid or html. This will determine which view is used.
 * Add a copy assets generator that will copy the few files to the app stylesheets dir. This will 
-  allow the user to customize the reports. Do the same for the layout file.
+  allow the user to customize the reports. Do the same for the layout file. (done)
 * Rename new_row to add_row. (done)
 * Move loading of the sub processor into the base processor. (done)
 * Think about creating a rake task. For instance an ASCII view of the reports, or csv.

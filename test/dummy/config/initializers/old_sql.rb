@@ -8,7 +8,7 @@ OldSql.setup do |config|
   config.round_report_values = true
   
   # The precision to round all values to if rounding is enabled.
-  config.rounding_precision = 4
+  config.rounding_precision = 2
   
   # Configure the default report view. This setting will be used unless overridden 
   # in config/old_sql/reports.yml.

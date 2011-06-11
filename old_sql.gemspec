@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{old_sql}
-  s.version = "1.2.0"
+  s.version = "1.3.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = [%q{Eddie Gonzales}]
-  s.date = %q{2011-06-10}
+  s.date = %q{2011-06-11}
   s.description = %q{OldSQL is a Rails Engine database reporting gem that uses plain old SQL}
   s.email = %q{egonzales@pureplay.com}
   s.extra_rdoc_files = [
@@ -27,8 +27,6 @@ Gem::Specification.new do |s|
     "app/views/old_sql/report/index.html.erb",
     "app/views/old_sql/report/print.html.erb",
     "config/locales/old_sql.en.yml",
-    "config/old_sql/report_sql/user.erb.example",
-    "config/old_sql/reports.yml.example",
     "config/routes.rb",
     "lib/extensions/action_controller/base.rb",
     "lib/generators/old_sql/USAGE",
@@ -36,11 +34,14 @@ Gem::Specification.new do |s|
     "lib/generators/old_sql/install_generator.rb",
     "lib/generators/old_sql/install_migrations_generator.rb",
     "lib/generators/old_sql/old_sql_generator.rb",
+    "lib/generators/old_sql/templates/add_devise_to_users_migration.rb",
     "lib/generators/old_sql/templates/add_old_sql_admin_to_users_migration.rb",
-    "lib/generators/old_sql/templates/devise/add_devise_to_users_migration.rb",
-    "lib/generators/old_sql/templates/devise/devise_model.rb.template",
+    "lib/generators/old_sql/templates/devise_model.rb.template",
     "lib/generators/old_sql/templates/old_sql.rb",
+    "lib/generators/old_sql/templates/reports.yml.example",
+    "lib/generators/old_sql/templates/user.erb.example",
     "lib/generators/old_sql/templates/user_design_template.csv",
+    "lib/generators/old_sql/templates/user_processor.rb.example",
     "lib/old_sql.rb",
     "lib/old_sql/engine.rb",
     "lib/old_sql/report_design/cell.rb",
@@ -49,7 +50,6 @@ Gem::Specification.new do |s|
     "lib/old_sql/report_design/parser.rb",
     "lib/old_sql/report_design/row.rb",
     "lib/old_sql/report_processor/base.rb",
-    "lib/old_sql/report_processor/user_processor.rb.example",
     "public/javascripts/old_sql/date_format.js",
     "public/javascripts/old_sql/jqgrid/i18n/grid.locale-bg.js",
     "public/javascripts/old_sql/jqgrid/i18n/grid.locale-bg1251.js",
