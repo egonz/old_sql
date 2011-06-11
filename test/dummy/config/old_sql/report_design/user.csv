@@ -20,7 +20,7 @@ id,name
 "Example Math Operation",id + id
 "Totals","..."
 "Expression",( id + id ) * 10
-"Divide by Zero 1",0 / 0
+"Divide by<br /> Zero 1",0 / 0
 "Divide by Zero 2",1.0 / 0
 "Divide by Zero 3",0.0 / 0.0
 "Rounding",200.0 / 43.0

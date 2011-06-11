@@ -11819,3 +11819,2289 @@ Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828
 
 
 Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-10 20:27:11 -0700
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-10 20:47:03 -0700
+  Processing by OldSql::ReportController#index as HTML
+Completed   in 8ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-06-10 20:47:03 -0700
+  Processing by Devise::SessionsController#new as HTML
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/devise-1.3.4/app/views/devise/shared/_links.erb (1.8ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/devise-1.3.4/app/views/devise/sessions/new.html.erb within layouts/application (27.1ms)
+Completed 200 OK in 206ms (Views: 181.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-06-10 20:47:06 -0700
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3BvMIbfXyAi0LirHMOu5WSWCBwLZQOkun5zjMhvgFh0=", "user"=>{"email"=>"egonzales@pureplay.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (50.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'egonzales@pureplay.com' LIMIT 1
+Completed   in 66ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3BvMIbfXyAi0LirHMOu5WSWCBwLZQOkun5zjMhvgFh0=", "user"=>{"email"=>"egonzales@pureplay.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/devise-1.3.4/app/views/devise/shared/_links.erb (1.5ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/devise-1.3.4/app/views/devise/sessions/new.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 141ms (Views: 14.9ms | ActiveRecord: 50.5ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-06-10 20:47:20 -0700
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3BvMIbfXyAi0LirHMOu5WSWCBwLZQOkun5zjMhvgFh0=", "user"=>{"email"=>"egonzales@pureplay.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'egonzales@pureplay.com' LIMIT 1[0m
+Completed   in 15ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3BvMIbfXyAi0LirHMOu5WSWCBwLZQOkun5zjMhvgFh0=", "user"=>{"email"=>"egonzales@pureplay.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/devise-1.3.4/app/views/devise/shared/_links.erb (1.6ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/devise-1.3.4/app/views/devise/sessions/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 137ms (Views: 14.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-06-10 20:47:31 -0700
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3BvMIbfXyAi0LirHMOu5WSWCBwLZQOkun5zjMhvgFh0=", "user"=>{"email"=>"egonzales@pureplay.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'egonzales@pureplay.com' LIMIT 1
+Completed   in 47ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3BvMIbfXyAi0LirHMOu5WSWCBwLZQOkun5zjMhvgFh0=", "user"=>{"email"=>"egonzales@pureplay.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/devise-1.3.4/app/views/devise/shared/_links.erb (1.5ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/devise-1.3.4/app/views/devise/sessions/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 106ms (Views: 14.5ms | ActiveRecord: 0.2ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."email" = 'eddiemgonzales@gmail.com') AND ("users".id <> 3) LIMIT 1[0m
+  [1m[35mAREL (0.6ms)[0m  UPDATE "users" SET "encrypted_password" = '$2a$10$U8vz0HP/QQp6q/mRyI4ihOGR7OQC3q7QvI0uUcYCGhaA8Io4OJ5Re', "updated_at" = '2011-06-11 03:48:21.524826' WHERE "users"."id" = 3
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-06-10 20:48:31 -0700
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3BvMIbfXyAi0LirHMOu5WSWCBwLZQOkun5zjMhvgFh0=", "user"=>{"email"=>"egonzales@pureplay.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'egonzales@pureplay.com' LIMIT 1[0m
+Completed   in 44ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3BvMIbfXyAi0LirHMOu5WSWCBwLZQOkun5zjMhvgFh0=", "user"=>{"email"=>"egonzales@pureplay.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/devise-1.3.4/app/views/devise/shared/_links.erb (1.6ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/devise-1.3.4/app/views/devise/sessions/new.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 105ms (Views: 14.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-06-10 20:48:41 -0700
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3BvMIbfXyAi0LirHMOu5WSWCBwLZQOkun5zjMhvgFh0=", "user"=>{"email"=>"eddiemgonzales@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'eddiemgonzales@gmail.com' LIMIT 1
+Completed   in 107ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3BvMIbfXyAi0LirHMOu5WSWCBwLZQOkun5zjMhvgFh0=", "user"=>{"email"=>"eddiemgonzales@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/devise-1.3.4/app/views/devise/shared/_links.erb (1.5ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/devise-1.3.4/app/views/devise/sessions/new.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 95ms (Views: 14.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-06-10 20:48:48 -0700
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3BvMIbfXyAi0LirHMOu5WSWCBwLZQOkun5zjMhvgFh0=", "user"=>{"email"=>"eddiemgonzales@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'eddiemgonzales@gmail.com' LIMIT 1[0m
+Completed   in 106ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3BvMIbfXyAi0LirHMOu5WSWCBwLZQOkun5zjMhvgFh0=", "user"=>{"email"=>"eddiemgonzales@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/devise-1.3.4/app/views/devise/shared/_links.erb (1.5ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/devise-1.3.4/app/views/devise/sessions/new.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 125ms (Views: 14.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-06-10 20:48:57 -0700
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3BvMIbfXyAi0LirHMOu5WSWCBwLZQOkun5zjMhvgFh0=", "user"=>{"email"=>"eddiemgonzales@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'eddiemgonzales@gmail.com' LIMIT 1
+Completed   in 137ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3BvMIbfXyAi0LirHMOu5WSWCBwLZQOkun5zjMhvgFh0=", "user"=>{"email"=>"eddiemgonzales@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/devise-1.3.4/app/views/devise/shared/_links.erb (1.5ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/devise-1.3.4/app/views/devise/sessions/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 95ms (Views: 14.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-06-10 20:49:04 -0700
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3BvMIbfXyAi0LirHMOu5WSWCBwLZQOkun5zjMhvgFh0=", "user"=>{"email"=>"eddiemgonzales@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'eddiemgonzales@gmail.com' LIMIT 1[0m
+  [1m[35mAREL (0.5ms)[0m  UPDATE "users" SET "last_sign_in_at" = '2011-06-09 21:25:45.999653', "current_sign_in_at" = '2011-06-11 03:49:04.505791', "sign_in_count" = 3, "updated_at" = '2011-06-11 03:49:04.506355' WHERE "users"."id" = 3
+Redirected to http://localhost:3000/sql/reports
+Completed 302 Found in 247ms
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-10 20:49:04 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Completed   in 87ms
+
+NameError (uninitialized constant OldSql::ReportController::Excetion):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.1ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (35.5ms)
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-10 20:49:29 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Completed   in 28ms
+
+NameError (undefined local variable or method `rails' for #<OldSql::ReportController:0x00000103a5cd88>):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.3ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.2ms)
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-10 20:49:51 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Old SQL Access Denied.
+Completed   in 33ms
+
+ActionView::MissingTemplate (Missing template error/401.html with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html, :text, :js, :css, :ics, :csv, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json], :locale=>[:en, :en]} in view paths "/Users/egonz/projects/rails/old_sql/test/dummy/app/views", "/Users/egonz/projects/rails/old_sql/app/views", "/Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/devise-1.3.4/app/views"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.7ms)
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-10 20:50:28 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Old SQL Access Denied.
+Completed   in 69ms
+
+ActionView::MissingTemplate (Missing template /401.html with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html, :text, :js, :css, :ics, :csv, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json], :locale=>[:en, :en]} in view paths "/Users/egonz/projects/rails/old_sql/test/dummy/app/views", "/Users/egonz/projects/rails/old_sql/app/views", "/Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/devise-1.3.4/app/views"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.8ms)
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-10 20:50:35 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Old SQL Access Denied.
+Completed   in 65ms
+
+ActionView::MissingTemplate (Missing template /401.html with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html, :text, :js, :css, :ics, :csv, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json], :locale=>[:en, :en]} in view paths "/Users/egonz/projects/rails/old_sql/test/dummy/app/views", "/Users/egonz/projects/rails/old_sql/app/views", "/Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/devise-1.3.4/app/views"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.8ms)
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-10 20:51:50 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Old SQL Access Denied.
+Completed   in 66ms
+
+ActionView::MissingTemplate (Missing template errors/401.html with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html, :text, :js, :css, :ics, :csv, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json], :locale=>[:en, :en]} in view paths "/Users/egonz/projects/rails/old_sql/test/dummy/app/views", "/Users/egonz/projects/rails/old_sql/app/views", "/Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/devise-1.3.4/app/views"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.7ms)
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-10 20:52:02 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Old SQL Access Denied.
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/errors/401.html within layouts/old_sql/report (1.7ms)
+Completed   in 66ms
+
+TypeError (exception class/object expected):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.6ms)
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-10 20:52:51 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Old SQL Access Denied.
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/errors/401.html.erb within layouts/old_sql/report (1.6ms)
+Completed   in 65ms
+
+TypeError (exception class/object expected):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.5ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.6ms)
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-10 20:52:57 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Old SQL Access Denied.
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/errors/401.html.erb within layouts/old_sql/report (1.6ms)
+Completed   in 35ms
+
+TypeError (exception class/object expected):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.0ms)
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-10 20:53:39 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Old SQL Access Denied.
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/errors/401.html.erb within layouts/old_sql/report (1.7ms)
+Completed 401 Unauthorized in 35ms (Views: 8.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-10 20:53:39 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-10 20:53:39 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-10 20:53:39 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-10 20:53:39 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-10 20:53:39 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-10 20:53:39 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-10 20:53:39 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-10 20:54:34 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Old SQL Access Denied.
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/errors/401.html.erb within layouts/old_sql/report (1.9ms)
+Completed 401 Unauthorized in 140ms (Views: 9.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-10 20:54:35 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-10 20:54:35 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-10 20:54:35 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-10 20:54:35 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-10 20:54:35 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-10 20:54:35 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-10 20:54:35 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-10 21:10:53 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Old SQL Access Denied.
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/errors/401.html.erb within layouts/old_sql/report (1.9ms)
+Completed 401 Unauthorized in 122ms (Views: 9.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-10 21:10:53 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-10 21:10:53 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-10 21:10:53 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-10 21:10:53 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-10 21:10:53 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-10 21:10:53 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-10 21:10:53 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-10 21:11:13 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/index.html.erb within layouts/old_sql/report (2.0ms)
+Completed 200 OK in 166ms (Views: 5.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-10 21:11:14 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-10 21:11:14 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-10 21:11:14 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-10 21:11:14 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-10 21:11:14 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-10 21:11:14 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-10 21:11:14 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-10 21:11:14 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-10 21:11:14 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/sql/reports/datagrid/?report=user&start_date=2011/05/27%2021:11:14&end_date=2011/06/11%2021:11:14&generation=-1&report_sql=user_old_sql_demo" for 127.0.0.1 at 2011-06-10 21:11:17 -0700
+  Processing by OldSql::ReportController#datagrid as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/27 21:11:14", "end_date"=>"2011/06/11 21:11:14", "generation"=>"-1", "report_sql"=>"user_old_sql_demo"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (2.7ms)
+Completed 200 OK in 34ms (Views: 6.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-10 21:11:17 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-10 21:11:17 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-10 21:11:17 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-10 21:11:17 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-10 21:11:17 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-10 21:11:17 -0700
+
+
+Started GET "/sql/reports/query.json/?report=user&report_sql=user_old_sql_demo&generation=-1&start_date=2011/05/27%2021:11:14&end_date=2011/06/11%2021:11:14&_search=false&nd=1307765477473&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-10 21:11:17 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"user", "report_sql"=>"user_old_sql_demo", "generation"=>"-1", "start_date"=>"2011/05/27 21:11:14", "end_date"=>"2011/06/11 21:11:14", "_search"=>"false", "nd"=>"1307765477473", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')
+PARSING DESIGN DOCUMENT user_old_sql_demo.csv
+Evalutating Expression: 3+3
+Expression result: 6.0
+Evalutating Expression: (3+3)*10
+Expression result: 60.0
+Evalutating Expression: 0/0
+divided by 0
+Expression result: 0.0
+Evalutating Expression: 1.0/0
+Expression result: 0.0
+Evalutating Expression: 0.0/0.0
+Expression result: 0.0
+Evalutating Expression: 200.0/43.0
+Expression result: 4.65
+PARSED DATA:
+@data
+Completed 200 OK in 56ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-10 21:11:17 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-10 21:11:17 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-10 21:11:17 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/sql/reports/print/?report=user&start_date=2011/05/27%2021:11:14&end_date=2011/06/11%2021:11:14&generation=-1&report_sql=user_old_sql_demo&desc=User" for 127.0.0.1 at 2011-06-10 21:11:18 -0700
+  Processing by OldSql::ReportController#print as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/27 21:11:14", "end_date"=>"2011/06/11 21:11:14", "generation"=>"-1", "report_sql"=>"user_old_sql_demo", "desc"=>"User"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')
+  [1m[35mSQL (0.4ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')
+PARSING DESIGN DOCUMENT user_old_sql_demo.csv
+Evalutating Expression: 3+3
+Expression result: 6.0
+Evalutating Expression: (3+3)*10
+Expression result: 60.0
+Evalutating Expression: 0/0
+divided by 0
+Expression result: 0.0
+Evalutating Expression: 1.0/0
+Expression result: 0.0
+Evalutating Expression: 0.0/0.0
+Expression result: 0.0
+Evalutating Expression: 200.0/43.0
+Expression result: 4.65
+PARSED DATA:
+@data
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/print.html.erb within layouts/old_sql/report (88.4ms)
+Completed   in 135ms
+
+ActionView::Template::Error (uninitialized constant OldSql::Stripper):
+    52: 			<tr>
+    53: 				<% first_cell=true %>
+    54: 				<%row[:cell].each do |c|%>
+    55: 					<% cleaned_cell = OldSql::Stripper.strip_html(c.to_s).gsub("\n","") %>
+    56: 					<% if first_cell==true %>
+    57: 						<td><%=cleaned_cell%></td>
+    58: 					<% else %>
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.4ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.6ms)
+
+
+Started GET "/sql/reports/print/?report=user&start_date=2011/05/27%2021:11:14&end_date=2011/06/11%2021:11:14&generation=-1&report_sql=user_old_sql_demo&desc=User" for 127.0.0.1 at 2011-06-10 21:12:03 -0700
+  Processing by OldSql::ReportController#print as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/27 21:11:14", "end_date"=>"2011/06/11 21:11:14", "generation"=>"-1", "report_sql"=>"user_old_sql_demo", "desc"=>"User"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')
+PARSING DESIGN DOCUMENT user_old_sql_demo.csv
+Evalutating Expression: 3+3
+Expression result: 6.0
+Evalutating Expression: (3+3)*10
+Expression result: 60.0
+Evalutating Expression: 0/0
+divided by 0
+Expression result: 0.0
+Evalutating Expression: 1.0/0
+Expression result: 0.0
+Evalutating Expression: 0.0/0.0
+Expression result: 0.0
+Evalutating Expression: 200.0/43.0
+Expression result: 4.65
+PARSED DATA:
+@data
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/print.html.erb within layouts/old_sql/report (2.7ms)
+Completed 200 OK in 64ms (Views: 5.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-10 21:12:03 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-10 21:12:03 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-10 21:12:03 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-10 21:12:03 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-10 21:12:03 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-10 21:12:03 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-10 21:12:03 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/sql/reports/print/?report=user&start_date=2011/05/27%2021:11:14&end_date=2011/06/11%2021:11:14&generation=-1&report_sql=user_old_sql_demo&desc=User" for 127.0.0.1 at 2011-06-10 21:13:06 -0700
+  Processing by OldSql::ReportController#print as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/27 21:11:14", "end_date"=>"2011/06/11 21:11:14", "generation"=>"-1", "report_sql"=>"user_old_sql_demo", "desc"=>"User"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')
+PARSING DESIGN DOCUMENT user_old_sql_demo.csv
+Evalutating Expression: 3+3
+Expression result: 6.0
+Evalutating Expression: (3+3)*10
+Expression result: 60.0
+Evalutating Expression: 0/0
+divided by 0
+Expression result: 0.0
+Evalutating Expression: 1.0/0
+Expression result: 0.0
+Evalutating Expression: 0.0/0.0
+Expression result: 0.0
+Evalutating Expression: 200.0/43.0
+Expression result: 4.65
+PARSED DATA:
+@data
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/print.html.erb within layouts/old_sql/report (5.6ms)
+Completed   in 68ms
+
+ActionView::Template::Error (uninitialized constant OldSql::Stripper):
+    52: 			<tr>
+    53: 				<% first_cell=true %>
+    54: 				<%row[:cell].each do |c|%>
+    55: 					<% cleaned_cell = OldSql::Stripper.strip_html(c.to_s).gsub("\n","") %>
+    56: 					<% if first_cell==true %>
+    57: 						<td><%=cleaned_cell%></td>
+    58: 					<% else %>
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.1ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.7ms)
+
+
+Started GET "/sql/reports/print/?report=user&start_date=2011/05/27%2021:11:14&end_date=2011/06/11%2021:11:14&generation=-1&report_sql=user_old_sql_demo&desc=User" for 127.0.0.1 at 2011-06-10 21:13:23 -0700
+  Processing by OldSql::ReportController#print as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/27 21:11:14", "end_date"=>"2011/06/11 21:11:14", "generation"=>"-1", "report_sql"=>"user_old_sql_demo", "desc"=>"User"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')
+  [1m[35mSQL (0.3ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')
+PARSING DESIGN DOCUMENT user_old_sql_demo.csv
+Evalutating Expression: 3+3
+Expression result: 6.0
+Evalutating Expression: (3+3)*10
+Expression result: 60.0
+Evalutating Expression: 0/0
+divided by 0
+Expression result: 0.0
+Evalutating Expression: 1.0/0
+Expression result: 0.0
+Evalutating Expression: 0.0/0.0
+Expression result: 0.0
+Evalutating Expression: 200.0/43.0
+Expression result: 4.65
+PARSED DATA:
+@data
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/print.html.erb within layouts/old_sql/report (5.6ms)
+Completed   in 42ms
+
+ActionView::Template::Error (uninitialized constant OldSql::Stripper):
+    52: 			<tr>
+    53: 				<% first_cell=true %>
+    54: 				<%row[:cell].each do |c|%>
+    55: 					<% cleaned_cell = OldSql::Stripper.strip_html(c.to_s).gsub("\n","") %>
+    56: 					<% if first_cell==true %>
+    57: 						<td><%=cleaned_cell%></td>
+    58: 					<% else %>
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (37.1ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.4ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (46.5ms)
+
+
+Started GET "/sql/reports/print/?report=user&start_date=2011/05/27%2021:11:14&end_date=2011/06/11%2021:11:14&generation=-1&report_sql=user_old_sql_demo&desc=User" for 127.0.0.1 at 2011-06-10 21:13:33 -0700
+  Processing by OldSql::ReportController#print as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/27 21:11:14", "end_date"=>"2011/06/11 21:11:14", "generation"=>"-1", "report_sql"=>"user_old_sql_demo", "desc"=>"User"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')
+PARSING DESIGN DOCUMENT user_old_sql_demo.csv
+Evalutating Expression: 3+3
+Expression result: 6.0
+Evalutating Expression: (3+3)*10
+Expression result: 60.0
+Evalutating Expression: 0/0
+divided by 0
+Expression result: 0.0
+Evalutating Expression: 1.0/0
+Expression result: 0.0
+Evalutating Expression: 0.0/0.0
+Expression result: 0.0
+Evalutating Expression: 200.0/43.0
+Expression result: 4.65
+PARSED DATA:
+@data
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/print.html.erb within layouts/old_sql/report (34.7ms)
+Completed   in 67ms
+
+ActionView::Template::Error (uninitialized constant OldSql::Stripper):
+    52: 			<tr>
+    53: 				<% first_cell=true %>
+    54: 				<%row[:cell].each do |c|%>
+    55: 					<% cleaned_cell = OldSql::Stripper.strip_html(c.to_s).gsub("\n","") %>
+    56: 					<% if first_cell==true %>
+    57: 						<td><%=cleaned_cell%></td>
+    58: 					<% else %>
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.2ms)
+
+
+Started GET "/sql/reports/print/?report=user&start_date=2011/05/27%2021:11:14&end_date=2011/06/11%2021:11:14&generation=-1&report_sql=user_old_sql_demo&desc=User" for 127.0.0.1 at 2011-06-10 21:13:35 -0700
+  Processing by OldSql::ReportController#print as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/27 21:11:14", "end_date"=>"2011/06/11 21:11:14", "generation"=>"-1", "report_sql"=>"user_old_sql_demo", "desc"=>"User"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')
+PARSING DESIGN DOCUMENT user_old_sql_demo.csv
+Evalutating Expression: 3+3
+Expression result: 6.0
+Evalutating Expression: (3+3)*10
+Expression result: 60.0
+Evalutating Expression: 0/0
+divided by 0
+Expression result: 0.0
+Evalutating Expression: 1.0/0
+Expression result: 0.0
+Evalutating Expression: 0.0/0.0
+Expression result: 0.0
+Evalutating Expression: 200.0/43.0
+Expression result: 4.65
+PARSED DATA:
+@data
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/print.html.erb within layouts/old_sql/report (5.9ms)
+Completed   in 70ms
+
+ActionView::Template::Error (uninitialized constant OldSql::Stripper):
+    52: 			<tr>
+    53: 				<% first_cell=true %>
+    54: 				<%row[:cell].each do |c|%>
+    55: 					<% cleaned_cell = OldSql::Stripper.strip_html(c.to_s).gsub("\n","") %>
+    56: 					<% if first_cell==true %>
+    57: 						<td><%=cleaned_cell%></td>
+    58: 					<% else %>
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.8ms)
+
+
+Started GET "/sql/reports/print/?report=user&start_date=2011/05/27%2021:11:14&end_date=2011/06/11%2021:11:14&generation=-1&report_sql=user_old_sql_demo&desc=User" for 127.0.0.1 at 2011-06-10 21:14:14 -0700
+  Processing by OldSql::ReportController#print as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/27 21:11:14", "end_date"=>"2011/06/11 21:11:14", "generation"=>"-1", "report_sql"=>"user_old_sql_demo", "desc"=>"User"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')
+PARSING DESIGN DOCUMENT user_old_sql_demo.csv
+Evalutating Expression: 3+3
+Expression result: 6.0
+Evalutating Expression: (3+3)*10
+Expression result: 60.0
+Evalutating Expression: 0/0
+divided by 0
+Expression result: 0.0
+Evalutating Expression: 1.0/0
+Expression result: 0.0
+Evalutating Expression: 0.0/0.0
+Expression result: 0.0
+Evalutating Expression: 200.0/43.0
+Expression result: 4.65
+PARSED DATA:
+@data
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/print.html.erb within layouts/old_sql/report (7.6ms)
+Completed   in 70ms
+
+ActionView::Template::Error (uninitialized constant OldSql::Stripper):
+    53: 			<tr>
+    54: 				<% first_cell=true %>
+    55: 				<%row[:cell].each do |c|%>
+    56: 					<% cleaned_cell = OldSql::Stripper.strip_html(c.to_s).gsub("\n","") %>
+    57: 					<% if first_cell==true %>
+    58: 						<td><%=cleaned_cell%></td>
+    59: 					<% else %>
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.6ms)
+
+
+Started GET "/sql/reports/print/?report=user&start_date=2011/05/27%2021:11:14&end_date=2011/06/11%2021:11:14&generation=-1&report_sql=user_old_sql_demo&desc=User" for 127.0.0.1 at 2011-06-10 21:14:16 -0700
+  Processing by OldSql::ReportController#print as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/27 21:11:14", "end_date"=>"2011/06/11 21:11:14", "generation"=>"-1", "report_sql"=>"user_old_sql_demo", "desc"=>"User"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')
+PARSING DESIGN DOCUMENT user_old_sql_demo.csv
+Evalutating Expression: 3+3
+Expression result: 6.0
+Evalutating Expression: (3+3)*10
+Expression result: 60.0
+Evalutating Expression: 0/0
+divided by 0
+Expression result: 0.0
+Evalutating Expression: 1.0/0
+Expression result: 0.0
+Evalutating Expression: 0.0/0.0
+Expression result: 0.0
+Evalutating Expression: 200.0/43.0
+Expression result: 4.65
+PARSED DATA:
+@data
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/print.html.erb within layouts/old_sql/report (7.4ms)
+Completed   in 40ms
+
+ActionView::Template::Error (uninitialized constant OldSql::Stripper):
+    53: 			<tr>
+    54: 				<% first_cell=true %>
+    55: 				<%row[:cell].each do |c|%>
+    56: 					<% cleaned_cell = OldSql::Stripper.strip_html(c.to_s).gsub("\n","") %>
+    57: 					<% if first_cell==true %>
+    58: 						<td><%=cleaned_cell%></td>
+    59: 					<% else %>
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.1ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.6ms)
+
+
+Started GET "/sql/reports/print/?report=user&start_date=2011/05/27%2021:11:14&end_date=2011/06/11%2021:11:14&generation=-1&report_sql=user_old_sql_demo&desc=User" for 127.0.0.1 at 2011-06-10 21:15:08 -0700
+  Processing by OldSql::ReportController#print as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/27 21:11:14", "end_date"=>"2011/06/11 21:11:14", "generation"=>"-1", "report_sql"=>"user_old_sql_demo", "desc"=>"User"}
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')[0m
+PARSING DESIGN DOCUMENT user_old_sql_demo.csv
+Evalutating Expression: 3+3
+Expression result: 6.0
+Evalutating Expression: (3+3)*10
+Expression result: 60.0
+Evalutating Expression: 0/0
+divided by 0
+Expression result: 0.0
+Evalutating Expression: 1.0/0
+Expression result: 0.0
+Evalutating Expression: 0.0/0.0
+Expression result: 0.0
+Evalutating Expression: 200.0/43.0
+Expression result: 4.65
+PARSED DATA:
+@data
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/print.html.erb within layouts/old_sql/report (2.8ms)
+Completed 200 OK in 135ms (Views: 6.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-10 21:15:08 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-10 21:15:08 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-10 21:15:08 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-10 21:15:08 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-10 21:15:08 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-10 21:15:08 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-10 21:15:09 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/sql/reports/print/?report=user&start_date=2011/05/27%2021:11:14&end_date=2011/06/11%2021:11:14&generation=-1&report_sql=user_old_sql_demo&desc=User" for 127.0.0.1 at 2011-06-10 21:15:15 -0700
+  Processing by OldSql::ReportController#print as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/27 21:11:14", "end_date"=>"2011/06/11 21:11:14", "generation"=>"-1", "report_sql"=>"user_old_sql_demo", "desc"=>"User"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')[0m
+PARSING DESIGN DOCUMENT user_old_sql_demo.csv
+Evalutating Expression: 3+3
+Expression result: 6.0
+Evalutating Expression: (3+3)*10
+Expression result: 60.0
+Evalutating Expression: 0/0
+divided by 0
+Expression result: 0.0
+Evalutating Expression: 1.0/0
+Expression result: 0.0
+Evalutating Expression: 0.0/0.0
+Expression result: 0.0
+Evalutating Expression: 200.0/43.0
+Expression result: 4.65
+PARSED DATA:
+@data
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/print.html.erb within layouts/old_sql/report (19.9ms)
+Completed   in 82ms
+
+ActionView::Template::Error (uninitialized constant OldSql::Stripper):
+    52: 			<tr>
+    53: 				<% first_cell=true %>
+    54: 				<%row[:cell].each do |c|%>
+    55: 					<% cleaned_cell = OldSql::Stripper.strip_html(c.to_s).gsub("\n","") %>
+    56: 					<% if first_cell==true %>
+    57: 						<td><%=cleaned_cell%></td>
+    58: 					<% else %>
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.5ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.8ms)
+
+
+Started GET "/sql/reports/print/?report=user&start_date=2011/05/27%2021:11:14&end_date=2011/06/11%2021:11:14&generation=-1&report_sql=user_old_sql_demo&desc=User" for 127.0.0.1 at 2011-06-10 21:15:26 -0700
+  Processing by OldSql::ReportController#print as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/27 21:11:14", "end_date"=>"2011/06/11 21:11:14", "generation"=>"-1", "report_sql"=>"user_old_sql_demo", "desc"=>"User"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')[0m
+PARSING DESIGN DOCUMENT user_old_sql_demo.csv
+Evalutating Expression: 3+3
+Expression result: 6.0
+Evalutating Expression: (3+3)*10
+Expression result: 60.0
+Evalutating Expression: 0/0
+divided by 0
+Expression result: 0.0
+Evalutating Expression: 1.0/0
+Expression result: 0.0
+Evalutating Expression: 0.0/0.0
+Expression result: 0.0
+Evalutating Expression: 200.0/43.0
+Expression result: 4.65
+PARSED DATA:
+@data
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/print.html.erb within layouts/old_sql/report (5.9ms)
+Completed   in 84ms
+
+ActionView::Template::Error (uninitialized constant OldSql::Stripper):
+    52: 			<tr>
+    53: 				<% first_cell=true %>
+    54: 				<%row[:cell].each do |c|%>
+    55: 					<% cleaned_cell = OldSql::Stripper.strip_html(c.to_s).gsub("\n","") %>
+    56: 					<% if first_cell==true %>
+    57: 						<td><%=cleaned_cell%></td>
+    58: 					<% else %>
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.9ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.9ms)
+
+
+Started GET "/sql/reports/print/?report=user&start_date=2011/05/27%2021:11:14&end_date=2011/06/11%2021:11:14&generation=-1&report_sql=user_old_sql_demo&desc=User" for 127.0.0.1 at 2011-06-10 21:16:55 -0700
+  Processing by OldSql::ReportController#print as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/27 21:11:14", "end_date"=>"2011/06/11 21:11:14", "generation"=>"-1", "report_sql"=>"user_old_sql_demo", "desc"=>"User"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')[0m
+PARSING DESIGN DOCUMENT user_old_sql_demo.csv
+Evalutating Expression: 3+3
+Expression result: 6.0
+Evalutating Expression: (3+3)*10
+Expression result: 60.0
+Evalutating Expression: 0/0
+divided by 0
+Expression result: 0.0
+Evalutating Expression: 1.0/0
+Expression result: 0.0
+Evalutating Expression: 0.0/0.0
+Expression result: 0.0
+Evalutating Expression: 200.0/43.0
+Expression result: 4.65
+PARSED DATA:
+@data
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/print.html.erb within layouts/old_sql/report (6.0ms)
+Completed   in 39ms
+
+ActionView::Template::Error (uninitialized constant OldSql::Stripper):
+    52: 			<tr>
+    53: 				<% first_cell=true %>
+    54: 				<%row[:cell].each do |c|%>
+    55: 					<% cleaned_cell = strip_html(c.to_s) %>
+    56: 					<% if first_cell==true %>
+    57: 						<td><%=cleaned_cell%></td>
+    58: 					<% else %>
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.1ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.1ms)
+
+
+Started GET "/sql/reports/print/?report=user&start_date=2011/05/27%2021:11:14&end_date=2011/06/11%2021:11:14&generation=-1&report_sql=user_old_sql_demo&desc=User" for 127.0.0.1 at 2011-06-10 21:16:57 -0700
+  Processing by OldSql::ReportController#print as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/27 21:11:14", "end_date"=>"2011/06/11 21:11:14", "generation"=>"-1", "report_sql"=>"user_old_sql_demo", "desc"=>"User"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')[0m
+PARSING DESIGN DOCUMENT user_old_sql_demo.csv
+Evalutating Expression: 3+3
+Expression result: 6.0
+Evalutating Expression: (3+3)*10
+Expression result: 60.0
+Evalutating Expression: 0/0
+divided by 0
+Expression result: 0.0
+Evalutating Expression: 1.0/0
+Expression result: 0.0
+Evalutating Expression: 0.0/0.0
+Expression result: 0.0
+Evalutating Expression: 200.0/43.0
+Expression result: 4.65
+PARSED DATA:
+@data
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/print.html.erb within layouts/old_sql/report (35.9ms)
+Completed   in 70ms
+
+ActionView::Template::Error (uninitialized constant OldSql::Stripper):
+    52: 			<tr>
+    53: 				<% first_cell=true %>
+    54: 				<%row[:cell].each do |c|%>
+    55: 					<% cleaned_cell = strip_html(c.to_s) %>
+    56: 					<% if first_cell==true %>
+    57: 						<td><%=cleaned_cell%></td>
+    58: 					<% else %>
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.2ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.9ms)
+
+
+Started GET "/sql/reports/print/?report=user&start_date=2011/05/27%2021:11:14&end_date=2011/06/11%2021:11:14&generation=-1&report_sql=user_old_sql_demo&desc=User" for 127.0.0.1 at 2011-06-10 21:17:14 -0700
+  Processing by OldSql::ReportController#print as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/27 21:11:14", "end_date"=>"2011/06/11 21:11:14", "generation"=>"-1", "report_sql"=>"user_old_sql_demo", "desc"=>"User"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')[0m
+PARSING DESIGN DOCUMENT user_old_sql_demo.csv
+Evalutating Expression: 3+3
+Expression result: 6.0
+Evalutating Expression: (3+3)*10
+Expression result: 60.0
+Evalutating Expression: 0/0
+divided by 0
+Expression result: 0.0
+Evalutating Expression: 1.0/0
+Expression result: 0.0
+Evalutating Expression: 0.0/0.0
+Expression result: 0.0
+Evalutating Expression: 200.0/43.0
+Expression result: 4.65
+PARSED DATA:
+@data
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/print.html.erb within layouts/old_sql/report (2.4ms)
+Completed 200 OK in 68ms (Views: 5.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-10 21:17:14 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-10 21:17:14 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-10 21:17:14 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-10 21:17:14 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-10 21:17:14 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-10 21:17:14 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-10 21:17:14 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/sql/reports/print/?report=user&start_date=2011/05/27%2021:11:14&end_date=2011/06/11%2021:11:14&generation=-1&report_sql=user_old_sql_demo&desc=User" for 127.0.0.1 at 2011-06-10 21:18:10 -0700
+  Processing by OldSql::ReportController#print as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/27 21:11:14", "end_date"=>"2011/06/11 21:11:14", "generation"=>"-1", "report_sql"=>"user_old_sql_demo", "desc"=>"User"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')[0m
+PARSING DESIGN DOCUMENT user_old_sql_demo.csv
+Evalutating Expression: 3+3
+Expression result: 6.0
+Evalutating Expression: (3+3)*10
+Expression result: 60.0
+Evalutating Expression: 0/0
+divided by 0
+Expression result: 0.0
+Evalutating Expression: 1.0/0
+Expression result: 0.0
+Evalutating Expression: 0.0/0.0
+Expression result: 0.0
+Evalutating Expression: 200.0/43.0
+Expression result: 4.65
+PARSED DATA:
+@data
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/print.html.erb within layouts/old_sql/report (5.5ms)
+Completed   in 66ms
+
+ActionView::Template::Error (uninitialized constant OldSql::Stripper):
+    52: 			<tr>
+    53: 				<% first_cell=true %>
+    54: 				<%row[:cell].each do |c|%>
+    55: 					<% cleaned_cell = strip_html(c.to_s) %>
+    56: 					<% if first_cell==true %>
+    57: 						<td><%=cleaned_cell%></td>
+    58: 					<% else %>
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.5ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.0ms)
+
+
+Started GET "/sql/reports/print/?report=user&start_date=2011/05/27%2021:11:14&end_date=2011/06/11%2021:11:14&generation=-1&report_sql=user_old_sql_demo&desc=User" for 127.0.0.1 at 2011-06-10 21:19:48 -0700
+  Processing by OldSql::ReportController#print as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/27 21:11:14", "end_date"=>"2011/06/11 21:11:14", "generation"=>"-1", "report_sql"=>"user_old_sql_demo", "desc"=>"User"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')[0m
+PARSING DESIGN DOCUMENT user_old_sql_demo.csv
+Evalutating Expression: 3+3
+Expression result: 6.0
+Evalutating Expression: (3+3)*10
+Expression result: 60.0
+Evalutating Expression: 0/0
+divided by 0
+Expression result: 0.0
+Evalutating Expression: 1.0/0
+Expression result: 0.0
+Evalutating Expression: 0.0/0.0
+Expression result: 0.0
+Evalutating Expression: 200.0/43.0
+Expression result: 4.65
+PARSED DATA:
+@data
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/print.html.erb within layouts/old_sql/report (2.8ms)
+Completed 200 OK in 35ms (Views: 5.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-10 21:19:48 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-10 21:19:48 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-10 21:19:48 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-10 21:19:48 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-10 21:19:48 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-10 21:19:48 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-10 21:19:48 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/sql/reports/print/?report=user&start_date=2011/05/27%2021:11:14&end_date=2011/06/11%2021:11:14&generation=-1&report_sql=user_old_sql_demo&desc=User" for 127.0.0.1 at 2011-06-10 21:19:51 -0700
+  Processing by OldSql::ReportController#print as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/27 21:11:14", "end_date"=>"2011/06/11 21:11:14", "generation"=>"-1", "report_sql"=>"user_old_sql_demo", "desc"=>"User"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')[0m
+PARSING DESIGN DOCUMENT user_old_sql_demo.csv
+Evalutating Expression: 3+3
+Expression result: 6.0
+Evalutating Expression: (3+3)*10
+Expression result: 60.0
+Evalutating Expression: 0/0
+divided by 0
+Expression result: 0.0
+Evalutating Expression: 1.0/0
+Expression result: 0.0
+Evalutating Expression: 0.0/0.0
+Expression result: 0.0
+Evalutating Expression: 200.0/43.0
+Expression result: 4.65
+PARSED DATA:
+@data
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/print.html.erb within layouts/old_sql/report (2.7ms)
+Completed 200 OK in 65ms (Views: 35.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-10 21:19:51 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-10 21:19:51 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-10 21:19:51 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-10 21:19:51 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-10 21:19:51 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-10 21:19:51 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-10 21:19:51 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/sql/reports/print/?report=user&start_date=2011/05/27%2021:11:14&end_date=2011/06/11%2021:11:14&generation=-1&report_sql=user_old_sql_demo&desc=User" for 127.0.0.1 at 2011-06-10 21:20:54 -0700
+  Processing by OldSql::ReportController#print as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/27 21:11:14", "end_date"=>"2011/06/11 21:11:14", "generation"=>"-1", "report_sql"=>"user_old_sql_demo", "desc"=>"User"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')[0m
+PARSING DESIGN DOCUMENT user_old_sql_demo.csv
+Evalutating Expression: 3+3
+Expression result: 6.0
+Evalutating Expression: (3+3)*10
+Expression result: 60.0
+Evalutating Expression: 0/0
+divided by 0
+Expression result: 0.0
+Evalutating Expression: 1.0/0
+Expression result: 0.0
+Evalutating Expression: 0.0/0.0
+Expression result: 0.0
+Evalutating Expression: 200.0/43.0
+Expression result: 4.65
+PARSED DATA:
+@data
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/print.html.erb within layouts/old_sql/report (1.3ms)
+Completed   in 64ms
+
+ActionView::Template::Error (undefined method `strip_html' for OldSql:Module):
+    52: 			<tr>
+    53: 				<% first_cell=true %>
+    54: 				<%row[:cell].each do |c|%>
+    55: 					<% cleaned_cell = strip_html(c.to_s).gsub("\n","") %>
+    56: 					<% if first_cell==true %>
+    57: 						<td><%=cleaned_cell%></td>
+    58: 					<% else %>
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.1ms)
+
+
+Started GET "/sql/reports/print/?report=user&start_date=2011/05/27%2021:11:14&end_date=2011/06/11%2021:11:14&generation=-1&report_sql=user_old_sql_demo&desc=User" for 127.0.0.1 at 2011-06-10 21:21:08 -0700
+  Processing by OldSql::ReportController#print as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/27 21:11:14", "end_date"=>"2011/06/11 21:11:14", "generation"=>"-1", "report_sql"=>"user_old_sql_demo", "desc"=>"User"}
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')[0m
+PARSING DESIGN DOCUMENT user_old_sql_demo.csv
+Evalutating Expression: 3+3
+Expression result: 6.0
+Evalutating Expression: (3+3)*10
+Expression result: 60.0
+Evalutating Expression: 0/0
+divided by 0
+Expression result: 0.0
+Evalutating Expression: 1.0/0
+Expression result: 0.0
+Evalutating Expression: 0.0/0.0
+Expression result: 0.0
+Evalutating Expression: 200.0/43.0
+Expression result: 4.65
+PARSED DATA:
+@data
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/print.html.erb within layouts/old_sql/report (15.5ms)
+Completed   in 151ms
+
+ActionView::Template::Error (undefined method `strip_html' for OldSql:Module):
+    52: 			<tr>
+    53: 				<% first_cell=true %>
+    54: 				<%row[:cell].each do |c|%>
+    55: 					<% cleaned_cell = strip_html(c.to_s).gsub("\n","") %>
+    56: 					<% if first_cell==true %>
+    57: 						<td><%=cleaned_cell%></td>
+    58: 					<% else %>
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.2ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.7ms)
+
+
+Started GET "/sql/reports/print/?report=user&start_date=2011/05/27%2021:11:14&end_date=2011/06/11%2021:11:14&generation=-1&report_sql=user_old_sql_demo&desc=User" for 127.0.0.1 at 2011-06-10 21:21:09 -0700
+  Processing by OldSql::ReportController#print as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/27 21:11:14", "end_date"=>"2011/06/11 21:11:14", "generation"=>"-1", "report_sql"=>"user_old_sql_demo", "desc"=>"User"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')[0m
+PARSING DESIGN DOCUMENT user_old_sql_demo.csv
+Evalutating Expression: 3+3
+Expression result: 6.0
+Evalutating Expression: (3+3)*10
+Expression result: 60.0
+Evalutating Expression: 0/0
+divided by 0
+Expression result: 0.0
+Evalutating Expression: 1.0/0
+Expression result: 0.0
+Evalutating Expression: 0.0/0.0
+Expression result: 0.0
+Evalutating Expression: 200.0/43.0
+Expression result: 4.65
+PARSED DATA:
+@data
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/print.html.erb within layouts/old_sql/report (1.0ms)
+Completed   in 61ms
+
+ActionView::Template::Error (undefined method `strip_html' for OldSql:Module):
+    52: 			<tr>
+    53: 				<% first_cell=true %>
+    54: 				<%row[:cell].each do |c|%>
+    55: 					<% cleaned_cell = strip_html(c.to_s).gsub("\n","") %>
+    56: 					<% if first_cell==true %>
+    57: 						<td><%=cleaned_cell%></td>
+    58: 					<% else %>
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.5ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.3ms)
+
+
+Started GET "/sql/reports/print/?report=user&start_date=2011/05/27%2021:11:14&end_date=2011/06/11%2021:11:14&generation=-1&report_sql=user_old_sql_demo&desc=User" for 127.0.0.1 at 2011-06-10 21:21:33 -0700
+  Processing by OldSql::ReportController#print as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/27 21:11:14", "end_date"=>"2011/06/11 21:11:14", "generation"=>"-1", "report_sql"=>"user_old_sql_demo", "desc"=>"User"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')[0m
+PARSING DESIGN DOCUMENT user_old_sql_demo.csv
+Evalutating Expression: 3+3
+Expression result: 6.0
+Evalutating Expression: (3+3)*10
+Expression result: 60.0
+Evalutating Expression: 0/0
+divided by 0
+Expression result: 0.0
+Evalutating Expression: 1.0/0
+Expression result: 0.0
+Evalutating Expression: 0.0/0.0
+Expression result: 0.0
+Evalutating Expression: 200.0/43.0
+Expression result: 4.65
+PARSED DATA:
+@data
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/print.html.erb within layouts/old_sql/report (1.1ms)
+Completed   in 36ms
+
+ActionView::Template::Error (undefined method `strip_html' for OldSql:Module):
+    52: 			<tr>
+    53: 				<% first_cell=true %>
+    54: 				<%row[:cell].each do |c|%>
+    55: 					<% cleaned_cell = strip_html(c.to_s).gsub("\n","") %>
+    56: 					<% if first_cell==true %>
+    57: 						<td><%=cleaned_cell%></td>
+    58: 					<% else %>
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.6ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.6ms)
+
+
+Started GET "/sql/reports/print/?report=user&start_date=2011/05/27%2021:11:14&end_date=2011/06/11%2021:11:14&generation=-1&report_sql=user_old_sql_demo&desc=User" for 127.0.0.1 at 2011-06-10 21:21:42 -0700
+  Processing by OldSql::ReportController#print as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/27 21:11:14", "end_date"=>"2011/06/11 21:11:14", "generation"=>"-1", "report_sql"=>"user_old_sql_demo", "desc"=>"User"}
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')[0m
+PARSING DESIGN DOCUMENT user_old_sql_demo.csv
+Evalutating Expression: 3+3
+Expression result: 6.0
+Evalutating Expression: (3+3)*10
+Expression result: 60.0
+Evalutating Expression: 0/0
+divided by 0
+Expression result: 0.0
+Evalutating Expression: 1.0/0
+Expression result: 0.0
+Evalutating Expression: 0.0/0.0
+Expression result: 0.0
+Evalutating Expression: 200.0/43.0
+Expression result: 4.65
+PARSED DATA:
+@data
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/print.html.erb within layouts/old_sql/report (2.8ms)
+Completed 200 OK in 137ms (Views: 5.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-10 21:21:42 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-10 21:21:42 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-10 21:21:42 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-10 21:21:42 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-10 21:21:42 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-10 21:21:42 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-10 21:21:42 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/sql/reports/print/?report=user&start_date=2011/05/27%2021:11:14&end_date=2011/06/11%2021:11:14&generation=-1&report_sql=user_old_sql_demo&desc=User" for 127.0.0.1 at 2011-06-10 21:21:45 -0700
+  Processing by OldSql::ReportController#print as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/27 21:11:14", "end_date"=>"2011/06/11 21:11:14", "generation"=>"-1", "report_sql"=>"user_old_sql_demo", "desc"=>"User"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')[0m
+PARSING DESIGN DOCUMENT user_old_sql_demo.csv
+Evalutating Expression: 3+3
+Expression result: 6.0
+Evalutating Expression: (3+3)*10
+Expression result: 60.0
+Evalutating Expression: 0/0
+divided by 0
+Expression result: 0.0
+Evalutating Expression: 1.0/0
+Expression result: 0.0
+Evalutating Expression: 0.0/0.0
+Expression result: 0.0
+Evalutating Expression: 200.0/43.0
+Expression result: 4.65
+PARSED DATA:
+@data
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/print.html.erb within layouts/old_sql/report (2.5ms)
+Completed 200 OK in 64ms (Views: 5.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-10 21:21:45 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-10 21:21:45 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-10 21:21:45 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-10 21:21:45 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-10 21:21:45 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-10 21:21:45 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-10 21:21:45 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/sql/reports/print/?report=user&start_date=2011/05/27%2021:11:14&end_date=2011/06/11%2021:11:14&generation=-1&report_sql=user_old_sql_demo&desc=User" for 127.0.0.1 at 2011-06-10 21:21:47 -0700
+  Processing by OldSql::ReportController#print as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/27 21:11:14", "end_date"=>"2011/06/11 21:11:14", "generation"=>"-1", "report_sql"=>"user_old_sql_demo", "desc"=>"User"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')[0m
+PARSING DESIGN DOCUMENT user_old_sql_demo.csv
+Evalutating Expression: 3+3
+Expression result: 6.0
+Evalutating Expression: (3+3)*10
+Expression result: 60.0
+Evalutating Expression: 0/0
+divided by 0
+Expression result: 0.0
+Evalutating Expression: 1.0/0
+Expression result: 0.0
+Evalutating Expression: 0.0/0.0
+Expression result: 0.0
+Evalutating Expression: 200.0/43.0
+Expression result: 4.65
+PARSED DATA:
+@data
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/print.html.erb within layouts/old_sql/report (2.7ms)
+Completed 200 OK in 66ms (Views: 5.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-10 21:21:47 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-10 21:21:47 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-10 21:21:47 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-10 21:21:47 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-10 21:21:47 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-10 21:21:47 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-10 21:21:47 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/sql/reports/print/?report=user&start_date=2011/05/27%2021:11:14&end_date=2011/06/11%2021:11:14&generation=-1&report_sql=user_old_sql_demo&desc=User" for 127.0.0.1 at 2011-06-10 21:21:48 -0700
+  Processing by OldSql::ReportController#print as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/27 21:11:14", "end_date"=>"2011/06/11 21:11:14", "generation"=>"-1", "report_sql"=>"user_old_sql_demo", "desc"=>"User"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')[0m
+PARSING DESIGN DOCUMENT user_old_sql_demo.csv
+Evalutating Expression: 3+3
+Expression result: 6.0
+Evalutating Expression: (3+3)*10
+Expression result: 60.0
+Evalutating Expression: 0/0
+divided by 0
+Expression result: 0.0
+Evalutating Expression: 1.0/0
+Expression result: 0.0
+Evalutating Expression: 0.0/0.0
+Expression result: 0.0
+Evalutating Expression: 200.0/43.0
+Expression result: 4.65
+PARSED DATA:
+@data
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/print.html.erb within layouts/old_sql/report (2.7ms)
+Completed 200 OK in 36ms (Views: 5.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-10 21:21:49 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-10 21:21:49 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-10 21:21:49 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-10 21:21:49 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-10 21:21:49 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-10 21:21:49 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-10 21:21:49 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/sql/reports/print/?report=user&start_date=2011/05/27%2021:11:14&end_date=2011/06/11%2021:11:14&generation=-1&report_sql=user_old_sql_demo&desc=User" for 127.0.0.1 at 2011-06-10 21:21:50 -0700
+  Processing by OldSql::ReportController#print as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/27 21:11:14", "end_date"=>"2011/06/11 21:11:14", "generation"=>"-1", "report_sql"=>"user_old_sql_demo", "desc"=>"User"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')[0m
+PARSING DESIGN DOCUMENT user_old_sql_demo.csv
+Evalutating Expression: 3+3
+Expression result: 6.0
+Evalutating Expression: (3+3)*10
+Expression result: 60.0
+Evalutating Expression: 0/0
+divided by 0
+Expression result: 0.0
+Evalutating Expression: 1.0/0
+Expression result: 0.0
+Evalutating Expression: 0.0/0.0
+Expression result: 0.0
+Evalutating Expression: 200.0/43.0
+Expression result: 4.65
+PARSED DATA:
+@data
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/print.html.erb within layouts/old_sql/report (3.5ms)
+Completed 200 OK in 69ms (Views: 6.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-10 21:21:50 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-10 21:21:50 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-10 21:21:50 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-10 21:21:50 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-10 21:21:50 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-10 21:21:50 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-10 21:21:50 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/sql/reports/print/?report=user&start_date=2011/05/27%2021:11:14&end_date=2011/06/11%2021:11:14&generation=-1&report_sql=user_old_sql_demo&desc=User" for 127.0.0.1 at 2011-06-10 21:21:51 -0700
+  Processing by OldSql::ReportController#print as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/27 21:11:14", "end_date"=>"2011/06/11 21:11:14", "generation"=>"-1", "report_sql"=>"user_old_sql_demo", "desc"=>"User"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')[0m
+PARSING DESIGN DOCUMENT user_old_sql_demo.csv
+Evalutating Expression: 3+3
+Expression result: 6.0
+Evalutating Expression: (3+3)*10
+Expression result: 60.0
+Evalutating Expression: 0/0
+divided by 0
+Expression result: 0.0
+Evalutating Expression: 1.0/0
+Expression result: 0.0
+Evalutating Expression: 0.0/0.0
+Expression result: 0.0
+Evalutating Expression: 200.0/43.0
+Expression result: 4.65
+PARSED DATA:
+@data
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/print.html.erb within layouts/old_sql/report (2.5ms)
+Completed 200 OK in 65ms (Views: 5.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-10 21:21:51 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-10 21:21:51 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-10 21:21:51 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-10 21:21:51 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-10 21:21:51 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-10 21:21:51 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-10 21:21:52 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/sql/reports/print/?report=user&start_date=2011/05/27%2021:11:14&end_date=2011/06/11%2021:11:14&generation=-1&report_sql=user_old_sql_demo&desc=User" for 127.0.0.1 at 2011-06-10 21:21:57 -0700
+  Processing by OldSql::ReportController#print as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/27 21:11:14", "end_date"=>"2011/06/11 21:11:14", "generation"=>"-1", "report_sql"=>"user_old_sql_demo", "desc"=>"User"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')[0m
+PARSING DESIGN DOCUMENT user_old_sql_demo.csv
+Evalutating Expression: 3+3
+Expression result: 6.0
+Evalutating Expression: (3+3)*10
+Expression result: 60.0
+Evalutating Expression: 0/0
+divided by 0
+Expression result: 0.0
+Evalutating Expression: 1.0/0
+Expression result: 0.0
+Evalutating Expression: 0.0/0.0
+Expression result: 0.0
+Evalutating Expression: 200.0/43.0
+Expression result: 4.65
+PARSED DATA:
+@data
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/print.html.erb within layouts/old_sql/report (2.7ms)
+Completed 200 OK in 74ms (Views: 5.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-10 21:21:57 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/sql/reports/print/?report=user&start_date=2011/05/27%2021:11:14&end_date=2011/06/11%2021:11:14&generation=-1&report_sql=user_old_sql_demo&desc=User" for 127.0.0.1 at 2011-06-10 21:22:02 -0700
+  Processing by OldSql::ReportController#print as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/27 21:11:14", "end_date"=>"2011/06/11 21:11:14", "generation"=>"-1", "report_sql"=>"user_old_sql_demo", "desc"=>"User"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:11:14')
+AND u.created_at < date('2011-06-11 21:11:14')[0m
+PARSING DESIGN DOCUMENT user_old_sql_demo.csv
+Evalutating Expression: 3+3
+Expression result: 6.0
+Evalutating Expression: (3+3)*10
+Expression result: 60.0
+Evalutating Expression: 0/0
+divided by 0
+Expression result: 0.0
+Evalutating Expression: 1.0/0
+Expression result: 0.0
+Evalutating Expression: 0.0/0.0
+Expression result: 0.0
+Evalutating Expression: 200.0/43.0
+Expression result: 4.65
+PARSED DATA:
+@data
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/print.html.erb within layouts/old_sql/report (4.2ms)
+Completed 200 OK in 79ms (Views: 7.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-10 21:22:02 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-10 21:22:53 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/index.html.erb within layouts/old_sql/report (2.1ms)
+Completed 200 OK in 118ms (Views: 5.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-10 21:22:53 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-10 21:22:53 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-10 21:22:53 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-10 21:22:53 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-10 21:22:53 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-10 21:22:53 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-10 21:22:53 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-10 21:22:53 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-10 21:22:53 -0700
+
+
+Started GET "/sql/reports/datagrid/?report=user&start_date=2011/05/27%2021:22:53&end_date=2011/06/11%2021:22:53&generation=-1&report_sql=user_old_sql_demo" for 127.0.0.1 at 2011-06-10 21:22:57 -0700
+  Processing by OldSql::ReportController#datagrid as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/27 21:22:53", "end_date"=>"2011/06/11 21:22:53", "generation"=>"-1", "report_sql"=>"user_old_sql_demo"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (2.4ms)
+Completed 200 OK in 65ms (Views: 5.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-10 21:22:57 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-10 21:22:57 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-10 21:22:57 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-10 21:22:57 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-10 21:22:57 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-10 21:22:57 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-10 21:22:57 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-10 21:22:57 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-10 21:22:57 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-10 21:22:57 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/sql/reports/query.json/?report=user&report_sql=user_old_sql_demo&generation=-1&start_date=2011/05/27%2021:22:53&end_date=2011/06/11%2021:22:53&_search=false&nd=1307766177476&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-10 21:22:57 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"user", "report_sql"=>"user_old_sql_demo", "generation"=>"-1", "start_date"=>"2011/05/27 21:22:53", "end_date"=>"2011/06/11 21:22:53", "_search"=>"false", "nd"=>"1307766177476", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:22:53')
+AND u.created_at < date('2011-06-11 21:22:53')
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:22:53')
+AND u.created_at < date('2011-06-11 21:22:53')[0m
+PARSING DESIGN DOCUMENT user_old_sql_demo.csv
+Evalutating Expression: 3+3
+Expression result: 6.0
+Evalutating Expression: (3+3)*10
+Expression result: 60.0
+Evalutating Expression: 0/0
+divided by 0
+Expression result: 0.0
+Evalutating Expression: 1.0/0
+Expression result: 0.0
+Evalutating Expression: 0.0/0.0
+Expression result: 0.0
+Evalutating Expression: 200.0/43.0
+Expression result: 4.65
+PARSED DATA:
+@data
+Completed 200 OK in 48ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-10 21:22:57 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-10 21:22:57 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-10 21:22:57 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-10 21:22:57 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-10 21:22:57 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-10 21:22:57 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-10 21:22:57 -0700
+
+
+Started GET "/sql/reports/print/?report=user&start_date=2011/05/27%2021:22:53&end_date=2011/06/11%2021:22:53&generation=-1&report_sql=user_old_sql_demo&desc=User" for 127.0.0.1 at 2011-06-10 21:22:58 -0700
+  Processing by OldSql::ReportController#print as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/27 21:22:53", "end_date"=>"2011/06/11 21:22:53", "generation"=>"-1", "report_sql"=>"user_old_sql_demo", "desc"=>"User"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:22:53')
+AND u.created_at < date('2011-06-11 21:22:53')
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:22:53')
+AND u.created_at < date('2011-06-11 21:22:53')[0m
+PARSING DESIGN DOCUMENT user_old_sql_demo.csv
+Evalutating Expression: 3+3
+Expression result: 6.0
+Evalutating Expression: (3+3)*10
+Expression result: 60.0
+Evalutating Expression: 0/0
+divided by 0
+Expression result: 0.0
+Evalutating Expression: 1.0/0
+Expression result: 0.0
+Evalutating Expression: 0.0/0.0
+Expression result: 0.0
+Evalutating Expression: 200.0/43.0
+Expression result: 4.65
+PARSED DATA:
+@data
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/print.html.erb within layouts/old_sql/report (3.6ms)
+Completed 200 OK in 47ms (Views: 6.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-10 21:22:58 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/sql/reports/print/?report=user&start_date=2011/05/27%2021:22:53&end_date=2011/06/11%2021:22:53&generation=-1&report_sql=user_old_sql_demo&desc=User" for 127.0.0.1 at 2011-06-10 21:23:11 -0700
+  Processing by OldSql::ReportController#print as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/27 21:22:53", "end_date"=>"2011/06/11 21:22:53", "generation"=>"-1", "report_sql"=>"user_old_sql_demo", "desc"=>"User"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:22:53')
+AND u.created_at < date('2011-06-11 21:22:53')
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:22:53')
+AND u.created_at < date('2011-06-11 21:22:53')[0m
+PARSING DESIGN DOCUMENT user_old_sql_demo.csv
+Evalutating Expression: 3+3
+Expression result: 6.0
+Evalutating Expression: (3+3)*10
+Expression result: 60.0
+Evalutating Expression: 0/0
+divided by 0
+Expression result: 0.0
+Evalutating Expression: 1.0/0
+Expression result: 0.0
+Evalutating Expression: 0.0/0.0
+Expression result: 0.0
+Evalutating Expression: 200.0/43.0
+Expression result: 4.65
+PARSED DATA:
+@data
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/print.html.erb within layouts/old_sql/report (2.8ms)
+Completed 200 OK in 37ms (Views: 5.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-10 21:23:11 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-10 21:23:11 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-10 21:23:11 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-10 21:23:11 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-10 21:23:11 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-10 21:23:11 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-10 21:23:12 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-10 21:23:20 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/index.html.erb within layouts/old_sql/report (2.1ms)
+Completed 200 OK in 60ms (Views: 5.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-10 21:23:20 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-10 21:23:20 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-10 21:23:20 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-10 21:23:20 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-10 21:23:20 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-10 21:23:20 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-10 21:23:20 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-10 21:23:20 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-10 21:23:20 -0700
+
+
+Started GET "/sql/reports/datagrid/?report=user&start_date=2011/05/27%2021:23:20&end_date=2011/06/11%2021:23:20&generation=-1&report_sql=user_old_sql_demo" for 127.0.0.1 at 2011-06-10 21:23:23 -0700
+  Processing by OldSql::ReportController#datagrid as HTML
+  Parameters: {"report"=>"user", "start_date"=>"2011/05/27 21:23:20", "end_date"=>"2011/06/11 21:23:20", "generation"=>"-1", "report_sql"=>"user_old_sql_demo"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (2.4ms)
+Completed 200 OK in 62ms (Views: 5.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-10 21:23:23 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-10 21:23:23 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-10 21:23:23 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-10 21:23:23 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-10 21:23:23 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-10 21:23:23 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-10 21:23:23 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-10 21:23:23 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-10 21:23:23 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-10 21:23:23 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/sql/reports/query.json/?report=user&report_sql=user_old_sql_demo&generation=-1&start_date=2011/05/27%2021:23:20&end_date=2011/06/11%2021:23:20&_search=false&nd=1307766203971&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-10 21:23:23 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"user", "report_sql"=>"user_old_sql_demo", "generation"=>"-1", "start_date"=>"2011/05/27 21:23:20", "end_date"=>"2011/06/11 21:23:20", "_search"=>"false", "nd"=>"1307766203971", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:23:20')
+AND u.created_at < date('2011-06-11 21:23:20')
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-05-27 21:23:20')
+AND u.created_at < date('2011-06-11 21:23:20')[0m
+PARSING DESIGN DOCUMENT user_old_sql_demo.csv
+Evalutating Expression: 3+3
+Expression result: 6.0
+Evalutating Expression: (3+3)*10
+Expression result: 60.0
+Evalutating Expression: 0/0
+divided by 0
+Expression result: 0.0
+Evalutating Expression: 1.0/0
+Expression result: 0.0
+Evalutating Expression: 0.0/0.0
+Expression result: 0.0
+Evalutating Expression: 200.0/43.0
+Expression result: 4.65
+PARSED DATA:
+@data
+Completed 200 OK in 34ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-10 21:23:24 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-10 21:23:24 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-10 21:23:24 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-10 21:23:24 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-10 21:23:24 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-10 21:23:24 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-10 21:23:24 -0700

@@ -25,7 +25,7 @@
 * Rename demo files to user_old_sql_demo* to not conflict with actual reports. (done)
 * ! Don't create the reports.yml if it already exists ! (done)
 * Allow jqgrid settings to be overridden in the report config (started)
-* Remove CanCan and Sanitize requirement
+* Remove CanCan and Sanitize requirement (done)
 * Make ROUND_PRECISION and whether to round values configuration options (done)
 
 # Design Parser

@@ -9,6 +9,7 @@ module OldSql
 
     helper_method :jqgrid_col_model
     helper_method :jqgrid_col_names
+    helper_method :strip_html
 
     layout "old_sql/report.html.erb"
     
@@ -61,7 +62,7 @@ module OldSql
             @report[:rows].each do |row|
               rec = []
               row[:cell].each do |cell|
-                rec << Sanitize.clean(cell.to_s)
+                rec << strip_html(cell.to_s).gsub("\n","")
               end
               csv << rec
             end
@@ -97,7 +98,7 @@ module OldSql
 
     private
       def ensure_old_sql_admin!
-        raise CanCan::AccessDenied unless current_user.old_sql_admin?
+        render_error(Exception.new "Old SQL Access Denied.") unless current_user.old_sql_admin?
       end
       
       def _init
@@ -153,6 +154,15 @@ module OldSql
         else
           return nil
         end
+      end
+      
+      def render_error(exception)
+        logger.error(exception)
+        render :template => "old_sql/errors/401.html.erb", :status => 401
+      end
+      
+      def strip_html html
+        OldSql.strip_html html
       end
   end
 end

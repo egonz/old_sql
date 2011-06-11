@@ -52,7 +52,7 @@ th {
 			<tr>
 				<% first_cell=true %>
 				<%row[:cell].each do |c|%>
-					<% cleaned_cell = Sanitize.clean(c.to_s) %>
+					<% cleaned_cell = strip_html(c.to_s).gsub("\n","") %>
 					<% if first_cell==true %>
 						<td><%=cleaned_cell%></td>
 					<% else %>
