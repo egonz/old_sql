@@ -5,10 +5,10 @@ OldSql.setup do |config|
   config.report_select_page_title = 'Old SQL Reports'
   
   # Determines whether the values for the report will be rounded.
-  config.round_report_values = true
+  config.round_report_values = false
   
   # The precision to round all values to if rounding is enabled.
-  config.rounding_precision = 2
+  config.rounding_precision = 4
   
   # Configure the default report view. This setting will be used unless overridden 
   # in config/old_sql/reports.yml.

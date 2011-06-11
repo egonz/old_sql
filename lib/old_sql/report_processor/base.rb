@@ -20,8 +20,6 @@ module OldSql
         template = File.read("#{Rails.root}/config/old_sql/report_sql/#{report_sql}.erb")
         sql = Erubis::Eruby.new(template).result(vars)
       
-        Rails.logger.debug sql
-      
         begin
           #todo change to a reporting db
           db = ActiveRecord::Base.connection();
@@ -48,10 +46,6 @@ module OldSql
           end
         end
         
-        if Rails.env == "development"
-          Rails.logger.debug "PARSED DATA:\n@data"
-        end
-        
         @data
       end
     
@@ -75,7 +69,8 @@ module OldSql
       end
       
       def parse_design(design, resultset)
-        Rails.logger.info "PARSING DESIGN DOCUMENT #{design}.csv"
+        return nil if @rec.nil?
+        
         model = OldSql::ReportDesign::Parser.read_file("#{design}.csv")
         
         init(resultset)
@@ -114,12 +109,9 @@ module OldSql
       def eval_expression expression
         result = 0.0
         begin
-          Rails.logger.debug "Evalutating Expression: #{expression}"
           result = eval(expression)
         rescue ZeroDivisionError => e
-          Rails.logger.error e
         rescue Exception => e
-          Rails.logger.error e
         end
         
         if result.class == Float || result.class == Fixnum
@@ -131,8 +123,6 @@ module OldSql
         elsif OldSql.round_report_values
           result = round(result.to_f, OldSql.rounding_precision)
         end
-        
-        Rails.logger.debug "Expression result: #{result}"
         
         result
       end

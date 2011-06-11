@@ -17,7 +17,7 @@
   allow the user to customize the reports. Do the same for the layout file. (done)
 * Rename new_row to add_row. (done)
 * Move loading of the sub processor into the base processor. (done)
-* Think about creating a rake task. For instance an ASCII view of the reports, or csv.
+* Think about creating a rake task. For instance an ASCII view of the reports, or csv. (done)
 * Report type should be in the yaml. Default can be in initializer.
 * Base should setup structure based on report type.
 
