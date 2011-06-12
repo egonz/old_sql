@@ -4,6 +4,7 @@ module OldSql
     template = File.read("#{OldSql::ReportDesign::Parser.report_design_path}/../reports.yml")
     report_config = YAML.load(Erubis::Eruby.new(template).result)[report] 
     
+    Rails.env = env
     set_logger
     set_connection(env)
     
@@ -68,7 +69,7 @@ module OldSql
   end
   
   def self.set_connection(env)
-    dbconfig = YAML::load(File.open(Rails.root.join("config/database.yml")))
+    dbconfig = YAML::load(Erubis::Eruby.new(File.read(Rails.root.join("config/database.yml"))).result)
     ActiveRecord::Base.establish_connection(dbconfig[env])
   end
   end

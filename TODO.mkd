@@ -1,33 +1,50 @@
 # TODO
 
+# HIGHER PRIORITY
+* The authenticate method in the report controller should be more generic. A variable could be set 
+  in an initializer that can be used in an eval method.
+* Clean up reports.yml
+* Rename reports.yml to report.yml.
+* Parse csv file with Erubis::Eruby
+* Make all caps labels bold
+* Eliminate the virality "feature."
+* Create a section of the design file that can be used as a testing area for within Excel.
+  This section would be ignored by the parser. Here is an example: 
+
+  # data:
+  parent clicks,other clicks,a+b
+  1,4,=A2+B2
+  2,5,=A3+B3
+  3,2,=A4+B4
+  4,1,=A5+B5
+  5,5,=A6+B6
+
+# BACKLOG
+
 * Allow multiple sql files
-* Move javascript in index.html.erb into a separate javascript file.
+* Try and implement jqgrid sort and search methods. (deferring)
+  This should be done in the sql files by passing the params from jqgrid into them. (deferring)
+* I'd like to create a more traditional html report view in addition to jqgrid.
+* Add setting in the initializer for jqgrid or html. This will determine which view is used.
+* Report type should be in the yaml. Default can be in initializer.
+* Base should setup structure based on report type.
+
+# COMPLETED
+
+* Need to check for divide by zero errors before calling eval (done)
+* Move javascript in index.html.erb into a separate javascript file. (done)
 * As an alternative to report_processors allow for a csv file that defines the format of the report.
   Use symbols in the cells for the columns. Math operators could be used for performing calculations.
   If this works we could write a complex report with zero ruby/rails code, html, or javascript. (done)  
-* Try and implement jqgrid sort and search methods.
-  This should be done in the sql files by passing the params from jqgrid into them. (deferring)
-
 * Add initializer (done)
-* The authenticate method in the report controller should be more generic. A variable could be set 
-  in an initializer that can be used in an eval method.
-* I'd like to create a more traditional html report view in addition to jqgrid.
-* Add setting in the initializer for jqgrid or html. This will determine which view is used.
 * Add a copy assets generator that will copy the few files to the app stylesheets dir. This will 
   allow the user to customize the reports. Do the same for the layout file. (done)
 * Rename new_row to add_row. (done)
 * Move loading of the sub processor into the base processor. (done)
 * Think about creating a rake task. For instance an ASCII view of the reports, or csv. (done)
-* Report type should be in the yaml. Default can be in initializer.
-* Base should setup structure based on report type.
-
 * Move all templates to lib/generators/old_sql/templates. (done)
 * Rename demo files to user_old_sql_demo* to not conflict with actual reports. (done)
 * ! Don't create the reports.yml if it already exists ! (done)
 * Allow jqgrid settings to be overridden in the report config (started)
 * Remove CanCan and Sanitize requirement (done)
 * Make ROUND_PRECISION and whether to round values configuration options (done)
-
-# Design Parser
-* Need to check for divide by zero errors before calling eval (done)
-* Parse csv file with Erubis::Eruby

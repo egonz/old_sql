@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{old_sql}
-  s.version = "1.4.0"
+  s.version = "1.8.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = [%q{Eddie Gonzales}]
@@ -52,6 +52,8 @@ Gem::Specification.new do |s|
     "lib/old_sql/report_design/parser.rb",
     "lib/old_sql/report_design/row.rb",
     "lib/old_sql/report_processor/base.rb",
+    "lib/old_sql/shell_report_facade.rb",
+    "lib/old_sql/tasks/old_sql.rake",
     "public/javascripts/old_sql/date_format.js",
     "public/javascripts/old_sql/jqgrid/i18n/grid.locale-bg.js",
     "public/javascripts/old_sql/jqgrid/i18n/grid.locale-bg1251.js",
