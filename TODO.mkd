@@ -1,6 +1,5 @@
-# TODO
-
 # HIGHER PRIORITY
+
 * The authenticate method in the report controller should be more generic. A variable could be set 
   in an initializer that can be used in an eval method.
 * Clean up reports.yml
