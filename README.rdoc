@@ -40,8 +40,8 @@ Configure your reports config/old_sql/report.yml. An example confiiguration is c
   	  report_design: user_old_sql_demo
   	  #report_processor: User_Old_Sql_Demo_Processor
   	  fields: 
-          - 'id'
-    	  - 'name'
+		- 'id'
+		- 'name'
 
 
 
