@@ -1,8 +1,12 @@
 # HIGHER PRIORITY
-
+ 
+* Add table.css to the copy_assets generator.
 * Work on documentation
 * Eliminate the virality "feature."
 * Clean up reports.yml
+* Allow multiple sql files. This could be acheived by making @resultset a hash with the name of the 
+  query as they key. In the design file, the different result outputs could be referenced using a dot 
+  syntax. E.g. user.id, user.first_name, etc.
 * Make all caps labels bold
 * The authenticate method in the report controller should be more generic. A variable could be set 
   in an initializer that can be used in an eval method.
@@ -20,31 +24,29 @@
 
 # BACKLOG
 
-* * Parse csv file with Erubis::Eruby
-* Allow multiple sql files
+* Parse csv file with Erubis::Eruby
 * Try and implement jqgrid sort and search methods. (deferring)
   This should be done in the sql files by passing the params from jqgrid into them. (deferring)
-* I'd like to create a more traditional html report view in addition to jqgrid.
-* Add setting in the initializer for jqgrid or html. This will determine which view is used.
 * Report type should be in the yaml. Default can be in initializer.
-* Base should setup structure based on report type.
 
 # COMPLETED
 
-* Need to check for divide by zero errors before calling eval (done)
-* Move javascript in index.html.erb into a separate javascript file. (done)
+* I'd like to create a more traditional html report view in addition to jqgrid.
+* Add setting in the initializer for jqgrid or html. This will determine which view is used.
+* Need to check for divide by zero errors before calling eval
+* Move javascript in index.html.erb into a separate javascript file.
 * As an alternative to report_processors allow for a csv file that defines the format of the report.
   Use symbols in the cells for the columns. Math operators could be used for performing calculations.
-  If this works we could write a complex report with zero ruby/rails code, html, or javascript. (done)  
-* Add initializer (done)
+  If this works we could write a complex report with zero ruby/rails code, html, or javascript.  
+* Add initializer
 * Add a copy assets generator that will copy the few files to the app stylesheets dir. This will 
-  allow the user to customize the reports. Do the same for the layout file. (done)
-* Rename new_row to add_row. (done)
-* Move loading of the sub processor into the base processor. (done)
-* Think about creating a rake task. For instance an ASCII view of the reports, or csv. (done)
-* Move all templates to lib/generators/old_sql/templates. (done)
-* Rename demo files to user_old_sql_demo* to not conflict with actual reports. (done)
-* ! Don't create the reports.yml if it already exists ! (done)
+  allow the user to customize the reports. Do the same for the layout file.
+* Rename new_row to add_row.
+* Move loading of the sub processor into the base processor.
+* Think about creating a rake task. For instance an ASCII view of the reports, or csv.
+* Move all templates to lib/generators/old_sql/templates.
+* Rename demo files to user_old_sql_demo* to not conflict with actual reports.
+* ! Don't create the reports.yml if it already exists !
 * Allow jqgrid settings to be overridden in the report config (started)
-* Remove CanCan and Sanitize requirement (done)
-* Make ROUND_PRECISION and whether to round values configuration options (done)
+* Remove CanCan and Sanitize requirement
+* Make ROUND_PRECISION and whether to round values configuration options
