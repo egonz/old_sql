@@ -7,10 +7,28 @@ Some features of Old SQL are:
 * Reports can be created using little or no Ruby code.
   - This allows the SQL for the report to be designed by a DBA, or other database developer independent of Ruby.
   - Reports can be designed using a design file that mocks the reports. This file can contain data from the SQL, as well as String literals, and formulas (that can also use numeric literals).
+  - The design documents, which are nothing more than csv files, can also serve as documentation, and describe the layout of the report in an intuitive way.
+  - If you want more fine grained control and report processor can parse the SQL.
   - This also makes it simple to convert legacy reports into Old SQL reports.  
 * Multiple report views (jqGrid, HTML table) that can be configured using the old_sql initializer.
 * Old SQL uses Devise for authentication, and will install it for you. It can
   even add Devise support to an existing model (by default users).
+* In the report design all data is rounded to a precision that can be set in the old_sql initializer. This feature can also be disabled in the initializer.
+* Old SQL has rake tasks for running the reports and outputting the result as CSV. This can simplify testing. It also allows reports to be run as a cron task.
+* The look of Old SQL can be customized.
+
+== Quick Setup and Demo
+
+1. Add gem 'old_sql', and gem 'devise' to your Gemfile.
+2. bundle instal
+3. rails g old_sql:install, or rails g old_sql:install <model>
+4. rake db:migrate
+5. Ensure you have at least one user record, and that old_sql_admin=true.
+6. if you didn't previously have Devise installed open rails console, and select your old_sql_admin user, and set password and password_confirmation. Save, and exit.
+7. Type rails s to start your rails server.
+8. Navigate to http://localhost:3000/sql/reports
+9. Authenticate using your old_sql_admin user.
+10. Select user from the Reports drop down list. Click run.
 
 == Installation
 
@@ -22,6 +40,10 @@ This will create the following directories:
 
 * config/old_sql
 * lib/old_sql
+
+This generator will also create a migration that will add a old_sql_admin column to the model used for authentication (by default users).
+
+If not already installed Devise is setup. 
 
 == Setup
 
