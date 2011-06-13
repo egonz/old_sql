@@ -2,6 +2,18 @@
 
 Old SQL is a Rails Engine database reporting gem that uses plain old SQL.
 
+Some features of Old SQL are:
+
+* Reports can be created using little or no Ruby code.
+  This allows the SQL for the report to be designed by a DBA, or other database developer
+  independent of Ruby.
+  Reports can be designed using a design file that mocks the reports. This file can contain
+  data from the SQL, as well as String literals, and formulas (that can also use numeric literals).
+  This also makes it simple to convert legacy reports into Old SQL reports.  
+* Multiple report views (jqGrid, HTML table) that can be configured using the old_sql initializer.
+* Old SQL uses Devise for authentication, and will install it for you. It can
+  even add Devise support to an existing model (by default users).
+
 == Installation
 
 To install Old SQL type:
