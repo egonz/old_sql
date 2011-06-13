@@ -1,5 +1,8 @@
-# HIGHER PRIORITY
- 
+# Old SQL Todo
+
+## HIGHER PRIORITY
+
+* Integrate PlotKit
 * Allow multiple sql files. This could be achieved by making @resultset a hash with the name of the 
   query as they key. In the design file, the different result outputs could be referenced using a dot 
   syntax. E.g. user.id, user.first_name, etc.
@@ -7,15 +10,15 @@
 * Create a section of the design file that can be used as a testing area for within Excel.
   This section would be ignored by the parser. Here is an example: 
 
-  # data:
-  parent clicks,other clicks,a+b
-  1,4,=A2+B2
-  2,5,=A3+B3
-  3,2,=A4+B4
-  4,1,=A5+B5
-  5,5,=A6+B6
+	# data:
+  	parent clicks,other clicks,a+b
+  	1,4,=A2+B2
+  	2,5,=A3+B3
+  	3,2,=A4+B4
+  	4,1,=A5+B5
+  	5,5,=A6+B6
 
-# BACKLOG
+## BACKLOG
 
 * Rename reports.yml to report.yml.
 * Parse csv file with Erubis::Eruby
@@ -23,7 +26,7 @@
   This should be done in the sql files by passing the params from jqgrid into them. (deferring)
 * Report type should be in the yaml. Default can be in initializer.
 
-# COMPLETED
+## COMPLETED
 
 * The authenticate method in the report controller should be more generic. A variable could be set 
   in an initializer that can be used in an eval method.
