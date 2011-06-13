@@ -13,6 +13,8 @@ This will create the following directories:
 * config/old_sql
 * lib/old_sql
 
+== Setup
+
 Configure your reports config/old_sql/report.yml. An example confiiguration is created when you install.
 
 	# Old SQL Reports YAML
