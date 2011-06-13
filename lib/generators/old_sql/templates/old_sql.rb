@@ -14,13 +14,13 @@ OldSql.setup do |config|
   # in config/old_sql/reports.yml.
   config.default_report_view = "jqgrid"
   
+  # Height of the report table or jqGrid.
+  config.report_height = 630
+  
+  # Width of the report table or jqGrid.
+  config.report_width = 800
+  
   # ==> jqGrid Report View Configuration
-  # Height of the jqGrid component in the jqGrid report view.
-  config.jqgrid_height = 630
-  
-  # Width of the jqGrid component in the jqGrid report view.
-  config.jqgrid_width = 800
-  
   # Number of rows to display in the jqGrid component in the jqGrid report view.
   config.jqgrid_row_num = 25
 end

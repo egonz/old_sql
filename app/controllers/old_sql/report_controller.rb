@@ -16,9 +16,10 @@ module OldSql
     BASE_PROCESSOR = "base"
 
     def index
+      @report_view = OldSql.default_report_view
     end
     
-    def datagrid
+    def jqgrid
       @start_date = params[:start_date]
       @end_date = params[:end_date]
       @generation = params[:generation]
@@ -27,10 +28,32 @@ module OldSql
       
       #todo allow these to be overridden in the report config
       @row_num = OldSql.jqgrid_row_num
-      @width = OldSql.jqgrid_width
-      @height = OldSql.jqgrid_height
+      @width = OldSql.report_width
+      @height = OldSql.report_height
       
       render :template => "old_sql/report/datagrid.html.erb"
+    end
+    
+    def table
+      @start_date = params[:start_date]
+      @end_date = params[:end_date]
+      @generation = params[:generation]
+      @report_name = params[:report]
+      @report_sql = params[:report_sql].downcase
+      @report_sql_orig = params[:report_sql].downcase
+      
+      @width = OldSql.report_width
+      @height = OldSql.report_height
+      
+      if !@generation.nil? && @generation.to_i >= 0
+        @report_sql << "_gen_#{@generation}"
+      end
+      
+      processor = load_base_processor
+      @report = processor.execute_query(@report_sql,@start_date,@end_date,query_vars(@report_name),@reports[@report_name]['report_design'],
+                                        @reports[@report_name]['report_processor'])
+      
+      render :template => "old_sql/report/table.html.erb"
     end
     
     def query

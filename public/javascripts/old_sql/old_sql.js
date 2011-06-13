@@ -19,7 +19,7 @@ function report_selected()
 
 function load_report()
 {	
-	var src = "http://"+host+":"+port+"/sql/reports/datagrid/?report="+jQuery("#report").val()+
+	var src = "http://"+host+":"+port+"/sql/reports/"+report_view+"/?report="+jQuery("#report").val()+
 	"&start_date="+jQuery("#datepicker-start").val()+"&end_date="+jQuery("#datepicker-end").val()+"&generation="+
 	jQuery("#select-generation").val()+"&report_sql="+
 	_report_sql;

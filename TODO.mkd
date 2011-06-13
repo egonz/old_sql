@@ -1,12 +1,12 @@
 # HIGHER PRIORITY
 
+* Work on documentation
+* Eliminate the virality "feature."
+* Clean up reports.yml
+* Make all caps labels bold
 * The authenticate method in the report controller should be more generic. A variable could be set 
   in an initializer that can be used in an eval method.
-* Clean up reports.yml
 * Rename reports.yml to report.yml.
-* Parse csv file with Erubis::Eruby
-* Make all caps labels bold
-* Eliminate the virality "feature."
 * Create a section of the design file that can be used as a testing area for within Excel.
   This section would be ignored by the parser. Here is an example: 
 
@@ -20,6 +20,7 @@
 
 # BACKLOG
 
+* * Parse csv file with Erubis::Eruby
 * Allow multiple sql files
 * Try and implement jqgrid sort and search methods. (deferring)
   This should be done in the sql files by passing the params from jqgrid into them. (deferring)

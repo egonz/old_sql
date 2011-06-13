@@ -18,13 +18,13 @@ module OldSql
   mattr_accessor :rounding_precision
   @@rounding_precision = 2
   
-  # Width of the jqGrid component in the jqGrid report view.
-  mattr_accessor :jqgrid_width
-  @@jqgrid_width = 800
+  # Width of the report table or jqGrid.
+  mattr_accessor :report_width
+  @@report_width = 800
   
-  # Height of the jqGrid component in the jqGrid report view.
-  mattr_accessor :jqgrid_height
-  @@jqgrid_width = 630
+  # Height of the report table or jqGrid.
+  mattr_accessor :report_height
+  @@report_width = 630
   
   # Number of rows to display in the jqGrid component in the jqGrid report view.
   mattr_accessor :jqgrid_row_num

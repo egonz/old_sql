@@ -1,0 +1,20 @@
+<%= stylesheet_link_tag "old_sql/table.css" %>
+<%= javascript_include_tag "old_sql/table.js" %>
+
+<table class="grid" border="0" width="<%=@width%>">
+	<thead>
+		<tr>
+		<% @reports[@report_name]['fields'].each do |field| %>
+			<th><%= field.capitalize %></th>
+		<% end %>
+		</tr>
+	</thead>
+	
+<% @report[:rows].each do |row| %>
+	<tr>
+	<% row[:cell].each do |cell| %>
+		<td><%=cell%></td>
+	<% end %>
+	</tr>
+<% end %>	
+</table>

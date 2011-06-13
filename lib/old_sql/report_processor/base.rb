@@ -69,6 +69,8 @@ module OldSql
       end
       
       def parse_design(design, resultset)
+        init(resultset)
+        
         return nil if @rec.nil?
         
         model = OldSql::ReportDesign::Parser.read_file("#{design}.csv")

@@ -4,7 +4,8 @@ Rails.application.routes.draw do
       controller "report" do
         match "/", :to => :index, :as => "report_list"
         match "/query", :to => :query, :as => "query"
-        match "/datagrid", :to => :datagrid, :as => "datagrid"
+        match "/jqgrid", :to => :jqgrid, :as => "jqgrid"
+        match "/table", :to => :table, :as => "table"
         match "/print", :to => :print, :as => "print"
       end
     end

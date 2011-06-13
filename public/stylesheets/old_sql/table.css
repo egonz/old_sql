@@ -1,0 +1,64 @@
+* {
+}
+
+body{
+  background:#fff url(../../images/rails_admin/background.png) repeat-x;
+  font-family:Verdana, Geneva, sans-serif;
+  font-size:12px;
+}
+
+.grid {
+  border-collapse: collapse;
+}
+
+.even {
+  background-color: #FFFFFF;
+}
+
+.odd {
+  background-color: #F2F2F2;
+}
+
+td, th {
+  display: table-cell;
+  vertical-align: inherit;
+  font-family:Verdana, Geneva, sans-serif;
+  font-size:12px;
+}
+
+th {
+  margin-left: 5px;
+  text-align: left;
+  border-bottom: 2px solid #B9B9B9;
+  padding: 9px 0;
+}
+
+#content {
+  width:960px;
+  background:#FFF;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.ra-block .ui-widget-header {
+  padding:8px;
+}
+
+.ra-block-content {
+  padding:10px;
+  border-left:1px solid #e6e6e6;
+  border-right:1px solid #e6e6e6;
+}
+
+.ra-block-content .ra-block-content {
+  border: none;
+}
+
+.ra-block .ra-block-toolbar {
+  border-top:1px solid #e6e6e6;
+  border-bottom:1px solid #e6e6e6;
+  border-left: none;
+  border-right: none;
+  padding:5px;
+  margin-bottom: 10px;
+}
