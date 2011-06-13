@@ -15,7 +15,7 @@ This will create the following directories:
 
 == Setup
 
-Configure your reports config/old_sql/report.yml. An example confiiguration is created when you install.
+Configure your reports config/old_sql/report.yml. An example confiiguration is created when you run the old_sql:install generator.
 
 	# Old SQL Reports YAML
 	# This is an example report. Replace it with your actual reports.
