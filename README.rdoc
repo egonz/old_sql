@@ -1,6 +1,20 @@
 = old_sql
 
-OldSQL is a Rails Engine database reporting gem that uses plain old SQL
+Old SQL is a Rails Engine database reporting gem that uses plain old SQL.
+
+= Installation
+
+To install Old SQL type:
+
+rails g old_sql:install
+
+This will create the following directories:
+
+* config/old_sql
+* lib/old_sql
+
+Configure your reports config/old_sql/report.yml. 
+
 
 == Contributing to old_sql
  
