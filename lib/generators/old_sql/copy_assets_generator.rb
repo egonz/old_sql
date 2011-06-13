@@ -15,6 +15,7 @@ module OldSql
     
     def copy_old_sql_files
       copy_file "#{gem_path}/public/stylesheets/old_sql/old_sql.css", "#{app_path}/public/stylesheets/old_sql/old_sql.css"
+      copy_file "#{gem_path}/public/stylesheets/old_sql/old_sql.css", "#{app_path}/public/stylesheets/old_sql/table.css"
       copy_file "#{gem_path}/app/views/layouts/old_sql/report.html.erb", "#{app_path}/app/views/layouts/old_sql/report.html.erb"
     end
     

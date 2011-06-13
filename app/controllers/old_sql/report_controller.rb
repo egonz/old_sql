@@ -2,7 +2,7 @@ require 'csv'
 
 module OldSql
   class ReportController < ApplicationController
-    before_filter :authenticate_user!
+    before_filter :"authenticate_#{OldSql.devise_model}!"
     before_filter :ensure_old_sql_admin!
     before_filter :_init
     before_filter :_reports
@@ -22,7 +22,6 @@ module OldSql
     def jqgrid
       @start_date = params[:start_date]
       @end_date = params[:end_date]
-      @generation = params[:generation]
       @report_name = params[:report]
       @report_sql = params[:report_sql]
       
@@ -37,17 +36,12 @@ module OldSql
     def table
       @start_date = params[:start_date]
       @end_date = params[:end_date]
-      @generation = params[:generation]
       @report_name = params[:report]
       @report_sql = params[:report_sql].downcase
       @report_sql_orig = params[:report_sql].downcase
       
       @width = OldSql.report_width
       @height = OldSql.report_height
-      
-      if !@generation.nil? && @generation.to_i >= 0
-        @report_sql << "_gen_#{@generation}"
-      end
       
       processor = load_base_processor
       @report = processor.execute_query(@report_sql,@start_date,@end_date,query_vars(@report_name),@reports[@report_name]['report_design'],
@@ -59,14 +53,9 @@ module OldSql
     def query
       @start_date = params[:start_date]
       @end_date = params[:end_date]
-      @generation = params[:generation]
       @report_name = params[:report]
       @report_sql = params[:report_sql].downcase
       @report_sql_orig = params[:report_sql].downcase
-      
-      if !@generation.nil? && @generation.to_i >= 0
-        @report_sql << "_gen_#{@generation}"
-      end
       
       processor = load_base_processor
       @report = processor.execute_query(@report_sql,@start_date,@end_date,query_vars(@report_name),@reports[@report_name]['report_design'],
@@ -101,15 +90,10 @@ module OldSql
     def print
       @start_date = params[:start_date]
       @end_date = params[:end_date]
-      @generation = params[:generation]
       @report_name = params[:report]
       @desc = params[:desc]
       @report_sql = params[:report_sql].downcase
       @report_sql_orig = params[:report_sql].downcase
-      
-      if !@generation.nil? && @generation.to_i >= 0
-        @report_sql << "_gen_#{@generation}"
-      end
       
       processor = load_base_processor
       @report = processor.execute_query(@report_sql,@start_date,@end_date,query_vars(@report_name),@reports[@report_name]['report_design'],
@@ -121,7 +105,7 @@ module OldSql
 
     private
       def ensure_old_sql_admin!
-        render_error(Exception.new "Old SQL Access Denied.") unless current_user.old_sql_admin?
+        render_error(Exception.new "Old SQL Access Denied.") unless eval("current_user.old_sql_admin?")
       end
       
       def _init
@@ -166,6 +150,8 @@ module OldSql
       end
       
       def jqgrid_col_names
+        logger.info @reports
+        logger.info "REPORT NAME #{@report_name}"
         json = @reports[@report_name]['fields'].to_json
         json.html_safe
       end

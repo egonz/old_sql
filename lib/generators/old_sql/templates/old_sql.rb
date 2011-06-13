@@ -1,5 +1,8 @@
 # Use this hook to configure the default report view, etc.
 OldSql.setup do |config|
+  # The model used by devise. Ensure that the devise columns are installed in the model.
+  config.devise_model = 'DeviseModel'
+  
   # ==> Default Report View Configuration
   # The title of the Report Selection View.
   config.report_select_page_title = 'Old SQL Reports'

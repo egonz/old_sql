@@ -1,5 +1,8 @@
 # Use this hook to configure the default report view, etc.
 OldSql.setup do |config|
+  # The model used by devise. Ensure that the devise columns are installed in the model.
+  config.devise_model = 'user'
+  
   # ==> Default Report View Configuration
   # The title of the Report Selection View.
   config.report_select_page_title = 'Old SQL Reports'
@@ -12,7 +15,7 @@ OldSql.setup do |config|
   
   # Configure the default report view. This setting will be used unless overridden 
   # in config/old_sql/reports.yml.
-  config.default_report_view = "table"
+  config.default_report_view = "jqgrid"
   
   # Height of the report table or jqGrid.
   config.report_height = 630

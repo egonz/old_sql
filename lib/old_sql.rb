@@ -1,6 +1,10 @@
 module OldSql
   require 'old_sql/engine' if defined?(Rails)
   
+  # The model used by devise. Ensure that the devise columns are installed in the model.
+  mattr_accessor :devise_model
+  @@devise_model = 'user'
+  
   # The title of the Report Selection View.
   mattr_accessor :report_select_page_title
   @@report_select_page_title = 'Old SQL Reports'

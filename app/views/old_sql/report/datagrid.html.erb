@@ -6,7 +6,7 @@
 <script>
 jQuery(document).ready(function(){
   jQuery("#rowed1").jqGrid({
-    url:"http://<%=@host%>:<%=@port%>/sql/reports/query.json/?report=<%=@report_name%>&report_sql=<%=@report_sql%>&generation=<%=@generation%>&start_date=<%=@start_date%>&end_date=<%=@end_date%>",
+    url:"http://<%=@host%>:<%=@port%>/sql/reports/query.json/?report=<%=@report_name%>&report_sql=<%=@report_sql%>&start_date=<%=@start_date%>&end_date=<%=@end_date%>",
   	datatype: "json",
   	pager: false,
     colNames: <%=jqgrid_col_names%>,

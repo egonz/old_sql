@@ -1,10 +1,10 @@
 # Old SQL Reports YAML
 # This is an example report. Replace it with your actual reports.
 #
+# 'description' is the value displayed in the 'SELECT A REPORT' drop down list.
+#
 # The 'report_sql' file should be located under config/old_sql/report_sql.
 # See config/old_sql/report_sql/user_old_sql_demo.sql for an example.
-#
-# The 'fields' are the headers for the report.
 #
 # The 'processor' parameter is optional, and should point to a class in lib/old_sql.
 # See lib/old_sql/user_old_sql_demo_processor.rb for an example.
@@ -14,12 +14,12 @@
 #
 # 'report_design' is also optional, and should point to a file in config/old_sql/report_design.
 # See config/old_sql/report_design/user_old_sql_demo.csv for an example.
+#
+# The 'fields' are the headers for the report.
 
 user:
-  name: user
-  value: User
+  description: User
   report_sql: user_old_sql_demo
-  virality: false
   report_design: user_old_sql_demo
   #report_processor: User_Old_Sql_Demo_Processor
   fields: 

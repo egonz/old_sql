@@ -1,28 +1,13 @@
-var _report_sql = '';
-var _report_loaded = false;
-
-function report_selected()
-{
-	var virality = jQuery("#report option:selected").attr('virality');
-	_report_sql = jQuery("#report option:selected").attr('report_sql');
-	
-  	if (virality == 'true')
-	{
-		jQuery("#select-generation").removeAttr('disabled');
-	}
-	else
-	{
-		jQuery("#select-generation").attr('disabled', 'disabled');
-		jQuery("#select-generation option:first").attr('selected','selected');
-	}
-}
-
 function load_report()
 {	
-	var src = "http://"+host+":"+port+"/sql/reports/"+report_view+"/?report="+jQuery("#report").val()+
-	"&start_date="+jQuery("#datepicker-start").val()+"&end_date="+jQuery("#datepicker-end").val()+"&generation="+
-	jQuery("#select-generation").val()+"&report_sql="+
-	_report_sql;
+  report_name = jQuery("#report option:selected").attr('name');
+  report_sql = jQuery("#report option:selected").attr('report_sql');
+
+  if (!reported_selected(report_name)) return;
+  
+	var src = "http://"+host+":"+port+"/sql/reports/"+report_view+"/?report="+report_name+
+	"&start_date="+jQuery("#datepicker-start").val()+"&end_date="+jQuery("#datepicker-end").val()+"&report_sql="+
+	report_sql;
 	
 	jQuery('iframe').attr('src', src);
 	
@@ -31,31 +16,38 @@ function load_report()
 
 function print_report()
 {
-	if(_report_loaded == false) 
-	{
-		alert("You must select a report, and run it before continuing.");
-		return;
-	}
+	report_name = jQuery("#report option:selected").attr('name');
+  report_sql = jQuery("#report option:selected").attr('report_sql');
 	
-	var src = "http://"+host+":"+port+"/sql/reports/print/?report="+jQuery("#report").val()+
-		"&start_date="+jQuery("#datepicker-start").val()+"&end_date="+jQuery("#datepicker-end").val()+"&generation="+
-		jQuery("#select-generation").val()+"&report_sql="+_report_sql+"&desc="+jQuery("#report option:selected").attr('desc');
+	if (!reported_selected(report_name)) return;
+	
+	var src = "http://"+host+":"+port+"/sql/reports/print/?report="+report_name+
+		"&start_date="+jQuery("#datepicker-start").val()+"&end_date="+jQuery("#datepicker-end").val()+
+		"&report_sql="+report_sql+"&desc="+jQuery("#report option:selected").attr('desc');
 	window.open(src,'Old SQL Report')
 }
 
 function export_report_to_excel()
 {
-	if(_report_loaded == false) 
-	{
-		alert("You must select a report, and run it before continuing.");
-		return;
-	}
+	report_name = jQuery("#report option:selected").attr('name');
+  report_sql = jQuery("#report option:selected").attr('report_sql');
 	
-	var src = "http://"+host+":"+port+"/sql/reports/query.csv/?report="+jQuery("#report").val()+
+	if (!reported_selected(report_name)) return;
+	
+	var src = "http://"+host+":"+port+"/sql/reports/query.csv/?report="+report_name+
 		"&start_date="+jQuery("#datepicker-start").val()+"&end_date="+jQuery("#datepicker-end").val()+
-		"&generation="+jQuery("#select-generation").val()+"&report_sql="+
-		_report_sql+"&desc="+jQuery("#report option:selected").attr('desc');
+		"&report_sql="+ report_sql+"&desc="+jQuery("#report option:selected").attr('desc');
 	window.open(src,'DB Report')
+}
+
+function reported_selected(report_name) 
+{
+  if (!report_name) {
+    alert("You must select a report, and run it before continuing.");
+    return false;
+  } else {
+    return true;
+  }
 }
 
 jQuery(document).ready(function($){
@@ -63,8 +55,6 @@ jQuery(document).ready(function($){
 	jQuery("#datepicker-start").datetimepicker( "option", "dateFormat", "yy/mm/dd" );
 	jQuery("#datepicker-end").datetimepicker();
 	jQuery("#datepicker-end").datetimepicker( "option", "dateFormat", "yy/mm/dd" );
-
-	jQuery("#select-generation").attr('disabled', 'disabled');
 	
 	var now = new Date();
 	var tomorrow = new Date();

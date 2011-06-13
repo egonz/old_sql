@@ -1,9 +1,6 @@
 # HIGHER PRIORITY
  
-* Add table.css to the copy_assets generator.
 * Work on documentation
-* Eliminate the virality "feature."
-* Clean up reports.yml
 * Allow multiple sql files. This could be acheived by making @resultset a hash with the name of the 
   query as they key. In the design file, the different result outputs could be referenced using a dot 
   syntax. E.g. user.id, user.first_name, etc.
@@ -31,6 +28,9 @@
 
 # COMPLETED
 
+* Add table.css to the copy_assets generator.
+* Eliminate the virality "feature."
+* Clean up reports.yml
 * I'd like to create a more traditional html report view in addition to jqgrid.
 * Add setting in the initializer for jqgrid or html. This will determine which view is used.
 * Need to check for divide by zero errors before calling eval

@@ -17,20 +17,8 @@ var report_view = "<%=@report_view%>";
 					onchange="report_selected()">
 					<option></option>		
 					<% @reports.each do |report, data| %>
-					<option value="<%= data['name'] %>" virality="<%= data['virality'] %>" report_sql="<%= data['report_sql'] %>" desc="<%= data['value'] %>"><%= data['value'] %></option>
+					<option value="<%= data['name'] %>" report_sql="<%= data['report_sql'] %>" desc="<%= data['description'] %>" name="<%=report%>"><%= data['description'] %></option>
 					<% end %>
-				</select>
-			</div>
-		</div>
-		
-		<div class="report-form-row">
-			<div class="report-form-label">GENERATION:</div>
-			<div class="report-form-input">
-				<select name="generation" id="select-generation">
-					<option value="-1"></option>
-					<option value="0">0</option>
-					<option value="1">1</option>
-					<option value="2">2</option>
 				</select>
 			</div>
 		</div>

@@ -61,6 +61,11 @@ module OldSql
       copy_file "user_design_template.csv", "#{app_path}/config/old_sql/report_design/user_old_sql_demo.csv"
     end
     
+    def configure_initializer
+      initializer_path = "#{app_path}/config/initializers/old_sql.rb"
+      gsub_file initializer_path, /DeviseModel/, "#{model_name.downcase}"
+    end
+    
     ################ PRIVATE ################
 
     private
