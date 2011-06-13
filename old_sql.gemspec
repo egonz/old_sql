@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{old_sql}
-  s.version = "1.9.0"
+  s.version = "1.10.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = [%q{Eddie Gonzales}]
-  s.date = %q{2011-06-12}
+  s.date = %q{2011-06-13}
   s.description = %q{OldSQL is a Rails Engine database reporting gem that uses plain old SQL}
   s.email = %q{egonzales@pureplay.com}
   s.extra_rdoc_files = [
@@ -27,6 +27,7 @@ Gem::Specification.new do |s|
     "app/views/old_sql/report/datagrid.html.erb",
     "app/views/old_sql/report/index.html.erb",
     "app/views/old_sql/report/print.html.erb",
+    "app/views/old_sql/report/table.html.erb",
     "config/locales/old_sql.en.yml",
     "config/routes.rb",
     "lib/extensions/action_controller/base.rb",
@@ -92,6 +93,7 @@ Gem::Specification.new do |s|
     "public/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js",
     "public/javascripts/old_sql/jquery-ui-timepicker-addon.js",
     "public/javascripts/old_sql/old_sql.js",
+    "public/javascripts/old_sql/table.js",
     "public/stylesheets/old_sql/jqgrid/themes/default/images/ui-bg_diagonals-thick_90_eeeeee_40x40.png",
     "public/stylesheets/old_sql/jqgrid/themes/default/images/ui-bg_flat_15_cd0a0a_40x100.png",
     "public/stylesheets/old_sql/jqgrid/themes/default/images/ui-bg_glass_100_e4f1fb_1x400.png",
@@ -127,6 +129,7 @@ Gem::Specification.new do |s|
     "public/stylesheets/old_sql/jqgrid/ui.jqgrid.css",
     "public/stylesheets/old_sql/jqgrid/ui.multiselect.css",
     "public/stylesheets/old_sql/old_sql.css",
+    "public/stylesheets/old_sql/table.css",
     "public/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_18_b81900_40x40.png",
     "public/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png",
     "public/stylesheets/old_sql/ui-lightness/images/ui-bg_flat_10_000000_40x100.png",
