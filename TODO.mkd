@@ -1,13 +1,9 @@
 # HIGHER PRIORITY
  
-* Work on documentation
-* Allow multiple sql files. This could be acheived by making @resultset a hash with the name of the 
+* Allow multiple sql files. This could be achieved by making @resultset a hash with the name of the 
   query as they key. In the design file, the different result outputs could be referenced using a dot 
   syntax. E.g. user.id, user.first_name, etc.
 * Make all caps labels bold
-* The authenticate method in the report controller should be more generic. A variable could be set 
-  in an initializer that can be used in an eval method.
-* Rename reports.yml to report.yml.
 * Create a section of the design file that can be used as a testing area for within Excel.
   This section would be ignored by the parser. Here is an example: 
 
@@ -21,6 +17,7 @@
 
 # BACKLOG
 
+* Rename reports.yml to report.yml.
 * Parse csv file with Erubis::Eruby
 * Try and implement jqgrid sort and search methods. (deferring)
   This should be done in the sql files by passing the params from jqgrid into them. (deferring)
@@ -28,6 +25,9 @@
 
 # COMPLETED
 
+* The authenticate method in the report controller should be more generic. A variable could be set 
+  in an initializer that can be used in an eval method.
+* Work on documentation
 * Add table.css to the copy_assets generator.
 * Eliminate the virality "feature."
 * Clean up reports.yml
