@@ -2,7 +2,7 @@
 
 Old SQL is a Rails Engine database reporting gem that uses plain old SQL.
 
-= Installation
+== Installation
 
 To install Old SQL type:
 
