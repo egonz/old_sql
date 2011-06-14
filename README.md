@@ -6,28 +6,33 @@ Old SQL is a Rails Engine database reporting gem that uses plain old SQL.
 Some features of Old SQL are:
 
 * Reports can be created using little or no Ruby code.
-  - This allows the SQL for the report to be designed by a DBA, or other database developer independent of Ruby.
-  - Reports can be designed using a design file that mocks the reports. This file can contain data from the SQL, as well as String literals, and formulas (that can also use numeric literals).
-  - The design documents, which are nothing more than csv files, can also serve as documentation, and describe the layout of the report in an intuitive way.
-  - If you want more fine grained control and report processor can parse the SQL.
-  - This also makes it simple to convert legacy reports into Old SQL reports.  
+  - SQL for the report to be designed by a DBA, or other database developer independent of Ruby.
+  - Reports can be designed using a design file that mocks the reports. This file can contain data 
+    from the SQL, as well as String literals, and formulas (that can also use numeric literals).
+  - The design documents, which are nothing more than CSV files, can also serve as documentation, 
+    and describe the layout of the report in an intuitive way.
+  - If you want more fine grained control, a custom report processor can parse the SQL.
+  - Simple to convert legacy reports into Old SQL reports.  
 * Multiple report views (jqGrid, HTML table, and chart) that can be configured using the old_sql initializer.
 * Old SQL uses Devise for authentication, and will install it for you. It can
   even add Devise support to an existing model (by default users).
-* In the report design all data is rounded to a precision that can be set in the old_sql initializer. This feature can also be disabled in the initializer.
-* Old SQL has rake tasks for running the reports and outputting the result as CSV. This can simplify testing. It also allows reports to be run as a cron task.
+* In the report design all data is rounded to a precision that can be set in the old_sql initializer. 
+  This feature can also be disabled in the initializer.
+* Old SQL has rake tasks for running the reports and outputting the result as CSV. This can simplify testing. 
+  It also allows reports to be run as a cron task.
 * The look of Old SQL can be customized.
-* Support for printing and exporting to csv.
+* Support for printing and exporting to CSV.
 
 Quick Setup and Demo
 --------------------
 
 1. Add gem 'old_sql', and gem 'devise' to your Gemfile.
-2. bundle instal
+2. bundle install
 3. rails g old_sql:install, or rails g old_sql:install <model>
 4. rake db:migrate
 5. Ensure you have at least one user record, and that old_sql_admin=true.
-6. if you didn't previously have Devise installed open rails console, and select your old_sql_admin user, and set password and password_confirmation. Save, and exit.
+6. If you didn't previously have Devise installed open rails console, and select your old_sql_admin user, 
+   and set password and password_confirmation. Save, and exit.
 7. Type rails s to start your rails server.
 8. Navigate to http://localhost:3000/sql/reports
 9. Authenticate using your old_sql_admin user.
@@ -69,7 +74,7 @@ Configure your reports config/old_sql/report.yml. An example configuration is cr
 	# itself should follow normal ruby class naming conventions.
 	#
 	# 'report_design' is also optional, and should point to a file in config/old_sql/report_design.
-	# See config/old_sql/report_design/user_old_sql_demo.csv for an example.
+	# See config/old_sql/report_design/user_old_sql_demo.CSV for an example.
 	#
 	# 'report_view' is optional. It overrides the default_report_view defined in the initializer. It
 	# can be set to jqgrid, table, or chart.
@@ -79,7 +84,7 @@ Configure your reports config/old_sql/report.yml. An example configuration is cr
 	user_jqgrid:
 	description: User jqGrid
 	report_sql: user_old_sql_demo
-	report_design: user_old_sql_demo.csv
+	report_design: user_old_sql_demo.CSV
 	report_view: jqgrid
 	fields: 
       - 'id'
@@ -110,7 +115,7 @@ Create a sql file under config/old_sql/report_sql. The following example is incl
 	WHERE u.created_at > date('<%=start_date.gsub('/','-')%>')
 	AND u.created_at < date('<%=end_date.gsub('/','-')%>')
 
-Optionally create a design file under config/old_sql/report_design:
+Optionally create a CSV DESIGN file under config/old_sql/report_design:
 
 	# Old SQL:
 	# Example Report Design Document
@@ -138,6 +143,22 @@ Optionally create a design file under config/old_sql/report_design:
 	"Divide by Zero 2",1.0 / 0
 	"Divide by Zero 3",0.0 / 0.0
 	"Rounding",200.0 / 43.0
+
+Optionally create a CHART DESIGN file under config/old_sql/report_design:
+	
+	# Old SQL Chart Design Example
+	#
+	# The key can either be pie or bar.
+	# Items should be numbered from 0 to n.
+	# The value of each item can be either a column name, or
+	# a formula.
+
+	pie:
+  	  0: id + 10
+	  1: id + 20
+	  2: id + 50
+	  3: id + 70
+	  4: id + 100
 
 Optionally create a processor under lib/old_sql_report_processor:
 
@@ -168,6 +189,25 @@ Screenshots
 ![table view](https://github.com/egonz/old_sql/raw/master/screenshots/table.png "Table view")
 ![table view](https://github.com/egonz/old_sql/raw/master/screenshots/chart.png "Chart view")
 
+Design File Tips
+----------------
+
+Design files, both CSV and CHART, work best (only?) with queries that return a single record.
+Ideally the query returns aggregate results, form one or more tables. For example:
+
+	SELECT
+		SUM(f.total_1) AS total,
+		IFNULL(SUM(CASE WHEN f.post_id IS NOT NULL THEN 1 ELSE 0 END),0) AS published,
+		IFNULL(bar_totals.bar_count,0) AS bar_count
+	FROM
+		foo f
+	JOIN
+		(SELECT COUNT(id) AS bar_count FROM bar) AS bar_totals
+	WHERE
+		1=1
+		AND f.created_at > '<%=start_date%>'
+		AND f.created_at < '<%=end_date%>'
+		
 Customize
 ---------
 

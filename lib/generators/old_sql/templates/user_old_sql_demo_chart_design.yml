@@ -1,4 +1,9 @@
 # Old SQL Chart Design Example
+#
+# The key can either be pie or bar.
+# Items should be numbered from 0 to n.
+# The value of each item can be either a column name, or
+# a formula.
 
 pie:
   0: id + 10
