@@ -4,6 +4,11 @@ require 'old_sql/report_design/row'
 require 'old_sql/report_design/cell'
 require 'old_sql/report_design/cell_data'
 
+require 'old_sql/report_design/chart_parser'
+require 'old_sql/report_design/chart'
+require 'old_sql/report_design/chart_item'
+require 'old_sql/report_design/chart_data'
+
 module OldSql
   module ReportProcessor
     class Base
@@ -35,7 +40,8 @@ module OldSql
         end
         
         if design
-          parse_design(design, @resultset)
+          parse_design(design, @resultset) if design =~ /csv/
+          parse_chart_design(design, @resultset) if design =~ /yml/
         else
           loaded_sub_processor = load_sub_processor(sub_processor)
           
@@ -73,7 +79,7 @@ module OldSql
         
         return nil if @rec.nil?
         
-        model = OldSql::ReportDesign::Parser.read_file("#{design}.csv")
+        model = OldSql::ReportDesign::Parser.read_file("#{design}")
         
         init(resultset)
         
@@ -106,6 +112,39 @@ module OldSql
           
           add_row(nil, report_row)
         end
+      end
+      
+      def parse_chart_design(design, resultset)
+        report_row = []
+        @rec = resultset[0]
+            
+        chart = OldSql::ReportDesign::ChartParser.read_file("#{design}")
+        
+        chart.items.each do |item|
+          key = item.key
+          expression = ""
+          item.chart_data.each do |data|
+            if item.expression?
+              if data.type == OldSql::ReportDesign::ChartData::COLUMN
+                expression << @rec[data.value].to_s
+              elsif data.type == OldSql::ReportDesign::ChartData::OPERATOR ||
+                    data.type == OldSql::ReportDesign::ChartData::NUMERIC_LITERAL
+                expression << data.value
+              end
+            else
+              if data.type == OldSql::ReportDesign::ChartData::COLUMN
+                result = @rec[data.value]
+                if OldSql.round_report_values
+                  result = round(result.to_f, OldSql.rounding_precision)
+                end
+                report_row << [key,result]
+              end
+            end
+          end
+          report_row << [key,eval_expression(expression)] unless expression.length==0
+        end
+        
+        @data = {chart.type=>report_row}
       end
       
       def eval_expression expression

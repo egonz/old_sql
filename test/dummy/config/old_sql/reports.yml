@@ -15,13 +15,37 @@
 # 'report_design' is also optional, and should point to a file in config/old_sql/report_design.
 # See config/old_sql/report_design/user_old_sql_demo.csv for an example.
 #
+# 'report_view' is optional. It overrides the default_report_view defined in the initializer. It
+# can be set to jqgrid, table, or chart.
+#
 # The 'fields' are the headers for the report.
 
-user:
-  description: User
+user_jqgrid:
+  description: User jqGrid
   report_sql: user_old_sql_demo
-  report_design: user_old_sql_demo
-  #report_processor: User_Old_Sql_Demo_Processor
+  report_design: user_old_sql_demo.csv
+  report_view: jqgrid
   fields: 
     - 'id'
     - 'name'
+    
+user_table:
+  description: User HTML Table
+  report_sql: user_old_sql_demo
+  report_processor: User_Old_Sql_Demo_Processor
+  report_view: table
+  fields: 
+    - 'id'
+    - 'name'
+    
+user_chart:
+  description: User Chart
+  report_sql: user_old_sql_demo
+  report_design: user_old_sql_demo.yml
+  report_view: chart
+  fields: 
+    - 'zero'
+    - 'one'
+    - 'two'
+    - 'three'
+    - 'four'

@@ -1,0 +1,26 @@
+<%= javascript_include_tag "old_sql/MochiKit-1.4.2/lib/MochiKit/MochiKit.js" %>
+<%= javascript_include_tag "old_sql/plotkit-0.9.1/PlotKit/Base.js" %>
+<%= javascript_include_tag "old_sql/plotkit-0.9.1/PlotKit/Layout.js" %>
+<%= javascript_include_tag "old_sql/plotkit-0.9.1/PlotKit/Canvas.js" %>
+<%= javascript_include_tag "old_sql/plotkit-0.9.1/PlotKit/SweetCanvas.js" %>
+
+<script>
+var options = {
+   "IECanvasHTC": "/plotkit/iecanvas.htc",
+   "colorScheme": PlotKit.Base.palette(PlotKit.Base.baseColors()[0]),
+   "xTicks": <%=chart_fields%>,
+   "drawYAxis": true
+};
+
+function drawGraph() {
+    var layout = new PlotKit.Layout("<%=chart_type%>", options);
+    layout.addDataset("sqrt", <%=chart_data%>);
+    layout.evaluate();
+    var canvas = MochiKit.DOM.getElement("graph");
+    var plotter = new PlotKit.SweetCanvasRenderer(canvas, layout, options);
+    plotter.render();
+}
+MochiKit.DOM.addLoadEvent(drawGraph);
+</script>
+
+<div><canvas id="graph" height="555" width="555"></canvas></div>

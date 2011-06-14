@@ -2,6 +2,8 @@
 
 ## HIGHER PRIORITY
 
+* Fix the demo query so that it performs an aggregate function
+* Override width and height for the report view in reports.yml
 * Integrate PlotKit
 * Allow multiple sql files. This could be achieved by making @resultset a hash with the name of the 
   query as they key. In the design file, the different result outputs could be referenced using a dot 
@@ -24,10 +26,10 @@
 * Parse csv file with Erubis::Eruby
 * Try and implement jqgrid sort and search methods. (deferring)
   This should be done in the sql files by passing the params from jqgrid into them. (deferring)
-* Report type should be in the yaml. Default can be in initializer.
 
 ## COMPLETED
 
+* Report type should be in the yaml. Default can be in initializer.
 * The authenticate method in the report controller should be more generic. A variable could be set 
   in an initializer that can be used in an eval method.
 * Work on documentation

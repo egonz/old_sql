@@ -59,6 +59,7 @@ module OldSql
       copy_file "user.erb.example", "#{app_path}/config/old_sql/report_sql/user_old_sql_demo.erb"
       copy_file "user_processor.rb.example", "#{app_path}/lib/old_sql/report_processor/user_old_sql_demo_processor.rb"
       copy_file "user_design_template.csv", "#{app_path}/config/old_sql/report_design/user_old_sql_demo.csv"
+      copy_file "user_old_sql_demo_chart_design.yml", "#{app_path}/config/old_sql/report_design/user_old_sql_demo.yml"
     end
     
     def configure_initializer

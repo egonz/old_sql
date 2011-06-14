@@ -6,6 +6,7 @@ Rails.application.routes.draw do
         match "/query", :to => :query, :as => "query"
         match "/jqgrid", :to => :jqgrid, :as => "jqgrid"
         match "/table", :to => :table, :as => "table"
+        match "/chart", :to => :chart, :as => "chart"
         match "/print", :to => :print, :as => "print"
       end
     end

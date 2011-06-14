@@ -1,0 +1,8 @@
+# Old SQL Chart Design Example
+
+pie:
+  0: id + 10
+  1: id + 20
+  2: id + 50
+  3: id + 70
+  4: id + 100

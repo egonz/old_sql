@@ -67,14 +67,35 @@ Configure your reports config/old_sql/report.yml. An example configuration is cr
 	# 'report_design' is also optional, and should point to a file in config/old_sql/report_design.
 	# See config/old_sql/report_design/user_old_sql_demo.csv for an example.
 	#
+	# 'report_view' is optional. It overrides the default_report_view defined in the initializer. It
+	# can be set to jqgrid, table, or chart.
+	#
 	# The 'fields' are the headers for the report.
 
-	user:
-  	  description: User
-  	  report_sql: user_old_sql_demo
-  	  report_design: user_old_sql_demo
-  	  #report_processor: User_Old_Sql_Demo_Processor
-  	  fields: 
+	user_jqgrid:
+	description: User jqGrid
+	report_sql: user_old_sql_demo
+	report_design: user_old_sql_demo.csv
+	report_view: jqgrid
+	fields: 
+    	- 'id'
+    	- 'name'
+    
+	user_table:
+	description: User HTML Table
+	report_sql: user_old_sql_demo
+	report_processor: User_Old_Sql_Demo_Processor
+	report_view: table
+	fields: 
+		- 'id'
+		- 'name'
+    
+	user_chart:
+	description: User Chart
+	report_sql: user_old_sql_demo
+	report_design: user_old_sql_demo.yml
+	report_view: chart
+	fields: 
 		- 'id'
 		- 'name'
 
@@ -143,6 +164,14 @@ All css and html template files can be copied to your installation by executing:
 	rails g old_sql:copy_assets
 	
 Settings for Old SQL can be configured in config/initializers/old_sql.rb.
+
+== Rake Examples
+
+	rake old_sql:print:range[user_table,'development','2011-03-01','2011-09-01']
+
+	rake old_sql:print:today[user_table,'development']
+
+	rake old_sql:print:week[user_table,'development']
 
 == Contributing to old_sql
  
