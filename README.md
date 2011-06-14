@@ -196,8 +196,8 @@ Design files, both CSV and CHART, work best (only?) with queries that return a s
 Ideally the query returns aggregate results, form one or more tables. For example:
 
 	SELECT
-		SUM(f.total_1) AS total,
-		IFNULL(SUM(CASE WHEN f.post_id IS NOT NULL THEN 1 ELSE 0 END),0) AS published,
+		IFNULL(SUM(f.total),0) AS foo_total,
+		IFNULL(SUM(CASE WHEN f.attempts IS NOT NULL THEN 1 ELSE 0 END),0) AS foo_attempts,
 		IFNULL(bar_totals.bar_count,0) AS bar_count
 	FROM
 		foo f
