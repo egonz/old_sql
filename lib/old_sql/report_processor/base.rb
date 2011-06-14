@@ -182,11 +182,7 @@ module OldSql
         @data[:rows] = []
       end
   
-      def add_row(title = nil, cell_data = [], id = @id+1)        
-        if !title.nil?
-          cell_data.unshift "<b>#{title}</b>"
-        end
-    
+      def add_row(cell_data = [], id = @id+1)        
         @data[:rows] << {id: id, cell: cell_data}
       end
   

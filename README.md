@@ -180,8 +180,8 @@ Optionally create a processor under lib/old_sql_report_processor:
      
 	        Rails.logger.debug "REC: #{@rec}"
      
-	        add_row(nil, [@rec['id'], @rec['name']])
-	        add_row('Totals', ['...'])
+	        add_row([@rec['id'], @rec['name']])
+	        add_row(['Totals', '...'])
      
 	        @data
 	      end

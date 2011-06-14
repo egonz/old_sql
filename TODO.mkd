@@ -29,6 +29,7 @@
 
 ## COMPLETED
 
+* Remove the first param to add_row
 * Integrate PlotKit
 * Report type should be in the yaml. Default can be in initializer.
 * The authenticate method in the report controller should be more generic. A variable could be set 
