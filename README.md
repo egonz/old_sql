@@ -208,7 +208,8 @@ Ideally the query returns aggregate results, from one or more tables. For exampl
 		AND f.created_at > '<%=start_date%>'
 		AND f.created_at < '<%=end_date%>'
 		
-If you need to process more than a single record create a subclass of OldSql::ReportProcessor::Base.
+If you need to process more than a single record create a subclass of OldSql::ReportProcessor::Base. See 
+[UserOldSqlDemoProcessor](https://github.com/egonz/old_sql/blob/master/lib/generators/old_sql/templates/user_processor.rb.example).
 		
 Customize
 ---------
