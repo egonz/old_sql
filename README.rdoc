@@ -10,7 +10,7 @@ Some features of Old SQL are:
   - The design documents, which are nothing more than csv files, can also serve as documentation, and describe the layout of the report in an intuitive way.
   - If you want more fine grained control and report processor can parse the SQL.
   - This also makes it simple to convert legacy reports into Old SQL reports.  
-* Multiple report views (jqGrid, HTML table) that can be configured using the old_sql initializer.
+* Multiple report views (jqGrid, HTML table, and chart) that can be configured using the old_sql initializer.
 * Old SQL uses Devise for authentication, and will install it for you. It can
   even add Devise support to an existing model (by default users).
 * In the report design all data is rounded to a precision that can be set in the old_sql initializer. This feature can also be disabled in the initializer.
