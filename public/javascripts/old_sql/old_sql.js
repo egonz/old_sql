@@ -2,6 +2,7 @@ function load_report()
 {	
   report_name = jQuery("#report option:selected").attr('name');
   report_sql = jQuery("#report option:selected").attr('report_sql');
+  report_view = get_report_view();
 
   if (!reported_selected(report_name)) return;
   
@@ -18,6 +19,7 @@ function print_report()
 {
 	report_name = jQuery("#report option:selected").attr('name');
   report_sql = jQuery("#report option:selected").attr('report_sql');
+	report_view = get_report_view();
 	
 	if (!reported_selected(report_name)) return;
 	
@@ -31,6 +33,7 @@ function export_report_to_excel()
 {
 	report_name = jQuery("#report option:selected").attr('name');
   report_sql = jQuery("#report option:selected").attr('report_sql');
+  report_view = get_report_view();
 	
 	if (!reported_selected(report_name)) return;
 	
@@ -47,6 +50,17 @@ function reported_selected(report_name)
     return false;
   } else {
     return true;
+  }
+}
+
+function get_report_view()
+{
+  report_view = jQuery("#report option:selected").attr('report_view');
+  
+  if (report_view) {
+    return report_view;
+  } else {
+    return default_report_view;
   }
 }
 
