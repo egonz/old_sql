@@ -68,7 +68,7 @@ module OldSql
           r.each do |key, value|
             cell << value
           end
-          add_row(nil, cell)
+          add_row(cell)
         end
       
         @data
@@ -110,7 +110,7 @@ module OldSql
             report_row << eval_expression(expression) unless expression.length==0
           end
           
-          add_row(nil, report_row)
+          add_row(report_row)
         end
       end
       
