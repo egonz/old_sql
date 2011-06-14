@@ -89,31 +89,31 @@ Configure your reports config/old_sql/report.yml. An example configuration is cr
 	# The 'fields' are the headers for the report.
 
 	user_jqgrid:
-	description: User jqGrid
-	report_sql: user_old_sql_demo
-	report_design: user_old_sql_demo.CSV
-	report_view: jqgrid
-	fields: 
-      - 'id'
-      - 'name'
+	  description: User jqGrid
+	  report_sql: user_old_sql_demo
+	  report_design: user_old_sql_demo.CSV
+	  report_view: jqgrid
+	  fields: 
+        - 'id'
+        - 'name'
     
 	user_table:
-	description: User HTML Table
-	report_sql: user_old_sql_demo
-	report_processor: User_Old_Sql_Demo_Processor
-	report_view: table
-	fields: 
-	  - 'id'
-	  - 'name'
+	  description: User HTML Table
+	  report_sql: user_old_sql_demo
+	  report_processor: User_Old_Sql_Demo_Processor
+	  report_view: table
+	  fields: 
+	    - 'id'
+	    - 'name'
     
 	user_chart:
-	description: User Chart
-	report_sql: user_old_sql_demo
-	report_design: user_old_sql_demo.yml
-	report_view: chart
-	fields: 
-	  - 'id'
-	  - 'name'
+	  description: User Chart
+	  report_sql: user_old_sql_demo
+	  report_design: user_old_sql_demo.yml
+	  report_view: chart
+	  fields: 
+	    - 'id'
+	    - 'name'
 
 Create a sql file under config/old_sql/report_sql. The following example is included:
 
