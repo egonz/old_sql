@@ -82,8 +82,8 @@ Configure your reports config/old_sql/report.yml. An example configuration is cr
 	report_design: user_old_sql_demo.csv
 	report_view: jqgrid
 	fields: 
-    	- 'id'
-    	- 'name'
+      - 'id'
+      - 'name'
     
 	user_table:
 	description: User HTML Table
@@ -91,8 +91,8 @@ Configure your reports config/old_sql/report.yml. An example configuration is cr
 	report_processor: User_Old_Sql_Demo_Processor
 	report_view: table
 	fields: 
-		- 'id'
-		- 'name'
+	  - 'id'
+	  - 'name'
     
 	user_chart:
 	description: User Chart
@@ -100,8 +100,8 @@ Configure your reports config/old_sql/report.yml. An example configuration is cr
 	report_design: user_old_sql_demo.yml
 	report_view: chart
 	fields: 
-		- 'id'
-		- 'name'
+	  - 'id'
+	  - 'name'
 
 Create a sql file under config/old_sql/report_sql. The following example is included:
 
