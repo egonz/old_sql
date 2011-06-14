@@ -193,7 +193,7 @@ Design File Tips
 ----------------
 
 Design files, both CSV and CHART, work best (only?) with queries that return a single record.
-Ideally the query returns aggregate results, form one or more tables. For example:
+Ideally the query returns aggregate results, from one or more tables. For example:
 
 	SELECT
 		IFNULL(SUM(f.total),0) AS foo_total,
@@ -207,6 +207,8 @@ Ideally the query returns aggregate results, form one or more tables. For exampl
 		1=1
 		AND f.created_at > '<%=start_date%>'
 		AND f.created_at < '<%=end_date%>'
+		
+If you need to process more than a single record create a subclass of OldSql::ReportProcessor::Base.
 		
 Customize
 ---------
