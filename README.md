@@ -23,6 +23,13 @@ Some features of Old SQL are:
 * The look of Old SQL can be customized.
 * Support for printing and exporting to CSV.
 
+Screenshots
+-----------
+
+![jqGrid view](https://github.com/egonz/old_sql/raw/master/screenshots/jqgrid.png "jqGrid view")
+![table view](https://github.com/egonz/old_sql/raw/master/screenshots/table.png "Table view")
+![table view](https://github.com/egonz/old_sql/raw/master/screenshots/chart.png "Chart view")
+
 Quick Setup and Demo
 --------------------
 
@@ -181,13 +188,6 @@ Optionally create a processor under lib/old_sql_report_processor:
 	    end
 	  end
 	end
-
-Screenshots
------------
-
-![jqGrid view](https://github.com/egonz/old_sql/raw/master/screenshots/jqgrid.png "jqGrid view")
-![table view](https://github.com/egonz/old_sql/raw/master/screenshots/table.png "Table view")
-![table view](https://github.com/egonz/old_sql/raw/master/screenshots/chart.png "Chart view")
 
 Design File Tips
 ----------------
