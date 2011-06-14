@@ -44,7 +44,7 @@ This will create the following directories:
 
 This generator will also create a migration that will add a old_sql_admin column to the model used for authentication (by default users).
 
-If not already installed Devise is setup. 
+If not already installed Devise is setup.
 
 == Creating Reports
 
@@ -156,6 +156,12 @@ Optionally create a processor under lib/old_sql_report_processor:
 	    end
 	  end
 	end
+
+== Screenshots
+
+![jqGrid view](https://github.com/egonz/old_sql/raw/master/screenshots/jqgrid.png "jqGrid view")
+![table view](https://github.com/egonz/old_sql/raw/master/screenshots/table.png "Table view")
+![table view](https://github.com/egonz/old_sql/raw/master/screenshots/chart.png "Chart view")
 
 == Customize 
 

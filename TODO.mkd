@@ -2,6 +2,7 @@
 
 ## HIGHER PRIORITY
 
+* Print charts
 * Fix the demo query so that it performs an aggregate function
 * Override width and height for the report view in reports.yml
 * Allow multiple sql files. This could be achieved by making @resultset a hash with the name of the 

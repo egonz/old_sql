@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{old_sql}
-  s.version = "1.13.0"
+  s.version = "1.14.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = [%q{Eddie Gonzales}]
-  s.date = %q{2011-06-13}
+  s.date = %q{2011-06-14}
   s.description = %q{OldSQL is a Rails Engine database reporting gem that uses plain old SQL}
   s.email = %q{egonzales@pureplay.com}
   s.extra_rdoc_files = [
@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
     "app/controllers/old_sql/report_controller.rb",
     "app/views/layouts/old_sql/report.html.erb",
     "app/views/old_sql/errors/401.html.erb",
+    "app/views/old_sql/report/chart.html.erb",
     "app/views/old_sql/report/datagrid.html.erb",
     "app/views/old_sql/report/index.html.erb",
     "app/views/old_sql/report/print.html.erb",
@@ -44,11 +45,16 @@ Gem::Specification.new do |s|
     "lib/generators/old_sql/templates/reports.yml.example",
     "lib/generators/old_sql/templates/user.erb.example",
     "lib/generators/old_sql/templates/user_design_template.csv",
+    "lib/generators/old_sql/templates/user_old_sql_demo_chart_design.yml",
     "lib/generators/old_sql/templates/user_processor.rb.example",
     "lib/old_sql.rb",
     "lib/old_sql/engine.rb",
     "lib/old_sql/report_design/cell.rb",
     "lib/old_sql/report_design/cell_data.rb",
+    "lib/old_sql/report_design/chart.rb",
+    "lib/old_sql/report_design/chart_data.rb",
+    "lib/old_sql/report_design/chart_item.rb",
+    "lib/old_sql/report_design/chart_parser.rb",
     "lib/old_sql/report_design/model.rb",
     "lib/old_sql/report_design/parser.rb",
     "lib/old_sql/report_design/row.rb",
