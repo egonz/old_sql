@@ -23,13 +23,6 @@ Some features of Old SQL are:
 * The look of Old SQL can be customized.
 * Support for printing and exporting to CSV.
 
-Screenshots
------------
-
-![jqGrid view](https://github.com/egonz/old_sql/raw/master/screenshots/jqgrid.png "jqGrid view")
-![table view](https://github.com/egonz/old_sql/raw/master/screenshots/table.png "Table view")
-![table view](https://github.com/egonz/old_sql/raw/master/screenshots/chart.png "Chart view")
-
 Quick Setup and Demo
 --------------------
 
@@ -44,6 +37,13 @@ Quick Setup and Demo
 8. Navigate to http://localhost:3000/sql/reports
 9. Authenticate using your old_sql_admin user.
 10. Select user from the Reports drop down list. Click run.
+
+Screenshots
+-----------
+
+![jqGrid view](https://github.com/egonz/old_sql/raw/master/screenshots/jqgrid.png "jqGrid view")
+![table view](https://github.com/egonz/old_sql/raw/master/screenshots/table.png "Table view")
+![table view](https://github.com/egonz/old_sql/raw/master/screenshots/chart.png "Chart view")
 
 Installation
 ------------
