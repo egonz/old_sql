@@ -13,15 +13,16 @@ Some features of Old SQL are:
     and describe the layout of the report in an intuitive way.
   - If you want more fine grained control, a custom report processor can parse the SQL.
   - Simple to convert legacy reports into Old SQL reports.  
-* Multiple report views (jqGrid, HTML table, and chart) that can be configured using the old_sql initializer.
-* Old SQL uses Devise for authentication, and will install it for you. It can
-  even add Devise support to an existing model (by default users).
+* Multiple report views (jqGrid, HTML table, and chart).
+* Bar and Pie charts using Google Charts.
 * In the report design all data is rounded to a precision that can be set in the old_sql initializer. 
   This feature can also be disabled in the initializer.
 * Old SQL has rake tasks for running the reports and outputting the result as CSV. This can simplify testing. 
   It also allows reports to be run as a cron task.
 * The look of Old SQL can be customized.
 * Support for printing and exporting to CSV.
+* Old SQL uses Devise for authentication, and will install it for you. It can
+  even add Devise support to an existing model (by default users).
 
 Quick Setup and Demo
 --------------------
