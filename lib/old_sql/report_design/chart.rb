@@ -12,8 +12,8 @@ module OldSql
         @type
       end
       
-      def add(key, value)
-        @items << ChartItem.new(key, value)
+      def add(slice)
+        @items << ChartItem.new(slice)
       end
       
       def item(index)

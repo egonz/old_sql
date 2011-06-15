@@ -1,5 +1,4 @@
-# Old SQL:
-# Example Report Design Document
+# Old SQL Example Report Design Document
 #
 # Text not in quotes are column names from the SQL query
 # Quoted text are labels that will appear in the report.
@@ -15,7 +14,7 @@
 # To disable this set round_report_values to false in
 # config/initializers/old_sql.rb. You can also change the
 # precision, which is 2 by default.
-#
+
 id,name
 "Example Math Operation",id + id
 "Totals","..."

@@ -11,7 +11,6 @@ module OldSql
     helper_method :jqgrid_col_names
     helper_method :strip_html
     helper_method :chart_type
-    helper_method :chart_fields
     helper_method :chart_data
 
     layout "old_sql/report.html.erb"
@@ -60,14 +59,14 @@ module OldSql
       @report_sql = params[:report_sql].downcase
       @report_sql_orig = params[:report_sql].downcase
       
-      @width = OldSql.report_width
-      @height = OldSql.report_height
+      @width = 800
+      @height = 500
       
       processor = load_base_processor
       @report = processor.execute_query(@report_sql,@start_date,@end_date,query_vars(@report_name),@reports[@report_name]['report_design'],
                                         @reports[@report_name]['report_processor'])
       
-      render :template => "old_sql/report/chart.html.erb"
+      render :layout => 'old_sql/chart.html.erb', :template => "old_sql/report/chart.html.erb"
     end
     
     def query
@@ -192,19 +191,6 @@ module OldSql
       
       def strip_html html
         OldSql.strip_html html
-      end
-      
-      def chart_fields
-        fields =[]
-        
-        i=0
-        @reports[@report_name]['fields'].each do |field|
-          fields << {v:i, label:field}
-          i+=1
-        end
-        
-        json = fields.to_json 
-        json.html_safe
       end
       
       def chart_data

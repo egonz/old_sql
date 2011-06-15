@@ -3,12 +3,12 @@ module OldSql
     class ChartItem
       attr_accessor :chart_data, :key
       
-      def initialize(key, value)
-        @key = key
-        @value = value
+      def initialize(slice)
+        @key = slice['title']
+        @data = slice['data']
         @chart_data = []
         
-        @value.split(" ").each {|chart_data| @chart_data << ChartData.new(chart_data)}
+        @data.split(" ").each {|chart_data| @chart_data << ChartData.new(chart_data)}
       end
       
       def expression?

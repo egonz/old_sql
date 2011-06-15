@@ -1,27 +1,10 @@
-<%= javascript_include_tag "old_sql/MochiKit-1.4.2/lib/MochiKit/MochiKit.js" %>
-<%= javascript_include_tag "old_sql/plotkit-0.9.1/PlotKit/Base.js" %>
-<%= javascript_include_tag "old_sql/plotkit-0.9.1/PlotKit/Layout.js" %>
-<%= javascript_include_tag "old_sql/plotkit-0.9.1/PlotKit/Canvas.js" %>
-<%= javascript_include_tag "old_sql/plotkit-0.9.1/PlotKit/SweetCanvas.js" %>
-
-<script>
-var options = {
-   "IECanvasHTC": "/plotkit/iecanvas.htc",
-   "colorScheme": PlotKit.Base.palette(PlotKit.Base.baseColors()[0]),
-   "backgroundColor": Color.whiteColor(),
-   "xTicks": <%=chart_fields%>,
-   "drawYAxis": true
-};
-
-function drawGraph() {
-    var layout = new PlotKit.Layout("<%=chart_type%>", options);
-    layout.addDataset("sqrt", <%=chart_data%>);
-    layout.evaluate();
-    var canvas = MochiKit.DOM.getElement("graph");
-    var plotter = new PlotKit.SweetCanvasRenderer(canvas, layout, options);
-    plotter.render();
-}
-MochiKit.DOM.addLoadEvent(drawGraph);
+<script type="text/javascript">
+	var chart_title = "<%=@reports[@report_name]['description']%> Report";
+	var chart_type = "<%=chart_type%>";
+	var chart_data = <%=chart_data%>;
+	var chart_colors = ['#E35F18','#307CC7','#D95117','#0A4592','#B33A13','#073D8D','#902811','#052D79','#7A1904','#061E59','#6E0E02','#071253','#530005','#1F3058','#2A437F','#3657A8','#5675BB','#7A94CC','#F38200','#C4794B','#BF5D29','#B8410B','#AD3300','#802205','#36170F'];
+	var width = <%=@width%>;
+	var height = <%=@height%>;
 </script>
 
-<div><canvas id="graph" height="555" width="555"></canvas></div>
+<div id="chart_div"></div>

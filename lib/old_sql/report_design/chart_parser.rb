@@ -13,8 +13,8 @@ module OldSql
         
         design_template.each do |type, i|
           @chart.type = type
-          i.each do |key, value|
-            @chart.add(key, value)
+          i.each do |slice|
+            @chart.add(slice)
           end
         end
       

@@ -124,8 +124,7 @@ Create a sql file under config/old_sql/report_sql. The following example is incl
 
 Optionally create a CSV DESIGN file under config/old_sql/report_design:
 
-	# Old SQL:
-	# Example Report Design Document
+	# Old SQL Example Report Design Document
 	#
 	# Text not in quotes are column names from the SQL query.
 	# Quoted text are labels that will appear in the report.
@@ -141,7 +140,7 @@ Optionally create a CSV DESIGN file under config/old_sql/report_design:
 	# To disable this set round_report_values to false in
 	# config/initializers/old_sql.rb. You can also change the
 	# precision, which is 2 by default.
-	#
+	
 	id,name
 	"Example Math Operation",id + id
 	"Totals","..."
@@ -155,17 +154,26 @@ Optionally create a CHART DESIGN file under config/old_sql/report_design:
 	
 	# Old SQL Chart Design Example
 	#
-	# The key can either be pie or bar.
-	# Items should be numbered from 0 to n.
-	# The value of each item can be either a column name, or
-	# a formula.
+	# The key for the YAML entry can either be pie or bar.
+	# 'title' is a label describing the data.
+	# 'data' can be either a column name, or a formula.
 
 	pie:
-  	  0: id + 10
-	  1: id + 20
-	  2: id + 50
-	  3: id + 70
-	  4: id + 100
+	  - 
+	    title: Id
+	    data: id
+	  - 
+	    title: Id + 20
+	    data: id + 20
+	  - 
+	    title: Id + 50
+	    data: id + 50
+	  - 
+	    title: Id + 70
+	    data: id + 70
+	  - 
+	    title: Id + 10
+	    data: id + 10  
 
 Optionally create a processor under lib/old_sql_report_processor:
 
