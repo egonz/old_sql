@@ -1,3 +1,6 @@
+<% if @report.nil? %>
+	The report has no data for this date range.
+<% else %>
 <script>
 	print();
 </script>
@@ -64,3 +67,4 @@ th {
 		<% end %>
 	</table>
 </div>
+<% end %>

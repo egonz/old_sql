@@ -1,3 +1,6 @@
+<% if @report.nil? %>
+	The report has no data for this date range.
+<% else %>
 <!-- TODO move these to the head -->
 <%= stylesheet_link_tag "old_sql/jqgrid/ui.jqgrid.css" %>
 <%= javascript_include_tag "old_sql/jqgrid/jquery.jqGrid.min.js" %>
@@ -21,3 +24,4 @@ jQuery(document).ready(function(){
 </script>
 
 <table id="rowed1"></table>
+<% end %>

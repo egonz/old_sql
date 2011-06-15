@@ -117,6 +117,8 @@ module OldSql
       def parse_chart_design(design, resultset)
         report_row = []
         @rec = resultset[0]
+        
+        return nil if @rec.nil?
             
         chart = OldSql::ReportDesign::ChartParser.read_file("#{design}")
         

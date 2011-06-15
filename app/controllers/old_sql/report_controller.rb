@@ -194,11 +194,13 @@ module OldSql
       end
       
       def chart_data
+        return nil if @report.nil?
         json = @report.values.first.to_json
         json.html_safe
       end
       
       def chart_type
+        return nil if @report.nil?
         @report.keys.first
       end
   end
