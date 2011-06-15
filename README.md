@@ -42,12 +42,15 @@ Quick Setup and Demo
 Screenshots
 -----------
 jqGrid
+
 ![jqGrid view](https://github.com/egonz/old_sql/raw/master/screenshots/jqgrid.png "jqGrid view")
 
 HTML Table
+
 ![table view](https://github.com/egonz/old_sql/raw/master/screenshots/table.png "Table view")
 
 Google Charts
+
 ![table view](https://github.com/egonz/old_sql/raw/master/screenshots/chart.png "Chart view")
 
 Installation
