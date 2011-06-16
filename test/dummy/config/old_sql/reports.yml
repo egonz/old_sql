@@ -18,6 +18,9 @@
 # 'report_view' is optional. It overrides the default_report_view defined in the initializer. It
 # can be set to jqgrid, table, or chart.
 #
+# Optionally use 'report_db' to specify a class that extends ActiveRecord::Base. Use the require
+# path for your class. E.g. foo/my_alternative_db. 
+#
 # The 'fields' are the headers for the report.
 
 user_jqgrid:
@@ -50,3 +53,13 @@ user_chart:
     - 'two'
     - 'three'
     - 'four'
+    
+user_table_alt_db:
+  description: User HTML Table Alt DB
+  report_sql: user_old_sql_demo
+  report_db: old_sql/report_db/alt_test
+  report_design: user_old_sql_demo.csv
+  report_view: table
+  fields: 
+    - 'id'
+    - 'name'

@@ -23,6 +23,7 @@ Some features of Old SQL are:
 * Support for printing and exporting to CSV.
 * Old SQL uses Devise for authentication, and will install it for you. It can
   even add Devise support to an existing model (by default users).
+* Support for multiple database connections.
 
 Quick Setup and Demo
 --------------------
@@ -93,6 +94,9 @@ Configure your reports config/old_sql/report.yml. An example configuration is cr
 	#
 	# 'report_view' is optional. It overrides the default_report_view defined in the initializer. It
 	# can be set to jqgrid, table, or chart.
+	#
+	# Optionally use 'report_db' to specify a class that extends ActiveRecord::Base. Use the require
+	# path for your class. E.g. foo/my_alternative_db.
 	#
 	# The 'fields' are the headers for the report.
 

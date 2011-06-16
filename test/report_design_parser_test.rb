@@ -1,10 +1,14 @@
 require 'test_helper'
+require 'old_sql/report_processor/base'
 require 'old_sql/report_design/parser'
 require 'old_sql/report_design/model'
 require 'old_sql/report_design/row'
 require 'old_sql/report_design/cell'
 require 'old_sql/report_design/cell_data'
-require 'old_sql/report_processor/base'
+require 'old_sql/report_design/chart_parser'
+require 'old_sql/report_design/chart'
+require 'old_sql/report_design/chart_item'
+require 'old_sql/report_design/chart_data'
 
 class ReportDesignParserTest < ActiveSupport::TestCase
   test "parsing design document" do
@@ -12,7 +16,7 @@ class ReportDesignParserTest < ActiveSupport::TestCase
     assert_raise(ArgumentError) {OldSql::ReportDesign::Parser.read_file}
     assert_raise(ArgumentError) {OldSql::ReportDesign::Parser.read_file "foo.csv"}
     
-    model = OldSql::ReportDesign::Parser.read_file "user.csv"
+    model = OldSql::ReportDesign::Parser.read_file "user_old_sql_demo.csv"
     
     # TEST STRUCTURE
     assert_instance_of OldSql::ReportDesign::Model, model
@@ -36,13 +40,13 @@ class ReportDesignParserTest < ActiveSupport::TestCase
   end
   
   test "using design document" do
-    model = OldSql::ReportDesign::Parser.read_file "user.csv"
+    model = OldSql::ReportDesign::Parser.read_file "user_old_sql_demo.csv"
     
     template = File.read("#{OldSql::ReportDesign::Parser.report_design_path}/../reports.yml")
-    report = YAML.load(Erubis::Eruby.new(template).result)['user']
+    report = YAML.load(Erubis::Eruby.new(template).result)['user_table']
     
     base_parser = OldSql::ReportProcessor::Base.new
-    data = base_parser.execute_query(report['report_sql'],'2011-05-06','2011-08-06',nil,report['report_design'])
+    data = base_parser.execute_query(report,'2011-05-06','2011-08-06',nil)
     puts "DATA #{data}"
     
     #todo add assertion

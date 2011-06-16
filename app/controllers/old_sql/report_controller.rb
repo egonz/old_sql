@@ -46,8 +46,7 @@ module OldSql
       @height = OldSql.report_height
       
       processor = load_base_processor
-      @report = processor.execute_query(@report_sql,@start_date,@end_date,query_vars(@report_name),@reports[@report_name]['report_design'],
-                                        @reports[@report_name]['report_processor'])
+      @report = processor.execute_query(@reports[@report_name],@start_date,@end_date,query_vars(@report_name))
       
       render :template => "old_sql/report/table.html.erb"
     end
@@ -63,8 +62,7 @@ module OldSql
       @height = 500
       
       processor = load_base_processor
-      @report = processor.execute_query(@report_sql,@start_date,@end_date,query_vars(@report_name),@reports[@report_name]['report_design'],
-                                        @reports[@report_name]['report_processor'])
+      @report = processor.execute_query(@reports[@report_name],@start_date,@end_date,query_vars(@report_name))
       
       render :layout => 'old_sql/chart.html.erb', :template => "old_sql/report/chart.html.erb"
     end
@@ -77,8 +75,7 @@ module OldSql
       @report_sql_orig = params[:report_sql].downcase
       
       processor = load_base_processor
-      @report = processor.execute_query(@report_sql,@start_date,@end_date,query_vars(@report_name),@reports[@report_name]['report_design'],
-                                        @reports[@report_name]['report_processor'])
+      @report = processor.execute_query(@reports[@report_name],@start_date,@end_date,query_vars(@report_name))
       
       respond_to do |format|
         format.json { render :json => @report.to_json}
@@ -115,8 +112,7 @@ module OldSql
       @report_sql_orig = params[:report_sql].downcase
       
       processor = load_base_processor
-      @report = processor.execute_query(@report_sql,@start_date,@end_date,query_vars(@report_name),@reports[@report_name]['report_design'],
-                                        @reports[@report_name]['report_processor'])
+      @report = processor.execute_query(@reports[@report_name],@start_date,@end_date,query_vars(@report_name))
       
       render :template => "old_sql/report/print.html.erb"
     end

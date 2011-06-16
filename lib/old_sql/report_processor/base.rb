@@ -3,7 +3,6 @@ require 'old_sql/report_design/model'
 require 'old_sql/report_design/row'
 require 'old_sql/report_design/cell'
 require 'old_sql/report_design/cell_data'
-
 require 'old_sql/report_design/chart_parser'
 require 'old_sql/report_design/chart'
 require 'old_sql/report_design/chart_item'
@@ -15,35 +14,21 @@ module OldSql
     
       ROUND_PRECISION = OldSql.rounding_precision
     
-      def execute_query(report_sql,start_date,end_date,query_vars,design=nil,sub_processor=nil)
-        vars = {:start_date => start_date, :end_date => end_date}
-      
-        if !query_vars.nil?
-          vars = vars.merge query_vars
-        end
-      
-        template = File.read("#{Rails.root}/config/old_sql/report_sql/#{report_sql}.erb")
-        sql = Erubis::Eruby.new(template).result(vars)
-      
-        begin
-          #todo change to a reporting db
-          db = ActiveRecord::Base.connection();
+      def execute_query(report_config, start_date, end_date, query_vars = nil)
+        sql = load_sql(report_config['report_sql'], start_date, end_date, query_vars)
+        query(sql, report_config)
         
-          @resultset = []
-          rec = db.select_all(sql)
-          rec.each do |row|
-            @resultset << row
-          end
-        rescue Exception=>e
-          #todo log error
-          Rails.logger.error e
-        end
+        return nil if @resultset.nil?
         
-        if design
-          parse_design(design, @resultset) if design =~ /csv/
-          parse_chart_design(design, @resultset) if design =~ /yml/
+        init
+        
+        report_design = report_config['report_design']
+        
+        if report_design
+          parse_design(report_design, @resultset) if report_design =~ /csv/
+          parse_chart_design(report_design, @resultset) if report_design =~ /yml/
         else
-          loaded_sub_processor = load_sub_processor(sub_processor)
+          loaded_sub_processor = load_sub_processor(report_config['report_processor'])
           
           if loaded_sub_processor.nil?
             parse(@resultset)
@@ -54,15 +39,109 @@ module OldSql
         
         @data
       end
-    
-      def init(resultset)
-        @rec = resultset[0]
-        self.new_data
+      
+      protected
+      
+      def add_row(cell_data = [], id = @id+1)        
+        @data[:rows] << {id: id, cell: cell_data}
       end
+      
+      def round(value, precision = ROUND_PRECISION)
+        factor = 10.0**precision
+        (value*factor).round / factor
+      end
+  
+      def isNumeric(s)
+        Float(s) != nil rescue false
+      end
+      
+      private
+      
+      def load_sql(report_sql, start_date, end_date, query_vars)
+        vars = {:start_date => start_date, :end_date => end_date}
+      
+        if !query_vars.nil?
+          vars = vars.merge query_vars
+        end
+      
+        template = File.read("#{Rails.root}/config/old_sql/report_sql/#{report_sql}.erb")
+        sql = Erubis::Eruby.new(template).result(vars)
+      end
+      
+      def query sql, report_config
+        begin
+          #todo change to a reporting db
+          db = db_connection(report_config['report_db'])
+        
+          raise Exception("Unable to Establish a Database Connection") unless db.active?
+        
+          @resultset = []
+          rec = db.select_all(sql)
+          rec.each do |row|
+            @resultset << row
+          end
+        rescue Exception=>e
+          Rails.logger.error e
+        end
+        
+        @resultset
+      end
+      
+      def db_connection report_db
+        db = nil
+        if report_db.nil?
+          db = ActiveRecord::Base.connection();
+        else
+          require report_db
+    
+          db_class_name = ""
+          first = true
+    
+          report_db.split("/").each do |path|
+            db_class_name << "::" unless first
+            path.split("_").each {|c| db_class_name << c.capitalize }
+            first = false
+          end
+    
+          db=eval(db_class_name).connection
+        end
+        
+        db
+      end
+      
+      def load_sub_processor sub_processor
+        return if sub_processor.nil?
+        
+        loaded_sub_processor = nil
+        begin
+          require "old_sql/report_processor/#{sub_processor.downcase}"
+          loaded_sub_processor=eval("OldSql::ReportProcessor::#{sub_processor.gsub("_","")}").new 
+        rescue Exception=>e
+          Rails.logger.error e.message
+        end
+        
+        loaded_sub_processor
+      end
+      
+      def init
+        @rec = @resultset[0]
+        @id = 0
+        @data = {}
+        @data[:rows] = []
+        
+        init_jqgrid_data
+      end
+      
+      def init_jqgrid_data(page=1, total=1, records=1)
+        @data[:page]=page
+        @data[:total]=total
+        @data[:records]=records
+      end
+      
     
       def parse(resultset)
-        init(resultset)
-      
+        init_jqgrid_data
+        
         resultset.each do |r|
           cell = [] 
           r.each do |key, value|
@@ -75,13 +154,7 @@ module OldSql
       end
       
       def parse_design(design, resultset)
-        init(resultset)
-        
-        return nil if @rec.nil?
-        
         model = OldSql::ReportDesign::Parser.read_file("#{design}")
-        
-        init(resultset)
         
         model.rows.each do |row|
           report_row = []
@@ -116,15 +189,13 @@ module OldSql
       
       def parse_chart_design(design, resultset)
         report_row = []
-        @rec = resultset[0]
         
-        return nil if @rec.nil?
-            
         chart = OldSql::ReportDesign::ChartParser.read_file("#{design}")
         
         chart.items.each do |item|
           key = item.key
           expression = ""
+          
           item.chart_data.each do |data|
             if item.expression?
               if data.type == OldSql::ReportDesign::ChartData::COLUMN
@@ -168,51 +239,6 @@ module OldSql
         end
         
         result
-      end
-      
-      def round(value, precision = ROUND_PRECISION)
-        factor = 10.0**precision
-        (value*factor).round / factor
-      end
-    
-      def new_data(page=1, total=1, records=1)
-        @id = 0
-        @data = {}
-        @data[:page]=page
-        @data[:total]=total
-        @data[:records]=records
-        @data[:rows] = []
-      end
-  
-      def add_row(cell_data = [], id = @id+1)        
-        @data[:rows] << {id: id, cell: cell_data}
-      end
-  
-      def ifnull(o)
-        if !o.nil? && o != 0
-          return o
-        else
-          return 1
-        end
-      end
-  
-      def isNumeric(s)
-        Float(s) != nil rescue false
-      end
-      
-      def load_sub_processor sub_processor
-        return if sub_processor.nil?
-        
-        loaded_sub_processor = nil
-        begin
-          Rails.logger.info "Loading Processor old_sql/report_processor/#{sub_processor.downcase}"
-          require "old_sql/report_processor/#{sub_processor.downcase}"
-          loaded_sub_processor=eval("OldSql::ReportProcessor::#{sub_processor.gsub("_","")}").new 
-        rescue Exception=>e
-          Rails.logger.error e.message
-        end
-        
-        loaded_sub_processor
       end
     end
   end

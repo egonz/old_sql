@@ -5,8 +5,6 @@ module OldSql
     class UserOldSqlDemoProcessor < OldSql::ReportProcessor::Base
    
       def parse(resultset)
-        init(resultset)
-     
         Rails.logger.debug "REC: #{@rec}"
      
         add_row([@rec['id'], @rec['name']])

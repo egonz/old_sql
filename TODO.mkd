@@ -2,7 +2,6 @@
 
 ## HIGHER PRIORITY
 
-* Add chart layout to the copy assets generator
 * Allow overriding of the chart colors
 * Print charts
 * Fix the demo query so that it performs an aggregate function
@@ -31,6 +30,13 @@
 
 ## COMPLETED
 
+* Pass reports structure to OldSql::ReportProcessor::Base
+* Multiple db connections
+	- Users can create a subclass of ActiveRecord::Base. The name of this class
+	  can optionally be included in the report configuration in reports.yml.
+	  The path to the class can be turned into a class name using:
+	  "old_sql/report_db/alt_test_db".split("/").last.split("_").each {|c| classname << c.capitalize }
+* Add chart layout to the copy assets generator
 * Switch to the Google Chart API
 * Remove the first param to add_row
 * Integrate PlotKit
