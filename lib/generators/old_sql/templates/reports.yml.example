@@ -6,7 +6,7 @@
 # The 'report_sql' file should be located under config/old_sql/report_sql.
 # See config/old_sql/report_sql/user_old_sql_demo.sql for an example.
 #
-# The 'processor' parameter is optional, and should point to a class in lib/old_sql.
+# The 'report_processor' parameter is optional, and should point to a class in lib/old_sql.
 # See lib/old_sql/user_old_sql_demo_processor.rb for an example.
 # 
 # 'report_processor' names should be capitalized and separated with underscores. The file
