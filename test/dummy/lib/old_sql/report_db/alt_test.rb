@@ -5,7 +5,7 @@ module OldSql
     class AltTest < ActiveRecord::Base
       config = YAML.load_file(File.join("#{File.dirname(__FILE__)}/../../../config/", 'database.yml'))
       
-      establish_connection config['development']
+      establish_connection config['test']
     end
   end
 end
