@@ -95,8 +95,7 @@ Configure your reports config/old_sql/report.yml. An example configuration is cr
 	# 'report_view' is optional. It overrides the default_report_view defined in the initializer. It
 	# can be set to jqgrid, table, or chart.
 	#
-	# 'query_vars' are variables that are passed into the SQL file and can be parsed using ERB. 
-	# E.g. <%=foo%>
+	# 'query_vars' are variables that are passed into the SQL file and can be parsed using ERB.
 	#
 	# Optionally use 'report_db' to specify a class that extends ActiveRecord::Base. Use the require
 	# path for your class. E.g. foo/my_alternative_db.
