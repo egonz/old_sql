@@ -60,6 +60,7 @@ module OldSql
       
       @width = 800
       @height = 500
+      @google_chart_colors = google_chart_colors
       
       processor = load_base_processor
       @report = processor.execute_query(@reports[@report_name],@start_date,@end_date,query_vars(@report_name))
@@ -198,6 +199,11 @@ module OldSql
       def chart_type
         return nil if @report.nil?
         @report.keys.first
+      end
+      
+      def google_chart_colors
+        json = OldSql.google_chart_colors.to_json
+        json.html_safe
       end
   end
 end

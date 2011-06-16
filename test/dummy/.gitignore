@@ -5,7 +5,7 @@ tmp/**/*
 test/dummy/db/*.sqlite3
 test/dummy/log/*.log
 test/dummy/tmp/**/*
-test/dummy/tmp/pids/*.pid
+test/dummy/tmp/pids/server.pid
 *~
 *#
 .#*

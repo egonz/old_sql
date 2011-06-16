@@ -34,6 +34,10 @@ module OldSql
   mattr_accessor :jqgrid_row_num
   @@jqgrid_row_num = 25
   
+  # Google chart colors.
+  mattr_accessor :google_chart_colors
+  @@google_chart_colors = ['#E35F18','#307CC7','#D95117','#0A4592','#B33A13','#073D8D','#902811','#052D79','#7A1904','#061E59','#6E0E02','#071253','#530005','#1F3058','#2A437F','#3657A8','#5675BB','#7A94CC','#F38200','#C4794B','#BF5D29','#B8410B','#AD3300','#802205','#36170F']
+  
   # Default way to setup Old SQL. Run rails generate old_sql:install to create
   # a fresh initializer with all configuration values.
   def self.setup

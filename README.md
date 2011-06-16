@@ -1,5 +1,4 @@
-Old SQL
-=======
+# Old SQL
 
 Old SQL is a Rails Engine database reporting gem that uses plain old SQL.
 
@@ -25,8 +24,7 @@ Some features of Old SQL are:
   even add Devise support to an existing model (by default users).
 * Support for multiple database connections.
 
-Quick Setup and Demo
---------------------
+## Quick Setup and Demo
 
 1. Add gem 'old_sql', and gem 'devise' to your Gemfile.
 2. bundle install
@@ -40,8 +38,8 @@ Quick Setup and Demo
 9. Authenticate using your old_sql_admin user.
 10. Select user from the Reports drop down list. Click run.
 
-Screenshots
------------
+## Screenshots
+
 #### jqGrid
 
 ![jqGrid view](https://github.com/egonz/old_sql/raw/master/screenshots/jqgrid.png "jqGrid view")
@@ -54,8 +52,7 @@ Screenshots
 
 ![table view](https://github.com/egonz/old_sql/raw/master/screenshots/chart.png "Chart view")
 
-Installation
-------------
+## Installation
 
 To install Old SQL type:
 
@@ -70,8 +67,7 @@ This generator will also create a migration that will add a old_sql_admin column
 
 If not already installed Devise is setup.
 
-Creating Reports
-----------------
+## Creating Reports
 
 Configure your reports config/old_sql/report.yml. An example configuration is created when you run the old_sql:install generator.
 
@@ -109,7 +105,7 @@ Configure your reports config/old_sql/report.yml. An example configuration is cr
 	  report_view: jqgrid
 	  query_vars:
         - 
-          foo: bar
+          old_sql_admin: 0
 	  fields: 
         - 'id'
         - 'name'
@@ -214,8 +210,7 @@ Optionally create a processor under lib/old_sql_report_processor:
 	  end
 	end
 
-Design File Tips
-----------------
+## Design File Tips
 
 Design files, both CSV and CHART, work best (only?) with queries that return a single record.
 Ideally the query returns aggregate results, from one or more tables. For example:
@@ -236,8 +231,7 @@ Ideally the query returns aggregate results, from one or more tables. For exampl
 If you need to process more than a single record create a subclass of OldSql::ReportProcessor::Base. See 
 [UserOldSqlDemoProcessor](https://github.com/egonz/old_sql/blob/master/lib/generators/old_sql/templates/user_processor.rb.example).
 		
-Customize
----------
+## Customize
 
 All css and html template files can be copied to your installation by executing: 
 
@@ -245,8 +239,7 @@ All css and html template files can be copied to your installation by executing:
 	
 Settings for Old SQL can be configured in config/initializers/old_sql.rb.
 
-Rake Examples
--------------
+## Rake Examples
 
 	rake old_sql:print:range[user_table,'development','2011-03-01','2011-09-01']
 
@@ -254,8 +247,7 @@ Rake Examples
 
 	rake old_sql:print:week[user_table,'development']
 
-Contributing to old_sql
------------------------
+## Contributing to old_sql
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
@@ -265,8 +257,7 @@ Contributing to old_sql
 * Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
 * Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
 
-Copyright
----------
+## Copyright
 
 Copyright (c) 2011 Eddie Gonzales. See LICENSE.txt for
 further details.

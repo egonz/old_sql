@@ -1,4 +1,8 @@
 # Old SQL Chart Design Example
+#
+# The key for the YAML entry can either be pie or bar.
+# 'title' is a label describing the data.
+# 'data' can be either a column name, or a formula.
 
 pie:
   - 
@@ -15,4 +19,4 @@ pie:
     data: id + 70
   - 
     title: Id + 10
-    data: id + 10 
+    data: id + 10  
