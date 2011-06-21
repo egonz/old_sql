@@ -60,11 +60,11 @@ user_chart:
     - 'four'
     
 user_table_alt_db:
-  description: User HTML Table Alt DB
+  description: User Chart Alt DB
   report_sql: user_old_sql_demo
   report_db: old_sql/report_db/alt_test
-  report_design: user_old_sql_demo.csv
-  report_view: table
+  report_design: user_old_sql_demo.yml
+  report_view: chart
   fields: 
     - 'id'
     - 'name'

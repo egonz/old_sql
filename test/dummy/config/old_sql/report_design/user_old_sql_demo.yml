@@ -12,11 +12,11 @@ pie:
     title: Id + 20
     data: id + 20
   - 
-    title: Id + 50
-    data: id + 50
+    title: Id + 25
+    data: id + 25
   - 
-    title: Id + 70
-    data: id + 70
+    title: Id + 30.5
+    data: id + 30.5
   - 
     title: Id + 10
     data: id + 10  
