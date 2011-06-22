@@ -33125,3 +33125,255 @@ ActionController::RoutingError (No route matches "/images/rails_admin/background
   
 
 Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-22 13:06:09 -0700
+  Processing by OldSql::ReportController#index as HTML
+Completed   in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-06-22 13:06:10 -0700
+  Processing by Devise::SessionsController#new as HTML
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/devise-1.3.4/app/views/devise/shared/_links.erb (1.7ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/devise-1.3.4/app/views/devise/sessions/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 57ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-06-22 13:06:13 -0700
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cpRb4E6cRCvUT77x227psJ47gLjK+hP9rI3E5z1XfQk=", "user"=>{"email"=>"eddiemgonzales@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (7.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'eddiemgonzales@gmail.com' LIMIT 1
+  [1m[36mAREL (0.6ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2011-06-17 23:20:03.152439', "current_sign_in_at" = '2011-06-22 20:06:14.324713', "sign_in_count" = 13, "updated_at" = '2011-06-22 20:06:14.325323' WHERE "users"."id" = 3[0m
+Redirected to http://localhost:3000/sql/reports
+Completed 302 Found in 431ms
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-22 13:06:14 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/index.html.erb within layouts/old_sql/report (3.0ms)
+Completed 200 OK in 147ms (Views: 64.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-22 13:06:14 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-22 13:06:14 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-22 13:06:14 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-22 13:06:14 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-22 13:06:14 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-22 13:06:14 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-22 13:06:14 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-22 13:06:14 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-22 13:06:15 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-22 13:06:15 -0700
+
+
+Started GET "/sql/reports/chart/?report=user_chart&start_date=2011/06/08%2013:06:15&end_date=2011/06/23%2013:06:15&report_sql=user_old_sql_demo" for 127.0.0.1 at 2011-06-22 13:06:19 -0700
+  Processing by OldSql::ReportController#chart as HTML
+  Parameters: {"report"=>"user_chart", "start_date"=>"2011/06/08 13:06:15", "end_date"=>"2011/06/23 13:06:15", "report_sql"=>"user_old_sql_demo"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSQL (7.0ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-06-08 13:06:15')
+AND u.created_at < date('2011-06-23 13:06:15')
+Completed   in 247ms
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.[]):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.1ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.8ms)
+
+
+Started GET "/sql/reports/chart/?report=user_table_alt_db&start_date=2011/06/08%2013:06:15&end_date=2011/06/23%2013:06:15&report_sql=user_old_sql_demo" for 127.0.0.1 at 2011-06-22 13:11:03 -0700
+  Processing by OldSql::ReportController#chart as HTML
+  Parameters: {"report"=>"user_table_alt_db", "start_date"=>"2011/06/08 13:06:15", "end_date"=>"2011/06/23 13:06:15", "report_sql"=>"user_old_sql_demo"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSQL (3.8ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-06-08 13:06:15')
+AND u.created_at < date('2011-06-23 13:06:15')
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/chart.html.erb within layouts/old_sql/chart (37.3ms)
+Completed 200 OK in 291ms (Views: 128.7ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/javascripts/old_sql/chart.js" for 127.0.0.1 at 2011-06-22 13:11:03 -0700
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-22 13:11:04 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/sql/reports/chart/?report=user_chart&start_date=2011/06/08%2013:06:15&end_date=2011/06/23%2013:06:15&report_sql=user_old_sql_demo" for 127.0.0.1 at 2011-06-22 13:11:07 -0700
+  Processing by OldSql::ReportController#chart as HTML
+  Parameters: {"report"=>"user_chart", "start_date"=>"2011/06/08 13:06:15", "end_date"=>"2011/06/23 13:06:15", "report_sql"=>"user_old_sql_demo"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-06-08 13:06:15')
+AND u.created_at < date('2011-06-23 13:06:15')
+Completed   in 63ms
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.[]):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.7ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-22 13:11:15 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-22 13:11:15 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-22 13:11:16 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_75_ffe45c_1x100.png" for 127.0.0.1 at 2011-06-22 13:11:16 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_fdf5ce_1x400.png" for 127.0.0.1 at 2011-06-22 13:11:16 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-22 13:11:16 -0700
+
+
+Started GET "/sql/reports/chart/?report=user_chart&start_date=2011/04/08%2000:00&end_date=2011/06/23%2013:06:15&report_sql=user_old_sql_demo" for 127.0.0.1 at 2011-06-22 13:11:21 -0700
+  Processing by OldSql::ReportController#chart as HTML
+  Parameters: {"report"=>"user_chart", "start_date"=>"2011/04/08 00:00", "end_date"=>"2011/06/23 13:06:15", "report_sql"=>"user_old_sql_demo"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-04-08 00:00')
+AND u.created_at < date('2011-06-23 13:06:15')
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/chart.html.erb within layouts/old_sql/chart (1.6ms)
+Completed 200 OK in 88ms (Views: 5.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-22 13:11:21 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/sql/reports/chart/?report=user_table_alt_db&start_date=2011/04/08%2000:00&end_date=2011/06/23%2013:06:15&report_sql=user_old_sql_demo" for 127.0.0.1 at 2011-06-22 13:11:24 -0700
+  Processing by OldSql::ReportController#chart as HTML
+  Parameters: {"report"=>"user_table_alt_db", "start_date"=>"2011/04/08 00:00", "end_date"=>"2011/06/23 13:06:15", "report_sql"=>"user_old_sql_demo"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-04-08 00:00')
+AND u.created_at < date('2011-06-23 13:06:15')
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/chart.html.erb within layouts/old_sql/chart (1.8ms)
+Completed 200 OK in 43ms (Views: 6.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-22 13:11:24 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/sql/reports/chart/?report=user_chart&start_date=2011/04/08%2000:00&end_date=2011/06/23%2013:06:15&report_sql=user_old_sql_demo" for 127.0.0.1 at 2011-06-22 13:11:26 -0700
+  Processing by OldSql::ReportController#chart as HTML
+  Parameters: {"report"=>"user_chart", "start_date"=>"2011/04/08 00:00", "end_date"=>"2011/06/23 13:06:15", "report_sql"=>"user_old_sql_demo"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-04-08 00:00')
+AND u.created_at < date('2011-06-23 13:06:15')
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/chart.html.erb within layouts/old_sql/chart (1.7ms)
+Completed 200 OK in 42ms (Views: 5.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-22 13:11:27 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/sql/reports/chart/?report=user_chart&start_date=2011/06/08%2000:00&end_date=2011/06/23%2013:06:15&report_sql=user_old_sql_demo" for 127.0.0.1 at 2011-06-22 13:12:10 -0700
+  Processing by OldSql::ReportController#chart as HTML
+  Parameters: {"report"=>"user_chart", "start_date"=>"2011/06/08 00:00", "end_date"=>"2011/06/23 13:06:15", "report_sql"=>"user_old_sql_demo"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-06-08 00:00')
+AND u.created_at < date('2011-06-23 13:06:15')
+Completed   in 66ms
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.[]):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.6ms)
+
+
+Started GET "/sql/reports/chart/?report=user_chart&start_date=2011/06/08%2000:00&end_date=2011/06/23%2013:06:15&report_sql=user_old_sql_demo" for 127.0.0.1 at 2011-06-22 13:14:12 -0700
+  Processing by OldSql::ReportController#chart as HTML
+  Parameters: {"report"=>"user_chart", "start_date"=>"2011/06/08 00:00", "end_date"=>"2011/06/23 13:06:15", "report_sql"=>"user_old_sql_demo"}
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-06-08 00:00')
+AND u.created_at < date('2011-06-23 13:06:15')[0m
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/chart.html.erb within layouts/old_sql/chart (1.3ms)
+Completed 200 OK in 817ms (Views: 4.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-22 13:14:14 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)

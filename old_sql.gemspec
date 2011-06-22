@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{old_sql}
-  s.version = "1.22.0"
+  s.version = "1.23.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = [%q{Eddie Gonzales}]
-  s.date = %q{2011-06-16}
+  s.date = %q{2011-06-21}
   s.description = %q{OldSQL is a Rails Engine database reporting gem that uses plain old SQL}
   s.email = %q{egonzales@pureplay.com}
   s.extra_rdoc_files = [
@@ -61,6 +61,8 @@ Gem::Specification.new do |s|
     "lib/old_sql/report_processor/base.rb",
     "lib/old_sql/shell_report_facade.rb",
     "lib/old_sql/tasks/old_sql.rake",
+    "public/images/old_sql_transparent.png",
+    "public/images/old_sql_transparent_small.png",
     "public/javascripts/old_sql/chart.js",
     "public/javascripts/old_sql/date_format.js",
     "public/javascripts/old_sql/jqgrid/i18n/grid.locale-bg.js",

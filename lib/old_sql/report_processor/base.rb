@@ -22,6 +22,8 @@ module OldSql
         
         init
         
+        return nil if @rec.nil?
+        
         report_design = report_config['report_design']
         
         if report_design
