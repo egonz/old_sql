@@ -4,7 +4,7 @@ module OldSql
       attr_accessor :cell_data, :cell
       
       def initialize(value)
-        @cell = value
+        @cell = value.strip
         @cell_data = []
         
         # Check if cell is a label

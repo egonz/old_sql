@@ -24,6 +24,7 @@ module OldSql
         
         return nil if @rec.nil?
         
+        @report_type = report_config['report_view']
         report_design = report_config['report_design']
         
         if report_design
@@ -178,7 +179,9 @@ module OldSql
                   end
                   report_row << result
                 elsif  cd.type == OldSql::ReportDesign::CellData::LABEL
-                  report_row << cd.data.gsub(/"/,"")
+                  label = cd.data.gsub(/"/,"")
+                  label = bold(label) if label.length == label[/[A-Z\s]*/].length
+                  report_row << label
                 end
               end
             end
@@ -241,6 +244,27 @@ module OldSql
         end
         
         result
+      end
+      
+      def bold(label)
+        _label = ""
+        _label << "<span style='font-weight:bold'>"
+        _label << capitalize(label)
+        _label << "</span>"
+        _label.html_safe
+      end
+      
+      def capitalize(label)
+        _label = ""
+        first = true
+        
+        label.split(/\s/).each do |s|
+          _label << " " unless first 
+          _label << s.capitalize
+          first = false
+        end
+        
+        _label
       end
     end
   end

@@ -153,15 +153,21 @@ Optionally create a CSV DESIGN file under config/old_sql/report_design:
 	# To disable this set round_report_values to false in
 	# config/initializers/old_sql.rb. You can also change the
 	# precision, which is 2 by default.
+	#
+	# Tabs or spaces can optionally be used between "cells" for 
+	# ease of reading.
+	#
+	# All uppercase Labels are bolded and converted to capitalized
+	# words for the jqgrid, and HTML table report views.
 	
-	id,name
-	"Example Math Operation",id + id
-	"Totals","..."
-	"Expression",( id + id ) * 10
-	"Divide by Zero 1",0 / 0
-	"Divide by Zero 2",1.0 / 0
-	"Divide by Zero 3",0.0 / 0.0
-	"Rounding",200.0 / 43.0
+	id,							name
+	"EXAMPLE MATH OPERATION",	id + id
+	"Totals",					"..."
+	"Expression",				( id + id ) * 10
+	"Divide by Zero 1",			0 / 0
+	"Divide by Zero 2",			1.0 / 0
+	"Divide by Zero 3",			0.0 / 0.0
+	"Rounding",					200.0 / 43.0
 
 Optionally create a CHART DESIGN file under config/old_sql/report_design:
 	

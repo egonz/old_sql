@@ -6,7 +6,6 @@
 * Allow multiple sql files. This could be achieved by making @resultset a hash with the name of the 
   query as they key. In the design file, the different result outputs could be referenced using a dot 
   syntax. E.g. user.id, user.first_name, etc.
-* Make all caps labels bold
 * Create a section of the design file that can be used as a testing area for within Excel.
   This section would be ignored by the parser. Here is an example: 
 
@@ -27,6 +26,9 @@
 
 ## COMPLETED
 
+* Make all caps labels bold
+* Spaces or tabs can be used between cells in the CSV design document to aid in 
+  grokking the document.
 * Override width and height for the report view in reports.yml
 * Allow overriding of the chart colors
 * Pass reports structure to OldSql::ReportProcessor::Base
