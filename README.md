@@ -157,7 +157,7 @@ Optionally create a CSV DESIGN file under config/old_sql/report_design:
 	# Tabs or spaces can optionally be used between "cells" for 
 	# ease of reading.
 	#
-	# All uppercase Labels are bolded and converted to capitalized
+	# All uppercase labels are bolded and converted to capitalized
 	# words for the jqgrid, and HTML table report views.
 	
 	id,							name

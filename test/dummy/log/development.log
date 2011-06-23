@@ -34038,3 +34038,171 @@ ActionController::RoutingError (No route matches "/images/rails_admin/background
   
 
 Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-22 17:54:13 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/index.html.erb within layouts/old_sql/report (2.6ms)
+Completed 200 OK in 904ms (Views: 108.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-22 17:54:16 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-22 18:46:58 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/index.html.erb within layouts/old_sql/report (3.2ms)
+Completed 200 OK in 533ms (Views: 97.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-22 18:47:00 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/sql/reports/jqgrid/?report=user_jqgrid&start_date=2011/06/08%2018:47:00&end_date=2011/06/23%2018:47:00&report_sql=user_old_sql_demo" for 127.0.0.1 at 2011-06-22 18:47:06 -0700
+  Processing by OldSql::ReportController#jqgrid as HTML
+  Parameters: {"report"=>"user_jqgrid", "start_date"=>"2011/06/08 18:47:00", "end_date"=>"2011/06/23 18:47:00", "report_sql"=>"user_old_sql_demo"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+{"user_jqgrid"=>{"description"=>"User jqGrid", "report_sql"=>"user_old_sql_demo", "report_design"=>"user_old_sql_demo.csv", "report_view"=>"jqgrid", "query_vars"=>[{"foo"=>"bar"}], "fields"=>["id", "name"]}, "user_table"=>{"description"=>"User HTML Table", "report_sql"=>"user_old_sql_demo", "report_design"=>"user_old_sql_demo.csv", "report_view"=>"table", "fields"=>["id", "name"]}, "user_chart"=>{"description"=>"User Chart", "report_sql"=>"user_old_sql_demo", "report_design"=>"user_old_sql_demo.yml", "report_view"=>"chart", "fields"=>["zero", "one", "two", "three", "four"]}, "user_table_alt_db"=>{"description"=>"User Chart Alt DB", "report_sql"=>"user_old_sql_demo", "report_db"=>"old_sql/report_db/alt_test", "report_design"=>"user_old_sql_demo.yml", "report_view"=>"chart", "fields"=>["id", "name"]}}
+REPORT NAME user_jqgrid
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (14.0ms)
+Completed 200 OK in 173ms (Views: 42.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-22 18:47:06 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/sql/reports/query.json/?report=user_jqgrid&report_sql=user_old_sql_demo&start_date=2011/06/08%2018:47:00&end_date=2011/06/23%2018:47:00&_search=false&nd=1308793626724&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-22 18:47:06 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"user_jqgrid", "report_sql"=>"user_old_sql_demo", "start_date"=>"2011/06/08 18:47:00", "end_date"=>"2011/06/23 18:47:00", "_search"=>"false", "nd"=>"1308793626724", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mSQL (10.2ms)[0m  [1mSELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-06-08 18:47:00')
+AND u.created_at < date('2011-06-23 18:47:00')[0m
+Completed 200 OK in 140ms (Views: 0.2ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/sql/reports/table/?report=user_table&start_date=2011/06/08%2018:47:00&end_date=2011/06/23%2018:47:00&report_sql=user_old_sql_demo" for 127.0.0.1 at 2011-06-22 18:47:19 -0700
+  Processing by OldSql::ReportController#table as HTML
+  Parameters: {"report"=>"user_table", "start_date"=>"2011/06/08 18:47:00", "end_date"=>"2011/06/23 18:47:00", "report_sql"=>"user_old_sql_demo"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-06-08 18:47:00')
+AND u.created_at < date('2011-06-23 18:47:00')[0m
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/table.html.erb within layouts/old_sql/report (3.9ms)
+Completed 200 OK in 186ms (Views: 64.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-22 18:47:19 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/sql/reports/table/?report=user_table&start_date=2011/04/08%2000:00&end_date=2011/06/23%2018:47:00&report_sql=user_old_sql_demo" for 127.0.0.1 at 2011-06-22 18:47:25 -0700
+  Processing by OldSql::ReportController#table as HTML
+  Parameters: {"report"=>"user_table", "start_date"=>"2011/04/08 00:00", "end_date"=>"2011/06/23 18:47:00", "report_sql"=>"user_old_sql_demo"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-04-08 00:00')
+AND u.created_at < date('2011-06-23 18:47:00')[0m
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/table.html.erb within layouts/old_sql/report (2.5ms)
+Completed 200 OK in 122ms (Views: 6.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-22 18:47:25 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/sql/reports/jqgrid/?report=user_jqgrid&start_date=2011/04/08%2000:00&end_date=2011/06/23%2018:47:00&report_sql=user_old_sql_demo" for 127.0.0.1 at 2011-06-22 18:47:29 -0700
+  Processing by OldSql::ReportController#jqgrid as HTML
+  Parameters: {"report"=>"user_jqgrid", "start_date"=>"2011/04/08 00:00", "end_date"=>"2011/06/23 18:47:00", "report_sql"=>"user_old_sql_demo"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+{"user_jqgrid"=>{"description"=>"User jqGrid", "report_sql"=>"user_old_sql_demo", "report_design"=>"user_old_sql_demo.csv", "report_view"=>"jqgrid", "query_vars"=>[{"foo"=>"bar"}], "fields"=>["id", "name"]}, "user_table"=>{"description"=>"User HTML Table", "report_sql"=>"user_old_sql_demo", "report_design"=>"user_old_sql_demo.csv", "report_view"=>"table", "fields"=>["id", "name"]}, "user_chart"=>{"description"=>"User Chart", "report_sql"=>"user_old_sql_demo", "report_design"=>"user_old_sql_demo.yml", "report_view"=>"chart", "fields"=>["zero", "one", "two", "three", "four"]}, "user_table_alt_db"=>{"description"=>"User Chart Alt DB", "report_sql"=>"user_old_sql_demo", "report_db"=>"old_sql/report_db/alt_test", "report_design"=>"user_old_sql_demo.yml", "report_view"=>"chart", "fields"=>["id", "name"]}}
+REPORT NAME user_jqgrid
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/datagrid.html.erb within layouts/old_sql/report (4.4ms)
+Completed 200 OK in 271ms (Views: 9.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/sql/reports/query.json/?report=user_jqgrid&report_sql=user_old_sql_demo&start_date=2011/04/08%2000:00&end_date=2011/06/23%2018:47:00&_search=false&nd=1308793649801&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-22 18:47:29 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"user_jqgrid", "report_sql"=>"user_old_sql_demo", "start_date"=>"2011/04/08 00:00", "end_date"=>"2011/06/23 18:47:00", "_search"=>"false", "nd"=>"1308793649801", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-04-08 00:00')
+AND u.created_at < date('2011-06-23 18:47:00')
+Completed 200 OK in 307ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-22 18:47:30 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/sql/reports/table/?report=user_table&start_date=2011/04/08%2000:00&end_date=2011/06/23%2018:47:00&report_sql=user_old_sql_demo" for 127.0.0.1 at 2011-06-22 18:47:35 -0700
+  Processing by OldSql::ReportController#table as HTML
+  Parameters: {"report"=>"user_table", "start_date"=>"2011/04/08 00:00", "end_date"=>"2011/06/23 18:47:00", "report_sql"=>"user_old_sql_demo"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-04-08 00:00')
+AND u.created_at < date('2011-06-23 18:47:00')
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/table.html.erb within layouts/old_sql/report (2.9ms)
+Completed 200 OK in 96ms (Views: 7.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-22 18:47:35 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/sql/reports/chart/?report=user_chart&start_date=2011/04/08%2000:00&end_date=2011/06/23%2018:47:00&report_sql=user_old_sql_demo" for 127.0.0.1 at 2011-06-22 18:47:41 -0700
+  Processing by OldSql::ReportController#chart as HTML
+  Parameters: {"report"=>"user_chart", "start_date"=>"2011/04/08 00:00", "end_date"=>"2011/06/23 18:47:00", "report_sql"=>"user_old_sql_demo"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-04-08 00:00')
+AND u.created_at < date('2011-06-23 18:47:00')
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/chart.html.erb within layouts/old_sql/chart (2.4ms)
+Completed 200 OK in 327ms (Views: 115.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/rails_admin/background.png" for 127.0.0.1 at 2011-06-22 18:47:42 -0700
+
+ActionController::RoutingError (No route matches "/images/rails_admin/background.png"):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
