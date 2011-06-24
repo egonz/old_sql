@@ -2,10 +2,12 @@
 
 ## HIGHER PRIORITY
 
-* Fix the demo query so that it performs an aggregate function
 * Allow multiple sql files. This could be achieved by making @resultset a hash with the name of the 
   query as they key. In the design file, the different result outputs could be referenced using a dot 
   syntax. E.g. user.id, user.first_name, etc.
+* Design enhancement: Add support for Excel: http://rubyforge.org/projects/spreadsheet.
+* Design enhancement: Add support for the Google Spreadsheet API http://code.google.com/apis/spreadsheets/.
+* Fix the demo query so that it performs an aggregate function
 * Create a section of the design file that can be used as a testing area for within Excel.
   This section would be ignored by the parser. Here is an example: 
 

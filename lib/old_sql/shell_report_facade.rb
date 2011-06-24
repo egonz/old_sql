@@ -9,9 +9,8 @@ module OldSql
     set_connection(env)
     
     base_parser = OldSql::ReportProcessor::Base.new
-    data = base_parser.execute_query(report_config['report_sql'],start_date,end_date,nil,
-                                     report_config['report_design'],report_config['report_processor'])
-    
+    data = base_parser.execute_query(report_config,start_date,end_date,nil)
+                                     
     print_header(report, start_date, end_date, clean)
     print_data(data, report_config['fields'], clean)
     print_footer(clean)
