@@ -1,3 +1,5 @@
+require 'cgi'
+
 module OldSql
   class ShellReportFacade
     def self.run_report(report, env, start_date, end_date, clean)
@@ -38,7 +40,7 @@ module OldSql
       first = true
       row[:cell].each do |cell|
         line << ", " if !first
-        line << cell.to_s
+        line << OldSql.strip_html(cell.to_s).gsub("\n","")
         first = false
       end
       puts line
