@@ -1,6 +1,6 @@
 <script>
-jQuery(document).ready(function($){
-	$('#query-button').bind('click', function() {
+$(document).ready(function($){
+	$('#run-query').bind('click', function() {
       	query();
     });
 
@@ -25,11 +25,21 @@ jQuery(document).ready(function($){
 	</div>
 
 	<div>
-		<textarea id="query-text" rows="12" cols="120"></textarea>
+		<textarea id="query-text"></textarea>
 	</div>
 
 	<div>
-		<input id="query-button" type="button" value="Run" onclick="return true;" /> or press ctrl-enter
+		<span class="query-button">
+			<input id="run-query" type="submit" value="Run" onclick="return true;" /> or press ctrl-enter
+		</span>
+		
+		<span class="query-button">
+			<input id="print-query" type="submit" value="Print" onclick="return true;" />
+		</span>
+		
+		<span class="query-button">
+			<input id="export-query-as-csv" type="submit" value="Export to CSV" onclick="return true;" />
+		</span>
 	</div>
 </div>                        
 
@@ -44,6 +54,6 @@ jQuery(document).ready(function($){
 	</div>
 	
 	<div>
-		<input id="delete-saved-queries" type="button" value="Clear" onclick="return true;" />
+		<input id="delete-saved-queries" type="submit" value="Clear" onclick="return true;" />
 	</div>
 </div>

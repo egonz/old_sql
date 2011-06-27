@@ -2,6 +2,7 @@
 
 ## HIGHER PRIORITY
 
+* Fix report name for jqGrid
 * Schema browser tab?
 * Printing and export to excel for ad hoc query results.
 * Ensure ad hoc queries are not delete, update, or insert

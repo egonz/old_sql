@@ -22,6 +22,7 @@ function query()
 	
 	if (!sql) {
 		alert('Invalid Query.');
+		return;
 	}
 
 	var src = "http://"+host+":"+port+"/sql/reports/jqgrid/?&query="+sql+"&db="+db+"&caption=Ad Hoc Query&w="+$(document).width();
@@ -175,4 +176,8 @@ jQuery(document).ready(function($){
 
 $(function() {
 	$( "#tabs" ).tabs();
+});
+
+$(function() {
+	$( "input:submit").button();
 });
