@@ -1,0 +1,40 @@
+<form id="report-form" name="report-form" action="/oldsql/reports/query" method="POST">
+	<div class="report-form-row">
+		<div class="report-form-label">SELECT A REPORT:</div>
+		<div class="report-form-input">
+			<select name="report" id="report" 
+				onchange="report_selected()">
+				<option></option>		
+				<% @reports.each do |report, data| %>
+				<option value="<%= data['name'] %>" report_sql="<%= data['report_sql'] %>" 
+				 desc="<%= data['description'] %>" name="<%=report%>" 
+				 report_view="<%=data['report_view']%>"><%= data['description'] %></option>
+				<% end %>
+			</select>
+		</div>
+	</div>
+
+	<div class="report-form-row">
+		<div class="report-form-label">START DATE:</div>
+		<div class="report-form-input">
+			<input type="text" id="datepicker-start" name="start_date" value="">
+		</div>
+	</div>
+
+	<div class="report-form-row">
+		<div class="report-form-label">END DATE:</div>
+		<div class="report-form-input">
+			<input type="text" id="datepicker-end" name="end_date" value="">
+		</div>
+	</div>
+
+	<div class="report-form-row">
+		<div class="report-form-label"></div>
+		<input type="button" value="Run" onclick="load_report();"/>
+	</div>
+</form>
+
+<div id="links">
+	<div><%= link_to_function("Print Report", "javascript:print_report()") %></div>
+	<div><%= link_to_function("Export To Excel", "javascript:export_report_to_excel()") %></div>
+</div>

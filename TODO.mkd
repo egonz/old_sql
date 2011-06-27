@@ -2,22 +2,21 @@
 
 ## HIGHER PRIORITY
 
+* Schema browser tab?
+* Printing and export to excel for ad hoc query results.
+* Ensure ad hoc queries are not delete, update, or insert
+* Move some of the private methods from the Report Controller into helper methods.
+* Add initializer setting to disable Old SQL link at the bottom of the index view.
+* Rename design documents to report_layout.
+* Require report_db libs to be in a standard location defined in the old_sql initializer.
+* If a reports db config exists for the current env, and a report_db connection is not specified in 
+  the reports.yml, use the report connection. This will require a subclass of ActiveRecord::Base.
+* Fix printing of charts
 * Allow multiple sql files. This could be achieved by making @resultset a hash with the name of the 
   query as they key. In the design file, the different result outputs could be referenced using a dot 
   syntax. E.g. user.id, user.first_name, etc.
 * Design enhancement: Add support for Excel: http://rubyforge.org/projects/spreadsheet.
 * Design enhancement: Add support for the Google Spreadsheet API http://code.google.com/apis/spreadsheets/.
-* Fix the demo query so that it performs an aggregate function
-* Create a section of the design file that can be used as a testing area for within Excel.
-  This section would be ignored by the parser. Here is an example: 
-
-	# data:
-  	parent clicks,other clicks,a+b
-  	1,4,=A2+B2
-  	2,5,=A3+B3
-  	3,2,=A4+B4
-  	4,1,=A5+B5
-  	5,5,=A6+B6
 
 ## BACKLOG
 
@@ -25,9 +24,23 @@
 * Parse csv file with Erubis::Eruby
 * Try and implement jqgrid sort and search methods. (deferring)
   This should be done in the sql files by passing the params from jqgrid into them. (deferring)
+* Fix the demo query so that it performs an aggregate function
 
 ## COMPLETED
 
+* Save ad hoc queries locally using html 5
+* Clean up, shorten, the block of text at the top of the README
+* Add ad hoc query panel.
+* Create a section of the design file that can be used as a testing area for within Excel.
+  This section would be ignored by the parser. Here is an example: 
+
+	# data:
+	parent clicks,other clicks,a+b
+	1,4,=A2+B2
+	2,5,=A3+B3
+	3,2,=A4+B4
+	4,1,=A5+B5
+	5,5,=A6+B6
 * Make all caps labels bold
 * Spaces or tabs can be used between cells in the CSV design document to aid in 
   grokking the document.

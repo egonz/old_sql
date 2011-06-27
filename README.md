@@ -1,28 +1,22 @@
-# Old SQL
+# Old SQL [pronounced /skuːl/]
 
 Old SQL is a Rails Engine database reporting gem that uses plain old SQL.
 
-Some features of Old SQL are:
-
-* Reports can be created using little or no Ruby code.
-  - SQL for the report to be designed by a DBA, or other database developer independent of Ruby.
-  - Reports can be designed using a design file that mocks the reports. This file can contain data 
-    from the SQL, as well as String literals, and formulas (that can also use numeric literals).
-  - The design documents, which are nothing more than CSV files, can also serve as documentation, 
-    and describe the layout of the report in an intuitive way.
-  - If you want more fine grained control, a custom report processor can parse the SQL.
-  - Simple to convert legacy reports into Old SQL reports.  
-* Multiple report views (jqGrid, HTML table, and chart).
-* Bar and Pie charts using Google Charts.
-* In the report design all data is rounded to a precision that can be set in the old_sql initializer. 
-  This feature can also be disabled in the initializer.
-* Old SQL has rake tasks for running the reports and outputting the result as CSV. This can simplify testing. 
-  It also allows reports to be run as a cron task.
-* The look of Old SQL can be customized.
-* Support for printing and exporting to CSV.
-* Old SQL uses Devise for authentication, and will install it for you. It can
-  even add Devise support to an existing model (by default users).
+* Write reports in plain old SQL with little or no coding. 
+* Layout reports using CSV and YAML.
+* Reports can be displayed using jqGrid, plain HTML, or as a chart (using the Google Charts API).
+* Automatic rounding of all values. Can be controlled via an initializer.
+* Rake tasks for running reports from the command line.
+* Devise for authentication. Which is installed and configured for you using the old_sql
+  generator._
+* Printing and exporting to CSV.
 * Support for multiple database connections.
+* Interface for running Ad hoc queries.
+
+## Coming Soon
+
+* Schema browser
+* Google docs integration
 
 ## Quick Setup and Demo
 

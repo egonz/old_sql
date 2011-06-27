@@ -4,7 +4,7 @@
 # 'title' is a label describing the data.
 # 'data' can be either a column name, or a formula.
 
-bar:
+pie:
   - 
     title: Id
     data: id

@@ -4,56 +4,30 @@ var port = "<%=@port%>";
 var default_report_view = "<%=@report_view%>";
 </script>
 
-<div class="os-block">
-	<div class="ui-widget-header clearfix" id="title">
-    	<%=OldSql.report_select_page_title%>
-  	</div>
-
-	<form id="report-form" name="report-form" action="/oldsql/reports/query" method="POST">
-		<div class="report-form-row">
-			<div class="report-form-label">SELECT A REPORT:</div>
-			<div class="report-form-input">
-				<select name="report" id="report" 
-					onchange="report_selected()">
-					<option></option>		
-					<% @reports.each do |report, data| %>
-					<option value="<%= data['name'] %>" report_sql="<%= data['report_sql'] %>" 
-					 desc="<%= data['description'] %>" name="<%=report%>" 
-					 report_view="<%=data['report_view']%>"><%= data['description'] %></option>
-					<% end %>
-				</select>
-			</div>
-		</div>
-		
-		<div class="report-form-row">
-			<div class="report-form-label">START DATE:</div>
-			<div class="report-form-input">
-				<input type="text" id="datepicker-start" name="start_date" value="">
-			</div>
-		</div>
-		
-		<div class="report-form-row">
-			<div class="report-form-label">END DATE:</div>
-			<div class="report-form-input">
-				<input type="text" id="datepicker-end" name="end_date" value="">
-			</div>
-		</div>
-		
-		<div class="report-form-row">
-			<div class="report-form-label"></div>
-			<input type="button" value="Run" onclick="load_report();"/>
-		</div>
-	</form>
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">Reports</a></li>
+		<li><a href="#tabs-2">Query</a></li>
+		<li><a href="#tabs-3">Schema</a></li>
+	</ul>
 	
-	<div id="links">
-		<div><%= link_to_function("Print Report", "javascript:print_report()") %></div>
-		<div><%= link_to_function("Export To Excel", "javascript:export_report_to_excel()") %></div>
+	<div id="tabs-1">
+		<%= render(:partial => 'reports') %>
 	</div>
-
+	
+	<div id="tabs-2">
+		<%= render(:partial => 'query') %>
+	</div>
+	
+	<div id="tabs-3">
+		Coming Soon...
+	</div>
+	
 	<div id="data_grid">
 		<iframe id="data_grid_frame" src="" width="100%" height="530" frameborder="0" scrolling="no">
 			<p>Your browser does not support iframes.</p>
 		</iframe>
 	</div>
-		
 </div>
+
+<div id="old-sql">built with <a href="https://github.com/egonz/old_sql" target="_blank">Old SQL</a></div>

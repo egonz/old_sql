@@ -27,6 +27,7 @@ function drawChart() {
 		width: width, 
 		height: height,
 		title: chart_title,
+		backgroundColor:'#F0F0F0',
        	colors: chart_colors,
 		is3D: true
 	});

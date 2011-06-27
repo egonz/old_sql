@@ -6,25 +6,13 @@
 .ui-timepicker-div td { font-size: 90%; }
 
 body{
-  background:#fff url(../../images/rails_admin/background.png) repeat-x;
   font-family:Verdana, Geneva, sans-serif;
   font-size:12px;
 }
 
-#title {
-  font-size:16px;
-  font-weight:bold;
-  padding:3px;
-}
-
-#report_list {
-	padding-top:10px;
-}
-
-#cohort-date-div {
-	padding-top: 15px;
-	padding-bottom: 25px;
-	display:inline-block;
+#old-sql {
+	width:100%;
+	text-align:center;
 }
 
 #report-form {
@@ -32,6 +20,12 @@ body{
 	width:400px;
 	padding-top: 20px;
 	padding-bottom: 20px;
+}
+
+a {
+	text-decoration: none;
+    color:#215086;
+    font-weight:bold;
 }
 
 #links {
@@ -63,29 +57,32 @@ body{
 	display:inline-block;
 }
 
-#cohort-label {
-	text-align: right;
-	margin-right:10px;
-	display:inline-block;
-	font-weight: bold;
-	width: 150px;
-}
-
-#cohort-date {
-	display:inline-block;
-}
-
 #data_grid {
 	padding-top:10px;
 }
 
-#data_grid_frame {
-	
+.query {
+	width:900;
+	float:left;
 }
 
-/* css for timepicker */
-.ui-timepicker-div .ui-widget-header{ margin-bottom: 8px; }
-.ui-timepicker-div dl{ text-align: left; }
-.ui-timepicker-div dl dt{ height: 25px; }
-.ui-timepicker-div dl dd{ margin: -25px 0 10px 65px; }
-.ui-timepicker-div td { font-size: 90%; }
+.query div {
+	padding-top:10px;
+}
+
+#query-text {
+	font-size:12pt;
+}
+
+#saved_queries div {
+	padding-top:10px;
+}
+
+#saved_queries {
+	float:left;
+	padding-top:7px;
+}
+
+#saved-queries-list {
+	width:500;
+}

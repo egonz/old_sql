@@ -14,15 +14,11 @@ module OldSql
     
       ROUND_PRECISION = OldSql.rounding_precision
     
-      def execute_query(report_config, start_date, end_date, query_vars = nil)
-        sql = load_sql(report_config['report_sql'], start_date, end_date, query_vars)
-        query(sql, report_config)
-        
-        return nil if @resultset.nil?
-        
-        init
+      def execute_query(report_config, start_date, end_date, query_vars = nil, sql_query = nil, db_class = nil)
+        execute(report_config, start_date, end_date, query_vars, sql_query, db_class)
         
         return nil if @rec.nil?
+        return parse(@resultset) if report_config.nil?
         
         @report_type = report_config['report_view']
         report_design = report_config['report_design']
@@ -43,6 +39,15 @@ module OldSql
         @data
       end
       
+      def fields(report_config, start_date, end_date, query_vars = nil, sql_query = nil, db_class = nil)
+        return report_config['fields'] unless report_config.nil?
+        
+        execute(report_config, start_date, end_date, query_vars, sql_query, db_class)
+        return humanize_fields(@rec.keys) unless @rec.nil?
+        
+        nil
+      end
+      
       protected
       
       def add_row(cell_data = [], id = @id+1)        
@@ -60,6 +65,30 @@ module OldSql
       
       private
       
+      def execute(report_config, start_date, end_date, query_vars = nil, sql_query = nil, db_class = nil)
+        if !sql_query.nil? && sql_query.length > 0
+          sql = sql_query.gsub("\n"," ")
+        else
+          sql = load_sql(report_config['report_sql'], start_date, end_date, query_vars)
+        end
+        
+        query(sql, report_config, db_class)
+        
+        return nil if @resultset.nil?
+        
+        init
+      end
+      
+      def humanize_fields(fields)
+        humanized_fields = []
+        fields.each do |field|
+          humanized_field = ""
+          field.split("_").each {|f| humanized_field << "#{f.capitalize} "}
+          humanized_fields << humanized_field.rstrip
+        end
+        humanized_fields
+      end
+      
       def load_sql(report_sql, start_date, end_date, query_vars)
         vars = {:start_date => start_date, :end_date => end_date}
       
@@ -71,15 +100,13 @@ module OldSql
         sql = Erubis::Eruby.new(template).result(vars)
       end
       
-      def query sql, report_config
+      def query sql, report_config, db_class
         begin
           #todo change to a reporting db
-          db = db_connection(report_config['report_db'])
-        
-          raise Exception("Unable to Establish a Database Connection") unless db.active?
+          db = db_connection(report_config, db_class)
         
           @resultset = []
-          rec = db.select_all(sql)
+          rec = db.connection.select_all(sql)
           rec.each do |row|
             @resultset << row
           end
@@ -90,26 +117,31 @@ module OldSql
         @resultset
       end
       
-      def db_connection report_db
-        db = nil
-        if report_db.nil?
-          db = ActiveRecord::Base.connection();
+      def db_connection report_config, db_class
+        if !report_config.nil? && report_db = report_config['report_db']
+          db = load_db_connection(report_db)
+        elsif !db_class.nil? && db_class.length > 0
+          db = load_db_connection(db_class)
         else
-          require report_db
-    
-          db_class_name = ""
-          first = true
-    
-          report_db.split("/").each do |path|
-            db_class_name << "::" unless first
-            path.split("_").each {|c| db_class_name << c.capitalize }
-            first = false
-          end
-    
-          db=eval(db_class_name).connection
+          db = ActiveRecord::Base;
         end
         
         db
+      end
+      
+      def load_db_connection db_class_path
+        require db_class_path
+    
+        db_class_name = ""
+        first = true
+    
+        db_class_path.split("/").each do |path|
+          db_class_name << "::" unless first
+          path.split("_").each {|c| db_class_name << c.capitalize }
+          first = false
+        end
+    
+        db=eval(db_class_name)
       end
       
       def load_sub_processor sub_processor

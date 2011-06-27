@@ -26,7 +26,7 @@ class ReportProcessorTest < ActiveSupport::TestCase
   
   test "processing chart design" do
     template = File.read("#{OldSql::ReportDesign::Parser.report_design_path}/../reports.yml")
-    report = YAML.load(Erubis::Eruby.new(template).result)['user_chart'] 
+    report = YAML.load(Erubis::Eruby.new(template).result)['user_jqgrid'] 
     
     base_parser = OldSql::ReportProcessor::Base.new
     data = base_parser.execute_query(report,'2011-05-06','2011-08-06')
