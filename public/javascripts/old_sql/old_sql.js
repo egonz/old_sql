@@ -179,5 +179,5 @@ $(function() {
 });
 
 $(function() {
-	$( "input:submit").button();
+	$( "input:submit, input:button").button();
 });
