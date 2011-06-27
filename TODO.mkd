@@ -9,7 +9,6 @@
 * Move some of the private methods from the Report Controller into helper methods.
 * Add initializer setting to disable Old SQL link at the bottom of the index view.
 * Rename design documents to report_layout.
-* Require report_db libs to be in a standard location defined in the old_sql initializer.
 * If a reports db config exists for the current env, and a report_db connection is not specified in 
   the reports.yml, use the report connection. This will require a subclass of ActiveRecord::Base.
 * Fix printing of charts
@@ -29,6 +28,7 @@
 
 ## COMPLETED
 
+* Require report_db libs to be in a standard location defined in the old_sql initializer.
 * Save ad hoc queries locally using html 5
 * Clean up, shorten, the block of text at the top of the README
 * Add ad hoc query panel.
