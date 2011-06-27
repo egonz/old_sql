@@ -60487,3 +60487,2531 @@ Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828
 
 
 Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-27 15:06:40 -0700
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-27 15:09:12 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/_reports.html.erb (1.5ms)
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/_query.html.erb (0.9ms)
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/index.html.erb within layouts/old_sql/report (10.8ms)
+Completed 200 OK in 94ms (Views: 13.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 15:09:13 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 15:09:13 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 15:09:13 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 15:09:13 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 15:09:13 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 15:09:13 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 15:09:13 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-27 15:09:13 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-27 15:09:13 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-27 15:09:13 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-27 15:09:13 -0700
+
+
+Started GET "/sql/reports/jqgrid/?&query=Select%20*from%20users&db=&caption=Ad%20Hoc%20Query&w=1471" for 127.0.0.1 at 2011-06-27 15:09:25 -0700
+  Processing by OldSql::ReportController#jqgrid as HTML
+  Parameters: {"query"=>"Select *from users", "db"=>"", "caption"=>"Ad Hoc Query", "w"=>"1471"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSQL (2.2ms)[0m  Select *from users
+FIELDS ["Id", "Email", "Encrypted Password", "Reset Password Token", "Reset Password Sent At", "Remember Created At", "Sign In Count", "Current Sign In At", "Last Sign In At", "Current Sign In Ip", "Last Sign In Ip", "Created At", "Updated At", "Name", "Old Sql Admin"]
+  [1m[36mCACHE (0.0ms)[0m  [1mSelect *from users[0m
+FIELDS ["Id", "Email", "Encrypted Password", "Reset Password Token", "Reset Password Sent At", "Remember Created At", "Sign In Count", "Current Sign In At", "Last Sign In At", "Current Sign In Ip", "Last Sign In Ip", "Created At", "Updated At", "Name", "Old Sql Admin"]
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/jqgrid.html.erb within layouts/old_sql/report (14.9ms)
+Completed 200 OK in 114ms (Views: 17.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 15:09:25 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 15:09:25 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 15:09:25 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 15:09:25 -0700
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 15:09:25 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 15:09:25 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 15:09:25 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-27 15:09:25 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-27 15:09:25 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-27 15:09:25 -0700
+
+
+Started GET "/sql/reports/query.json/?report=&report_sql=&start_date=&end_date=&query=Select%20*from%20users&db=&_search=false&nd=1309212565744&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-27 15:09:25 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"", "report_sql"=>"", "start_date"=>"", "end_date"=>"", "query"=>"Select *from users", "db"=>"", "_search"=>"false", "nd"=>"1309212565744", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mSQL (1.4ms)[0m  [1mSelect *from users[0m
+Completed 200 OK in 79ms (Views: 0.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-27 15:09:25 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-27 15:09:25 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-27 15:09:25 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-27 15:09:25 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-27 15:09:25 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-27 15:09:25 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-27 15:09:25 -0700
+
+
+Started GET "/sql/reports/jqgrid/?&query=Select%20*from%20users&db=&caption=Ad%20Hoc%20Query&w=1471" for 127.0.0.1 at 2011-06-27 15:09:29 -0700
+  Processing by OldSql::ReportController#jqgrid as HTML
+  Parameters: {"query"=>"Select *from users", "db"=>"", "caption"=>"Ad Hoc Query", "w"=>"1471"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mSQL (1.5ms)[0m  [1mSelect *from users[0m
+FIELDS ["Id", "Email", "Encrypted Password", "Reset Password Token", "Reset Password Sent At", "Remember Created At", "Sign In Count", "Current Sign In At", "Last Sign In At", "Current Sign In Ip", "Last Sign In Ip", "Created At", "Updated At", "Name", "Old Sql Admin"]
+  [1m[35mCACHE (0.0ms)[0m  Select *from users
+FIELDS ["Id", "Email", "Encrypted Password", "Reset Password Token", "Reset Password Sent At", "Remember Created At", "Sign In Count", "Current Sign In At", "Last Sign In At", "Current Sign In Ip", "Last Sign In Ip", "Created At", "Updated At", "Name", "Old Sql Admin"]
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/jqgrid.html.erb within layouts/old_sql/report (10.7ms)
+Completed 200 OK in 90ms (Views: 12.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 15:09:29 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 15:09:29 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 15:09:29 -0700
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 15:09:29 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 15:09:29 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 15:09:30 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 15:09:30 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-27 15:09:30 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-27 15:09:30 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-27 15:09:30 -0700
+
+
+Started GET "/sql/reports/query.json/?report=&report_sql=&start_date=&end_date=&query=Select%20*from%20users&db=&_search=false&nd=1309212570133&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-27 15:09:30 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"", "report_sql"=>"", "start_date"=>"", "end_date"=>"", "query"=>"Select *from users", "db"=>"", "_search"=>"false", "nd"=>"1309212570133", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSQL (1.9ms)[0m  Select *from users
+Completed 200 OK in 86ms (Views: 0.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-27 15:09:30 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-27 15:09:30 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-27 15:09:30 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-27 15:09:30 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-27 15:09:30 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-27 15:09:30 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-27 15:09:30 -0700
+
+
+Started GET "/sql/reports/jqgrid/?&query=Select%20*from%20users&db=&caption=Ad%20Hoc%20Query&w=1471" for 127.0.0.1 at 2011-06-27 15:09:51 -0700
+  Processing by OldSql::ReportController#jqgrid as HTML
+  Parameters: {"query"=>"Select *from users", "db"=>"", "caption"=>"Ad Hoc Query", "w"=>"1471"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSQL (2.0ms)[0m  Select *from users
+FIELDS ["Id", "Email", "Encrypted Password", "Reset Password Token", "Reset Password Sent At", "Remember Created At", "Sign In Count", "Current Sign In At", "Last Sign In At", "Current Sign In Ip", "Last Sign In Ip", "Created At", "Updated At", "Name", "Old Sql Admin"]
+  [1m[36mCACHE (0.0ms)[0m  [1mSelect *from users[0m
+FIELDS ["Id", "Email", "Encrypted Password", "Reset Password Token", "Reset Password Sent At", "Remember Created At", "Sign In Count", "Current Sign In At", "Last Sign In At", "Current Sign In Ip", "Last Sign In Ip", "Created At", "Updated At", "Name", "Old Sql Admin"]
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/jqgrid.html.erb within layouts/old_sql/report (12.4ms)
+Completed 200 OK in 91ms (Views: 14.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 15:09:51 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 15:09:51 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 15:09:51 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 15:09:51 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 15:09:51 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 15:09:51 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 15:09:51 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-27 15:09:51 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-27 15:09:51 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-27 15:09:51 -0700
+
+
+Started GET "/sql/reports/query.json/?report=&report_sql=&start_date=&end_date=&query=Select%20*from%20users&db=&_search=false&nd=1309212591592&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-27 15:09:51 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"", "report_sql"=>"", "start_date"=>"", "end_date"=>"", "query"=>"Select *from users", "db"=>"", "_search"=>"false", "nd"=>"1309212591592", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mSQL (1.9ms)[0m  [1mSelect *from users[0m
+Completed 200 OK in 51ms (Views: 0.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-27 15:09:51 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-27 15:09:51 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-27 15:09:51 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-27 15:09:51 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-27 15:09:51 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-27 15:09:51 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-27 15:09:51 -0700
+
+
+Started GET "/sql/reports/jqgrid/?&query=seelect%20*%20from%20users&db=&caption=Ad%20Hoc%20Query&w=1471" for 127.0.0.1 at 2011-06-27 15:10:26 -0700
+  Processing by OldSql::ReportController#jqgrid as HTML
+  Parameters: {"query"=>"seelect * from users", "db"=>"", "caption"=>"Ad Hoc Query", "w"=>"1471"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mseelect * from users[0m
+SQLite3::SQLException: near "seelect": syntax error: seelect * from users
+SQLite3::SQLException: near "seelect": syntax error: seelect * from users
+FIELDS 
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/jqgrid.html.erb within layouts/old_sql/report (7.9ms)
+Completed 200 OK in 91ms (Views: 10.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 15:10:26 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 15:10:26 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 15:10:26 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 15:10:26 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 15:10:26 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 15:10:26 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 15:10:26 -0700
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-27 15:11:42 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/_reports.html.erb (1.4ms)
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/_query.html.erb (0.9ms)
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/index.html.erb within layouts/old_sql/report (10.2ms)
+Completed 200 OK in 96ms (Views: 14.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 15:11:42 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 15:11:42 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 15:11:42 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 15:11:42 -0700
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 15:11:42 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 15:11:42 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 15:11:42 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-27 15:11:42 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-27 15:11:42 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-27 15:11:42 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-27 15:11:42 -0700
+
+
+Started GET "/sql/reports/jqgrid/?&query=Select%20*from%20users&db=&caption=Ad%20Hoc%20Query&w=1471" for 127.0.0.1 at 2011-06-27 15:12:09 -0700
+  Processing by OldSql::ReportController#jqgrid as HTML
+  Parameters: {"query"=>"Select *from users", "db"=>"", "caption"=>"Ad Hoc Query", "w"=>"1471"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSQL (1.7ms)[0m  Select *from users
+FIELDS ["Id", "Email", "Encrypted Password", "Reset Password Token", "Reset Password Sent At", "Remember Created At", "Sign In Count", "Current Sign In At", "Last Sign In At", "Current Sign In Ip", "Last Sign In Ip", "Created At", "Updated At", "Name", "Old Sql Admin"]
+  [1m[36mCACHE (0.0ms)[0m  [1mSelect *from users[0m
+FIELDS ["Id", "Email", "Encrypted Password", "Reset Password Token", "Reset Password Sent At", "Remember Created At", "Sign In Count", "Current Sign In At", "Last Sign In At", "Current Sign In Ip", "Last Sign In Ip", "Created At", "Updated At", "Name", "Old Sql Admin"]
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/jqgrid.html.erb within layouts/old_sql/report (11.6ms)
+Completed 200 OK in 93ms (Views: 13.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 15:12:10 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 15:12:10 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 15:12:10 -0700
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 15:12:10 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 15:12:10 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 15:12:10 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 15:12:10 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-27 15:12:10 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-27 15:12:10 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-27 15:12:10 -0700
+
+
+Started GET "/sql/reports/query.json/?report=&report_sql=&start_date=&end_date=&query=Select%20*from%20users&db=&_search=false&nd=1309212730326&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-27 15:12:10 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"", "report_sql"=>"", "start_date"=>"", "end_date"=>"", "query"=>"Select *from users", "db"=>"", "_search"=>"false", "nd"=>"1309212730326", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mSQL (1.4ms)[0m  [1mSelect *from users[0m
+Completed 200 OK in 47ms (Views: 0.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-27 15:12:10 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-27 15:12:10 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-27 15:12:10 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-27 15:12:10 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-27 15:12:10 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-27 15:12:10 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-27 15:12:10 -0700
+
+
+Started GET "/sql/reports/jqgrid/?&query=seelect%20*%20from%20users&db=&caption=Ad%20Hoc%20Query&w=1471" for 127.0.0.1 at 2011-06-27 15:12:13 -0700
+  Processing by OldSql::ReportController#jqgrid as HTML
+  Parameters: {"query"=>"seelect * from users", "db"=>"", "caption"=>"Ad Hoc Query", "w"=>"1471"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mseelect * from users[0m
+SQLite3::SQLException: near "seelect": syntax error: seelect * from users
+SQLite3::SQLException: near "seelect": syntax error: seelect * from users
+FIELDS 
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/jqgrid.html.erb within layouts/old_sql/report (6.3ms)
+Completed 200 OK in 99ms (Views: 10.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 15:12:13 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 15:12:13 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 15:12:13 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 15:12:13 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 15:12:13 -0700
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 15:12:13 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 15:12:13 -0700
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-27 15:39:14 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/_reports.html.erb (1.0ms)
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/_query.html.erb (0.5ms)
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/index.html.erb within layouts/old_sql/report (8.2ms)
+Completed 200 OK in 48ms (Views: 13.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 15:39:14 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 15:39:14 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 15:39:14 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 15:39:14 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 15:39:14 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 15:39:14 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 15:39:14 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-27 15:39:14 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-27 15:39:14 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-27 15:39:14 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-27 15:39:14 -0700
+
+
+Started GET "/sql/reports/jqgrid/?&query=Select%20*from%20users&db=&caption=Ad%20Hoc%20Query&w=1471" for 127.0.0.1 at 2011-06-27 15:39:21 -0700
+  Processing by OldSql::ReportController#jqgrid as HTML
+  Parameters: {"query"=>"Select *from users", "db"=>"", "caption"=>"Ad Hoc Query", "w"=>"1471"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSQL (2.4ms)[0m  Select *from users
+FIELDS ["Id", "Email", "Encrypted Password", "Reset Password Token", "Reset Password Sent At", "Remember Created At", "Sign In Count", "Current Sign In At", "Last Sign In At", "Current Sign In Ip", "Last Sign In Ip", "Created At", "Updated At", "Name", "Old Sql Admin"]
+  [1m[36mCACHE (0.0ms)[0m  [1mSelect *from users[0m
+FIELDS ["Id", "Email", "Encrypted Password", "Reset Password Token", "Reset Password Sent At", "Remember Created At", "Sign In Count", "Current Sign In At", "Last Sign In At", "Current Sign In Ip", "Last Sign In Ip", "Created At", "Updated At", "Name", "Old Sql Admin"]
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/jqgrid.html.erb within layouts/old_sql/report (15.0ms)
+Completed 200 OK in 53ms (Views: 17.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 15:39:21 -0700
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 15:39:21 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 15:39:21 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 15:39:21 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 15:39:21 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 15:39:21 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 15:39:21 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-27 15:39:21 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-27 15:39:21 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-27 15:39:21 -0700
+
+
+Started GET "/sql/reports/query.json/?report=&report_sql=&start_date=&end_date=&query=Select%20*from%20users&db=&_search=false&nd=1309214361423&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-27 15:39:21 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"", "report_sql"=>"", "start_date"=>"", "end_date"=>"", "query"=>"Select *from users", "db"=>"", "_search"=>"false", "nd"=>"1309214361423", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mSQL (1.8ms)[0m  [1mSelect *from users[0m
+Completed 200 OK in 42ms (Views: 0.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-27 15:39:21 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-27 15:39:21 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-27 15:39:21 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-27 15:39:21 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-27 15:39:21 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-27 15:39:21 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-27 15:39:21 -0700
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-27 15:42:31 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/_reports.html.erb (0.9ms)
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/_query.html.erb (0.7ms)
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/index.html.erb within layouts/old_sql/report (7.6ms)
+Completed 200 OK in 50ms (Views: 11.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 15:42:31 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 15:42:31 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 15:42:31 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 15:42:31 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 15:42:31 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 15:42:31 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 15:42:31 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-27 15:42:31 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-27 15:42:31 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-27 15:42:31 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-27 15:42:31 -0700
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-27 15:43:21 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/_reports.html.erb (1.3ms)
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/_query.html.erb (0.8ms)
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/index.html.erb within layouts/old_sql/report (9.7ms)
+Completed 200 OK in 51ms (Views: 13.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 15:43:21 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 15:43:21 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 15:43:21 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 15:43:21 -0700
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 15:43:21 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 15:43:21 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 15:43:21 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-27 15:43:21 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-27 15:43:21 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-27 15:43:21 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-27 15:43:21 -0700
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-27 15:43:27 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/_reports.html.erb (0.7ms)
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/_query.html.erb (0.9ms)
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/index.html.erb within layouts/old_sql/report (7.9ms)
+Completed 200 OK in 45ms (Views: 11.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 15:43:27 -0700
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 15:43:27 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 15:43:27 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 15:43:27 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 15:43:27 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 15:43:27 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 15:43:27 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-27 15:43:27 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-27 15:43:27 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-27 15:43:27 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-27 15:43:27 -0700
+
+
+Started GET "/sql/reports/jqgrid/?&query=Select%20*from%20users&db=&caption=Ad%20Hoc%20Query&w=1471" for 127.0.0.1 at 2011-06-27 15:43:34 -0700
+  Processing by OldSql::ReportController#jqgrid as HTML
+  Parameters: {"query"=>"Select *from users", "db"=>"", "caption"=>"Ad Hoc Query", "w"=>"1471"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSQL (2.3ms)[0m  Select *from users
+FIELDS ["Id", "Email", "Encrypted Password", "Reset Password Token", "Reset Password Sent At", "Remember Created At", "Sign In Count", "Current Sign In At", "Last Sign In At", "Current Sign In Ip", "Last Sign In Ip", "Created At", "Updated At", "Name", "Old Sql Admin"]
+  [1m[36mCACHE (0.0ms)[0m  [1mSelect *from users[0m
+FIELDS ["Id", "Email", "Encrypted Password", "Reset Password Token", "Reset Password Sent At", "Remember Created At", "Sign In Count", "Current Sign In At", "Last Sign In At", "Current Sign In Ip", "Last Sign In Ip", "Created At", "Updated At", "Name", "Old Sql Admin"]
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/jqgrid.html.erb within layouts/old_sql/report (11.2ms)
+Completed 200 OK in 48ms (Views: 12.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 15:43:34 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 15:43:34 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 15:43:34 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 15:43:34 -0700
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 15:43:34 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 15:43:34 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 15:43:34 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-27 15:43:34 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-27 15:43:34 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-27 15:43:34 -0700
+
+
+Started GET "/sql/reports/query.json/?report=&report_sql=&start_date=&end_date=&query=Select%20*from%20users&db=&_search=false&nd=1309214614484&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-27 15:43:34 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"", "report_sql"=>"", "start_date"=>"", "end_date"=>"", "query"=>"Select *from users", "db"=>"", "_search"=>"false", "nd"=>"1309214614484", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mSQL (1.3ms)[0m  [1mSelect *from users[0m
+Completed 200 OK in 38ms (Views: 0.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-27 15:43:34 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-27 15:43:34 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-27 15:43:34 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-27 15:43:34 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-27 15:43:34 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-27 15:43:34 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-27 15:43:34 -0700
+
+
+Started GET "/sql/reports/jqgrid/?&query=Select%20*from%20users&db=&caption=Ad%20Hoc%20Query&w=1471" for 127.0.0.1 at 2011-06-27 15:43:38 -0700
+  Processing by OldSql::ReportController#jqgrid as HTML
+  Parameters: {"query"=>"Select *from users", "db"=>"", "caption"=>"Ad Hoc Query", "w"=>"1471"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mSQL (1.5ms)[0m  [1mSelect *from users[0m
+FIELDS ["Id", "Email", "Encrypted Password", "Reset Password Token", "Reset Password Sent At", "Remember Created At", "Sign In Count", "Current Sign In At", "Last Sign In At", "Current Sign In Ip", "Last Sign In Ip", "Created At", "Updated At", "Name", "Old Sql Admin"]
+  [1m[35mCACHE (0.0ms)[0m  Select *from users
+FIELDS ["Id", "Email", "Encrypted Password", "Reset Password Token", "Reset Password Sent At", "Remember Created At", "Sign In Count", "Current Sign In At", "Last Sign In At", "Current Sign In Ip", "Last Sign In Ip", "Created At", "Updated At", "Name", "Old Sql Admin"]
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/jqgrid.html.erb within layouts/old_sql/report (10.4ms)
+Completed 200 OK in 50ms (Views: 12.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 15:43:38 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 15:43:38 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 15:43:38 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 15:43:38 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 15:43:38 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 15:43:38 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 15:43:38 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-27 15:43:38 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-27 15:43:38 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-27 15:43:38 -0700
+
+
+Started GET "/sql/reports/query.json/?report=&report_sql=&start_date=&end_date=&query=Select%20*from%20users&db=&_search=false&nd=1309214618834&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-27 15:43:38 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"", "report_sql"=>"", "start_date"=>"", "end_date"=>"", "query"=>"Select *from users", "db"=>"", "_search"=>"false", "nd"=>"1309214618834", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSQL (2.1ms)[0m  Select *from users
+Completed 200 OK in 47ms (Views: 0.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-27 15:43:38 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-27 15:43:38 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-27 15:43:38 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-27 15:43:38 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-27 15:43:38 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-27 15:43:38 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-27 15:43:38 -0700
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-27 15:43:44 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/_reports.html.erb (1.0ms)
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/_query.html.erb (0.9ms)
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/index.html.erb within layouts/old_sql/report (8.5ms)
+Completed 200 OK in 47ms (Views: 11.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 15:43:45 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 15:43:45 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 15:43:45 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 15:43:45 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 15:43:45 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 15:43:45 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 15:43:45 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-27 15:43:45 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-27 15:43:45 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-27 15:43:45 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-27 15:43:45 -0700
+
+
+Started GET "/sql/reports/jqgrid/?&query=Select%20*from%20users&db=&caption=Ad%20Hoc%20Query&w=1471" for 127.0.0.1 at 2011-06-27 15:43:52 -0700
+  Processing by OldSql::ReportController#jqgrid as HTML
+  Parameters: {"query"=>"Select *from users", "db"=>"", "caption"=>"Ad Hoc Query", "w"=>"1471"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mSQL (1.6ms)[0m  [1mSelect *from users[0m
+FIELDS ["Id", "Email", "Encrypted Password", "Reset Password Token", "Reset Password Sent At", "Remember Created At", "Sign In Count", "Current Sign In At", "Last Sign In At", "Current Sign In Ip", "Last Sign In Ip", "Created At", "Updated At", "Name", "Old Sql Admin"]
+  [1m[35mCACHE (0.0ms)[0m  Select *from users
+FIELDS ["Id", "Email", "Encrypted Password", "Reset Password Token", "Reset Password Sent At", "Remember Created At", "Sign In Count", "Current Sign In At", "Last Sign In At", "Current Sign In Ip", "Last Sign In Ip", "Created At", "Updated At", "Name", "Old Sql Admin"]
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/jqgrid.html.erb within layouts/old_sql/report (10.9ms)
+Completed 200 OK in 53ms (Views: 13.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 15:43:52 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 15:43:52 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 15:43:52 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 15:43:52 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 15:43:52 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 15:43:52 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 15:43:52 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-27 15:43:52 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-27 15:43:52 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-27 15:43:52 -0700
+
+
+Started GET "/sql/reports/query.json/?report=&report_sql=&start_date=&end_date=&query=Select%20*from%20users&db=&_search=false&nd=1309214632417&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-27 15:43:52 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"", "report_sql"=>"", "start_date"=>"", "end_date"=>"", "query"=>"Select *from users", "db"=>"", "_search"=>"false", "nd"=>"1309214632417", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSQL (2.1ms)[0m  Select *from users
+Completed 200 OK in 44ms (Views: 0.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-27 15:43:52 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-27 15:43:52 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-27 15:43:52 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-27 15:43:52 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-27 15:43:52 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-27 15:43:52 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-27 15:43:52 -0700
+
+
+Started GET "/sql/reports/jqgrid/?&query=Select%20idfrom%20users&db=&caption=Ad%20Hoc%20Query&w=1471" for 127.0.0.1 at 2011-06-27 15:43:56 -0700
+  Processing by OldSql::ReportController#jqgrid as HTML
+  Parameters: {"query"=>"Select idfrom users", "db"=>"", "caption"=>"Ad Hoc Query", "w"=>"1471"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  Select idfrom users
+SQLite3::SQLException: no such column: idfrom: Select idfrom users
+SQLite3::SQLException: no such column: idfrom: Select idfrom users
+FIELDS 
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/jqgrid.html.erb within layouts/old_sql/report (7.0ms)
+Completed 200 OK in 85ms (Views: 10.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 15:43:56 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 15:43:56 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 15:43:56 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 15:43:56 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 15:43:56 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 15:43:56 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 15:43:56 -0700
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-27 15:44:03 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/_reports.html.erb (1.3ms)
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/_query.html.erb (0.9ms)
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/index.html.erb within layouts/old_sql/report (9.3ms)
+Completed 200 OK in 87ms (Views: 13.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 15:44:03 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 15:44:03 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 15:44:03 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 15:44:03 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 15:44:03 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 15:44:03 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 15:44:03 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-27 15:44:03 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-27 15:44:03 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-27 15:44:03 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-27 15:44:03 -0700
+
+
+Started GET "/sql/reports/jqgrid/?&query=Select%20idfrom%20users&db=&caption=Ad%20Hoc%20Query&w=1471" for 127.0.0.1 at 2011-06-27 15:44:29 -0700
+  Processing by OldSql::ReportController#jqgrid as HTML
+  Parameters: {"query"=>"Select idfrom users", "db"=>"", "caption"=>"Ad Hoc Query", "w"=>"1471"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSelect idfrom users[0m
+SQLite3::SQLException: no such column: idfrom: Select idfrom users
+SQLite3::SQLException: no such column: idfrom: Select idfrom users
+FIELDS 
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/jqgrid.html.erb within layouts/old_sql/report (6.7ms)
+Completed 200 OK in 85ms (Views: 10.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 15:44:29 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 15:44:29 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 15:44:29 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 15:44:29 -0700
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 15:44:29 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 15:44:29 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 15:44:30 -0700
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-27 15:46:07 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/_reports.html.erb (1.4ms)
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/_query.html.erb (0.8ms)
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/index.html.erb within layouts/old_sql/report (9.6ms)
+Completed 200 OK in 87ms (Views: 12.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 15:46:07 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 15:46:07 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 15:46:07 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 15:46:07 -0700
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 15:46:07 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 15:46:07 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 15:46:07 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-27 15:46:07 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-27 15:46:07 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-27 15:46:07 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-27 15:46:07 -0700
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-27 15:54:10 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/_reports.html.erb (1.0ms)
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/_query.html.erb (0.5ms)
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/index.html.erb within layouts/old_sql/report (7.0ms)
+Completed 200 OK in 84ms (Views: 10.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 15:54:10 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 15:54:10 -0700
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 15:54:10 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 15:54:10 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 15:54:10 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 15:54:10 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 15:54:10 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-27 15:54:11 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-27 15:54:11 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-27 15:54:11 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-27 15:54:11 -0700
+
+
+Started GET "/sql/reports/jqgrid/?&query=Select%20idfrom%20users&db=active_record/base&caption=Ad%20Hoc%20Query&w=1471" for 127.0.0.1 at 2011-06-27 15:54:25 -0700
+  Processing by OldSql::ReportController#jqgrid as HTML
+  Parameters: {"query"=>"Select idfrom users", "db"=>"active_record/base", "caption"=>"Ad Hoc Query", "w"=>"1471"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSelect idfrom users[0m
+SQLite3::SQLException: no such column: idfrom: Select idfrom users
+SQLite3::SQLException: no such column: idfrom: Select idfrom users
+FIELDS 
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/jqgrid.html.erb within layouts/old_sql/report (7.3ms)
+Completed 200 OK in 88ms (Views: 10.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 15:54:25 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 15:54:25 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 15:54:25 -0700
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 15:54:25 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 15:54:25 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 15:54:25 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 15:54:25 -0700
+
+
+Started GET "/sql/reports/jqgrid/?&query=Select%20id%20from%20users&db=active_record/base&caption=Ad%20Hoc%20Query&w=1471" for 127.0.0.1 at 2011-06-27 15:55:02 -0700
+  Processing by OldSql::ReportController#jqgrid as HTML
+  Parameters: {"query"=>"Select id from users", "db"=>"active_record/base", "caption"=>"Ad Hoc Query", "w"=>"1471"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSelect id from users[0m
+FIELDS ["Id"]
+  [1m[35mCACHE (0.0ms)[0m  Select id from users
+FIELDS ["Id"]
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/jqgrid.html.erb within layouts/old_sql/report (10.6ms)
+Completed 200 OK in 90ms (Views: 13.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 15:55:02 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 15:55:02 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 15:55:02 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 15:55:02 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 15:55:02 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 15:55:02 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 15:55:02 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-27 15:55:02 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-27 15:55:02 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-27 15:55:02 -0700
+
+
+Started GET "/sql/reports/query.json/?report=&report_sql=&start_date=&end_date=&query=Select%20id%20from%20users&db=active_record/base&_search=false&nd=1309215302663&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-27 15:55:02 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"", "report_sql"=>"", "start_date"=>"", "end_date"=>"", "query"=>"Select id from users", "db"=>"active_record/base", "_search"=>"false", "nd"=>"1309215302663", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  Select id from users
+Completed 200 OK in 91ms (Views: 0.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-27 15:55:02 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-27 15:55:02 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-27 15:55:02 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-27 15:55:02 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-27 15:55:02 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-27 15:55:02 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-27 15:55:02 -0700
+
+
+Started GET "/sql/reports/jqgrid/?&query=Select%20idfrom%20users&db=active_record/base&caption=Ad%20Hoc%20Query&w=1471" for 127.0.0.1 at 2011-06-27 15:55:10 -0700
+  Processing by OldSql::ReportController#jqgrid as HTML
+  Parameters: {"query"=>"Select idfrom users", "db"=>"active_record/base", "caption"=>"Ad Hoc Query", "w"=>"1471"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  Select idfrom users
+SQLite3::SQLException: no such column: idfrom: Select idfrom users
+SQLite3::SQLException: no such column: idfrom: Select idfrom users
+FIELDS 
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/jqgrid.html.erb within layouts/old_sql/report (7.0ms)
+Completed 200 OK in 95ms (Views: 11.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 15:55:11 -0700
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 15:55:11 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 15:55:11 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 15:55:11 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 15:55:11 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 15:55:11 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 15:55:11 -0700
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-27 15:55:43 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/_reports.html.erb (1.5ms)
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/_query.html.erb (1.1ms)
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/index.html.erb within layouts/old_sql/report (11.5ms)
+Completed 200 OK in 115ms (Views: 18.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 15:55:43 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 15:55:44 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 15:55:44 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 15:55:44 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 15:55:44 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 15:55:44 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 15:55:44 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-27 15:55:44 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-27 15:55:44 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-27 15:55:44 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-27 15:55:44 -0700
+
+
+Started GET "/sql/reports/jqgrid/?&query=Select%20idfrom%20users&db=active_record/base&caption=Ad%20Hoc%20Query&w=1471" for 127.0.0.1 at 2011-06-27 15:55:54 -0700
+  Processing by OldSql::ReportController#jqgrid as HTML
+  Parameters: {"query"=>"Select idfrom users", "db"=>"active_record/base", "caption"=>"Ad Hoc Query", "w"=>"1471"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mSelect idfrom users[0m
+SQLite3::SQLException: no such column: idfrom: Select idfrom users
+SQLite3::SQLException: no such column: idfrom: Select idfrom users
+FIELDS 
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/jqgrid.html.erb within layouts/old_sql/report (8.8ms)
+Completed 200 OK in 99ms (Views: 12.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 15:55:54 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 15:55:54 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 15:55:54 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 15:55:54 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 15:55:54 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 15:55:54 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 15:55:54 -0700
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-27 15:56:08 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/_reports.html.erb (1.6ms)
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/_query.html.erb (1.0ms)
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/index.html.erb within layouts/old_sql/report (13.7ms)
+Completed 200 OK in 62ms (Views: 18.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 15:56:08 -0700
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 15:56:08 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 15:56:09 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 15:56:09 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 15:56:09 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 15:56:09 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 15:56:09 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-27 15:56:09 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-27 15:56:09 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-27 15:56:09 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-27 15:56:09 -0700
+
+
+Started GET "/sql/reports/jqgrid/?&query=Select%20idfrom%20users&db=active_record/base&caption=Ad%20Hoc%20Query&w=1471" for 127.0.0.1 at 2011-06-27 15:56:15 -0700
+  Processing by OldSql::ReportController#jqgrid as HTML
+  Parameters: {"query"=>"Select idfrom users", "db"=>"active_record/base", "caption"=>"Ad Hoc Query", "w"=>"1471"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  Select idfrom users
+SQLite3::SQLException: no such column: idfrom: Select idfrom users
+SQLite3::SQLException: no such column: idfrom: Select idfrom users
+FIELDS 
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/jqgrid.html.erb within layouts/old_sql/report (8.2ms)
+Completed 200 OK in 50ms (Views: 11.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 15:56:15 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 15:56:15 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 15:56:15 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 15:56:15 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 15:56:15 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 15:56:16 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 15:56:16 -0700
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-27 15:57:39 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/_reports.html.erb (1.2ms)
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/_query.html.erb (1.0ms)
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/index.html.erb within layouts/old_sql/report (9.5ms)
+Completed 200 OK in 53ms (Views: 14.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 15:57:39 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 15:57:39 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 15:57:39 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 15:57:39 -0700
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 15:57:40 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 15:57:40 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 15:57:40 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-27 15:57:40 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-27 15:57:40 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-27 15:57:40 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-27 15:57:40 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_fdf5ce_1x400.png" for 127.0.0.1 at 2011-06-27 15:57:40 -0700
+
+
+Started GET "/sql/reports/jqgrid/?&query=Select%20id%20from%20users&db=active_record/base&caption=Ad%20Hoc%20Query&w=1471" for 127.0.0.1 at 2011-06-27 15:57:45 -0700
+  Processing by OldSql::ReportController#jqgrid as HTML
+  Parameters: {"query"=>"Select id from users", "db"=>"active_record/base", "caption"=>"Ad Hoc Query", "w"=>"1471"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSelect id from users[0m
+FIELDS ["Id"]
+  [1m[35mCACHE (0.0ms)[0m  Select id from users
+FIELDS ["Id"]
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/jqgrid.html.erb within layouts/old_sql/report (12.9ms)
+Completed 200 OK in 54ms (Views: 16.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 15:57:45 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 15:57:45 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 15:57:45 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 15:57:45 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 15:57:45 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 15:57:45 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 15:57:45 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-27 15:57:46 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-27 15:57:46 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-27 15:57:46 -0700
+
+
+Started GET "/sql/reports/query.json/?report=&report_sql=&start_date=&end_date=&query=Select%20id%20from%20users&db=active_record/base&_search=false&nd=1309215466350&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-27 15:57:46 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"", "report_sql"=>"", "start_date"=>"", "end_date"=>"", "query"=>"Select id from users", "db"=>"active_record/base", "_search"=>"false", "nd"=>"1309215466350", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  Select id from users
+Completed 200 OK in 44ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-27 15:57:46 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-27 15:57:46 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-27 15:57:46 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-27 15:57:46 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-27 15:57:46 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-27 15:57:46 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-27 15:57:46 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_fdf5ce_1x400.png" for 127.0.0.1 at 2011-06-27 15:57:46 -0700
+
+
+Started GET "/sql/reports/jqgrid/?&query=Select%20id%20from%20users&db=active_record/base&caption=Ad%20Hoc%20Query&w=1471" for 127.0.0.1 at 2011-06-27 15:57:54 -0700
+  Processing by OldSql::ReportController#jqgrid as HTML
+  Parameters: {"query"=>"Select id from users", "db"=>"active_record/base", "caption"=>"Ad Hoc Query", "w"=>"1471"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  Select id from users
+FIELDS ["Id"]
+  [1m[36mCACHE (0.0ms)[0m  [1mSelect id from users[0m
+FIELDS ["Id"]
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/jqgrid.html.erb within layouts/old_sql/report (10.9ms)
+Completed 200 OK in 58ms (Views: 15.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 15:57:54 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 15:57:54 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 15:57:54 -0700
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 15:57:54 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 15:57:54 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 15:57:54 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 15:57:54 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-27 15:57:54 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-27 15:57:54 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-27 15:57:54 -0700
+
+
+Started GET "/sql/reports/query.json/?report=&report_sql=&start_date=&end_date=&query=Select%20id%20from%20users&db=active_record/base&_search=false&nd=1309215475272&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-27 15:57:55 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"", "report_sql"=>"", "start_date"=>"", "end_date"=>"", "query"=>"Select id from users", "db"=>"active_record/base", "_search"=>"false", "nd"=>"1309215475272", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mSelect id from users[0m
+Completed 200 OK in 44ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-27 15:57:55 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-27 15:57:55 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-27 15:57:55 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-27 15:57:55 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-27 15:57:55 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-27 15:57:55 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-27 15:57:55 -0700
+
+
+Started GET "/sql/reports/jqgrid/?&query=Select%20id%20from%20users&db=active_record/base&caption=Ad%20Hoc%20Query&w=1471" for 127.0.0.1 at 2011-06-27 15:58:04 -0700
+  Processing by OldSql::ReportController#jqgrid as HTML
+  Parameters: {"query"=>"Select id from users", "db"=>"active_record/base", "caption"=>"Ad Hoc Query", "w"=>"1471"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSelect id from users[0m
+FIELDS ["Id"]
+  [1m[35mCACHE (0.0ms)[0m  Select id from users
+FIELDS ["Id"]
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/jqgrid.html.erb within layouts/old_sql/report (11.0ms)
+Completed 200 OK in 50ms (Views: 15.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 15:58:04 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 15:58:04 -0700
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 15:58:04 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 15:58:04 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 15:58:04 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 15:58:04 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 15:58:04 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-27 15:58:04 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-27 15:58:04 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-27 15:58:04 -0700
+
+
+Started GET "/sql/reports/query.json/?report=&report_sql=&start_date=&end_date=&query=Select%20id%20from%20users&db=active_record/base&_search=false&nd=1309215484896&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-27 15:58:04 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"", "report_sql"=>"", "start_date"=>"", "end_date"=>"", "query"=>"Select id from users", "db"=>"active_record/base", "_search"=>"false", "nd"=>"1309215484896", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  Select id from users
+Completed 200 OK in 46ms (Views: 0.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-27 15:58:05 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-27 15:58:05 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-27 15:58:05 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-27 15:58:05 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-27 15:58:05 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-27 15:58:05 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-27 15:58:05 -0700
+
+
+Started GET "/sql/reports/jqgrid/?&query=Select%20id%20from%20users&db=active_record/base&caption=Ad%20Hoc%20Query&w=1471" for 127.0.0.1 at 2011-06-27 15:58:07 -0700
+  Processing by OldSql::ReportController#jqgrid as HTML
+  Parameters: {"query"=>"Select id from users", "db"=>"active_record/base", "caption"=>"Ad Hoc Query", "w"=>"1471"}
+  [1m[36mUser Load (45.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  Select id from users
+FIELDS ["Id"]
+  [1m[36mCACHE (0.0ms)[0m  [1mSelect id from users[0m
+FIELDS ["Id"]
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/jqgrid.html.erb within layouts/old_sql/report (12.8ms)
+Completed 200 OK in 102ms (Views: 16.4ms | ActiveRecord: 46.1ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 15:58:07 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 15:58:07 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 15:58:07 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 15:58:07 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 15:58:07 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 15:58:07 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 15:58:07 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-27 15:58:07 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-27 15:58:07 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-27 15:58:07 -0700
+
+
+Started GET "/sql/reports/query.json/?report=&report_sql=&start_date=&end_date=&query=Select%20id%20from%20users&db=active_record/base&_search=false&nd=1309215488107&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-27 15:58:08 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"", "report_sql"=>"", "start_date"=>"", "end_date"=>"", "query"=>"Select id from users", "db"=>"active_record/base", "_search"=>"false", "nd"=>"1309215488107", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSelect id from users[0m
+Completed 200 OK in 95ms (Views: 0.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-27 15:58:08 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-27 15:58:08 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-27 15:58:08 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-27 15:58:08 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-27 15:58:08 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-27 15:58:08 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-27 15:58:08 -0700
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-27 16:00:00 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/_reports.html.erb (1.3ms)
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/_query.html.erb (0.5ms)
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/index.html.erb within layouts/old_sql/report (8.6ms)
+Completed 200 OK in 98ms (Views: 13.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 16:00:00 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 16:00:00 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 16:00:00 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 16:00:00 -0700
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 16:00:00 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 16:00:00 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 16:00:00 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-27 16:00:01 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-27 16:00:01 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-27 16:00:01 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-27 16:00:01 -0700
+
+
+Started GET "/sql/reports/jqgrid/?&query=Select%20id%20from%20users&db=active_record/base&caption=Ad%20Hoc%20Query&w=1471" for 127.0.0.1 at 2011-06-27 16:00:11 -0700
+  Processing by OldSql::ReportController#jqgrid as HTML
+  Parameters: {"query"=>"Select id from users", "db"=>"active_record/base", "caption"=>"Ad Hoc Query", "w"=>"1471"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  Select id from users
+FIELDS ["Id"]
+  [1m[36mCACHE (0.0ms)[0m  [1mSelect id from users[0m
+FIELDS ["Id"]
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/jqgrid.html.erb within layouts/old_sql/report (12.0ms)
+Completed 200 OK in 99ms (Views: 15.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 16:00:11 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 16:00:11 -0700
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 16:00:11 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 16:00:11 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 16:00:11 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 16:00:11 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 16:00:11 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-27 16:00:11 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-27 16:00:11 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-27 16:00:11 -0700
+
+
+Started GET "/sql/reports/query.json/?report=&report_sql=&start_date=&end_date=&query=Select%20id%20from%20users&db=active_record/base&_search=false&nd=1309215611880&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-27 16:00:11 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"", "report_sql"=>"", "start_date"=>"", "end_date"=>"", "query"=>"Select id from users", "db"=>"active_record/base", "_search"=>"false", "nd"=>"1309215611880", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSelect id from users[0m
+Completed 200 OK in 81ms (Views: 0.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-27 16:00:12 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-27 16:00:12 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-27 16:00:12 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-27 16:00:12 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-27 16:00:12 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-27 16:00:12 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-27 16:00:12 -0700
+
+
+Started GET "/sql/reports/jqgrid/?&query=Select%20id%20from%20users&db=active_record/base&caption=Ad%20Hoc%20Query&w=1471" for 127.0.0.1 at 2011-06-27 16:00:18 -0700
+  Processing by OldSql::ReportController#jqgrid as HTML
+  Parameters: {"query"=>"Select id from users", "db"=>"active_record/base", "caption"=>"Ad Hoc Query", "w"=>"1471"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mSelect id from users[0m
+FIELDS ["Id"]
+  [1m[35mCACHE (0.0ms)[0m  Select id from users
+FIELDS ["Id"]
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/jqgrid.html.erb within layouts/old_sql/report (13.1ms)
+Completed 200 OK in 54ms (Views: 16.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 16:00:18 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 16:00:18 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 16:00:18 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 16:00:18 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 16:00:18 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 16:00:18 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 16:00:18 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-27 16:00:18 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-27 16:00:18 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-27 16:00:18 -0700
+
+
+Started GET "/sql/reports/query.json/?report=&report_sql=&start_date=&end_date=&query=Select%20id%20from%20users&db=active_record/base&_search=false&nd=1309215618510&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-27 16:00:18 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"", "report_sql"=>"", "start_date"=>"", "end_date"=>"", "query"=>"Select id from users", "db"=>"active_record/base", "_search"=>"false", "nd"=>"1309215618510", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  Select id from users
+Completed 200 OK in 49ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-27 16:00:18 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-27 16:00:18 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-27 16:00:18 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-27 16:00:18 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-27 16:00:18 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-27 16:00:18 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-27 16:00:18 -0700
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-27 16:18:19 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/_reports.html.erb (1.4ms)
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/_query.html.erb (1.0ms)
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/index.html.erb within layouts/old_sql/report (10.2ms)
+Completed 200 OK in 175ms (Views: 14.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 16:18:19 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 16:18:19 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 16:18:19 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 16:18:19 -0700
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 16:18:19 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 16:18:19 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 16:18:19 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-27 16:18:19 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-27 16:18:20 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-27 16:18:20 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-27 16:18:20 -0700
+
+
+Started GET "/sql/reports/chart/?report=user_table_alt_db&start_date=2011/04/13%2000:00&end_date=2011/06/28%2016:18:19&report_sql=user_old_sql_demo&caption=user_table_alt_db" for 127.0.0.1 at 2011-06-27 16:19:03 -0700
+  Processing by OldSql::ReportController#chart as HTML
+  Parameters: {"report"=>"user_table_alt_db", "start_date"=>"2011/04/13 00:00", "end_date"=>"2011/06/28 16:18:19", "report_sql"=>"user_old_sql_demo", "caption"=>"user_table_alt_db"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSQL (1.3ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-04-13 00:00')
+AND u.created_at < date('2011-06-28 16:18:19')
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/chart.html.erb within layouts/old_sql/chart (2.2ms)
+Completed 200 OK in 179ms (Views: 8.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 16:19:03 -0700
+
+
+Started GET "/sql/reports/chart/?report=user_chart&start_date=2011/04/13%2000:00&end_date=2011/06/28%2016:18:19&report_sql=user_old_sql_demo&caption=user_chart" for 127.0.0.1 at 2011-06-27 16:19:07 -0700
+  Processing by OldSql::ReportController#chart as HTML
+  Parameters: {"report"=>"user_chart", "start_date"=>"2011/04/13 00:00", "end_date"=>"2011/06/28 16:18:19", "report_sql"=>"user_old_sql_demo", "caption"=>"user_chart"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT u.id, u.name
+FROM users u
+WHERE u.created_at > date('2011-04-13 00:00')
+AND u.created_at < date('2011-06-28 16:18:19')
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/chart.html.erb within layouts/old_sql/chart (1.7ms)
+Completed 200 OK in 82ms (Views: 5.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 16:19:07 -0700
+
+
+Started GET "/javascripts/old_sql/chart.js" for 127.0.0.1 at 2011-06-27 16:19:08 -0700
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-27 16:32:56 -0700
+
+SyntaxError (/Users/egonz/projects/rails/old_sql/app/controllers/old_sql/report_controller.rb:232: syntax error, unexpected '}', expecting keyword_end):
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.7ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.3ms)
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-27 16:33:19 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[36mSQL (0.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/_reports.html.erb (1.7ms)
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/_query.html.erb (19.7ms)
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/index.html.erb within layouts/old_sql/report (26.8ms)
+Completed   in 195ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    2: 	<div>
+    3: 		DATABASE: 
+    4: 		<select name="query-db" id="query-db" onchange="db_selected()">
+    5: 		<% db_list.each do |db| %>
+    6: 			<option value="<%=db[:name]%>" db_class="<%=db[:db_class]%>"><%=db[:name]%></option>
+    7: 		<% end %>
+    8: 		</select>
+  
+
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.4ms)
+Rendered /Users/egonz/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (51.0ms)
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-27 16:33:39 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/_reports.html.erb (0.9ms)
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/_query.html.erb (0.9ms)
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/index.html.erb within layouts/old_sql/report (7.9ms)
+Completed 200 OK in 87ms (Views: 12.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 16:33:39 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 16:33:39 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 16:33:39 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 16:33:39 -0700
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 16:33:39 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 16:33:39 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 16:33:39 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-27 16:33:39 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-27 16:33:39 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-27 16:33:39 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-27 16:33:39 -0700
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-27 16:49:58 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/_reports.html.erb (1.6ms)
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/_query.html.erb (0.9ms)
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/index.html.erb within layouts/old_sql/report (10.3ms)
+Completed 200 OK in 164ms (Views: 15.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 16:49:59 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 16:49:59 -0700
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 16:49:59 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 16:49:59 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 16:49:59 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 16:49:59 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 16:49:59 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-27 16:49:59 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-27 16:49:59 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_fdf5ce_1x400.png" for 127.0.0.1 at 2011-06-27 16:49:59 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-27 16:49:59 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-27 16:49:59 -0700
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-27 16:50:49 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/_reports.html.erb (1.3ms)
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/_query.html.erb (0.7ms)
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/index.html.erb within layouts/old_sql/report (8.9ms)
+Completed 200 OK in 50ms (Views: 12.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 16:50:49 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 16:50:49 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 16:50:49 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 16:50:49 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 16:50:49 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 16:50:49 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 16:50:49 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-27 16:50:50 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-27 16:50:50 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-27 16:50:50 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-27 16:50:50 -0700
+
+
+Started GET "/sql/reports/jqgrid/?&query=Select%20id%20from%20users&db=old_sql/db//Users/egonz/projects/rails/old_sql/test/dummy/lib/old_sql/db/test.rb&caption=Ad%20Hoc%20Query&w=1471" for 127.0.0.1 at 2011-06-27 16:50:55 -0700
+  Processing by OldSql::ReportController#jqgrid as HTML
+  Parameters: {"query"=>"Select id from users", "db"=>"old_sql/db//Users/egonz/projects/rails/old_sql/test/dummy/lib/old_sql/db/test.rb", "caption"=>"Ad Hoc Query", "w"=>"1471"}
+  [1m[35mUser Load (2.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+no such file to load -- old_sql/db//Users/egonz/projects/rails/old_sql/test/dummy/lib/old_sql/db/test.rb
+FIELDS 
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/jqgrid.html.erb within layouts/old_sql/report (36.8ms)
+Completed 200 OK in 130ms (Views: 42.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 16:50:55 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 16:50:55 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 16:50:55 -0700
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 16:50:55 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 16:50:55 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 16:50:55 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 16:50:55 -0700
+
+
+Started GET "/sql/reports" for 127.0.0.1 at 2011-06-27 16:52:22 -0700
+  Processing by OldSql::ReportController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/_reports.html.erb (1.3ms)
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/_query.html.erb (1.1ms)
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/index.html.erb within layouts/old_sql/report (9.6ms)
+Completed 200 OK in 48ms (Views: 14.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 16:52:22 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 16:52:22 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 16:52:22 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 16:52:22 -0700
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 16:52:22 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 16:52:22 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 16:52:22 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-27 16:52:22 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-27 16:52:22 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-27 16:52:22 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-27 16:52:22 -0700
+
+
+Started GET "/sql/reports/jqgrid/?&query=Select%20id%20from%20users&db=old_sql/db/test&caption=Ad%20Hoc%20Query&w=1471" for 127.0.0.1 at 2011-06-27 16:52:27 -0700
+  Processing by OldSql::ReportController#jqgrid as HTML
+  Parameters: {"query"=>"Select id from users", "db"=>"old_sql/db/test", "caption"=>"Ad Hoc Query", "w"=>"1471"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mSelect id from users[0m
+FIELDS ["Id"]
+  [1m[35mSQL (0.2ms)[0m  Select id from users
+FIELDS ["Id"]
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/jqgrid.html.erb within layouts/old_sql/report (14.8ms)
+Completed 200 OK in 90ms (Views: 17.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 16:52:27 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 16:52:27 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 16:52:27 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 16:52:27 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 16:52:27 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 16:52:27 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 16:52:27 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-27 16:52:27 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-27 16:52:27 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-27 16:52:27 -0700
+
+
+Started GET "/sql/reports/query.json/?report=&report_sql=&start_date=&end_date=&query=Select%20id%20from%20users&db=old_sql/db/test&_search=false&nd=1309218747785&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-27 16:52:27 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"", "report_sql"=>"", "start_date"=>"", "end_date"=>"", "query"=>"Select id from users", "db"=>"old_sql/db/test", "_search"=>"false", "nd"=>"1309218747785", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  Select id from users
+Completed 200 OK in 47ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-27 16:52:27 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-27 16:52:27 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-27 16:52:27 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-27 16:52:27 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-27 16:52:27 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-27 16:52:27 -0700
+
+
+Started GET "/sql/reports/jqgrid/?&query=Select%20*%20from%20users&db=old_sql/db/test&caption=Ad%20Hoc%20Query&w=1471" for 127.0.0.1 at 2011-06-27 16:52:36 -0700
+  Processing by OldSql::ReportController#jqgrid as HTML
+  Parameters: {"query"=>"Select * from users", "db"=>"old_sql/db/test", "caption"=>"Ad Hoc Query", "w"=>"1471"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSQL (2.1ms)[0m  Select * from users
+FIELDS ["Id", "Email", "Encrypted Password", "Reset Password Token", "Reset Password Sent At", "Remember Created At", "Sign In Count", "Current Sign In At", "Last Sign In At", "Current Sign In Ip", "Last Sign In Ip", "Created At", "Updated At", "Name", "Old Sql Admin"]
+  [1m[36mSQL (1.7ms)[0m  [1mSelect * from users[0m
+FIELDS ["Id", "Email", "Encrypted Password", "Reset Password Token", "Reset Password Sent At", "Remember Created At", "Sign In Count", "Current Sign In At", "Last Sign In At", "Current Sign In Ip", "Last Sign In Ip", "Created At", "Updated At", "Name", "Old Sql Admin"]
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/jqgrid.html.erb within layouts/old_sql/report (57.8ms)
+Completed 200 OK in 96ms (Views: 57.4ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 16:52:36 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 16:52:36 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 16:52:36 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 16:52:36 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 16:52:36 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 16:52:36 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 16:52:36 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-27 16:52:36 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-27 16:52:36 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-27 16:52:36 -0700
+
+
+Started GET "/sql/reports/query.json/?report=&report_sql=&start_date=&end_date=&query=Select%20*%20from%20users&db=old_sql/db/test&_search=false&nd=1309218756682&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-27 16:52:36 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"", "report_sql"=>"", "start_date"=>"", "end_date"=>"", "query"=>"Select * from users", "db"=>"old_sql/db/test", "_search"=>"false", "nd"=>"1309218756682", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mSQL (1.1ms)[0m  [1mSelect * from users[0m
+Completed 200 OK in 92ms (Views: 0.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-27 16:52:36 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-27 16:52:36 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-27 16:52:36 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-27 16:52:36 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-27 16:52:36 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-27 16:52:36 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-27 16:52:36 -0700
+
+
+Started GET "/sql/reports/jqgrid/?&query=Select%20*%20from%20users&db=active_record/base&caption=Ad%20Hoc%20Query&w=1471" for 127.0.0.1 at 2011-06-27 16:52:41 -0700
+  Processing by OldSql::ReportController#jqgrid as HTML
+  Parameters: {"query"=>"Select * from users", "db"=>"active_record/base", "caption"=>"Ad Hoc Query", "w"=>"1471"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mSQL (2.3ms)[0m  [1mSelect * from users[0m
+FIELDS ["Id", "Email", "Encrypted Password", "Reset Password Token", "Reset Password Sent At", "Remember Created At", "Sign In Count", "Current Sign In At", "Last Sign In At", "Current Sign In Ip", "Last Sign In Ip", "Created At", "Updated At", "Name", "Old Sql Admin"]
+  [1m[35mCACHE (0.0ms)[0m  Select * from users
+FIELDS ["Id", "Email", "Encrypted Password", "Reset Password Token", "Reset Password Sent At", "Remember Created At", "Sign In Count", "Current Sign In At", "Last Sign In At", "Current Sign In Ip", "Last Sign In Ip", "Created At", "Updated At", "Name", "Old Sql Admin"]
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/jqgrid.html.erb within layouts/old_sql/report (17.4ms)
+Completed 200 OK in 93ms (Views: 19.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 16:52:41 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 16:52:41 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 16:52:41 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 16:52:41 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 16:52:41 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 16:52:41 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 16:52:41 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-27 16:52:41 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-27 16:52:41 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-27 16:52:41 -0700
+
+
+Started GET "/sql/reports/query.json/?report=&report_sql=&start_date=&end_date=&query=Select%20*%20from%20users&db=active_record/base&_search=false&nd=1309218761911&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-27 16:52:41 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"", "report_sql"=>"", "start_date"=>"", "end_date"=>"", "query"=>"Select * from users", "db"=>"active_record/base", "_search"=>"false", "nd"=>"1309218761911", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSQL (1.9ms)[0m  Select * from users
+Completed 200 OK in 92ms (Views: 0.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-27 16:52:42 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-27 16:52:42 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-27 16:52:42 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-27 16:52:42 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-27 16:52:42 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-27 16:52:42 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-27 16:52:42 -0700
+
+
+Started GET "/sql/reports/jqgrid/?&query=Select%20*%20from%20users&db=old_sql/db/test&caption=Ad%20Hoc%20Query&w=1471" for 127.0.0.1 at 2011-06-27 16:52:58 -0700
+  Processing by OldSql::ReportController#jqgrid as HTML
+  Parameters: {"query"=>"Select * from users", "db"=>"old_sql/db/test", "caption"=>"Ad Hoc Query", "w"=>"1471"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mSQL (2.0ms)[0m  Select * from users
+FIELDS ["Id", "Email", "Encrypted Password", "Reset Password Token", "Reset Password Sent At", "Remember Created At", "Sign In Count", "Current Sign In At", "Last Sign In At", "Current Sign In Ip", "Last Sign In Ip", "Created At", "Updated At", "Name", "Old Sql Admin"]
+  [1m[36mSQL (1.1ms)[0m  [1mSelect * from users[0m
+FIELDS ["Id", "Email", "Encrypted Password", "Reset Password Token", "Reset Password Sent At", "Remember Created At", "Sign In Count", "Current Sign In At", "Last Sign In At", "Current Sign In Ip", "Last Sign In Ip", "Created At", "Updated At", "Name", "Old Sql Admin"]
+Rendered /Users/egonz/projects/rails/old_sql/app/views/old_sql/report/jqgrid.html.erb within layouts/old_sql/report (17.7ms)
+Completed 200 OK in 101ms (Views: 19.2ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/jquery-ui-1.8.13.custom.css" for 127.0.0.1 at 2011-06-27 16:52:59 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-1.5.1.min.js" for 127.0.0.1 at 2011-06-27 16:52:59 -0700
+
+
+Started GET "/javascripts/old_sql/date_format.js" for 127.0.0.1 at 2011-06-27 16:52:59 -0700
+
+
+Started GET "/stylesheets/old_sql/old_sql.css" for 127.0.0.1 at 2011-06-27 16:52:59 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-timepicker-addon.js" for 127.0.0.1 at 2011-06-27 16:52:59 -0700
+
+
+Started GET "/javascripts/old_sql/jquery-ui-1.8.13.custom.min.js" for 127.0.0.1 at 2011-06-27 16:52:59 -0700
+
+
+Started GET "/javascripts/old_sql/old_sql.js" for 127.0.0.1 at 2011-06-27 16:52:59 -0700
+
+
+Started GET "/stylesheets/old_sql/jqgrid/ui.jqgrid.css" for 127.0.0.1 at 2011-06-27 16:52:59 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/ui.multiselect.js" for 127.0.0.1 at 2011-06-27 16:52:59 -0700
+
+
+Started GET "/javascripts/old_sql/jqgrid/jquery.jqGrid.min.js" for 127.0.0.1 at 2011-06-27 16:52:59 -0700
+
+
+Started GET "/sql/reports/query.json/?report=&report_sql=&start_date=&end_date=&query=Select%20*%20from%20users&db=old_sql/db/test&_search=false&nd=1309218779330&rows=25&page=1&sidx=&sord=asc" for 127.0.0.1 at 2011-06-27 16:52:59 -0700
+  Processing by OldSql::ReportController#query as JSON
+  Parameters: {"report"=>"", "report_sql"=>"", "start_date"=>"", "end_date"=>"", "query"=>"Select * from users", "db"=>"old_sql/db/test", "_search"=>"false", "nd"=>"1309218779330", "rows"=>"25", "page"=>"1", "sidx"=>"", "sord"=>"asc"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mSQL (1.5ms)[0m  [1mSelect * from users[0m
+Completed 200 OK in 47ms (Views: 0.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png" for 127.0.0.1 at 2011-06-27 16:52:59 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png" for 127.0.0.1 at 2011-06-27 16:52:59 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png" for 127.0.0.1 at 2011-06-27 16:52:59 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ef8c08_256x240.png" for 127.0.0.1 at 2011-06-27 16:52:59 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" for 127.0.0.1 at 2011-06-27 16:52:59 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png" for 127.0.0.1 at 2011-06-27 16:52:59 -0700
+
+
+Started GET "/stylesheets/old_sql/ui-lightness/images/ui-icons_ffffff_256x240.png" for 127.0.0.1 at 2011-06-27 16:52:59 -0700

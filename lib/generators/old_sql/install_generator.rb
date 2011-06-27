@@ -51,6 +51,7 @@ module OldSql
       empty_directory "#{app_path}/config/old_sql/report_sql"
       empty_directory "#{app_path}/config/old_sql/report_design"
       empty_directory "#{app_path}/lib/old_sql/report_processor"
+      empty_directory "#{app_path}/lib/old_sql/db"
     end
     
     def copy_old_sql_files
@@ -60,6 +61,7 @@ module OldSql
       copy_file "user_processor.rb.example", "#{app_path}/lib/old_sql/report_processor/user_old_sql_demo_processor.rb"
       copy_file "user_design_template.csv", "#{app_path}/config/old_sql/report_design/user_old_sql_demo.csv"
       copy_file "user_old_sql_demo_chart_design.yml", "#{app_path}/config/old_sql/report_design/user_old_sql_demo.yml"
+      copy_file "test_db.rb", "#{app_path}/lib/old_sql/db/test.rb"
     end
     
     def configure_initializer

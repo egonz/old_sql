@@ -1,8 +1,8 @@
 require 'active_record'
 
 module OldSql
-  module ReportDb
-    class AltTest < ActiveRecord::Base
+  module Db
+    class Test < ActiveRecord::Base
       config = YAML.load_file(File.join("#{File.dirname(__FILE__)}/../../../config/", 'database.yml'))
       
       establish_connection config['test']

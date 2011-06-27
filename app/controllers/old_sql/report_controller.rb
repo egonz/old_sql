@@ -224,7 +224,17 @@ module OldSql
 
     def db_list
       db = []
+      
       db << {name: Rails.env.capitalize, db_class: "active_record/base"}
+      
+      if File.directory?("#{Rails.root}/lib/old_sql/db")
+        Dir.glob("#{Rails.root}/lib/old_sql/db/*.rb") do |filename|
+          file_sans_ext = File.basename(filename, ".rb") 
+          db << {name: file_sans_ext.capitalize, db_class: "old_sql/db/#{file_sans_ext}"}
+        end
+      end
+      
+      db
     end
   end
 end

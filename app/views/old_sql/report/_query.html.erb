@@ -1,25 +1,9 @@
-<script>
-$(document).ready(function($){
-	$('#run-query').bind('click', function() {
-      	query();
-    });
-
-	$('#delete-saved-queries').bind('click', function() {
-      	deleted_saved_queries();
-    });
-
-	$('#saved-queries-list').bind('click', function() {
-		$('#query-text').val($("#saved-queries-list option:selected").val()); 
-    });
-});
-</script>
-
 <div class="query">
 	<div>
 		DATABASE: 
 		<select name="query-db" id="query-db" onchange="db_selected()">
 		<% db_list.each do |db| %>
-			<option value="<%=db[:name]%>" class_name="<%=db[:class_name]%>"><%=db[:name]%></option>
+			<option value="<%=db[:name]%>" db_class="<%=db[:db_class]%>"><%=db[:name]%></option>
 		<% end %>
 		</select>
 	</div>
@@ -54,6 +38,12 @@ $(document).ready(function($){
 	</div>
 	
 	<div>
-		<input id="delete-saved-queries" type="submit" value="Clear" onclick="return true;" />
+		<span class="query-button">
+			<input id="delete-saved-query" type="submit" value="Delete" onclick="return true;" />
+		</span>
+		
+		<span class="query-button">
+			<input id="delete-saved-queries" type="submit" value="Remove All" onclick="return true;" />
+		</span>
 	</div>
 </div>
