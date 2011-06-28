@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{old_sql}
-  s.version = "1.29.0"
+  s.version = "1.30.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = [%q{Eddie Gonzales}]
-  s.date = %q{2011-06-27}
+  s.date = %q{2011-06-28}
   s.description = %q{OldSQL is a Rails Engine database reporting gem that uses plain old SQL}
   s.email = %q{egonzales@pureplay.com}
   s.extra_rdoc_files = [
@@ -45,6 +45,7 @@ Gem::Specification.new do |s|
     "lib/generators/old_sql/templates/devise_model.rb.template",
     "lib/generators/old_sql/templates/old_sql.rb",
     "lib/generators/old_sql/templates/reports.yml.example",
+    "lib/generators/old_sql/templates/test_db.rb",
     "lib/generators/old_sql/templates/user.erb.example",
     "lib/generators/old_sql/templates/user_design_template.csv",
     "lib/generators/old_sql/templates/user_old_sql_demo_chart_design.yml",

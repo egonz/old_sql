@@ -4,7 +4,7 @@
 		<div class="report-form-input">
 			<select name="report" id="report" 
 				onchange="report_selected()">
-				<option></option>		
+				<option></option>
 				<% @reports.each do |report, data| %>
 				<option value="<%= data['name'] %>" report_sql="<%= data['report_sql'] %>" 
 				 desc="<%= data['description'] %>" name="<%=report%>" 

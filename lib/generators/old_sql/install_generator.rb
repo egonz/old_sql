@@ -6,16 +6,13 @@ module OldSql
     desc "Old SQL Install"
 
     def check_for_devise
-      puts "Old SQL works with devise, cancan and sanitize. Checking for a current installation of devise!\n"
+      puts "Old SQL works with devise. Checking for a current installation of devise!\n"
 
       if defined?(Devise)
         check_for_devise_models
       else
-        puts "Please put gem 'devise', gem 'cancan', and gem 'sanitize' into your Gemfile"
+        puts "Please put gem 'devise' into your Gemfile"
       end
-      
-      puts "Please put gem 'cancan' into your Gemfile" unless defined?(Cancan)
-      puts "Please put gem 'sanitize' into your Gemfile" unless defined?(Sanitize)
       
       puts "Also you need a new migration. We'll generate it for you now."
       invoke 'old_sql:install_migrations'

@@ -140,6 +140,7 @@ module OldSql
     def _reports
       template = File.read("#{Rails.root}/config/old_sql/reports.yml")
       @reports = YAML.load(Erubis::Eruby.new(template).result)
+      @reports = {} if @reports.nil? || @reports == false
     end
 
     def load_base_processor
@@ -183,7 +184,6 @@ module OldSql
     
     def query_fields
       fields = load_base_processor.fields(@reports[@report_name],@start_date,@end_date,query_vars(@report_name),@query,@db)
-      logger.info "FIELDS #{fields}"
       fields
     end
 

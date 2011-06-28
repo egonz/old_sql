@@ -15,6 +15,7 @@ module OldSql
       ROUND_PRECISION = OldSql.rounding_precision
     
       def execute_query(report_config, start_date, end_date, query_vars = nil, sql_query = nil, db_class = nil)
+        Rails.logger.info "debug 1"
         execute(report_config, start_date, end_date, query_vars, sql_query, db_class)
         
         return nil if @rec.nil?
