@@ -38,10 +38,6 @@ Old SQL is a Rails Engine database reporting gem that uses plain old SQL.
 
 ![jqGrid view](https://github.com/egonz/old_sql/raw/master/screenshots/jqgrid.png "jqGrid view")
 
-#### HTML Table
-
-![table view](https://github.com/egonz/old_sql/raw/master/screenshots/table.png "Table view")
-
 #### Google Charts
 
 ![table view](https://github.com/egonz/old_sql/raw/master/screenshots/chart.png "Chart view")
