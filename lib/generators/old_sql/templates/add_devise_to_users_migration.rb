@@ -3,7 +3,7 @@ class AddDeviseToDeviseModel < ActiveRecord::Migration
     null    = false
     default = ""
 
-    unless column_exists? :email
+    unless column_exists? :devise_model, :email
       add_column :devise_model, :email, :string
       add_column :devise_model, :alternative_admin_email, :string
     end
@@ -27,10 +27,17 @@ class AddDeviseToDeviseModel < ActiveRecord::Migration
     add_column :devise_model, :unlock_token,   :string
     add_column :devise_model, :locked_at, :datetime
 
+    unless column_exists? :devise_model, :updated_at
+      add_column :devise_model, :updated_at, :datetime
+    end
+    
+    unless column_exists? :devise_model, :created_at
+      add_column :devise_model, :created_at, :datetime
+    end
   end
 
   def self.down
-    unless column_exists? :alternative_admin_email
+    if column_exists? :devise_model, :alternative_admin_email
       remove_column :devise_model, :email, :string
       remove_column :devise_model, :alternative_admin_email, :string
     end

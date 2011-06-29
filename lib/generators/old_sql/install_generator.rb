@@ -63,7 +63,7 @@ module OldSql
     
     def configure_initializer
       initializer_path = "#{app_path}/config/initializers/old_sql.rb"
-      gsub_file initializer_path, /DeviseModel/, "#{model_name.downcase}"
+      gsub_file initializer_path, /DeviseModel/, "#{model_name.pluralize.downcase}"
     end
     
     ################ PRIVATE ################
@@ -129,20 +129,20 @@ module OldSql
       app_path.delete_at(-1)
       app_path = app_path.join("/")
       
-      File.exists?("#{app_path}/app/models/#{model_name}.rb")
+      File.exists?("#{app_path}/app/models/#{model_name.pluralize}.rb")
     end
     
     def create_model_class
-      model_path = "#{app_path}/app/models/#{model_name.singularize}.rb"
+      model_path = "#{app_path}/app/models/#{model_name.pluralize}.rb"
       copy_file "devise_model.rb.template", model_path
-      gsub_file model_path, /DeviseModel/, "#{model_name.singularize.capitalize}"
+      gsub_file model_path, /DeviseModel/, "#{model_name.pluralize.capitalize}"
     end
     
     def add_devise_to_routes
       routes_path = "#{app_path}/config/routes.rb"
       if open(routes_path).grep(/devise_for :#{model_name}/).count<=0
-        puts "Adding devise_for :#{model_name} to #{routes_path}"
-        insert_into_file routes_path, "  devise_for :#{model_name}\n\n", :after => "Application.routes.draw do\n"
+        puts "Adding devise_for :#{model_name.pluralize} to #{routes_path}"
+        insert_into_file routes_path, "  devise_for :#{model_name.pluralize}\n\n", :after => "Application.routes.draw do\n"
       end
     end
 
