@@ -102,7 +102,7 @@ module OldSql
       
       puts "Checking #{schema_path} for pattern #{model_name}" 
       
-      if File.exists?(schema_path) && open(schema_path).grep(/#{model_name.pluralize}/).count>0
+      if File.exists?(schema_path) && open(schema_path).grep(/#{model_name}/).count>0
         return true
       else
         return false
