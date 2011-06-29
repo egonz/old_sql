@@ -2,6 +2,7 @@
 
 ## HIGHER PRIORITY
 
+* Create generator to clean out demo files
 * Fix report name for jqGrid
 * Schema browser tab?
 * Printing and export to excel for ad hoc query results.
