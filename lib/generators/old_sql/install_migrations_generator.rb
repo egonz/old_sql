@@ -20,7 +20,7 @@ module OldSql
     def create_migration_file
       sleep 1 # ensure scripts have different timestamps
       migration_template 'add_old_sql_admin_to_users_migration.rb', "db/migrate/add_old_sql_admin_to_#{model_name}.rb" rescue p $!.message
-      gsub_file "db/migrate/#{@migration_number}_add_old_sql_admin_to_#{model_name}.rb", /users/, "#{model_name}"
+      gsub_file "db/migrate/#{@migration_number}_add_old_sql_admin_to_#{model_name}.rb", /device_model/, "#{model_name}"
       #sleep 1 # ensure scripts have different timestamps
     end
   end
