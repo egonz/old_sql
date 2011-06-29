@@ -86,7 +86,7 @@ module OldSql
           set_devise
         elsif !model_has_devise?
           puts 'Devise Model Does Not Have Devise Support'
-          invoke "old_sql:install_devise_migrations #{model_name}"
+          invoke "old_sql:install_devise_migrations", ["#{model_name}"]
           create_model_class unless model_exists?
           add_devise_to_routes
         end
