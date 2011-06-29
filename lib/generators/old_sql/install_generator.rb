@@ -15,7 +15,7 @@ module OldSql
       end
       
       puts "Also you need a new migration. We'll generate it for you now."
-      invoke 'old_sql:install_migrations'
+      invoke 'old_sql:install_migrations', ["#{model_name}"]
     end
     
     def copy_initializer
