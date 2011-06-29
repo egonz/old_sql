@@ -21,7 +21,7 @@ module OldSql
       sleep 1 # ensure scripts have different timestamps
       migration_template 'add_old_sql_admin_to_users_migration.rb', "db/migrate/add_old_sql_admin_to_#{model_name}.rb" rescue p $!.message
       gsub_file "db/migrate/#{@migration_number}_add_old_sql_admin_to_#{model_name}.rb", /devise_model/, "#{model_name.pluralize}"
-      gsub_file "db/migrate/#{@migration_number}_add_old_sql_admin_to_#{model_name}.rb", /DeviseModel/, "#{model_name.capitalize}"
+      gsub_file "db/migrate/#{@migration_number}_add_old_sql_admin_to_#{model_name}.rb", /DeviseModel/, "#{model_name.singularize.capitalize}"
       #sleep 1 # ensure scripts have different timestamps
     end
   end
