@@ -1,4 +1,4 @@
-class AddDeviseToUsers < ActiveRecord::Migration
+class AddDeviseToDeviseModel < ActiveRecord::Migration
   def self.up
     null    = false
     default = ""
