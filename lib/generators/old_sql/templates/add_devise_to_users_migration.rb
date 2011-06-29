@@ -3,6 +3,10 @@ class AddDeviseToDeviseModel < ActiveRecord::Migration
     null    = false
     default = ""
 
+    unless column_exists? :email
+      add_column :devise_model, :email, :string
+      add_column :devise_model, :alternative_admin_email, :string
+    end
     add_column :devise_model, :encrypted_password, :string, :null => null, :default => default, :limit => 128
     add_column :devise_model, :password_salt, :string
     add_column :devise_model, :authentication_token, :string
@@ -26,6 +30,10 @@ class AddDeviseToDeviseModel < ActiveRecord::Migration
   end
 
   def self.down
+    unless column_exists? :alternative_admin_email
+      remove_column :devise_model, :email, :string
+      remove_column :devise_model, :alternative_admin_email, :string
+    end
     remove_column :devise_model, :encrypted_password
     remove_column :devise_model, :password_salt
     remove_column :devise_model, :authentication_token
