@@ -129,7 +129,7 @@ module OldSql
 
     private
     def ensure_old_sql_admin!
-      render_error(Exception.new "Old SQL Access Denied.") unless eval("current_user.old_sql_admin?")
+      render_error(Exception.new "Old SQL Access Denied.") unless eval("current_#{OldSql.devise_model}.old_sql_admin?")
     end
 
     def _init

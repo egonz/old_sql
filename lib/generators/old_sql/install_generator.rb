@@ -63,7 +63,7 @@ module OldSql
     
     def configure_initializer
       initializer_path = "#{app_path}/config/initializers/old_sql.rb"
-      gsub_file initializer_path, /DeviseModel/, "#{model_name.pluralize.downcase}"
+      gsub_file initializer_path, /DeviseModel/, "#{model_name.singularize.downcase}"
     end
     
     ################ PRIVATE ################
@@ -133,9 +133,9 @@ module OldSql
     end
     
     def create_model_class
-      model_path = "#{app_path}/app/models/#{model_name.pluralize}.rb"
+      model_path = "#{app_path}/app/models/#{model_name.singularize}.rb"
       copy_file "devise_model.rb.template", model_path
-      gsub_file model_path, /DeviseModel/, "#{model_name.pluralize.capitalize}"
+      gsub_file model_path, /DeviseModel/, "#{model_name.singularize.capitalize}"
     end
     
     def add_devise_to_routes
